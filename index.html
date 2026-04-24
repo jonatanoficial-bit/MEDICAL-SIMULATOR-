@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medical Simulator - Vale Edition</title>
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<div id="app">
+
+```
+<!-- BACKGROUND -->
+<div id="bg"></div>
+
+<!-- MENU -->
+<section id="menu" class="page active">
+    <h1>Medical Simulator</h1>
+    <p>Vale Edition</p>
+    <button onclick="go('career')">Iniciar</button>
+</section>
+
+<!-- CARREIRA -->
+<section id="career" class="page">
+    <h2>Modo Carreira</h2>
+    <button onclick="go('shift')">Ir para Plantão</button>
+    <button onclick="go('menu')">Voltar</button>
+</section>
+
+<!-- PLANTÃO -->
+<section id="shift" class="page">
+    <h2>Paciente</h2>
+
+    <p id="caseText">Dor no peito e cansaço</p>
+
+    <button onclick="action('exam')">Pedir exame</button>
+    <button onclick="action('diagnose')">Diagnosticar</button>
+    <button onclick="finishCase()">Finalizar</button>
+</section>
+
+<!-- RESULTADO -->
+<section id="result" class="page">
+    <h2>Resultado</h2>
+    <p id="score"></p>
+    <button onclick="go('career')">Voltar</button>
+</section>
+```
+
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
