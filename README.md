@@ -1,18 +1,19 @@
 # Medical Simulator - Vale Edition
 
-Versão: v0.5.0  
-Build: 2026-04-24 20:28
+Build: v0.6.0 | build 2026-04-24 21:36
 
-## Como rodar
-Abra `index.html` em um navegador moderno ou publique a pasta inteira no GitHub Pages.
+## Status de conclusão
+Conclusão estimada do projeto: 58%.
 
-## Estrutura
-- `index.html`: entrada do jogo
-- `src/app.js`: aplicação SPA principal
-- `src/styles.css`: visual premium hospitalar mobile-first
-- `assets/`: imagens, UI, avatares e dados JSON
-- `content/`: estrutura preparada para expansão/DLC
-- `docs/`: documentação do projeto
+## Principais avanços desta build
+- Área clínica central agora exibe respostas de anamnese com efeito máquina de escrever.
+- Exames agora retornam laudos/resultados claros para o jogador.
+- Procedimentos agora exibem achados clínicos interpretáveis.
+- Resultados de exames também aparecem em modal/pop-up para evitar que o usuário perca informação importante.
+- Timeline registra resposta clínica, exame, procedimento, hipótese e conduta com horário clínico.
+- Build/data/hora continuam visíveis no jogo.
 
-## Observação
-Esta build substitui a v0.4.0 placeholder e volta para uma estrutura completa de jogo, usando os assets reais enviados pelo usuário.
+## Próximas prioridades
+- Fase 6: painel admin local para criar/editar casos.
+- Expansão do conteúdo clínico por especialidade.
+- DLC loader visual e import/export de save/conteúdo.
