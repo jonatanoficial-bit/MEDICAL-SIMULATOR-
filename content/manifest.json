@@ -1,1 +1,1 @@
-{"activePacks":["core"],"availablePacks":["emergency-advanced","pediatrics-pack"],"contentVersion":"0.1.0"}
+{"id":"core","name":"Medical Simulator Core","version":"0.5.0","enabled":true,"packs":["core"],"build":"20260424_2028"}

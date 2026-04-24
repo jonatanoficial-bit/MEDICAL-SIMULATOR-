@@ -1,0 +1,5 @@
+[
+ {"id":"daily-3-patients","type":"daily","title":"Atender 3 pacientes","goal":3,"metric":"patients","rewardXp":120,"rewardCredits":80},
+ {"id":"daily-accuracy","type":"daily","title":"Fechar 2 casos com score acima de 80","goal":2,"metric":"highScoreCases","rewardXp":160,"rewardCredits":100},
+ {"id":"weekly-study","type":"weekly","title":"Concluir 3 módulos de aprendizagem","goal":3,"metric":"learnedModules","rewardXp":300,"rewardCredits":200}
+]

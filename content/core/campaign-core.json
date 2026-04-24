@@ -1,1 +1,1 @@
-{"id":"core","name":"Campanha Core","version":"0.1.0","enabled":true,"firstSpecialty":"clinica-medica"}
+{"campaign":"Residência Clínica Vale","firstSpecialty":"clinica-medica","mode":"simulador","chapters":["fundamentos","plantao-clinico","decisao-sob-pressao"]}

@@ -1,0 +1,76 @@
+MAPA DE ARQUIVOS DO JOGO - ASSETS ORGANIZADOS
+Versao/build: v20260424_1340
+
+Pasta base recomendada no jogo: assets/
+Nomes padronizados em minusculo, sem espacos e sem acentos.
+Estrutura final conferida: avatars, backgrounds, icons e ui.
+Duplicados exatos de UI foram removidos para evitar caminhos repetidos.
+
+[AVATARS]
+assets/avatars/avatar_01.png
+assets/avatars/avatar_02.png
+assets/avatars/avatar_03.png
+assets/avatars/avatar_04.png
+assets/avatars/avatar_05.png
+
+[BACKGROUNDS]
+assets/backgrounds/background_01.png
+assets/backgrounds/background_02.png
+assets/backgrounds/background_03.png
+assets/backgrounds/background_04.png
+assets/backgrounds/background_05.png
+assets/backgrounds/background_06.png
+assets/backgrounds/background_07.png
+assets/backgrounds/background_08.png
+assets/backgrounds/background_09.png
+assets/backgrounds/background_10.png
+assets/backgrounds/background_11.png
+
+[ICONS]
+assets/icons/icon_01.png
+assets/icons/icon_02.png
+assets/icons/icon_03.png
+assets/icons/icon_04.png
+
+[UI]
+assets/ui/ui_01.png
+assets/ui/ui_02.png
+assets/ui/ui_03.png
+assets/ui/ui_04.png
+assets/ui/ui_05.png
+
+MAPEAMENTO ORIGINAL -> NOVO
+avatars/ChatGPT_Image_24_de_abr._de_2026__09_31_05-removebg-preview.png -> assets/avatars/avatar_01.png
+avatars/ChatGPT_Image_24_de_abr._de_2026__09_31_07-removebg-preview.png -> assets/avatars/avatar_02.png
+avatars/ChatGPT_Image_24_de_abr._de_2026__09_31_09-removebg-preview.png -> assets/avatars/avatar_03.png
+avatars/ChatGPT_Image_24_de_abr._de_2026__09_31_11-removebg-preview.png -> assets/avatars/avatar_04.png
+avatars/ChatGPT_Image_24_de_abr._de_2026__09_31_13-removebg-preview.png -> assets/avatars/avatar_05.png
+backgrounds/ChatGPT Image 24 de abr. de 2026, 09_31_16.png -> assets/backgrounds/background_01.png
+backgrounds/ChatGPT Image 24 de abr. de 2026, 09_31_17.png -> assets/backgrounds/background_02.png
+backgrounds/ChatGPT Image 24 de abr. de 2026, 09_31_19.png -> assets/backgrounds/background_03.png
+backgrounds/ChatGPT Image 24 de abr. de 2026, 09_31_22.png -> assets/backgrounds/background_04.png
+backgrounds/ChatGPT Image 24 de abr. de 2026, 09_31_24.png -> assets/backgrounds/background_05.png
+backgrounds/ChatGPT Image 24 de abr. de 2026, 09_31_26.png -> assets/backgrounds/background_06.png
+backgrounds/ChatGPT Image 24 de abr. de 2026, 09_31_29.png -> assets/backgrounds/background_07.png
+backgrounds/ChatGPT Image 24 de abr. de 2026, 09_31_30.png -> assets/backgrounds/background_08.png
+backgrounds/ChatGPT Image 24 de abr. de 2026, 09_31_32.png -> assets/backgrounds/background_09.png
+backgrounds/ChatGPT Image 24 de abr. de 2026, 09_31_34.png -> assets/backgrounds/background_10.png
+backgrounds/ChatGPT Image 24 de abr. de 2026, 09_31_43.png -> assets/backgrounds/background_11.png
+icons/ChatGPT_Image_24_de_abr._de_2026__09_30_43-removebg-preview.png -> assets/icons/icon_01.png
+icons/ChatGPT_Image_24_de_abr._de_2026__09_30_51-removebg-preview.png -> assets/icons/icon_02.png
+icons/ChatGPT_Image_24_de_abr._de_2026__09_30_53-removebg-preview.png -> assets/icons/icon_03.png
+icons/ChatGPT_Image_24_de_abr._de_2026__09_30_55-removebg-preview.png -> assets/icons/icon_04.png
+ui/ChatGPT_Image_24_de_abr._de_2026__09_30_37-removebg-preview.png -> assets/ui/ui_01.png
+ui/ChatGPT_Image_24_de_abr._de_2026__09_30_57-removebg-preview.png -> assets/ui/ui_02.png
+ui/ChatGPT_Image_24_de_abr._de_2026__09_30_59-removebg-preview.png -> assets/ui/ui_03.png
+ui/ChatGPT_Image_24_de_abr._de_2026__09_31_01-removebg-preview.png -> assets/ui/ui_04.png
+ui/ChatGPT_Image_24_de_abr._de_2026__09_31_03-removebg-preview.png -> assets/ui/ui_05.png
+
+DUPLICADOS EXATOS REMOVIDOS
+ui/ChatGPT_Image_24_de_abr._de_2026__09_30_37-removebg-preview (1).png -> igual a assets/ui/ui_01.png
+ui/ChatGPT_Image_24_de_abr._de_2026__09_30_37-removebg-preview (2).png -> igual a assets/ui/ui_01.png
+ui/ChatGPT_Image_24_de_abr._de_2026__09_31_03-removebg-preview (1).png -> igual a assets/ui/ui_05.png
+
+SUGESTAO DE USO EM CODIGO
+const ASSET_BASE = 'assets/';
+// Exemplo: <img src='assets/avatars/avatar_01.png'>
