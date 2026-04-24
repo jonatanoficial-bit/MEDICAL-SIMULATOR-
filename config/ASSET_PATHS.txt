@@ -1,0 +1,5 @@
+Coloque suas imagens aqui:
+
+assets/backgrounds/
+assets/characters/
+assets/ui/
