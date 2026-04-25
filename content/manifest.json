@@ -1,1 +1,15 @@
-{"id":"core","name":"Medical Simulator Core","version":"0.5.0","enabled":true,"packs":["core"],"build":"20260424_2028"}
+{
+  "id": "medical-simulator-vale-edition-core",
+  "name": "Medical Simulator - Vale Edition Core",
+  "version": "0.8.0",
+  "build": "20260425_1502",
+  "completion_estimate": "82%",
+  "features": [
+    "prontuario_completo",
+    "maquina_de_escrever",
+    "exames_com_modal",
+    "evolucao_sinais_vitais",
+    "progressao_xp_missoes",
+    "modo_simulador"
+  ]
+}
