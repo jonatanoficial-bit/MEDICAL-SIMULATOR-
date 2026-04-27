@@ -1,6 +1,1 @@
-[
- {"id":"clinica-medica","name":"Clínica Médica","unlockLevel":1,"status":"unlocked"},
- {"id":"urgencia","name":"Urgência e Emergência","unlockLevel":2,"status":"locked"},
- {"id":"cardiologia","name":"Cardiologia","unlockLevel":3,"status":"locked"},
- {"id":"pediatria","name":"Pediatria","unlockLevel":4,"status":"locked"}
-]
+[{"id":"clinica-medica","name":"Clínica Médica","unlocked":true},{"id":"emergencia","name":"Urgência e Emergência","unlocked":true},{"id":"cardiologia","name":"Cardiologia","unlocked":false}]
