@@ -1,4 +1,4 @@
-const BUILD={version:'0.8.0',stamp:'20260425_1502',label:'v0.8.0 | build 2026-04-25 15:02'};
+const BUILD={version:'0.8.1',stamp:'20260427_1258',label:'v0.8.1 | build 2026-04-27 12:58'};
 const A='assets/';
 const bg=n=>`${A}backgrounds/background_${String(n).padStart(2,'0')}.png`;
 const av=n=>`${A}avatars/avatar_${String(n).padStart(2,'0')}.png`;
