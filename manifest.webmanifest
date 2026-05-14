@@ -1,1 +1,9 @@
-{"name":"Medical Simulator - Vale Edition","short_name":"MedSim Vale","start_url":"./","display":"standalone","background_color":"#06131f","theme_color":"#0b8fff","orientation":"any"}
+{
+  "name": "Medical Simulator - Vale Edition",
+  "short_name": "MedSim Vale",
+  "start_url": "./",
+  "display": "fullscreen",
+  "background_color": "#020814",
+  "theme_color": "#020814",
+  "orientation": "portrait-primary"
+}

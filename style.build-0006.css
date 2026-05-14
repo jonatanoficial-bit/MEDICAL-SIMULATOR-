@@ -1,0 +1,667 @@
+/* =========================================================
+   Simulador Médico — Vale Edition (Local Base Style)
+   Stage 1: remove dependências remotas (style/script locais)
+   ========================================================= */
+
+:root{
+  --bg0:#06080d;
+  --bg1:#0b1220;
+  --card: rgba(255,255,255,.06);
+  --card2: rgba(255,255,255,.10);
+  --stroke: rgba(255,255,255,.14);
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.68);
+  --brand:#3dd6ff;
+  --brand2:#6cffb3;
+  --danger:#ff4d4d;
+  --warn:#ffd24d;
+  --ok:#4dff8f;
+  --shadow: 0 18px 55px rgba(0,0,0,.55);
+  --radius: 18px;
+  --radius2: 24px;
+  --pad: 18px;
+  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: var(--font);
+  color:var(--text);
+  background:
+    radial-gradient(1200px 800px at 15% 10%, rgba(61,214,255,.20), transparent 60%),
+    radial-gradient(900px 700px at 85% 20%, rgba(108,255,179,.16), transparent 60%),
+    radial-gradient(800px 700px at 50% 90%, rgba(255,210,77,.10), transparent 60%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+  overflow:hidden;
+}
+
+/* Screens */
+.screen{
+  position:fixed;
+  inset:0;
+  display:none;
+  overflow:hidden;
+  padding: clamp(14px, 3vw, 28px);
+}
+.screen.active{display:block}
+
+/* Generic card/panel */
+.welcome-panel,
+.cover-content,
+.lobby-content,
+.office-card,
+.patient-details,
+.patients-panel{
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius2);
+  backdrop-filter: blur(10px);
+}
+
+/* Logo screen */
+#logo-screen{
+  align-items:center;
+  justify-content:center;
+}
+#logo-screen.active{display:flex}
+.logo-container{
+  width:min(460px, 92vw);
+  padding: 34px 26px;
+  text-align:center;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.04));
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow: var(--shadow);
+}
+.logo-container img{
+  width:min(300px, 70vw);
+  max-width:100%;
+  height:auto;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.14);
+}
+.logo-container .hint{
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Cover */
+#cover-screen{
+  background: url("images/capa.jpg") center/cover no-repeat;
+}
+#cover-screen::before{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    radial-gradient(1200px 800px at 10% 10%, rgba(0,0,0,.35), rgba(0,0,0,.75)),
+    linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.80));
+}
+.cover-content{
+  position:relative;
+  width:min(640px, 92vw);
+  margin: 8vh auto 0;
+  padding: 22px;
+}
+.cover-content h1{
+  margin:0 0 10px 0;
+  font-size: clamp(26px, 4.5vw, 42px);
+  letter-spacing:.2px;
+}
+.cover-content .muted{color:var(--muted); line-height:1.45}
+.cover-content .primary-btn{margin-top:14px}
+
+/* Welcome/Lobby/Office layout */
+#welcome-screen, #lobby-screen, #office-screen{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    url("images/bg_hospital_02.jpg") center/cover no-repeat;
+}
+#welcome-screen::before,
+#lobby-screen::before,
+#office-screen::before{
+  content:"";
+  position:absolute; inset:0;
+  background: radial-gradient(900px 650px at 15% 10%, rgba(0,0,0,.25), rgba(0,0,0,.78));
+}
+.welcome-content, .lobby-content{
+  position:relative;
+  width:min(720px, 95vw);
+}
+.welcome-panel, .lobby-content{
+  padding: 22px;
+}
+.welcome-panel h2, .lobby-content h2{margin:0 0 10px 0}
+.muted{color:var(--muted)}
+.control{margin: 14px 0}
+.control label{display:block; font-size:13px; color:var(--muted); margin-bottom:7px}
+.control input, .control select{
+  width:100%;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.16);
+  background: rgba(0,0,0,.28);
+  color: var(--text);
+  outline:none;
+}
+.control input:focus, .control select:focus{border-color: rgba(61,214,255,.55)}
+
+/* Avatar selection */
+.avatar-selection{
+  display:grid;
+  grid-template-columns: repeat(6, minmax(44px, 1fr));
+  gap:10px;
+  margin-top:10px;
+}
+.avatar-selection button{
+  appearance:none;
+  border:1px solid rgba(255,255,255,.18);
+  background: rgba(0,0,0,.20);
+  border-radius: 16px;
+  padding:10px;
+  cursor:pointer;
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+.avatar-selection button:hover{transform: translateY(-1px); border-color: rgba(61,214,255,.45)}
+.avatar-selection button.selected{background: rgba(61,214,255,.12); border-color: rgba(61,214,255,.60)}
+.avatar-selection img{width:100%; height:auto; display:block; border-radius:12px}
+
+/* Buttons */
+.primary-btn, .ghost-btn, .overlay-back, .action-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  cursor:pointer;
+  border:1px solid rgba(255,255,255,.16);
+  font-weight: 650;
+  letter-spacing:.2px;
+  transition: transform .12s ease, filter .12s ease, background .12s ease, border-color .12s ease;
+  user-select:none;
+}
+.primary-btn{
+  width:100%;
+  background: linear-gradient(135deg, rgba(61,214,255,.95), rgba(108,255,179,.85));
+  color: #061018;
+  border:1px solid rgba(255,255,255,.18);
+}
+.primary-btn:hover{filter: brightness(1.02); transform: translateY(-1px)}
+.ghost-btn, .overlay-back{
+  background: rgba(0,0,0,.25);
+  color: var(--text);
+}
+.ghost-btn:hover, .overlay-back:hover{
+  border-color: rgba(255,255,255,.28);
+  transform: translateY(-1px);
+}
+.ghost-btn{padding:10px 12px}
+.overlay-back{width:100%}
+
+/* Office */
+.office-card{
+  position:relative;
+  width:min(920px, 96vw);
+  overflow:hidden;
+}
+.office-header{
+  padding: 20px;
+  border-bottom: 1px solid rgba(255,255,255,.10);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+}
+.office-profile{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.office-avatar{
+  width:64px;
+  height:64px;
+  border-radius: 18px;
+  border:1px solid rgba(255,255,255,.18);
+  overflow:hidden;
+  background: rgba(0,0,0,.25);
+}
+.office-avatar img{width:100%; height:100%; object-fit:cover}
+.office-name{font-size:18px; font-weight:750}
+.office-level{color:var(--muted); font-size:13px}
+.office-body{
+  padding:20px;
+  display:grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap:16px;
+}
+@media (max-width: 860px){
+  .office-body{grid-template-columns:1fr}
+}
+.office-scorebox{
+  padding: 16px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+  border:1px solid rgba(255,255,255,.12);
+}
+.score-label{color:var(--muted); font-size:13px}
+.score-value{font-size:34px; font-weight:850; margin-top:6px}
+.stats-grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:12px;
+  margin-top: 14px;
+}
+.stat{
+  padding: 12px;
+  border-radius: 16px;
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.22);
+}
+.stat-label{color:var(--muted); font-size:12px}
+.stat-value{font-size:20px; font-weight:800; margin-top:6px}
+.office-controls{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  padding: 16px;
+  border-radius: 18px;
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.22);
+}
+
+/* Game screen */
+#game-screen{
+  background: url("images/bg_hospital_01.jpg") center/cover no-repeat;
+}
+#game-screen::before{
+  content:"";
+  position:absolute; inset:0;
+  background: radial-gradient(1000px 700px at 15% 10%, rgba(0,0,0,.25), rgba(0,0,0,.80));
+}
+#game-screen > *{position:relative}
+.top-bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding: 12px;
+  border-radius: 18px;
+  background: rgba(0,0,0,.28);
+  border:1px solid rgba(255,255,255,.12);
+}
+.top-left{display:flex; gap:10px; flex-wrap:wrap}
+.top-pill{
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  font-weight: 700;
+  font-size: 13px;
+}
+.game-layout{
+  display:grid;
+  grid-template-columns: 340px 1fr;
+  gap: 12px;
+  margin-top: 12px;
+  height: calc(100vh - 92px);
+}
+@media (max-width: 900px){
+  .game-layout{grid-template-columns:1fr; height:auto}
+}
+.patients-panel{
+  padding: 14px;
+}
+.patients-panel h3{margin:0 0 10px 0}
+.patients-list{display:flex; flex-direction:column; gap:10px}
+.patient-chip{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding: 12px;
+  border-radius: 18px;
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.20);
+  cursor:pointer;
+  transition: transform .12s ease, border-color .12s ease, background .12s ease;
+}
+.patient-chip:hover{transform: translateY(-1px); border-color: rgba(61,214,255,.35)}
+.patient-chip.active{background: rgba(61,214,255,.10); border-color: rgba(61,214,255,.55)}
+.mini-avatar{
+  width:42px; height:42px;
+  border-radius: 14px;
+  border:1px solid rgba(255,255,255,.16);
+  overflow:hidden;
+  background: rgba(0,0,0,.25);
+}
+.mini-avatar img{width:100%; height:100%; object-fit:cover}
+.patient-meta .name{font-weight:800}
+.patient-meta .sub{color:var(--muted); font-size:12px; margin-top:2px}
+.badge{
+  margin-left:auto;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.06);
+}
+.badge.red{border-color: rgba(255,77,77,.45); background: rgba(255,77,77,.12)}
+.badge.yellow{border-color: rgba(255,210,77,.45); background: rgba(255,210,77,.12)}
+.badge.green{border-color: rgba(77,255,143,.45); background: rgba(77,255,143,.12)}
+
+/* Patient details */
+.patient-panel{min-height: 220px}
+.patient-details{
+  padding: 16px;
+}
+.patient-details h2{
+  margin: 0 0 8px 0;
+  font-size: 20px;
+}
+.profile-row{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-bottom: 10px;
+}
+.profile-name{font-weight:900}
+.vitals{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:10px;
+  margin: 12px 0;
+}
+@media (max-width: 520px){
+  .vitals{grid-template-columns: repeat(2, 1fr)}
+}
+.vital{
+  padding: 10px;
+  border-radius: 16px;
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.22);
+}
+.vital .k{font-size:12px; color:var(--muted)}
+.vital .v{margin-top:6px; font-size:16px; font-weight:850}
+.section-title{
+  margin: 12px 0 8px 0;
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+}
+.actions-area{
+  margin-top: 14px;
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+}
+.actions-row{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:10px;
+}
+@media (max-width: 640px){
+  .actions-row{grid-template-columns:1fr}
+}
+.action-btn{
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+}
+.action-btn:hover{transform: translateY(-1px); border-color: rgba(61,214,255,.35)}
+.action-btn i{font-style:normal}
+
+/* Info box */
+.info-container{
+  padding: 12px;
+  border-radius: 16px;
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.22);
+}
+.info-container h4{margin:0 0 8px 0}
+.info-container pre{
+  margin:0;
+  white-space: pre-wrap;
+  color: rgba(255,255,255,.88);
+  line-height: 1.35;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 12.5px;
+}
+
+/* Overlay pages */
+.overlay{
+  position:fixed;
+  inset:0;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  padding: 18px;
+  z-index: 50;
+}
+.overlay::before{
+  content:"";
+  position:absolute; inset:0;
+  background: rgba(0,0,0,.62);
+  backdrop-filter: blur(8px);
+}
+.overlay.hidden{display:none}
+.overlay-content{
+  position:relative;
+  width:min(980px, 96vw);
+  max-height: 88vh;
+  overflow:auto;
+  padding: 16px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.05));
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow: var(--shadow);
+}
+.overlay-content h2{margin:0 0 10px 0}
+.grid-list{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:10px;
+  margin: 12px 0;
+}
+@media (max-width: 740px){.grid-list{grid-template-columns:1fr}}
+.item-btn{
+  width:100%;
+  text-align:left;
+  padding: 12px;
+  border-radius: 18px;
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.22);
+  color: var(--text);
+  cursor:pointer;
+  transition: transform .12s ease, border-color .12s ease, background .12s ease;
+}
+.item-btn:hover{transform: translateY(-1px); border-color: rgba(61,214,255,.35)}
+.item-btn .small{display:block; color:var(--muted); font-size:12px; margin-top:4px}
+
+/* Simple fade */
+@keyframes fadeLogo{
+  0%{opacity:0; transform: translateY(6px) scale(.98)}
+  18%{opacity:1; transform: none}
+  78%{opacity:1}
+  100%{opacity:0; transform: translateY(-4px) scale(.99)}
+}
+#logo-screen.active .logo-container{animation: fadeLogo 2.8s ease-in-out both}
+
+
+/* =========================
+   Custom merged (Stage1 Fix)
+   ========================= */
+
+/*
+ * Arquivo de estilos customizados.
+ *
+ * Este arquivo contém pequenos ajustes de layout para melhorar a experiência
+ * tanto em dispositivos móveis quanto em computadores. Ele também define
+ * estilos para a nova tela de abertura com o logo "Vale Games".
+ */
+
+/* Permite rolagem vertical da página para evitar que conteúdos importantes
+   fiquem cortados, principalmente em telas com altura limitada. Usamos
+   !important para sobrescrever a definição original de overflow:hidden. */
+html, body {
+  overflow-y: auto !important;
+}
+
+/* =========================================================
+   Correção de conteúdo cortado no jogo
+   - Em alguns PCs/notebooks com "zoom"/resolução diferente,
+     a caixa de mensagens/dicas pode ficar parcialmente fora
+     da área visível.
+   - Como as telas usam position:fixed, a rolagem deve existir
+     DENTRO dos painéis.
+   ========================================================= */
+
+/* Dá uma altura fixa ao miolo do jogo (abaixo da top-bar) e garante
+   que os painéis possam rolar internamente. */
+#game-screen {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Mantém o layout do jogo dentro da viewport e faz o scroll dentro
+   dos painéis (fila e atendimento). */
+#game-screen .game-layout {
+  height: calc(100vh - 92px);
+  overflow: hidden;
+}
+
+#game-screen .patients-panel,
+#game-screen .patient-panel {
+  max-height: 100%;
+  overflow: auto;
+}
+
+/* Reserva um "respiro" no fim do painel do paciente para evitar que o
+   conteúdo encoste no limite inferior da tela. */
+#game-screen .patient-details {
+  padding-bottom: 18px;
+}
+
+/* A caixa onde aparecem "História Clínica" / "Dicas" / etc.
+   Agora ela pode rolar quando o texto for grande. */
+#game-screen .info-container {
+  max-height: min(260px, 28vh);
+  overflow: auto;
+}
+
+/* iOS: rolagem mais suave */
+#game-screen .patients-panel,
+#game-screen .patient-panel,
+#game-screen .info-container {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Configuração da tela de logo. A classe .screen já define posição fixa
+   e centraliza verticalmente o conteúdo. Aqui definimos um fundo escuro e
+   centralizamos a imagem do logo. */
+#logo-screen {
+  background: radial-gradient(800px 600px at 50% 50%, #0a1a24 0%, #01080e 100%);
+  z-index: 100; /* garante que o logo fique na frente de outras telas */
+}
+
+#logo-screen .logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#logo-screen img {
+  max-width: 70%;
+  height: auto;
+  filter: drop-shadow(0 0 20px rgba(0,0,0,0.6));
+  /* Suave transição de opacidade: o logo aparece e desaparece gradualmente. */
+  animation: fadeLogo 2.8s ease forwards;
+}
+
+@keyframes fadeLogo {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Build badge */
+.build-badge{
+  position:fixed;
+  right:14px;
+  bottom:14px;
+  z-index:9999;
+  font-size:12px;
+  letter-spacing:.2px;
+  opacity:.75;
+  padding:8px 10px;
+  border-radius:999px;
+  background: rgba(0,0,0,.35);
+  border: 1px solid rgba(255,255,255,.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+
+/* Menu screen */
+.menu-content{
+  min-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 22px 16px;
+}
+.menu-panel{
+  width: min(720px, 96vw);
+  padding: 22px 18px;
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius2);
+  backdrop-filter: blur(10px);
+}
+.menu-panel h2{ margin: 0 0 10px 0; }
+.menu-profile{
+  margin-top: 6px;
+  line-height: 1.35;
+}
+.menu-actions{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.menu-actions .primary-btn{
+  flex: 1 1 220px;
+}
+.menu-actions .ghost-btn{
+  flex: 1 1 160px;
+}
+
+
+/* XP bar */
+.xpbar{
+  width: 220px;
+  max-width: 45vw;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.14);
+  overflow:hidden;
+  margin-top: 6px;
+}
+.xpfill{
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, rgba(59,130,246,.9), rgba(16,185,129,.9));
+}
+@media (max-width: 720px){
+  .xpbar{ width: 180px; }
+}
