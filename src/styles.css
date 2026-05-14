@@ -27,3 +27,35 @@ body.mobile-fullscreen-active{min-height:100dvh;}
   .profile{grid-column:1/-1;}
 }
 @media(display-mode:fullscreen){.build{bottom:calc(8px + env(safe-area-inset-bottom));}}
+
+/* v0.8.4 SAFE PATCH: visual stability + mobile clinical focus. Gameplay untouched. */
+:root{--glass-strong:rgba(3,14,28,.70);--glass-soft:rgba(3,14,28,.52)}
+body{overflow-x:hidden;background:#020814;}
+.screen{isolation:isolate;position:relative;background-color:#020814!important;}
+.screen:before{content:"";position:fixed;inset:0;z-index:-2;background:var(--bg);background-size:cover;background-position:center;background-repeat:no-repeat;filter:saturate(1.05) contrast(1.04);}
+.screen:after{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 22% 10%,rgba(40,183,255,.20),transparent 30%),linear-gradient(90deg,rgba(2,8,20,.70),rgba(2,8,20,.40) 50%,rgba(2,8,20,.22));pointer-events:none;}
+.card,.panel,.side,.profile,.result-modal,.clinical-board,.record-grid{background-color:var(--glass-strong);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);}
+.hero-card:before,.mode:before{filter:saturate(1.08) brightness(.95);}
+.screen-lobby-do-residente:before{background:url('../assets/backgrounds/background_08.png');background-size:cover;background-position:center;}
+.screen-plantao-modo-simulador:before{background:url('../assets/backgrounds/background_05.png');background-size:cover;background-position:center;}
+.screen-plantao-especialidade:before{background:url('../assets/backgrounds/background_04.png');background-size:cover;background-position:center;}
+.screen-aprendizagem-medica:before{background:url('../assets/backgrounds/background_09.png');background-size:cover;background-position:center;}
+.screen-configuracoes:before{background:url('../assets/backgrounds/background_10.png');background-size:cover;background-position:center;}
+.clinical-board.focus-pulse{animation:focusPulse .85s ease;box-shadow:0 0 0 2px rgba(117,221,255,.56),0 0 42px rgba(40,183,255,.42),inset 0 0 26px rgba(57,180,255,.18)}
+@keyframes focusPulse{0%{transform:scale(.985);filter:brightness(1.22)}100%{transform:scale(1);filter:brightness(1)}}
+@media(max-width:980px){
+  .screen:before{position:fixed;background-position:center top;}
+  .screen:after{background:linear-gradient(180deg,rgba(2,8,20,.52),rgba(2,8,20,.74));}
+  .card,.panel,.side,.profile,.clinical-board,.record-grid{background-color:rgba(3,14,28,.76)}
+  .clinical-board{scroll-margin-top:calc(12px + env(safe-area-inset-top));}
+  .rightpanel .card{margin-bottom:10px;}
+  .hud{position:sticky;bottom:calc(8px + env(safe-area-inset-bottom));z-index:70;}
+  .build{right:8px;bottom:calc(8px + env(safe-area-inset-bottom));}
+}
+@media(max-width:520px){
+  .screen{padding-left:10px!important;padding-right:10px!important;}
+  .logo b{font-size:34px;}
+  .clinical-board{min-height:140px;padding:14px;}
+  #typewriter{font-size:16px;line-height:1.5;}
+  .record-grid{max-height:460px;overflow:auto;}
+}

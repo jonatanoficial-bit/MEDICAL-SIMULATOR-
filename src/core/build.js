@@ -1,1 +1,1 @@
-export const BUILD={version:'0.6.0',stamp:'20260424_2136',label:'v0.6.0 | build 2026-04-24 21:36'};
+export const BUILD='v0.8.4 | build 2026-05-14 13:58';

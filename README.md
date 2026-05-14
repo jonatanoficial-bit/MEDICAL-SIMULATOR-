@@ -17,3 +17,7 @@ Conclusão estimada do projeto: 58%.
 - Fase 6: painel admin local para criar/editar casos.
 - Expansão do conteúdo clínico por especialidade.
 - DLC loader visual e import/export de save/conteúdo.
+
+
+## v0.8.4
+Patch seguro: foco automático no painel clínico no mobile, estabilidade visual dos fundos e ajustes de fullscreen. Conclusão estimada: 84%.
