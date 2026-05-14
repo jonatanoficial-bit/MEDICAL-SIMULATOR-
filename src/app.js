@@ -1,4 +1,4 @@
-const BUILD={version:'0.8.7',stamp:'20260514_1544',label:'v0.8.9 | build 2026-05-14 16:44'};
+const BUILD={version:'0.8.7',stamp:'20260514_1544',label:'v0.9.0 | build 2026-05-14 17:12'};
 const A='assets/';
 const bg=n=>`${A}backgrounds/background_${String(n).padStart(2,'0')}.png`;
 const av=n=>`${A}avatars/avatar_${String(n).padStart(2,'0')}.png`;
@@ -183,7 +183,7 @@ window.go=go;window.requestGameFullscreen=requestGameFullscreen;window.state=sta
 
 /* v0.8.8 stability polish safe patch */
 (function(){
-  window.VALE_BUILD_LABEL = 'v0.8.9 | build 2026-05-14 16:44';
+  window.VALE_BUILD_LABEL = 'v0.9.0 | build 2026-05-14 17:12';
   window.addEventListener('error', function(ev){
     try{ console.warn('[ValeSafeGuard]', ev.message); document.body.classList.add('safe-runtime'); }catch(e){}
   });
@@ -204,7 +204,7 @@ window.go=go;window.requestGameFullscreen=requestGameFullscreen;window.state=sta
     if(document.querySelector('.build')) return;
     const b=document.createElement('div');
     b.className='build';
-    b.textContent='v0.8.9 | build 2026-05-14 16:44';
+    b.textContent='v0.9.0 | build 2026-05-14 17:12';
     document.body.appendChild(b);
   }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ensureBuildBadge);
@@ -214,7 +214,7 @@ window.go=go;window.requestGameFullscreen=requestGameFullscreen;window.state=sta
 
 /* v0.8.9 release readiness safe patch */
 (function(){
-  window.VALE_BUILD_LABEL = 'v0.8.9 | build 2026-05-14 16:44';
+  window.VALE_BUILD_LABEL = 'v0.9.0 | build 2026-05-14 17:12';
   function preloadBackgrounds(){
     try {
       var paths = [
@@ -243,5 +243,56 @@ window.go=go;window.requestGameFullscreen=requestGameFullscreen;window.state=sta
     document.addEventListener('DOMContentLoaded', function(){ preloadBackgrounds(); addReleaseBadge(); });
   } else {
     preloadBackgrounds(); addReleaseBadge();
+  }
+})();
+
+
+/* v0.9.0 release candidate safe patch */
+(function(){
+  window.VALE_BUILD_LABEL = 'v0.9.0 | build 2026-05-14 17:12';
+  window.ValeReleaseCandidate = {
+    version: '0.9.0',
+    build: 'v0.9.0 | build 2026-05-14 17:12',
+    safeMode: true,
+    exportSave: function(){
+      try {
+        var payload = {};
+        for (var i=0;i<localStorage.length;i++) {
+          var k = localStorage.key(i);
+          if (k && /medical|msve|vale/i.test(k)) payload[k] = localStorage.getItem(k);
+        }
+        var blob = new Blob([JSON.stringify(payload, null, 2)], {type:'application/json'});
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'medical-simulator-save-backup-v0.9.0.json';
+        a.click();
+        setTimeout(function(){URL.revokeObjectURL(a.href)}, 800);
+      } catch(e) { console.warn('[ValeSaveExport]', e); }
+    }
+  };
+  function addRCButton(){
+    if(document.querySelector('.rc-safe-tools')) return;
+    var box = document.createElement('div');
+    box.className = 'rc-safe-tools';
+    box.innerHTML = '<button type="button" title="Exportar backup do save">Backup Save</button>';
+    box.querySelector('button').addEventListener('click', function(ev){
+      ev.preventDefault();
+      window.ValeReleaseCandidate.exportSave();
+    });
+    document.body.appendChild(box);
+  }
+  function verifyCriticalAssets(){
+    try {
+      ['assets/backgrounds/background_08.png','src/styles.css'].forEach(function(src){
+        var img = new Image();
+        img.onerror = function(){ document.body.classList.add('asset-fallback-mode'); };
+        if(src.match(/\.png$/)) img.src = src;
+      });
+    } catch(e) {}
+  }
+  if(document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function(){ addRCButton(); verifyCriticalAssets(); });
+  } else {
+    addRCButton(); verifyCriticalAssets();
   }
 })();

@@ -124,3 +124,35 @@ img, video, canvas { max-width: 100%; }
   input, select, textarea { font-size: 16px; }
   body { touch-action: manipulation; }
 }
+
+
+/* v0.9.0 release candidate safe patch */
+.rc-safe-tools {
+  position: fixed;
+  left: 10px;
+  bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+  z-index: 9998;
+  opacity: .72;
+}
+.rc-safe-tools button {
+  min-height: 34px;
+  padding: 6px 9px;
+  border-radius: 9px;
+  border: 1px solid rgba(95,184,255,.35);
+  background: rgba(2,8,20,.78);
+  color: #bff1ff;
+  font-size: 11px;
+  font-weight: 800;
+}
+.rc-safe-tools button:active { transform: scale(.96); }
+.asset-fallback-mode .screen,
+.asset-fallback-mode body {
+  background-color: #020814 !important;
+  background-image:
+    radial-gradient(circle at 20% 0%, rgba(40,183,255,.22), transparent 30%),
+    linear-gradient(135deg, #020814, #08223a 60%, #020814) !important;
+}
+@media (max-width:780px){
+  .rc-safe-tools { left: 8px; bottom: calc(8px + env(safe-area-inset-bottom, 0px)); }
+  .rc-safe-tools button { font-size: 10px; padding: 5px 8px; }
+}

@@ -1,5 +1,5 @@
 
-const CACHE_NAME = 'medical-simulator-vale-edition-v0-8-9';
+const CACHE_NAME = 'medical-simulator-vale-edition-v0-9-0';
 const CORE_ASSETS = [
   './',
   './index.html',

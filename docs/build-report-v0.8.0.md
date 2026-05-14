@@ -1,6 +1,6 @@
 # Medical Simulator - Vale Edition — Build v0.8.0
 
-Build: v0.8.9 | build 2026-05-14 16:44
+Build: v0.9.0 | build 2026-05-14 17:12
 Conclusão estimada: 82%
 
 ## Principais avanços

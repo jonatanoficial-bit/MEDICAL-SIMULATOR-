@@ -1,6 +1,6 @@
 # Build Report v0.8.4 — Mobile Focus + Visual Stability
 
-Build: v0.8.9 | build 2026-05-14 16:44
+Build: v0.9.0 | build 2026-05-14 17:12
 
 ## Tipo de patch
 Patch seguro em cima da v0.8.3. Não altera lógica clínica, pontuação, prontuário, exames, progressão ou casos.

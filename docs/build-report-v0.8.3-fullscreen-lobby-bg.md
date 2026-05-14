@@ -1,6 +1,6 @@
 # Build Report v0.8.3 — Fullscreen + Lobby Background
 
-Build: v0.8.9 | build 2026-05-14 16:44
+Build: v0.9.0 | build 2026-05-14 17:12
 
 Patch seguro aplicado sobre a base v0.8.0.
 
