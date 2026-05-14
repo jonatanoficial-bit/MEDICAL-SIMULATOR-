@@ -1,6 +1,6 @@
 # Build Report v0.8.6 - Clinical Content Safety Patch
 
-Build: v0.9.0 | build 2026-05-14 17:12
+Build: v0.9.2 | build 2026-05-14 18:12
 Conclusão estimada: 86%.
 
 ## Objetivo

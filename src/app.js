@@ -1,4 +1,4 @@
-const BUILD={version:'0.8.7',stamp:'20260514_1544',label:'v0.9.0 | build 2026-05-14 17:12'};
+const BUILD={version:'0.8.7',stamp:'20260514_1544',label:'v0.9.2 | build 2026-05-14 18:12'};
 const A='assets/';
 const bg=n=>`${A}backgrounds/background_${String(n).padStart(2,'0')}.png`;
 const av=n=>`${A}avatars/avatar_${String(n).padStart(2,'0')}.png`;
@@ -183,7 +183,7 @@ window.go=go;window.requestGameFullscreen=requestGameFullscreen;window.state=sta
 
 /* v0.8.8 stability polish safe patch */
 (function(){
-  window.VALE_BUILD_LABEL = 'v0.9.0 | build 2026-05-14 17:12';
+  window.VALE_BUILD_LABEL = 'v0.9.2 | build 2026-05-14 18:12';
   window.addEventListener('error', function(ev){
     try{ console.warn('[ValeSafeGuard]', ev.message); document.body.classList.add('safe-runtime'); }catch(e){}
   });
@@ -204,7 +204,7 @@ window.go=go;window.requestGameFullscreen=requestGameFullscreen;window.state=sta
     if(document.querySelector('.build')) return;
     const b=document.createElement('div');
     b.className='build';
-    b.textContent='v0.9.0 | build 2026-05-14 17:12';
+    b.textContent='v0.9.2 | build 2026-05-14 18:12';
     document.body.appendChild(b);
   }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ensureBuildBadge);
@@ -214,7 +214,7 @@ window.go=go;window.requestGameFullscreen=requestGameFullscreen;window.state=sta
 
 /* v0.8.9 release readiness safe patch */
 (function(){
-  window.VALE_BUILD_LABEL = 'v0.9.0 | build 2026-05-14 17:12';
+  window.VALE_BUILD_LABEL = 'v0.9.2 | build 2026-05-14 18:12';
   function preloadBackgrounds(){
     try {
       var paths = [
@@ -249,10 +249,10 @@ window.go=go;window.requestGameFullscreen=requestGameFullscreen;window.state=sta
 
 /* v0.9.0 release candidate safe patch */
 (function(){
-  window.VALE_BUILD_LABEL = 'v0.9.0 | build 2026-05-14 17:12';
+  window.VALE_BUILD_LABEL = 'v0.9.2 | build 2026-05-14 18:12';
   window.ValeReleaseCandidate = {
     version: '0.9.0',
-    build: 'v0.9.0 | build 2026-05-14 17:12',
+    build: 'v0.9.2 | build 2026-05-14 18:12',
     safeMode: true,
     exportSave: function(){
       try {
@@ -294,5 +294,98 @@ window.go=go;window.requestGameFullscreen=requestGameFullscreen;window.state=sta
     document.addEventListener('DOMContentLoaded', function(){ addRCButton(); verifyCriticalAssets(); });
   } else {
     addRCButton(); verifyCriticalAssets();
+  }
+})();
+
+
+/* v0.9.1 diagnostics safe patch */
+(function(){
+  window.VALE_BUILD_LABEL = 'v0.9.2 | build 2026-05-14 18:12';
+  var LOG_KEY = 'medical_simulator_diagnostics_v091';
+  function readLog(){
+    try { return JSON.parse(localStorage.getItem(LOG_KEY) || '[]'); } catch(e) { return []; }
+  }
+  function writeLog(log){ try { localStorage.setItem(LOG_KEY, JSON.stringify(log.slice(-120))); } catch(e) {} }
+  function addLog(type, detail){
+    try {
+      var log = readLog();
+      log.push({type:type, detail:String(detail||''), at:new Date().toISOString(), build:'v0.9.2 | build 2026-05-14 18:12', width:innerWidth, height:innerHeight});
+      writeLog(log);
+    } catch(e) {}
+  }
+  window.ValeDiagnostics = {
+    log:addLog,
+    export:function(){
+      try {
+        var payload = {build:'v0.9.2 | build 2026-05-14 18:12', diagnostics:readLog()};
+        var blob = new Blob([JSON.stringify(payload,null,2)], {type:'application/json'});
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'medical-simulator-diagnostics-v0.9.1.json';
+        a.click();
+        setTimeout(function(){URL.revokeObjectURL(a.href)},800);
+      } catch(e) { console.warn('[ValeDiagnosticsExport]', e); }
+    }
+  };
+  window.addEventListener('error', function(ev){ addLog('error', ev.message || 'runtime error'); });
+  window.addEventListener('unhandledrejection', function(ev){ addLog('promise', ev.reason || 'unhandled promise'); });
+  window.addEventListener('load', function(){ addLog('load','game loaded'); });
+  document.addEventListener('click', function(ev){
+    var t = ev.target && ev.target.closest ? ev.target.closest('button,.listbtn,[data-action]') : null;
+    if(t) addLog('click', (t.textContent || t.getAttribute('aria-label') || 'action').trim().slice(0,80));
+  }, true);
+  function addPanel(){
+    if(document.querySelector('.diagnostics-safe-tools')) return;
+    var box = document.createElement('div');
+    box.className = 'diagnostics-safe-tools';
+    box.innerHTML = '<button type="button">Diagnóstico</button>';
+    box.querySelector('button').addEventListener('click', function(ev){ ev.preventDefault(); window.ValeDiagnostics.export(); });
+    document.body.appendChild(box);
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', addPanel);
+  else addPanel();
+})();
+
+
+/* v0.9.2 prefinal ui safe patch */
+(function(){
+  window.VALE_BUILD_LABEL = 'v0.9.2 | build 2026-05-14 18:12';
+  function setTechVisible(visible){
+    try {
+      document.body.classList.toggle('show-tech-tools', !!visible);
+      sessionStorage.setItem('vale_show_tech_tools', visible ? '1' : '0');
+    } catch(e) {}
+  }
+  function getTechVisible(){
+    try { return sessionStorage.getItem('vale_show_tech_tools') === '1'; } catch(e) { return false; }
+  }
+  function applyTechState(){
+    document.body.classList.toggle('show-tech-tools', getTechVisible());
+  }
+  var pressTimer = null;
+  document.addEventListener('keydown', function(ev){
+    if((ev.ctrlKey || ev.metaKey) && ev.shiftKey && String(ev.key).toLowerCase() === 'd'){
+      setTechVisible(!document.body.classList.contains('show-tech-tools'));
+    }
+  });
+  document.addEventListener('pointerdown', function(ev){
+    var build = ev.target.closest && ev.target.closest('.build');
+    if(!build) return;
+    pressTimer = setTimeout(function(){ setTechVisible(!document.body.classList.contains('show-tech-tools')); }, 900);
+  }, true);
+  document.addEventListener('pointerup', function(){ if(pressTimer) clearTimeout(pressTimer); pressTimer=null; }, true);
+  document.addEventListener('pointercancel', function(){ if(pressTimer) clearTimeout(pressTimer); pressTimer=null; }, true);
+  function addHint(){
+    if(document.querySelector('.prefinal-safe-note')) return;
+    var note = document.createElement('div');
+    note.className = 'prefinal-safe-note';
+    note.textContent = 'Pré-final seguro';
+    document.body.appendChild(note);
+    setTimeout(function(){ if(note && note.parentNode) note.parentNode.removeChild(note); }, 1800);
+  }
+  if(document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function(){ applyTechState(); addHint(); });
+  } else {
+    applyTechState(); addHint();
   }
 })();

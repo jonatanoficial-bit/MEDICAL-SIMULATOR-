@@ -1,6 +1,6 @@
 # Medical Simulator - Vale Edition
 
-Build: v0.9.0 | build 2026-05-14 17:12
+Build: v0.9.2 | build 2026-05-14 18:12
 
 ## Tipo
 Release candidate seguro da linha v0.8.x/v0.9.x.
