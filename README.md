@@ -21,3 +21,14 @@ Conclusão estimada do projeto: 58%.
 
 ## v0.8.4
 Patch seguro: foco automático no painel clínico no mobile, estabilidade visual dos fundos e ajustes de fullscreen. Conclusão estimada: 84%.
+
+
+## v0.8.5 anti-quebra
+Patch seguro em cima da v0.8.4. Não reescreve visual nem gameplay.
+Inclui:
+- carregamento seguro de save corrompido;
+- normalização automática de estado antigo/incompleto;
+- proteção contra erro global de JavaScript;
+- tela de recuperação com voltar ao lobby, exportar save e reset manual;
+- render protegido para evitar tela branca;
+- build visível atualizada.

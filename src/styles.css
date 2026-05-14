@@ -59,3 +59,7 @@ body{overflow-x:hidden;background:#020814;}
   #typewriter{font-size:16px;line-height:1.5;}
   .record-grid{max-height:460px;overflow:auto;}
 }
+
+
+/* v0.8.5 anti-quebra: tela de recuperação e proteção visual */
+.recovery-screen{min-height:100svh;background-image:linear-gradient(90deg,rgba(1,8,16,.76),rgba(1,12,24,.48)),var(--bg),radial-gradient(circle at 50% 20%,rgba(0,180,255,.22),transparent 38%)!important;background-size:cover;background-position:center}.recovery-screen .setup{max-width:620px;margin:8vh auto}.anti-break-badge{position:fixed;left:10px;bottom:10px;z-index:80;font-size:11px;opacity:.7}.screen:before{pointer-events:none}.screen{background-color:#020814}.card img,.profile img,.hero-doc,.patient-art,.portrait{background:linear-gradient(145deg,rgba(0,184,255,.18),rgba(2,11,22,.5));object-fit:cover}

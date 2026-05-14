@@ -1,4 +1,4 @@
-const BUILD={version:'0.8.4',stamp:'20260514_1358',label:'v0.8.4 | build 2026-05-14 13:58'};
+const BUILD={version:'0.8.5',stamp:'20260514_1426',label:'v0.8.5 | build 2026-05-14 14:26'};
 const A='assets/';
 const bg=n=>`${A}backgrounds/background_${String(n).padStart(2,'0')}.png`;
 const av=n=>`${A}avatars/avatar_${String(n).padStart(2,'0')}.png`;
@@ -6,8 +6,50 @@ const ui=n=>`${A}ui/ui_${String(n).padStart(2,'0')}.png`;
 const app=document.querySelector('#app');
 const saveKey='medsim-vale-save-v080';
 const fresh=()=>({screen:'setup',drawer:false,sound:true,selectedSpec:'clinica-medica',currentCase:0,score:null,timeline:[],prontuario:{history:[],exams:[],procedures:[],hypotheses:[],conduct:[],notes:[]},vitalTrend:[],actions:{questions:[],exams:[],procedures:[],hypotheses:[],conduct:[]},player:{name:'Dr. Rafael Santos',short:'Dr. Rafael',avatar:1,level:1,xp:0,credits:2450,reputation:'Boa',patients:0,correct:88,highScoreCases:0,learnedModules:0,title:'Interno',rank:1248,streak:0},simulation:{minutes:720,criticality:0},encounter:null,popup:null,unlocks:{specialties:['clinica-medica']},missions:{claimed:[]},completed:[]});
-let state=JSON.parse(localStorage.getItem(saveKey)||'null')||fresh();
-const save=()=>localStorage.setItem(saveKey,JSON.stringify(state));
+function deepMerge(base, extra){
+  if(!extra || typeof extra !== 'object') return base;
+  Object.keys(extra).forEach(k=>{
+    if(extra[k] && typeof extra[k] === 'object' && !Array.isArray(extra[k]) && base[k] && typeof base[k] === 'object' && !Array.isArray(base[k])) deepMerge(base[k], extra[k]);
+    else base[k]=extra[k];
+  });
+  return base;
+}
+function safeLoad(){
+  try{
+    const raw=localStorage.getItem(saveKey);
+    if(!raw) return fresh();
+    const parsed=JSON.parse(raw);
+    return deepMerge(fresh(), parsed);
+  }catch(err){
+    try{localStorage.setItem(saveKey+'-backup-corrompido-'+Date.now(), localStorage.getItem(saveKey)||'');}catch(e){}
+    return fresh();
+  }
+}
+let state=safeLoad();
+function normalizeState(){
+  const base=fresh();
+  state=deepMerge(base, state||{});
+  const validScreens=['setup','menu','hub','specialty','shift','post','learning','settings'];
+  if(!validScreens.includes(state.screen)) state.screen='hub';
+  state.actions=deepMerge({questions:[],exams:[],procedures:[],hypotheses:[],conduct:[]}, state.actions||{});
+  state.prontuario=deepMerge({history:[],exams:[],procedures:[],hypotheses:[],conduct:[],notes:[]}, state.prontuario||{});
+  state.missions=deepMerge({claimed:[]}, state.missions||{});
+  state.player=deepMerge(base.player, state.player||{});
+  state.currentCase=Number.isFinite(Number(state.currentCase))?Number(state.currentCase):0;
+  state.simulation=deepMerge({minutes:720,criticality:0}, state.simulation||{});
+}
+const save=()=>{try{normalizeState();localStorage.setItem(saveKey,JSON.stringify(state));}catch(err){console.warn('Save protegido: falha ignorada',err)}};
+function showRecoveryScreen(err){
+  try{
+    const msg=(err && (err.message||String(err))) || 'Erro desconhecido';
+    app.innerHTML=`<main class="screen fade recovery-screen" style="--bg:url('${bg(8)}')"><section class="setup panel pop"><h1>Modo segurança ativo</h1><p>O jogo evitou uma quebra e preservou seu progresso local.</p><p><small>${esc(msg)}</small></p><button class="btn primary" onclick="safeRecoverHub()">Voltar ao lobby</button><button class="btn" onclick="safeExportSave()">Exportar save</button><button class="btn danger" onclick="safeFreshStart()">Resetar apenas se necessário</button></section><div class="build">${BUILD.label} • anti-quebra</div></main>`;
+  }catch(e){document.body.innerHTML='<h1>Medical Simulator</h1><p>Modo segurança.</p><button onclick=\"location.reload()\">Recarregar</button>'}
+}
+window.safeRecoverHub=()=>{state=deepMerge(fresh(),state||{});state.screen='hub';state.popup=null;save();render()};
+window.safeFreshStart=()=>{try{localStorage.setItem(saveKey+'-backup-before-reset-'+Date.now(),JSON.stringify(state||{}));localStorage.removeItem(saveKey);}catch(e){} location.reload()};
+window.safeExportSave=()=>{try{const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='medical-simulator-save-'+BUILD.stamp+'.json';a.click();URL.revokeObjectURL(a.href);}catch(e){alert('Não foi possível exportar agora.')}};
+window.addEventListener('error',e=>{console.error('Erro capturado pelo anti-quebra',e.error||e.message);showRecoveryScreen(e.error||e.message)});
+window.addEventListener('unhandledrejection',e=>{console.error('Promessa capturada pelo anti-quebra',e.reason);showRecoveryScreen(e.reason)});
 let audioCtx=null;
 function sound(type='tap'){if(!state.sound)return;try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.connect(g);g.connect(audioCtx.destination);const map={tap:[520,.025],ok:[760,.055],warn:[210,.09],nav:[390,.04],level:[880,.14]};const [f,d]=map[type]||map.tap;o.frequency.value=f;o.type='sine';g.gain.setValueAtTime(.0001,audioCtx.currentTime);g.gain.exponentialRampToValueAtTime(.045,audioCtx.currentTime+.01);g.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+d);o.start();o.stop(audioCtx.currentTime+d+.01)}catch(e){}}
 function toast(t,type='ok'){sound(type);let e=document.createElement('div');e.className='toast pop';e.textContent=t;document.body.append(e);setTimeout(()=>e.remove(),2100)}
@@ -130,4 +172,4 @@ document.addEventListener('click',()=>{
   if(matchMedia('(max-width: 980px)').matches){requestGameFullscreen();}
 },{once:true});
 
-window.go=go;window.requestGameFullscreen=requestGameFullscreen;window.state=state;window.toggleDrawer=()=>{state.drawer=!state.drawer;render()};window.toggleAction=toggleAction;window.finishCaseCore=finishCaseCore;window.claimMission=claimMission;window.resetEncounterData=resetEncounterData;function render(){syncProgress();({setup,menu,hub,specialty,shift,post,learning,settings}[state.screen]||setup)();setTimeout(typeWriter,30)}render();
+window.go=go;window.requestGameFullscreen=requestGameFullscreen;window.state=state;window.toggleDrawer=()=>{state.drawer=!state.drawer;render()};window.toggleAction=toggleAction;window.finishCaseCore=finishCaseCore;window.claimMission=claimMission;window.resetEncounterData=resetEncounterData;function render(){try{normalizeState();syncProgress();const screens={setup,menu,hub,specialty,shift,post,learning,settings};(screens[state.screen]||hub)();setTimeout(typeWriter,30)}catch(err){console.error('Render protegido',err);showRecoveryScreen(err)}}render();
