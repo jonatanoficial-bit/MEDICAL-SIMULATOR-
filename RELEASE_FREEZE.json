@@ -1,0 +1,8 @@
+{
+  "game": "Medical Simulator - Vale Edition",
+  "build": "v0.9.4 | build 2026-05-14 19:15",
+  "status": "release-freeze-candidate",
+  "base": "medical-simulator-vale-edition_v0.9.3_final_test_polish_safe_build_20260514_1844.zip",
+  "completion_estimate": "94%",
+  "rule": "Do not alter core gameplay/visual base without rollback plan."
+}

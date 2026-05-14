@@ -270,3 +270,25 @@ body.show-tech-tools .rc-safe-tools {
     min-height: calc(var(--vh, 1vh) * 100);
   }
 }
+
+
+/* v0.9.4 release freeze safe patch */
+.release-freeze-marker {
+  position: fixed;
+  top: calc(10px + env(safe-area-inset-top, 0px));
+  right: 10px;
+  z-index: 9999;
+  padding: 7px 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(132,227,255,.42);
+  background: rgba(2,8,20,.82);
+  color: #d8f8ff;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  pointer-events: none;
+  box-shadow: 0 0 18px rgba(40,183,255,.2);
+}
+@media (max-width:780px){
+  .release-freeze-marker { right: 8px; font-size: 10px; padding: 6px 9px; }
+}

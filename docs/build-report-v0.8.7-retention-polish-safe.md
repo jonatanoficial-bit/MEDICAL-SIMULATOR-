@@ -1,6 +1,6 @@
 # Build Report v0.8.7 - Retenção e polish seguro
 
-Build: v0.9.3 | build 2026-05-14 18:44
+Build: v0.9.4 | build 2026-05-14 19:15
 Conclusão estimada: 87%.
 
 ## Base
