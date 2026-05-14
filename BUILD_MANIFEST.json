@@ -1,0 +1,354 @@
+{
+  "game": "Medical Simulator - Vale Edition",
+  "build": "v0.9.5 | build 2026-05-14 19:46",
+  "type": "gold-candidate-safe",
+  "base": "medical-simulator-vale-edition_v0.9.4_release_freeze_safe_build_20260514_1915.zip",
+  "completion_estimate": "95%",
+  "files": [
+    {
+      "path": "404.html",
+      "bytes": 117,
+      "sha256_16": "65f60221bb147258"
+    },
+    {
+      "path": "CAMINHOS_ASSETS_JOGO.txt",
+      "bytes": 4027,
+      "sha256_16": "a2c45514bfa5fd11"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2034,
+      "sha256_16": "6522fc7d12b1925f"
+    },
+    {
+      "path": "RELEASE_FREEZE.json",
+      "bytes": 339,
+      "sha256_16": "62169a0c72b876c7"
+    },
+    {
+      "path": "VERSAO.txt",
+      "bytes": 208,
+      "sha256_16": "57a023bb91f95e24"
+    },
+    {
+      "path": "assets/avatars/avatar_01.png",
+      "bytes": 331583,
+      "sha256_16": "685587227a89eee2"
+    },
+    {
+      "path": "assets/avatars/avatar_02.png",
+      "bytes": 185480,
+      "sha256_16": "c6e8b62e2cb59847"
+    },
+    {
+      "path": "assets/avatars/avatar_03.png",
+      "bytes": 276191,
+      "sha256_16": "4a30e32aaccaa2bf"
+    },
+    {
+      "path": "assets/avatars/avatar_04.png",
+      "bytes": 177955,
+      "sha256_16": "01f8f1cb85025c52"
+    },
+    {
+      "path": "assets/avatars/avatar_05.png",
+      "bytes": 177762,
+      "sha256_16": "7f979d553dbd76ca"
+    },
+    {
+      "path": "assets/backgrounds/background_01.png",
+      "bytes": 2052671,
+      "sha256_16": "bc111862786e8eb3"
+    },
+    {
+      "path": "assets/backgrounds/background_02.png",
+      "bytes": 2267473,
+      "sha256_16": "cd34d4df51abf30f"
+    },
+    {
+      "path": "assets/backgrounds/background_03.png",
+      "bytes": 2160217,
+      "sha256_16": "5e87b40f6959953a"
+    },
+    {
+      "path": "assets/backgrounds/background_04.png",
+      "bytes": 2160217,
+      "sha256_16": "5e87b40f6959953a"
+    },
+    {
+      "path": "assets/backgrounds/background_05.png",
+      "bytes": 2048657,
+      "sha256_16": "09c2f68a185927c4"
+    },
+    {
+      "path": "assets/backgrounds/background_06.png",
+      "bytes": 2088477,
+      "sha256_16": "3f4e17ba4efe0313"
+    },
+    {
+      "path": "assets/backgrounds/background_07.png",
+      "bytes": 2433984,
+      "sha256_16": "5b86e041ed4a1fae"
+    },
+    {
+      "path": "assets/backgrounds/background_08.png",
+      "bytes": 2157660,
+      "sha256_16": "353813c07fbca229"
+    },
+    {
+      "path": "assets/backgrounds/background_09.png",
+      "bytes": 2183956,
+      "sha256_16": "15dd6a499d0443c7"
+    },
+    {
+      "path": "assets/backgrounds/background_10.png",
+      "bytes": 2232564,
+      "sha256_16": "a29e189ef867cce6"
+    },
+    {
+      "path": "assets/backgrounds/background_11.png",
+      "bytes": 2172997,
+      "sha256_16": "da7e5ce2ec9c8383"
+    },
+    {
+      "path": "assets/data/cases.json",
+      "bytes": 3151,
+      "sha256_16": "897c861cfbba036e"
+    },
+    {
+      "path": "assets/data/missions.json",
+      "bytes": 453,
+      "sha256_16": "ba7e9f3fafb0677b"
+    },
+    {
+      "path": "assets/data/release-checklist-v0.8.7.json",
+      "bytes": 349,
+      "sha256_16": "354e2517822bf21e"
+    },
+    {
+      "path": "assets/data/specialties.json",
+      "bytes": 330,
+      "sha256_16": "8642e3ee0c260151"
+    },
+    {
+      "path": "assets/icons/icon_01.png",
+      "bytes": 54633,
+      "sha256_16": "5b018a2a4d3b53d6"
+    },
+    {
+      "path": "assets/icons/icon_02.png",
+      "bytes": 89444,
+      "sha256_16": "37f2f5fe114fa767"
+    },
+    {
+      "path": "assets/icons/icon_03.png",
+      "bytes": 120274,
+      "sha256_16": "31eea86393151f5d"
+    },
+    {
+      "path": "assets/icons/icon_04.png",
+      "bytes": 106134,
+      "sha256_16": "5f54cf853639e70d"
+    },
+    {
+      "path": "assets/ui/ui_01.png",
+      "bytes": 110339,
+      "sha256_16": "ff15a7db504953fe"
+    },
+    {
+      "path": "assets/ui/ui_02.png",
+      "bytes": 135020,
+      "sha256_16": "a7b4b6b8a4f49169"
+    },
+    {
+      "path": "assets/ui/ui_03.png",
+      "bytes": 144120,
+      "sha256_16": "984231cda641b1cf"
+    },
+    {
+      "path": "assets/ui/ui_04.png",
+      "bytes": 102467,
+      "sha256_16": "18b0b517ef8830f5"
+    },
+    {
+      "path": "assets/ui/ui_05.png",
+      "bytes": 142712,
+      "sha256_16": "e06a5ae12965c588"
+    },
+    {
+      "path": "content/core/campaign-core.json",
+      "bytes": 161,
+      "sha256_16": "df38b420720d4585"
+    },
+    {
+      "path": "content/core/unlocks-core.json",
+      "bytes": 107,
+      "sha256_16": "eb1da87a758800a2"
+    },
+    {
+      "path": "content/dlc/emergency-advanced/manifest.json",
+      "bytes": 125,
+      "sha256_16": "3b312cbe91e2745d"
+    },
+    {
+      "path": "content/dlc/pediatrics-pack/manifest.json",
+      "bytes": 103,
+      "sha256_16": "34c2986d08affadc"
+    },
+    {
+      "path": "content/manifest.json",
+      "bytes": 362,
+      "sha256_16": "71e4aab7a818cee0"
+    },
+    {
+      "path": "docs/aprovacao-final-v0.9.3.md",
+      "bytes": 318,
+      "sha256_16": "fa96d426db6de904"
+    },
+    {
+      "path": "docs/build-report-v0.8.0.md",
+      "bytes": 706,
+      "sha256_16": "bb6d9768a8f6132c"
+    },
+    {
+      "path": "docs/build-report-v0.8.3-fullscreen-lobby-bg.md",
+      "bytes": 687,
+      "sha256_16": "8dceafc320eb4505"
+    },
+    {
+      "path": "docs/build-report-v0.8.4-mobile-focus-visual.md",
+      "bytes": 660,
+      "sha256_16": "f8819822c37f1d9b"
+    },
+    {
+      "path": "docs/build-report-v0.8.5-antiquebra.md",
+      "bytes": 833,
+      "sha256_16": "2c4e775df6df02c8"
+    },
+    {
+      "path": "docs/build-report-v0.8.6-clinical-content-safety.md",
+      "bytes": 836,
+      "sha256_16": "636c0e419047d672"
+    },
+    {
+      "path": "docs/build-report-v0.8.7-retention-polish-safe.md",
+      "bytes": 577,
+      "sha256_16": "c1a736f1b57105b6"
+    },
+    {
+      "path": "docs/build-report-v0.8.8-stability-polish.md",
+      "bytes": 604,
+      "sha256_16": "9cc272cd777e3cbc"
+    },
+    {
+      "path": "docs/build-report-v0.8.9-release-readiness.md",
+      "bytes": 794,
+      "sha256_16": "77ed15baa2f42465"
+    },
+    {
+      "path": "docs/build-report-v0.9.0-release-candidate.md",
+      "bytes": 665,
+      "sha256_16": "b427f4fb7a501aef"
+    },
+    {
+      "path": "docs/build-report-v0.9.1-diagnostics.md",
+      "bytes": 483,
+      "sha256_16": "0f3c81c99d552310"
+    },
+    {
+      "path": "docs/build-report-v0.9.2-prefinal-ui.md",
+      "bytes": 533,
+      "sha256_16": "0b4a3938e964e7a9"
+    },
+    {
+      "path": "docs/build-report-v0.9.3-final-test-polish.md",
+      "bytes": 643,
+      "sha256_16": "2ed660ca077ab4cf"
+    },
+    {
+      "path": "docs/build-report-v0.9.4-release-freeze.md",
+      "bytes": 512,
+      "sha256_16": "b54889e0753db130"
+    },
+    {
+      "path": "docs/checklist-teste-mobile-v0.8.8.md",
+      "bytes": 269,
+      "sha256_16": "9c0ef061abd82453"
+    },
+    {
+      "path": "docs/como-ativar-ferramentas-tecnicas-v0.9.2.md",
+      "bytes": 178,
+      "sha256_16": "7f2c2fecde24445b"
+    },
+    {
+      "path": "docs/game-design-document.md",
+      "bytes": 506,
+      "sha256_16": "08b812d0e2fd8ce6"
+    },
+    {
+      "path": "docs/regression-checklist-v0.9.4.md",
+      "bytes": 340,
+      "sha256_16": "f4c65d8f10806d87"
+    },
+    {
+      "path": "docs/release-checklist-v0.8.9.md",
+      "bytes": 383,
+      "sha256_16": "21566e2c4763a716"
+    },
+    {
+      "path": "docs/rollback-plan-v0.9.4.md",
+      "bytes": 589,
+      "sha256_16": "034b8693b37f2462"
+    },
+    {
+      "path": "docs/roteiro-teste-v0.9.1.md",
+      "bytes": 253,
+      "sha256_16": "b653a767fcdf2e98"
+    },
+    {
+      "path": "docs/teste-final-v0.9.0.md",
+      "bytes": 571,
+      "sha256_16": "a5b377155f350ca0"
+    },
+    {
+      "path": "favicon.ico",
+      "bytes": 4,
+      "sha256_16": "84a49683540efdb1"
+    },
+    {
+      "path": "index.html",
+      "bytes": 1067,
+      "sha256_16": "f8dcf9d6b70e60b5"
+    },
+    {
+      "path": "manifest.webmanifest",
+      "bytes": 307,
+      "sha256_16": "f3386023150ede28"
+    },
+    {
+      "path": "manifest_assets.csv",
+      "bytes": 2988,
+      "sha256_16": "87c1362480392dc8"
+    },
+    {
+      "path": "src/app.js",
+      "bytes": 54442,
+      "sha256_16": "64ef405587ea5c9c"
+    },
+    {
+      "path": "src/core/build.js",
+      "bytes": 60,
+      "sha256_16": "6816dc451417e6f0"
+    },
+    {
+      "path": "src/styles.css",
+      "bytes": 27464,
+      "sha256_16": "abd73f947e435e4f"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 1009,
+      "sha256_16": "5776a5ffedd0052f"
+    }
+  ]
+}

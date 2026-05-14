@@ -1,5 +1,5 @@
 Medical Simulator - Vale Edition
-v0.9.4 | build 2026-05-14 19:15
-Patch: release freeze safe
-Conclusão estimada: 94%
-Base: medical-simulator-vale-edition_v0.9.3_final_test_polish_safe_build_20260514_1844.zip
+v0.9.5 | build 2026-05-14 19:46
+Patch: gold candidate safe
+Conclusão estimada: 95%
+Base: medical-simulator-vale-edition_v0.9.4_release_freeze_safe_build_20260514_1915.zip
