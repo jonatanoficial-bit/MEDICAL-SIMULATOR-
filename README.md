@@ -32,3 +32,20 @@ Inclui:
 - tela de recuperação com voltar ao lobby, exportar save e reset manual;
 - render protegido para evitar tela branca;
 - build visível atualizada.
+
+
+## v0.8.7 - Clinical Content Safety Patch
+- Base preservada da v0.8.5 anti-quebra.
+- Adicionados casos clínicos: Refluxo gastroesofágico e Dermatite atópica.
+- Adicionados exames/condutas relacionados aos novos casos.
+- Adicionada missão de carreira por sequência de bons atendimentos.
+- Fallback visual reforçado para reduzir risco de tela/fundo quebrado.
+- Nenhuma reescrita estrutural do core.
+
+
+## v0.8.7 - Retenção e polish seguro
+- Build aplicada em cima da v0.8.6.
+- Novas missões de carreira e sequência segura.
+- Sem reescrita de layout, fundos ou core clínico.
+- Anti-quebra preservado.
+- Conclusão estimada: 87%.
