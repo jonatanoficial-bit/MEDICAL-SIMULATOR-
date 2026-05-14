@@ -1,9 +1,11 @@
 {
   "name": "Medical Simulator - Vale Edition",
-  "short_name": "MedSim Vale",
-  "start_url": "./",
+  "short_name": "Med Vale",
+  "start_url": "./index.html",
   "display": "fullscreen",
   "background_color": "#020814",
   "theme_color": "#020814",
-  "orientation": "portrait-primary"
+  "orientation": "portrait",
+  "scope": "./",
+  "description": "Simulador médico mobile-first da Vale Games."
 }

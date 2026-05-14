@@ -1,4 +1,4 @@
-const BUILD={version:'0.8.7',stamp:'20260514_1544',label:'v0.8.7 | build 2026-05-14 15:44'};
+const BUILD={version:'0.8.7',stamp:'20260514_1544',label:'v0.8.9 | build 2026-05-14 16:44'};
 const A='assets/';
 const bg=n=>`${A}backgrounds/background_${String(n).padStart(2,'0')}.png`;
 const av=n=>`${A}avatars/avatar_${String(n).padStart(2,'0')}.png`;
@@ -179,3 +179,69 @@ document.addEventListener('click',()=>{
 },{once:true});
 
 window.go=go;window.requestGameFullscreen=requestGameFullscreen;window.state=state;window.toggleDrawer=()=>{state.drawer=!state.drawer;render()};window.toggleAction=toggleAction;window.finishCaseCore=finishCaseCore;window.claimMission=claimMission;window.resetEncounterData=resetEncounterData;function render(){try{normalizeState();syncProgress();const screens={setup,menu,hub,specialty,shift,post,learning,settings};(screens[state.screen]||hub)();setTimeout(typeWriter,30)}catch(err){console.error('Render protegido',err);showRecoveryScreen(err)}}render();
+
+
+/* v0.8.8 stability polish safe patch */
+(function(){
+  window.VALE_BUILD_LABEL = 'v0.8.9 | build 2026-05-14 16:44';
+  window.addEventListener('error', function(ev){
+    try{ console.warn('[ValeSafeGuard]', ev.message); document.body.classList.add('safe-runtime'); }catch(e){}
+  });
+  window.addEventListener('unhandledrejection', function(ev){
+    try{ console.warn('[ValeSafeGuard Promise]', ev.reason); document.body.classList.add('safe-runtime'); }catch(e){}
+  });
+  document.addEventListener('click', function(ev){
+    const btn = ev.target.closest('button, .listbtn, [data-action]');
+    if(!btn) return;
+    btn.classList.add('tap-confirm');
+    setTimeout(function(){btn.classList.remove('tap-confirm')}, 260);
+    const board = document.querySelector('.clinical-board,.response,.clinical-response,#clinicalBoard,#responsePanel');
+    if(board && window.innerWidth < 780){
+      setTimeout(function(){ board.scrollIntoView({behavior:'smooth', block:'nearest'}); }, 80);
+    }
+  }, true);
+  function ensureBuildBadge(){
+    if(document.querySelector('.build')) return;
+    const b=document.createElement('div');
+    b.className='build';
+    b.textContent='v0.8.9 | build 2026-05-14 16:44';
+    document.body.appendChild(b);
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ensureBuildBadge);
+  else ensureBuildBadge();
+})();
+
+
+/* v0.8.9 release readiness safe patch */
+(function(){
+  window.VALE_BUILD_LABEL = 'v0.8.9 | build 2026-05-14 16:44';
+  function preloadBackgrounds(){
+    try {
+      var paths = [
+        'assets/backgrounds/background_01.png',
+        'assets/backgrounds/background_02.png',
+        'assets/backgrounds/background_03.png',
+        'assets/backgrounds/background_08.png'
+      ];
+      paths.forEach(function(src){
+        var img = new Image();
+        img.decoding = 'async';
+        img.loading = 'eager';
+        img.src = src;
+      });
+    } catch(e) {}
+  }
+  function addReleaseBadge(){
+    if(document.querySelector('.release-ready-badge')) return;
+    var badge = document.createElement('div');
+    badge.className = 'release-ready-badge';
+    badge.textContent = 'Release readiness ativo';
+    document.body.appendChild(badge);
+    setTimeout(function(){ if(badge && badge.parentNode) badge.parentNode.removeChild(badge); }, 2200);
+  }
+  if(document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function(){ preloadBackgrounds(); addReleaseBadge(); });
+  } else {
+    preloadBackgrounds(); addReleaseBadge();
+  }
+})();

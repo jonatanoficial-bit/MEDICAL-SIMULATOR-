@@ -72,3 +72,55 @@ body{overflow-x:hidden;background:#020814;}
 .mission small{display:block;margin-top:4px;color:#84e3ff;}
 .listbtn:disabled,.btn:disabled{opacity:.45;filter:saturate(.5);}
 .clinical-board,.prontuario,.card{contain:layout paint style;}
+
+
+/* v0.8.8 stability polish safe patch */
+html, body { min-height: 100%; overscroll-behavior-y: none; }
+body.safe-runtime::before {
+  content: "Modo seguro ativo";
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  z-index: 9999;
+  padding: 6px 9px;
+  border-radius: 8px;
+  background: rgba(2, 8, 20, .82);
+  border: 1px solid rgba(90,190,255,.45);
+  color: #bff1ff;
+  font-size: 11px;
+  pointer-events: none;
+}
+.tap-confirm { transform: scale(.985); filter: brightness(1.18); }
+.clinical-board, .response, .clinical-response, #clinicalBoard, #responsePanel { scroll-margin-top: 18px; }
+@media (max-width: 780px) {
+  button, .listbtn, [role="button"] { min-height: 44px; }
+  .clinical-board, .response, .clinical-response, #clinicalBoard, #responsePanel { position: relative; z-index: 4; }
+}
+
+
+/* v0.8.9 release readiness safe patch */
+:root { color-scheme: dark; }
+html { background: #020814; }
+body { -webkit-tap-highlight-color: transparent; text-rendering: optimizeLegibility; }
+.release-ready-badge {
+  position: fixed;
+  top: calc(10px + env(safe-area-inset-top, 0px));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(95,184,255,.45);
+  background: rgba(2,8,20,.82);
+  color: #c8f5ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  box-shadow: 0 0 22px rgba(40,183,255,.25);
+  pointer-events: none;
+}
+img, video, canvas { max-width: 100%; }
+@media (max-width: 780px) {
+  input, select, textarea { font-size: 16px; }
+  body { touch-action: manipulation; }
+}
