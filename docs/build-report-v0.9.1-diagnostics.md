@@ -1,6 +1,6 @@
 # Medical Simulator - Vale Edition
 
-Build: v0.9.2 | build 2026-05-14 18:12
+Build: v0.9.3 | build 2026-05-14 18:44
 
 ## Tipo
 Patch seguro de diagnóstico local.

@@ -1,4 +1,4 @@
-const BUILD={version:'0.8.7',stamp:'20260514_1544',label:'v0.9.2 | build 2026-05-14 18:12'};
+const BUILD={version:'0.8.7',stamp:'20260514_1544',label:'v0.9.3 | build 2026-05-14 18:44'};
 const A='assets/';
 const bg=n=>`${A}backgrounds/background_${String(n).padStart(2,'0')}.png`;
 const av=n=>`${A}avatars/avatar_${String(n).padStart(2,'0')}.png`;
@@ -183,7 +183,7 @@ window.go=go;window.requestGameFullscreen=requestGameFullscreen;window.state=sta
 
 /* v0.8.8 stability polish safe patch */
 (function(){
-  window.VALE_BUILD_LABEL = 'v0.9.2 | build 2026-05-14 18:12';
+  window.VALE_BUILD_LABEL = 'v0.9.3 | build 2026-05-14 18:44';
   window.addEventListener('error', function(ev){
     try{ console.warn('[ValeSafeGuard]', ev.message); document.body.classList.add('safe-runtime'); }catch(e){}
   });
@@ -204,7 +204,7 @@ window.go=go;window.requestGameFullscreen=requestGameFullscreen;window.state=sta
     if(document.querySelector('.build')) return;
     const b=document.createElement('div');
     b.className='build';
-    b.textContent='v0.9.2 | build 2026-05-14 18:12';
+    b.textContent='v0.9.3 | build 2026-05-14 18:44';
     document.body.appendChild(b);
   }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ensureBuildBadge);
@@ -214,7 +214,7 @@ window.go=go;window.requestGameFullscreen=requestGameFullscreen;window.state=sta
 
 /* v0.8.9 release readiness safe patch */
 (function(){
-  window.VALE_BUILD_LABEL = 'v0.9.2 | build 2026-05-14 18:12';
+  window.VALE_BUILD_LABEL = 'v0.9.3 | build 2026-05-14 18:44';
   function preloadBackgrounds(){
     try {
       var paths = [
@@ -249,10 +249,10 @@ window.go=go;window.requestGameFullscreen=requestGameFullscreen;window.state=sta
 
 /* v0.9.0 release candidate safe patch */
 (function(){
-  window.VALE_BUILD_LABEL = 'v0.9.2 | build 2026-05-14 18:12';
+  window.VALE_BUILD_LABEL = 'v0.9.3 | build 2026-05-14 18:44';
   window.ValeReleaseCandidate = {
     version: '0.9.0',
-    build: 'v0.9.2 | build 2026-05-14 18:12',
+    build: 'v0.9.3 | build 2026-05-14 18:44',
     safeMode: true,
     exportSave: function(){
       try {
@@ -300,7 +300,7 @@ window.go=go;window.requestGameFullscreen=requestGameFullscreen;window.state=sta
 
 /* v0.9.1 diagnostics safe patch */
 (function(){
-  window.VALE_BUILD_LABEL = 'v0.9.2 | build 2026-05-14 18:12';
+  window.VALE_BUILD_LABEL = 'v0.9.3 | build 2026-05-14 18:44';
   var LOG_KEY = 'medical_simulator_diagnostics_v091';
   function readLog(){
     try { return JSON.parse(localStorage.getItem(LOG_KEY) || '[]'); } catch(e) { return []; }
@@ -309,7 +309,7 @@ window.go=go;window.requestGameFullscreen=requestGameFullscreen;window.state=sta
   function addLog(type, detail){
     try {
       var log = readLog();
-      log.push({type:type, detail:String(detail||''), at:new Date().toISOString(), build:'v0.9.2 | build 2026-05-14 18:12', width:innerWidth, height:innerHeight});
+      log.push({type:type, detail:String(detail||''), at:new Date().toISOString(), build:'v0.9.3 | build 2026-05-14 18:44', width:innerWidth, height:innerHeight});
       writeLog(log);
     } catch(e) {}
   }
@@ -317,7 +317,7 @@ window.go=go;window.requestGameFullscreen=requestGameFullscreen;window.state=sta
     log:addLog,
     export:function(){
       try {
-        var payload = {build:'v0.9.2 | build 2026-05-14 18:12', diagnostics:readLog()};
+        var payload = {build:'v0.9.3 | build 2026-05-14 18:44', diagnostics:readLog()};
         var blob = new Blob([JSON.stringify(payload,null,2)], {type:'application/json'});
         var a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
@@ -349,7 +349,7 @@ window.go=go;window.requestGameFullscreen=requestGameFullscreen;window.state=sta
 
 /* v0.9.2 prefinal ui safe patch */
 (function(){
-  window.VALE_BUILD_LABEL = 'v0.9.2 | build 2026-05-14 18:12';
+  window.VALE_BUILD_LABEL = 'v0.9.3 | build 2026-05-14 18:44';
   function setTechVisible(visible){
     try {
       document.body.classList.toggle('show-tech-tools', !!visible);
@@ -388,4 +388,59 @@ window.go=go;window.requestGameFullscreen=requestGameFullscreen;window.state=sta
   } else {
     applyTechState(); addHint();
   }
+})();
+
+
+/* v0.9.3 final test polish safe patch */
+(function(){
+  window.VALE_BUILD_LABEL = 'v0.9.3 | build 2026-05-14 18:44';
+  var checklist = [
+    'Lobby com fundo visível',
+    'Atendimento abre sem tela branca',
+    'Perguntas exibem resposta clara',
+    'Exames mostram resultado claro',
+    'Procedimentos registram achado',
+    'Prontuário persiste no caso',
+    'Mobile não exige sobe/desce excessivo',
+    'Fullscreen/PWA não quebra layout'
+  ];
+  function toggleChecklist(){
+    var old = document.querySelector('.final-test-panel');
+    if(old) { old.remove(); return; }
+    var done = {};
+    try { done = JSON.parse(localStorage.getItem('vale_final_test_checklist_v093') || '{}'); } catch(e) {}
+    var panel = document.createElement('section');
+    panel.className = 'final-test-panel';
+    panel.innerHTML = '<div class="final-test-head"><b>Checklist final v0.9.3</b><button type="button" data-close>×</button></div>' +
+      checklist.map(function(item, i){
+        var checked = done[item] ? 'checked' : '';
+        return '<label><input type="checkbox" data-item="'+ item.replace(/"/g,'&quot;') +'" '+checked+'> <span>'+item+'</span></label>';
+      }).join('') +
+      '<small>Esse painel é só para teste. Não altera o jogo.</small>';
+    panel.addEventListener('change', function(ev){
+      var input = ev.target;
+      if(input && input.matches('input[type="checkbox"]')) {
+        done[input.getAttribute('data-item')] = input.checked;
+        try { localStorage.setItem('vale_final_test_checklist_v093', JSON.stringify(done)); } catch(e) {}
+      }
+    });
+    panel.querySelector('[data-close]').addEventListener('click', function(){ panel.remove(); });
+    document.body.appendChild(panel);
+  }
+  document.addEventListener('keydown', function(ev){
+    if((ev.ctrlKey || ev.metaKey) && ev.shiftKey && String(ev.key).toLowerCase() === 't') toggleChecklist();
+  });
+  document.addEventListener('click', function(ev){
+    var b = ev.target.closest && ev.target.closest('.build');
+    if(!b) return;
+    if(ev.detail >= 2) toggleChecklist();
+  }, true);
+  function applySafeViewport(){
+    try {
+      document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px');
+    } catch(e) {}
+  }
+  window.addEventListener('resize', applySafeViewport);
+  window.addEventListener('orientationchange', function(){ setTimeout(applySafeViewport, 250); });
+  applySafeViewport();
 })();

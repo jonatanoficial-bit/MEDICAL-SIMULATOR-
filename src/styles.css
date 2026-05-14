@@ -213,3 +213,60 @@ body.show-tech-tools .rc-safe-tools {
 @media (max-width:780px){
   .prefinal-safe-note { font-size: 10px; padding: 7px 10px; }
 }
+
+
+/* v0.9.3 final test polish safe patch */
+.final-test-panel {
+  position: fixed;
+  right: 12px;
+  top: calc(12px + env(safe-area-inset-top, 0px));
+  width: min(360px, calc(100vw - 24px));
+  z-index: 10000;
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(95,184,255,.45);
+  background: rgba(2,8,20,.94);
+  color: #e9fbff;
+  box-shadow: 0 0 32px rgba(40,183,255,.28);
+  backdrop-filter: blur(12px);
+}
+.final-test-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.final-test-head button {
+  min-height: 28px;
+  width: 28px;
+  padding: 0;
+  border-radius: 8px;
+}
+.final-test-panel label {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 7px 4px;
+  font-size: 13px;
+  line-height: 1.25;
+}
+.final-test-panel input { margin-top: 2px; }
+.final-test-panel small {
+  display: block;
+  margin-top: 8px;
+  color: #9ecfe3;
+}
+@media (max-width:780px){
+  .final-test-panel {
+    left: 8px;
+    right: 8px;
+    top: calc(8px + env(safe-area-inset-top, 0px));
+    width: auto;
+    max-height: 80vh;
+    overflow: auto;
+  }
+  .screen, main, body {
+    min-height: calc(var(--vh, 1vh) * 100);
+  }
+}
