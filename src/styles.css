@@ -315,3 +315,54 @@ body.show-tech-tools .rc-safe-tools {
 @media (max-width:780px){
   .gold-candidate-marker { font-size: 10px; padding: 6px 10px; }
 }
+
+
+/* v0.10.0 Recovery Foundation: mobile-first safe layout and quiet build badges */
+.release-ready-badge,.release-freeze-marker,.gold-candidate-marker,.prefinal-safe-note{display:none!important}
+html,body,#app{min-height:100%;width:100%;overflow-x:hidden;}
+.screen{min-height:100svh;padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))!important;}
+.build{max-width:calc(100vw - 18px);white-space:normal;text-align:right;line-height:1.25;pointer-events:none;}
+@media(max-width:980px){
+  .setup{margin:10px auto 80px;padding:16px;}
+  .avatar-row{gap:8px;}
+  .topbar{position:relative;margin-bottom:10px;}
+  .shift{gap:10px;}
+  .patient-list{max-height:220px;}
+  .patient-list .patient:nth-of-type(n+8){display:none;}
+  .case{padding:14px;}
+  .patient-art{max-height:210px;}
+  .record-grid{max-height:none;overflow:visible;}
+  .rightpanel .card{max-height:none;overflow:visible;}
+  .hud{position:sticky;bottom:calc(8px + env(safe-area-inset-bottom,0px));display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px;padding:10px;z-index:75;}
+  .hud .btn{grid-column:1/-1;min-height:42px;}
+  .toast{bottom:calc(82px + env(safe-area-inset-bottom,0px));max-width:92vw;}
+}
+@media(max-width:520px){
+  .screen{padding:10px 10px calc(82px + env(safe-area-inset-bottom,0px))!important;}
+  .brand small{font-size:8px;}
+  .setup h2{font-size:18px;margin:12px 0 6px;}
+  .btn{width:100%;padding:12px 14px;letter-spacing:.05em;}
+  .listbtn{padding:11px 12px;margin:5px 0;}
+  .clinical-board{min-height:120px;}
+  .build{left:auto;right:6px;bottom:4px;font-size:9px;opacity:.85;}
+}
+
+/* v0.12.0 Anti-quebra 2.0 e observabilidade */
+.boot-shell{
+  min-height:100svh;display:grid;place-items:center;align-content:center;gap:12px;
+  background:radial-gradient(circle at 50% 20%,#123955,#020814 68%);color:#effaff;text-align:center;padding:24px
+}
+.boot-shell h1,.boot-shell p{margin:0}.boot-shell small{color:#8dd9ff}.boot-spinner{width:46px;height:46px;border:4px solid #ffffff22;border-top-color:#77d8ff;border-radius:50%;animation:bootspin .8s linear infinite}
+@keyframes bootspin{to{transform:rotate(360deg)}}
+.safety-kicker{color:#78d8ff;font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;margin-bottom:6px}
+.recovery-card{width:min(620px,calc(100vw - 24px));}
+.recovery-error{padding:12px;border:1px solid #8e5366;background:#2c1119aa;border-radius:12px;overflow-wrap:anywhere}
+.recovery-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px}
+.recovery-actions .btn{width:100%;margin:0}
+.recovery-hero{border-color:#4c9cc0;background:linear-gradient(145deg,rgba(5,29,47,.94),rgba(3,13,24,.96))}
+.backup-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid rgba(150,210,235,.13)}
+.backup-row:last-child{border-bottom:0}.backup-row div{min-width:0}.backup-row b,.backup-row small{display:block}.backup-row small{color:#99c8da;margin-top:4px;overflow-wrap:anywhere}
+.diag-event{padding:9px;border-left:3px solid #5fb8df;background:#071b2a;border-radius:0 9px 9px 0}.diag-event.warn{border-left-color:#f4c05f}.diag-event.error{border-left-color:#ff7187}
+.screen-recovery .layout{align-items:start}.screen-recovery .rightcol{position:sticky;top:12px}
+@media(max-width:980px){.screen-recovery .rightcol{position:static}.recovery-actions{grid-template-columns:1fr}.backup-row{align-items:flex-start}.backup-row .btn{width:auto;min-width:92px}}
+@media(max-width:520px){.backup-row{display:grid}.backup-row .btn{width:100%}.recovery-card{margin-bottom:72px}}

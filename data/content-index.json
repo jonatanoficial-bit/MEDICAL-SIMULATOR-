@@ -1,0 +1,21 @@
+{
+  "id": "medical-simulator-vale-content",
+  "schemaVersion": 1,
+  "contentVersion": "0.12.0",
+  "required": [
+    "data/core-cases.json",
+    "data/gameplay.json",
+    "data/queue.json",
+    "data/specialties.json",
+    "data/missions.json",
+    "data/clinical-responses.json"
+  ],
+  "staged": [
+    "data/legacy-cases-v0.8.json",
+    "data/catalog.json"
+  ],
+  "notes": [
+    "Os seis casos jogáveis da build anterior foram externalizados sem alterar o fluxo principal.",
+    "Os três casos avançados antigos permanecem preservados, mas não são ativados até serem adaptados ao schema atual e revisados."
+  ]
+}

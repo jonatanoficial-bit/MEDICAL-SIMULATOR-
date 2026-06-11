@@ -1,15 +1,32 @@
 {
   "id": "medical-simulator-vale-edition-core",
   "name": "Medical Simulator - Vale Edition Core",
-  "version": "0.8.0",
-  "build": "20260425_1502",
-  "completion_estimate": "82%",
+  "version": "0.12.0",
+  "build": "20260611_190122_BRT",
+  "architecture": {
+    "entry": "src/core/boot-guard.js -> src/app.js",
+    "modules": [
+      "config",
+      "core",
+      "data",
+      "i18n",
+      "compat",
+      "observability"
+    ],
+    "contentSchema": 1,
+    "saveSchema": 3
+  },
+  "activeCases": 6,
+  "stagedCases": 3,
   "features": [
-    "prontuario_completo",
-    "maquina_de_escrever",
-    "exames_com_modal",
-    "evolucao_sinais_vitais",
-    "progressao_xp_missoes",
-    "modo_simulador"
+    "modular_content_loader",
+    "validated_external_cases",
+    "safe_fallback",
+    "transactional_save",
+    "rotating_backups",
+    "boot_watchdog",
+    "runtime_build_check",
+    "diagnostics_log",
+    "last_known_good_content"
   ]
 }

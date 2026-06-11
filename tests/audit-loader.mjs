@@ -1,0 +1,22 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const root=path.resolve(new URL('..',import.meta.url).pathname);
+const memory=new Map();
+globalThis.localStorage={getItem:key=>memory.get(key)||null,setItem:(key,value)=>memory.set(key,String(value)),removeItem:key=>memory.delete(key)};
+let malformed=false;
+globalThis.fetch=async input=>{
+  const raw=String(input).split('?')[0];
+  if(malformed&&raw.endsWith('core-cases.json'))return {ok:true,status:200,json:async()=>({invalid:true})};
+  const file=path.join(root,raw.replace(/^\.\//,''));
+  if(!fs.existsSync(file))return {ok:false,status:404,json:async()=>({})};
+  return {ok:true,status:200,json:async()=>JSON.parse(fs.readFileSync(file,'utf8'))};
+};
+const {loadGameContent}=await import('../src/data/content-loader.js');
+const result=await loadGameContent({version:'0.12.0-test'});
+if(result.status.mode!=='external'||result.content.cases.length!==6)throw new Error('Carregamento externo válido falhou.');
+malformed=true;
+const recovered=await loadGameContent({version:'0.12.0-corrupt'});
+if(recovered.status.mode!=='last-known-good'||recovered.content.cases.length!==6)throw new Error('Último pacote válido não foi restaurado após conteúdo malformado.');
+const safe=await loadGameContent({version:'0.12.0-safe',safeMode:true});
+if(safe.status.mode!=='safe-fallback'||safe.content.cases.length!==6)throw new Error('Modo seguro do conteúdo falhou.');
+console.log(JSON.stringify({ok:true,mode:result.status.mode,recoveredMode:recovered.status.mode,safeMode:safe.status.mode,cases:result.content.cases.length,resources:result.status.externalCount},null,2));

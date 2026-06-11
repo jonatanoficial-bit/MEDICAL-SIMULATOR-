@@ -1,0 +1,9 @@
+{
+  "locale": "en",
+  "status": "structure-ready",
+  "messages": {
+    "app.name": "Medical Simulator - Vale Edition",
+    "system.safeMode": "Safe mode active",
+    "settings.language": "Language"
+  }
+}

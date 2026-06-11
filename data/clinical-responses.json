@@ -1,0 +1,79 @@
+{
+  "examResults": {
+    "hipertensao-1": {
+      "Eletrocardiograma (ECG)": "ECG: ritmo sinusal, sem supra de ST, sinais discretos de sobrecarga ventricular esquerda. Resultado compatível com investigação cardiovascular inicial, sem emergência no momento.",
+      "Perfil lipídico": "Perfil lipídico: LDL 154 mg/dL, HDL 39 mg/dL, triglicerídeos 186 mg/dL. Risco cardiovascular aumentado.",
+      "Glicemia de jejum": "Glicemia de jejum: 103 mg/dL. Limítrofe, sugere orientar estilo de vida e acompanhar.",
+      "Hemograma completo": "Hemograma: sem anemia, leucócitos normais, plaquetas normais. Não explica diretamente a queixa."
+    },
+    "cefaleia-tensional": {
+      "Hemograma completo": "Hemograma completo: dentro da normalidade. Sem sinais laboratoriais de infecção ou anemia.",
+      "Eletrocardiograma (ECG)": "ECG: ritmo sinusal, sem alterações isquêmicas. Baixa contribuição para a queixa atual.",
+      "TSH": "TSH: 2,1 mUI/L. Função tireoidiana preservada."
+    },
+    "angina-estavel": {
+      "Eletrocardiograma (ECG)": "ECG: alterações inespecíficas de repolarização em parede lateral. Não há supra de ST. Requer correlação com clínica.",
+      "Troponina": "Troponina: negativa na primeira dosagem. Não exclui completamente risco; considerar seriado conforme protocolo.",
+      "Perfil lipídico": "Perfil lipídico: LDL 172 mg/dL, HDL 34 mg/dL. Perfil de alto risco cardiovascular.",
+      "Raio-X de tórax": "Raio-X: sem congestão pulmonar ou alargamento mediastinal. Exame pouco decisivo para o caso."
+    },
+    "itu-nao-complicada": {
+      "Urina tipo 1": "Urina tipo 1: leucócitos aumentados, nitrito positivo e bacteriúria. Resultado favorece ITU baixa.",
+      "Urocultura": "Urocultura: coleta indicada; resultado definitivo ficaria disponível posteriormente. Ajuda a guiar antibiótico se falha terapêutica.",
+      "Hemograma completo": "Hemograma: leucócitos discretamente elevados. Achado inespecífico, mas compatível com processo infeccioso leve."
+    },
+    "refluxo-gastroesofagico": {
+      "Teste terapêutico IBP": "Teste terapêutico com IBP: indicado quando não há sinais de alarme. Resposta clínica esperada ajuda a confirmar DRGE.",
+      "Endoscopia digestiva alta": "Endoscopia: indicada se houver sinais de alarme, idade de risco ou refratariedade. No caso atual não é primeiro passo obrigatório.",
+      "Hemograma completo": "Hemograma: sem anemia. Reduz preocupação imediata com sangramento digestivo."
+    },
+    "dermatite-atopica": {
+      "Dermatoscopia": "Dermatoscopia: padrão inflamatório inespecífico, sem sinais suspeitos de lesão maligna. Achado compatível com dermatite.",
+      "Hemograma completo": "Hemograma: sem eosinofilia importante. Não muda conduta inicial."
+    }
+  },
+  "questionResults": {
+    "hipertensao-1": {
+      "tempo dos sintomas": "Paciente relata sintomas há cerca de 3 meses, piores em semanas de maior estresse e sedentarismo.",
+      "histórico familiar": "Pai hipertenso e avô com infarto antes dos 60 anos. Há risco cardiovascular familiar relevante.",
+      "dor em esforço": "Aperto no peito aparece em esforço moderado e melhora com repouso, sem síncope.",
+      "estresse e sono": "Sono irregular e rotina sedentária; relata muito café e pouca atividade física."
+    },
+    "cefaleia-tensional": {
+      "tempo dos sintomas": "Dor recorrente há 6 semanas, em aperto bilateral, principalmente no fim do dia.",
+      "estresse e sono": "Relata estresse profissional, sono de baixa qualidade e tensão cervical.",
+      "sinais de alarme": "Nega febre, rigidez de nuca, déficit neurológico, pior cefaleia da vida ou vômitos em jato."
+    },
+    "angina-estavel": {
+      "dor em esforço": "Dor surge ao subir escadas ou caminhar rápido e melhora em poucos minutos com repouso.",
+      "irradiação da dor": "Às vezes irradia para braço esquerdo e mandíbula, associada a suor frio leve.",
+      "fatores de risco": "Tabagista prévio, dislipidemia, pai com infarto e sedentarismo importante."
+    },
+    "itu-nao-complicada": {
+      "dor lombar": "Nega dor lombar intensa. Refere apenas desconforto suprapúbico.",
+      "febre recente": "Nega febre alta ou calafrios, reduzindo suspeita de pielonefrite.",
+      "gestação": "Nega gestação atual. Última menstruação regular."
+    },
+    "refluxo-gastroesofagico": {
+      "tempo dos sintomas": "Sintomas há 4 meses, principalmente após refeições volumosas e à noite.",
+      "gatilhos alimentares": "Piora com café, frituras, refrigerante e quando deita logo após comer.",
+      "sinais de alarme": "Nega perda de peso, disfagia progressiva, vômitos persistentes ou sangramento digestivo."
+    },
+    "dermatite-atopica": {
+      "tempo dos sintomas": "Crises desde a adolescência, com piora em clima seco e períodos de estresse.",
+      "alergias e gatilhos": "Relata rinite alérgica e piora com sabonetes perfumados.",
+      "uso de produtos na pele": "Usa hidratante de forma irregular e já aplicou pomadas sem orientação."
+    }
+  },
+  "procedureResults": {
+    "Aferir sinais vitais": "Sinais vitais conferidos e registrados no painel. Sem instabilidade imediata, mas devem ser interpretados junto da queixa.",
+    "Exame físico geral": "Paciente em bom estado geral, consciente, orientado, corado, hidratado e sem sinais de sofrimento agudo.",
+    "Ausculta cardíaca": "Ausculta cardíaca: bulhas rítmicas, normofonéticas, sem sopros evidentes nesta avaliação inicial.",
+    "Ausculta pulmonar": "Ausculta pulmonar: murmúrio vesicular presente bilateralmente, sem ruídos adventícios.",
+    "Palpação abdominal": "Abdome flácido. Dor leve em hipogástrio quando aplicável, sem sinais de irritação peritoneal.",
+    "Avaliação neurológica": "Exame neurológico sumário sem déficits focais. Pupilas isocóricas e força preservada.",
+    "Solicitar acesso venoso": "Acesso venoso periférico solicitado e preparado. Ação útil em cenário de maior risco ou necessidade de medicação EV.",
+    "Orientação terapêutica": "Paciente recebeu orientação inicial clara, com checagem de compreensão e sinais de alarme para retorno."
+  },
+  "schemaVersion": 1
+}

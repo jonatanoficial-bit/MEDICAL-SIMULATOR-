@@ -1,0 +1,59 @@
+{
+  "missions": [
+    {
+      "id": "daily-3-patients",
+      "type": "Diária",
+      "title": "Atender 3 pacientes",
+      "metric": "patients",
+      "goal": 3,
+      "rewardXp": 120,
+      "rewardCredits": 80
+    },
+    {
+      "id": "daily-accuracy",
+      "type": "Diária",
+      "title": "Fechar 2 casos com score acima de 80",
+      "metric": "highScoreCases",
+      "goal": 2,
+      "rewardXp": 160,
+      "rewardCredits": 100
+    },
+    {
+      "id": "weekly-study",
+      "type": "Semanal",
+      "title": "Concluir 3 módulos de aprendizagem",
+      "metric": "learnedModules",
+      "goal": 3,
+      "rewardXp": 300,
+      "rewardCredits": 200
+    },
+    {
+      "id": "career-streak-3",
+      "type": "Carreira",
+      "title": "Manter sequência de 3 bons atendimentos",
+      "metric": "streak",
+      "goal": 3,
+      "rewardXp": 260,
+      "rewardCredits": 180
+    },
+    {
+      "id": "retention-6-patients",
+      "type": "Carreira",
+      "title": "Atender 6 pacientes na carreira",
+      "metric": "patients",
+      "goal": 6,
+      "rewardXp": 280,
+      "rewardCredits": 210
+    },
+    {
+      "id": "safe-streak-5",
+      "type": "Especial",
+      "title": "Sequência segura de 5 bons atendimentos",
+      "metric": "streak",
+      "goal": 5,
+      "rewardXp": 420,
+      "rewardCredits": 300
+    }
+  ],
+  "schemaVersion": 1
+}
