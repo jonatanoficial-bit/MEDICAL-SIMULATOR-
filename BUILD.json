@@ -1,0 +1,28 @@
+{
+  "product": "Medical Simulator - Vale Edition",
+  "version": "0.12.0",
+  "phase": "Anti-quebra 2.0 e Observabilidade",
+  "build": "20260611-190122-BRT",
+  "build_label": "v0.12.0 | build 2026-06-11 19:01:22 BRT",
+  "timezone": "America/Sao_Paulo",
+  "release_type": "fase-3-antiquebra-observabilidade",
+  "core_entry": "index.html -> src/core/boot-guard.js -> src/app.js",
+  "save_schema": 3,
+  "content_schema": 1,
+  "active_cases": 6,
+  "staged_legacy_cases": 3,
+  "compatibility_priority": ["mobile", "tablet", "desktop"],
+  "anti_break": {
+    "transactional_save": true,
+    "save_checksum": "FNV-1a 32-bit",
+    "rotating_backups": 5,
+    "pending_write_recovery": true,
+    "boot_watchdog": true,
+    "crash_loop_detection": true,
+    "last_known_good_content": true,
+    "runtime_build_check": true,
+    "diagnostics_log": true,
+    "service_worker_previous_cache_retention": true,
+    "manifest_sha256": true
+  }
+}

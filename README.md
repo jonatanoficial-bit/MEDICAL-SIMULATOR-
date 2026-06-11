@@ -1,51 +1,34 @@
 # Medical Simulator - Vale Edition
 
-Build: v0.9.5 | build 2026-05-14 19:46
+**Build ativa:** v0.12.0 | build 2026-06-11 19:01:22 BRT  
+**Fase:** Anti-quebra 2.0 e Observabilidade
 
-## Status de conclusão
-Conclusão estimada do projeto: 58%.
+## Como executar
 
-## Principais avanços desta build
-- Área clínica central agora exibe respostas de anamnese com efeito máquina de escrever.
-- Exames agora retornam laudos/resultados claros para o jogador.
-- Procedimentos agora exibem achados clínicos interpretáveis.
-- Resultados de exames também aparecem em modal/pop-up para evitar que o usuário perca informação importante.
-- Timeline registra resposta clínica, exame, procedimento, hipótese e conduta com horário clínico.
-- Build/data/hora continuam visíveis no jogo.
+Hospede a pasta em um servidor HTTP/HTTPS, como GitHub Pages. A abertura direta por `file://` mantém o fallback interno, mas PWA, service worker e carregamento externo de JSON dependem de hospedagem.
 
-## Próximas prioridades
-- Fase 6: painel admin local para criar/editar casos.
-- Expansão do conteúdo clínico por especialidade.
-- DLC loader visual e import/export de save/conteúdo.
+## Arquitetura ativa
 
+- `src/app.js`: composição da interface e fluxo atual.
+- `src/config/`: versão e caminhos.
+- `src/core/`: estado padrão, merge e armazenamento versionado.
+- `src/data/`: carregador, schema e fallback anti-quebra.
+- `src/i18n/`: fundação para PT-BR, EN e ES.
+- `src/compat/`: proteções históricas isoladas do núcleo.
+- `data/`: casos, catálogos, fila, missões e respostas clínicas.
+- `legacy/`: motor anterior arquivado; não é carregado.
 
-## v0.8.4
-Patch seguro: foco automático no painel clínico no mobile, estabilidade visual dos fundos e ajustes de fullscreen. Conclusão estimada: 84%.
+## Conteúdo clínico
 
+A build mantém os seis casos jogáveis anteriores. Três casos avançados antigos estão preservados em `data/legacy-cases-v0.8.json`, mas permanecem desativados até adaptação ao schema atual e revisão médica.
 
-## v0.8.5 anti-quebra
-Patch seguro em cima da v0.8.4. Não reescreve visual nem gameplay.
-Inclui:
-- carregamento seguro de save corrompido;
-- normalização automática de estado antigo/incompleto;
-- proteção contra erro global de JavaScript;
-- tela de recuperação com voltar ao lobby, exportar save e reset manual;
-- render protegido para evitar tela branca;
-- build visível atualizada.
+## Auditoria
 
+Execute:
 
-## v0.8.7 - Clinical Content Safety Patch
-- Base preservada da v0.8.5 anti-quebra.
-- Adicionados casos clínicos: Refluxo gastroesofágico e Dermatite atópica.
-- Adicionados exames/condutas relacionados aos novos casos.
-- Adicionada missão de carreira por sequência de bons atendimentos.
-- Fallback visual reforçado para reduzir risco de tela/fundo quebrado.
-- Nenhuma reescrita estrutural do core.
+```bash
+npm run audit
+npm run manifest
+```
 
-
-## v0.8.7 - Retenção e polish seguro
-- Build aplicada em cima da v0.8.6.
-- Novas missões de carreira e sequência segura.
-- Sem reescrita de layout, fundos ou core clínico.
-- Anti-quebra preservado.
-- Conclusão estimada: 87%.
+Consulte `docs/build-report-v0.12.0-antiquebra-observabilidade.md` para o relatório integral.

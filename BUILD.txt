@@ -1,4 +1,7 @@
-Build: 0006
-Timestamp: 2026-02-18 15:28:46 UTC
-Stage: 2
-Notes: Catalog normalization (fix overlays), corrected cooldown timeout formatting, updated build assets.
+MEDICAL SIMULATOR - VALE EDITION
+Versão: 0.12.0
+Fase: Anti-quebra 2.0 e Observabilidade
+Build: 2026-06-11 19:01:22 BRT
+Save schema: 3
+Content schema: 1
+Prioridade: Mobile > Tablet > PC
