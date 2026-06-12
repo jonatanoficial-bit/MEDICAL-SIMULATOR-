@@ -1,10 +1,10 @@
 export const BUILD = Object.freeze({
-  version: '0.15.0',
-  stamp: '20260612_161518_BRT',
-  label: 'v0.15.0 | build 2026-06-12 16:15:18 BRT',
-  phase: 'Design System e Acessibilidade',
-  saveSchema: 6,
-  contentSchema: 1
+  version: '0.18.0',
+  stamp: '20260612_171520_BRT',
+  label: 'v0.18.0 | build 2026-06-12 17:15:20 BRT',
+  phase: 'Academia Clínica Introdutória trilíngue',
+  saveSchema: 9,
+  contentSchema: 3
 });
 
 export const ASSET_ROOT = 'assets/';

@@ -1,3 +1,5 @@
+import {validateGovernance} from './clinical-governance.js';
+import {validateAcademy} from './academy-schema.js';
 const nonEmptyString=value=>typeof value==='string' && value.trim().length>0;
 const stringArray=value=>Array.isArray(value) && value.every(nonEmptyString);
 
@@ -11,6 +13,8 @@ export function validateGameContent(content){
   const specialties=(content.specialties||{}).specialties;
   const missions=(content.missions||{}).missions;
   const responses=content.responses||{};
+  const governance=content.governance||null;
+  const academy=content.academy||null;
   if(!Array.isArray(cases)||!cases.length) errors.push('Nenhum caso clínico válido foi fornecido.');
   if(!stringArray(gameplay.exams)) errors.push('Lista de exames inválida.');
   if(!stringArray(gameplay.procedures)) errors.push('Lista de procedimentos inválida.');
@@ -21,6 +25,12 @@ export function validateGameContent(content){
   if(!Array.isArray(specialties)||!specialties.length) errors.push('Especialidades inválidas.');
   if(!Array.isArray(missions)) errors.push('Missões inválidas.');
   if(!responses.examResults||!responses.questionResults||!responses.procedureResults) errors.push('Banco de respostas clínicas incompleto.');
+  const governanceValidation=validateGovernance(governance,Array.isArray(cases)?cases:[]);
+  if(!governanceValidation.ok)errors.push(...governanceValidation.errors);
+  warnings.push(...governanceValidation.warnings);
+  const academyValidation=validateAcademy(academy);
+  if(!academyValidation.ok)errors.push(...academyValidation.errors);
+  warnings.push(...academyValidation.warnings);
 
   const ids=new Set();
   const safeSpecialties=Array.isArray(specialties)?specialties:[];

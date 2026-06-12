@@ -1,0 +1,2041 @@
+// Fallback anti-quebra gerado a partir de data/academy.json.
+export const FALLBACK_ACADEMY = Object.freeze({
+  "schemaVersion": 1,
+  "contentVersion": "0.18.0",
+  "status": "development-only",
+  "publishable": false,
+  "locales": [
+    "pt-BR",
+    "en",
+    "es"
+  ],
+  "requiredPassPercent": 100,
+  "xpPerModule": 45,
+  "xpGuidedCase": 90,
+  "policy": {
+    "disclaimer": {
+      "pt-BR": "Academia educacional. Não substitui formação, certificação, atendimento ou treinamento prático supervisionado.",
+      "en": "Educational academy. It does not replace education, certification, care, or supervised hands-on training.",
+      "es": "Academia educativa. No sustituye formación, certificación, atención ni entrenamiento práctico supervisado."
+    },
+    "commercialReleaseRequiresClinicalReview": true,
+    "allModulesDevelopmentOnly": true
+  },
+  "pretest": {
+    "pt-BR": {
+      "title": "Desafio diagnóstico inicial",
+      "description": "Cinco perguntas sem penalidade. O resultado serve apenas para sugerir por onde começar.",
+      "questions": [
+        {
+          "question": "Qual é a atitude mais segura ao reconhecer uma possível emergência fora do jogo?",
+          "options": [
+            "Repetir a decisão que deu mais pontos",
+            "Aguardar para ver se melhora",
+            "Acionar ajuda profissional e o sistema local de emergência",
+            "Tentar um medicamento sugerido por outro jogador"
+          ],
+          "correctIndex": 2,
+          "explanation": "O simulador é educacional. Situações reais exigem avaliação e resposta profissional."
+        },
+        {
+          "question": "Por que a avaliação inicial vem antes do diagnóstico definitivo?",
+          "options": [
+            "Porque elimina a necessidade de exames",
+            "Porque identifica ameaças imediatas e define prioridades",
+            "Porque sempre confirma a doença",
+            "Porque evita conversar com o paciente"
+          ],
+          "correctIndex": 1,
+          "explanation": "A prioridade é reconhecer e escalar ameaças imediatas; o diagnóstico pode exigir mais dados."
+        },
+        {
+          "question": "Qual interpretação é mais segura?",
+          "options": [
+            "Um sinal vital normal exclui doença grave",
+            "Todo valor fora da faixa confirma uma doença",
+            "Conjunto, tendência, técnica e sintomas devem ser analisados juntos",
+            "Saturação é o único dado importante"
+          ],
+          "correctIndex": 2,
+          "explanation": "Sinais vitais ganham significado quando combinados com contexto clínico, qualidade da medida e evolução."
+        },
+        {
+          "question": "Qual sequência produz uma anamnese mais segura?",
+          "options": [
+            "Perguntar apenas o diagnóstico que o jogador suspeita",
+            "Ouvir a queixa, organizar detalhes, buscar contexto e sinais de alarme, resumir e confirmar",
+            "Solicitar todos os exames antes de conversar",
+            "Ignorar medicamentos se o paciente parecer jovem"
+          ],
+          "correctIndex": 1,
+          "explanation": "Uma história organizada combina escuta, perguntas dirigidas, risco, contexto e confirmação."
+        },
+        {
+          "question": "Qual é a melhor justificativa para escolher um procedimento de exame físico?",
+          "options": [
+            "Porque está disponível no menu",
+            "Porque todos os pacientes precisam de todos os exames",
+            "Porque responde a uma pergunta clínica e avalia risco",
+            "Porque aumenta o número de ações"
+          ],
+          "correctIndex": 2,
+          "explanation": "O exame deve ser orientado pela queixa, risco e hipótese, com consentimento e registro."
+        }
+      ]
+    },
+    "en": {
+      "title": "Initial knowledge check",
+      "description": "Five questions with no penalty. The result only suggests where to start.",
+      "questions": [
+        {
+          "question": "What is the safest action when you recognize a possible emergency outside the game?",
+          "options": [
+            "Repeat the highest-scoring game decision",
+            "Wait and see",
+            "Activate professional help and the local emergency system",
+            "Try a medicine suggested by another player"
+          ],
+          "correctIndex": 2,
+          "explanation": "The simulator is educational. Real emergencies require professional assessment and response."
+        },
+        {
+          "question": "Why does the initial assessment come before the definitive diagnosis?",
+          "options": [
+            "It removes the need for tests",
+            "It identifies immediate threats and sets priorities",
+            "It always confirms the disease",
+            "It avoids speaking with the patient"
+          ],
+          "correctIndex": 1,
+          "explanation": "The priority is to recognize and escalate immediate threats; diagnosis may require more data."
+        },
+        {
+          "question": "Which interpretation is safest?",
+          "options": [
+            "One normal vital sign excludes serious disease",
+            "Every out-of-range value confirms a disease",
+            "The set, trend, technique, and symptoms must be analyzed together",
+            "Oxygen saturation is the only important datum"
+          ],
+          "correctIndex": 2,
+          "explanation": "Vital signs gain meaning when combined with clinical context, measurement quality, and change over time."
+        },
+        {
+          "question": "Which sequence produces a safer history?",
+          "options": [
+            "Ask only about the diagnosis the player suspects",
+            "Listen, organize details, check context and red flags, summarize, and confirm",
+            "Order every test before speaking",
+            "Ignore medicines if the patient looks young"
+          ],
+          "correctIndex": 1,
+          "explanation": "A structured history combines listening, focused questions, risk, context, and confirmation."
+        },
+        {
+          "question": "What is the best reason to choose a physical examination action?",
+          "options": [
+            "It is available in the menu",
+            "Every patient needs every examination",
+            "It answers a clinical question and assesses risk",
+            "It increases the action count"
+          ],
+          "correctIndex": 2,
+          "explanation": "Examination should be guided by complaint, risk, and hypothesis, with consent and documentation."
+        }
+      ]
+    },
+    "es": {
+      "title": "Desafío diagnóstico inicial",
+      "description": "Cinco preguntas sin penalización. El resultado solo sugiere por dónde comenzar.",
+      "questions": [
+        {
+          "question": "¿Cuál es la conducta más segura al reconocer una posible emergencia fuera del juego?",
+          "options": [
+            "Repetir la decisión con más puntos",
+            "Esperar a que mejore",
+            "Activar ayuda profesional y el sistema local de emergencias",
+            "Probar un medicamento sugerido por otro jugador"
+          ],
+          "correctIndex": 2,
+          "explanation": "El simulador es educativo. Las emergencias reales requieren evaluación y respuesta profesional."
+        },
+        {
+          "question": "¿Por qué la evaluación inicial viene antes del diagnóstico definitivo?",
+          "options": [
+            "Elimina la necesidad de pruebas",
+            "Identifica amenazas inmediatas y define prioridades",
+            "Siempre confirma la enfermedad",
+            "Evita hablar con el paciente"
+          ],
+          "correctIndex": 1,
+          "explanation": "La prioridad es reconocer y escalar amenazas inmediatas; el diagnóstico puede requerir más datos."
+        },
+        {
+          "question": "¿Cuál interpretación es más segura?",
+          "options": [
+            "Un signo vital normal excluye enfermedad grave",
+            "Todo valor fuera de rango confirma una enfermedad",
+            "Conjunto, tendencia, técnica y síntomas deben analizarse juntos",
+            "La saturación es el único dato importante"
+          ],
+          "correctIndex": 2,
+          "explanation": "Los signos vitales adquieren significado junto al contexto clínico, la calidad de medición y la evolución."
+        },
+        {
+          "question": "¿Qué secuencia produce una anamnesis más segura?",
+          "options": [
+            "Preguntar solo por el diagnóstico sospechado",
+            "Escuchar, organizar detalles, buscar contexto y alarmas, resumir y confirmar",
+            "Pedir todas las pruebas antes de hablar",
+            "Ignorar medicamentos si el paciente parece joven"
+          ],
+          "correctIndex": 1,
+          "explanation": "Una historia estructurada combina escucha, preguntas dirigidas, riesgo, contexto y confirmación."
+        },
+        {
+          "question": "¿Cuál es la mejor razón para elegir una acción de exploración física?",
+          "options": [
+            "Está disponible en el menú",
+            "Todos necesitan todas las exploraciones",
+            "Responde una pregunta clínica y evalúa riesgo",
+            "Aumenta el número de acciones"
+          ],
+          "correctIndex": 2,
+          "explanation": "La exploración debe guiarse por la queja, el riesgo y la hipótesis, con consentimiento y registro."
+        }
+      ]
+    }
+  },
+  "modules": [
+    {
+      "id": "safety-limits",
+      "order": 1,
+      "icon": "🛡️",
+      "estimatedMinutes": 18,
+      "difficulty": "beginner",
+      "sourceIds": [
+        "WHO-PATIENT-SAFETY-2011"
+      ],
+      "prerequisites": [],
+      "status": "development-only",
+      "publishable": false,
+      "locales": {
+        "pt-BR": {
+          "title": "Segurança, limites e papel do simulador",
+          "summary": "Entenda o que o jogo ensina, o que ele não autoriza e como evitar levar uma decisão simulada para uma situação real.",
+          "objectives": [
+            "Distinguir educação de atendimento real",
+            "Reconhecer riscos e pedir ajuda",
+            "Usar erros simulados como aprendizado"
+          ],
+          "lessons": [
+            {
+              "id": "scope",
+              "title": "Simulação não é habilitação",
+              "summary": "O jogo treina raciocínio, priorização e comunicação; não concede autorização profissional.",
+              "body": [
+                "Casos são simplificados e não representam todas as variações humanas.",
+                "Uma resposta correta no jogo pode não ser correta para uma pessoa real sem avaliação completa.",
+                "Em dúvida fora do jogo, procure um serviço de saúde ou o número local de emergência."
+              ],
+              "checks": []
+            },
+            {
+              "id": "safety-first",
+              "title": "Primeiro, não aumentar o risco",
+              "summary": "Segurança vem antes de acertar o diagnóstico.",
+              "body": [
+                "Identifique instabilidade, alergias, risco de queda, comunicação falha e possibilidade de deterioração.",
+                "Não adivinhe doses, não use medicamentos de terceiros e não atrase ajuda por causa do jogo.",
+                "No simulador, você pode pausar e revisar; na vida real, acione profissionais habilitados."
+              ],
+              "checks": []
+            },
+            {
+              "id": "learning-loop",
+              "title": "Erro, reflexão e debriefing",
+              "summary": "O objetivo não é esconder o erro, mas compreender por que ocorreu.",
+              "body": [
+                "Revise sinais ignorados, excesso de exames e comunicação insuficiente.",
+                "Compare sua decisão com os objetivos do caso e as fontes registradas.",
+                "Transforme o erro em uma regra de segurança para a próxima tentativa."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "Qual é a atitude mais segura ao reconhecer uma possível emergência fora do jogo?",
+            "options": [
+              "Repetir a decisão que deu mais pontos",
+              "Aguardar para ver se melhora",
+              "Acionar ajuda profissional e o sistema local de emergência",
+              "Tentar um medicamento sugerido por outro jogador"
+            ],
+            "correctIndex": 2,
+            "explanation": "O simulador é educacional. Situações reais exigem avaliação e resposta profissional."
+          }
+        },
+        "en": {
+          "title": "Safety, limits, and the role of the simulator",
+          "summary": "Understand what the game teaches, what it does not authorize, and how to avoid transferring simulated decisions to real situations.",
+          "objectives": [
+            "Distinguish education from real care",
+            "Recognize risk and seek help",
+            "Use simulated errors for learning"
+          ],
+          "lessons": [
+            {
+              "id": "scope",
+              "title": "Simulation is not a license",
+              "summary": "The game trains reasoning, prioritization, and communication; it does not grant professional authority.",
+              "body": [
+                "Cases are simplified and do not represent every human variation.",
+                "A correct game answer may be wrong for a real person without a full assessment.",
+                "Outside the game, seek healthcare or call the local emergency number when in doubt."
+              ],
+              "checks": []
+            },
+            {
+              "id": "safety-first",
+              "title": "First, do not increase risk",
+              "summary": "Safety comes before getting the diagnosis right.",
+              "body": [
+                "Identify instability, allergies, fall risk, communication failure, and possible deterioration.",
+                "Do not guess doses, use someone else’s medicines, or delay help because of the game.",
+                "In the simulator you can pause and review; in real life, activate qualified professionals."
+              ],
+              "checks": []
+            },
+            {
+              "id": "learning-loop",
+              "title": "Error, reflection, and debriefing",
+              "summary": "The goal is not to hide an error but to understand why it happened.",
+              "body": [
+                "Review missed warning signs, unnecessary testing, and weak communication.",
+                "Compare your decision with case objectives and registered sources.",
+                "Turn the error into a safety rule for the next attempt."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "What is the safest action when you recognize a possible emergency outside the game?",
+            "options": [
+              "Repeat the highest-scoring game decision",
+              "Wait and see",
+              "Activate professional help and the local emergency system",
+              "Try a medicine suggested by another player"
+            ],
+            "correctIndex": 2,
+            "explanation": "The simulator is educational. Real emergencies require professional assessment and response."
+          }
+        },
+        "es": {
+          "title": "Seguridad, límites y función del simulador",
+          "summary": "Comprende qué enseña el juego, qué no autoriza y cómo evitar trasladar decisiones simuladas a situaciones reales.",
+          "objectives": [
+            "Distinguir educación de atención real",
+            "Reconocer riesgos y pedir ayuda",
+            "Usar errores simulados para aprender"
+          ],
+          "lessons": [
+            {
+              "id": "scope",
+              "title": "La simulación no es una habilitación",
+              "summary": "El juego entrena razonamiento, priorización y comunicación; no otorga autorización profesional.",
+              "body": [
+                "Los casos son simplificados y no representan todas las variaciones humanas.",
+                "Una respuesta correcta en el juego puede ser incorrecta para una persona real sin evaluación completa.",
+                "Fuera del juego, busca atención sanitaria o llama al número local de emergencias si tienes dudas."
+              ],
+              "checks": []
+            },
+            {
+              "id": "safety-first",
+              "title": "Primero, no aumentar el riesgo",
+              "summary": "La seguridad está antes que acertar el diagnóstico.",
+              "body": [
+                "Identifica inestabilidad, alergias, riesgo de caída, fallas de comunicación y posible deterioro.",
+                "No adivines dosis, no uses medicamentos ajenos ni retrases la ayuda por causa del juego.",
+                "En el simulador puedes pausar y revisar; en la vida real, activa profesionales habilitados."
+              ],
+              "checks": []
+            },
+            {
+              "id": "learning-loop",
+              "title": "Error, reflexión y debriefing",
+              "summary": "El objetivo no es ocultar el error, sino comprender por qué ocurrió.",
+              "body": [
+                "Revisa señales de alarma ignoradas, exceso de pruebas y comunicación insuficiente.",
+                "Compara tu decisión con los objetivos del caso y las fuentes registradas.",
+                "Convierte el error en una regla de seguridad para el siguiente intento."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "¿Cuál es la conducta más segura al reconocer una posible emergencia fuera del juego?",
+            "options": [
+              "Repetir la decisión con más puntos",
+              "Esperar a que mejore",
+              "Activar ayuda profesional y el sistema local de emergencias",
+              "Probar un medicamento sugerido por otro jugador"
+            ],
+            "correctIndex": 2,
+            "explanation": "El simulador es educativo. Las emergencias reales requieren evaluación y respuesta profesional."
+          }
+        }
+      }
+    },
+    {
+      "id": "initial-assessment",
+      "order": 2,
+      "icon": "🚨",
+      "estimatedMinutes": 24,
+      "difficulty": "beginner",
+      "sourceIds": [
+        "WHO-PATIENT-SAFETY-2011",
+        "AHA-CPR-ECC-2025"
+      ],
+      "prerequisites": [
+        "safety-limits"
+      ],
+      "status": "development-only",
+      "publishable": false,
+      "locales": {
+        "pt-BR": {
+          "title": "Avaliação inicial e reconhecimento de urgência",
+          "summary": "Aprenda a priorizar ameaças imediatas antes de buscar um diagnóstico definitivo.",
+          "objectives": [
+            "Usar uma sequência estruturada",
+            "Reconhecer sinais de instabilidade",
+            "Reavaliar após cada ação"
+          ],
+          "lessons": [
+            {
+              "id": "first-impression",
+              "title": "Primeira impressão e segurança do ambiente",
+              "summary": "Antes de detalhes, confirme se é seguro aproximar-se e observe consciência, fala, respiração e aparência geral.",
+              "body": [
+                "Um paciente que não responde, não respira normalmente ou piora rapidamente exige escalada imediata.",
+                "A sequência ABCDE organiza prioridades; ela não substitui treinamento prático.",
+                "No jogo, sinais críticos devem mudar sua ordem de ações."
+              ],
+              "checks": []
+            },
+            {
+              "id": "abcde",
+              "title": "ABCDE em linguagem simples",
+              "summary": "A: via aérea; B: respiração; C: circulação; D: estado neurológico; E: exposição e contexto.",
+              "body": [
+                "Trate primeiro a ameaça que pode causar dano mais rápido.",
+                "Não avance mecanicamente: uma alteração em A ou B pode exigir ajuda antes de completar a sequência.",
+                "Documente o que encontrou e reavalie após intervenções."
+              ],
+              "checks": []
+            },
+            {
+              "id": "escalation",
+              "title": "Escalada e reavaliação",
+              "summary": "Reconhecer limites e pedir apoio é parte do cuidado seguro.",
+              "body": [
+                "Comunique situação, contexto, avaliação e pedido de forma objetiva.",
+                "Sinais vitais normais isolados não anulam uma queixa de alto risco.",
+                "A piora ao longo do tempo vale tanto quanto um número isolado."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "Por que a avaliação inicial vem antes do diagnóstico definitivo?",
+            "options": [
+              "Porque elimina a necessidade de exames",
+              "Porque identifica ameaças imediatas e define prioridades",
+              "Porque sempre confirma a doença",
+              "Porque evita conversar com o paciente"
+            ],
+            "correctIndex": 1,
+            "explanation": "A prioridade é reconhecer e escalar ameaças imediatas; o diagnóstico pode exigir mais dados."
+          }
+        },
+        "en": {
+          "title": "Initial assessment and recognition of urgency",
+          "summary": "Learn to prioritize immediate threats before pursuing a definitive diagnosis.",
+          "objectives": [
+            "Use a structured sequence",
+            "Recognize signs of instability",
+            "Reassess after each action"
+          ],
+          "lessons": [
+            {
+              "id": "first-impression",
+              "title": "First impression and scene safety",
+              "summary": "Before details, check whether it is safe to approach and observe responsiveness, speech, breathing, and general appearance.",
+              "body": [
+                "An unresponsive patient, abnormal breathing, or rapid deterioration requires immediate escalation.",
+                "ABCDE organizes priorities; it does not replace hands-on training.",
+                "In the game, critical findings should change the order of actions."
+              ],
+              "checks": []
+            },
+            {
+              "id": "abcde",
+              "title": "ABCDE in plain language",
+              "summary": "A: airway; B: breathing; C: circulation; D: disability/neurologic status; E: exposure and context.",
+              "body": [
+                "Address the threat that can cause harm fastest.",
+                "Do not move mechanically: a problem in A or B may require help before completing the sequence.",
+                "Document findings and reassess after interventions."
+              ],
+              "checks": []
+            },
+            {
+              "id": "escalation",
+              "title": "Escalation and reassessment",
+              "summary": "Recognizing limits and asking for support are part of safe care.",
+              "body": [
+                "Communicate situation, background, assessment, and request clearly.",
+                "Normal vital signs alone do not cancel a high-risk complaint.",
+                "Change over time matters as much as a single number."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "Why does the initial assessment come before the definitive diagnosis?",
+            "options": [
+              "It removes the need for tests",
+              "It identifies immediate threats and sets priorities",
+              "It always confirms the disease",
+              "It avoids speaking with the patient"
+            ],
+            "correctIndex": 1,
+            "explanation": "The priority is to recognize and escalate immediate threats; diagnosis may require more data."
+          }
+        },
+        "es": {
+          "title": "Evaluación inicial y reconocimiento de urgencia",
+          "summary": "Aprende a priorizar amenazas inmediatas antes de buscar un diagnóstico definitivo.",
+          "objectives": [
+            "Usar una secuencia estructurada",
+            "Reconocer signos de inestabilidad",
+            "Reevaluar después de cada acción"
+          ],
+          "lessons": [
+            {
+              "id": "first-impression",
+              "title": "Primera impresión y seguridad de la escena",
+              "summary": "Antes de los detalles, confirma que sea seguro acercarse y observa respuesta, habla, respiración y aspecto general.",
+              "body": [
+                "Un paciente que no responde, respira de forma anormal o empeora rápidamente requiere escalamiento inmediato.",
+                "ABCDE organiza prioridades; no sustituye la formación práctica.",
+                "En el juego, los hallazgos críticos deben cambiar el orden de tus acciones."
+              ],
+              "checks": []
+            },
+            {
+              "id": "abcde",
+              "title": "ABCDE en lenguaje sencillo",
+              "summary": "A: vía aérea; B: respiración; C: circulación; D: estado neurológico; E: exposición y contexto.",
+              "body": [
+                "Atiende primero la amenaza que puede causar daño más rápido.",
+                "No avances de forma mecánica: un problema en A o B puede exigir ayuda antes de completar la secuencia.",
+                "Documenta hallazgos y reevalúa después de las intervenciones."
+              ],
+              "checks": []
+            },
+            {
+              "id": "escalation",
+              "title": "Escalamiento y reevaluación",
+              "summary": "Reconocer límites y pedir apoyo forma parte de una atención segura.",
+              "body": [
+                "Comunica situación, antecedentes, evaluación y solicitud con claridad.",
+                "Signos vitales normales aislados no anulan una queja de alto riesgo.",
+                "La evolución en el tiempo importa tanto como un valor aislado."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "¿Por qué la evaluación inicial viene antes del diagnóstico definitivo?",
+            "options": [
+              "Elimina la necesidad de pruebas",
+              "Identifica amenazas inmediatas y define prioridades",
+              "Siempre confirma la enfermedad",
+              "Evita hablar con el paciente"
+            ],
+            "correctIndex": 1,
+            "explanation": "La prioridad es reconocer y escalar amenazas inmediatas; el diagnóstico puede requerir más datos."
+          }
+        }
+      }
+    },
+    {
+      "id": "vital-signs",
+      "order": 3,
+      "icon": "📟",
+      "estimatedMinutes": 22,
+      "difficulty": "beginner",
+      "sourceIds": [
+        "WHO-PATIENT-SAFETY-2011"
+      ],
+      "prerequisites": [
+        "initial-assessment"
+      ],
+      "status": "development-only",
+      "publishable": false,
+      "locales": {
+        "pt-BR": {
+          "title": "Sinais vitais e tendências",
+          "summary": "Interprete pressão, pulso, respiração, temperatura e saturação como conjunto, nunca como números isolados.",
+          "objectives": [
+            "Ler o conjunto de sinais vitais",
+            "Comparar com sintomas e contexto",
+            "Valorizar tendências e reavaliação"
+          ],
+          "lessons": [
+            {
+              "id": "meaning",
+              "title": "O que cada sinal representa",
+              "summary": "Sinais vitais resumem funções circulatória, respiratória e térmica, mas não fecham diagnóstico.",
+              "body": [
+                "PA deve ser interpretada com técnica de medida, contexto e repetição.",
+                "FC e FR mudam com dor, febre, ansiedade, esforço e doença.",
+                "SpO₂ precisa de leitura confiável e correlação clínica."
+              ],
+              "checks": []
+            },
+            {
+              "id": "trend",
+              "title": "Tendência é mais útil que fotografia",
+              "summary": "Uma sequência de medidas pode revelar melhora ou deterioração.",
+              "body": [
+                "Compare horário, posição, tratamento e qualidade da medida.",
+                "Uma mudança rápida pode ser mais importante que um valor ainda “normal”.",
+                "Registre antes e depois das ações relevantes."
+              ],
+              "checks": []
+            },
+            {
+              "id": "context",
+              "title": "Números não substituem o paciente",
+              "summary": "Fala, esforço respiratório, perfusão, consciência e queixa completam a interpretação.",
+              "body": [
+                "Não ignore sintomas graves por causa de um único número normal.",
+                "Resultados inesperados devem ser confirmados quando possível.",
+                "No jogo, observe o painel e a linha do tempo juntos."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "Qual interpretação é mais segura?",
+            "options": [
+              "Um sinal vital normal exclui doença grave",
+              "Todo valor fora da faixa confirma uma doença",
+              "Conjunto, tendência, técnica e sintomas devem ser analisados juntos",
+              "Saturação é o único dado importante"
+            ],
+            "correctIndex": 2,
+            "explanation": "Sinais vitais ganham significado quando combinados com contexto clínico, qualidade da medida e evolução."
+          }
+        },
+        "en": {
+          "title": "Vital signs and trends",
+          "summary": "Interpret blood pressure, pulse, breathing, temperature, and oxygen saturation as a set, never as isolated numbers.",
+          "objectives": [
+            "Read vital signs as a set",
+            "Compare with symptoms and context",
+            "Value trends and reassessment"
+          ],
+          "lessons": [
+            {
+              "id": "meaning",
+              "title": "What each sign represents",
+              "summary": "Vital signs summarize circulatory, respiratory, and thermal function but do not establish a diagnosis.",
+              "body": [
+                "Blood pressure depends on measurement technique, context, and repeat readings.",
+                "Heart and respiratory rates change with pain, fever, anxiety, exertion, and disease.",
+                "Oxygen saturation requires a reliable signal and clinical correlation."
+              ],
+              "checks": []
+            },
+            {
+              "id": "trend",
+              "title": "A trend is more useful than a snapshot",
+              "summary": "A sequence of measurements can reveal improvement or deterioration.",
+              "body": [
+                "Compare time, position, treatment, and measurement quality.",
+                "A rapid change may matter more than a value still within a reference range.",
+                "Record before and after relevant actions."
+              ],
+              "checks": []
+            },
+            {
+              "id": "context",
+              "title": "Numbers do not replace the patient",
+              "summary": "Speech, work of breathing, perfusion, consciousness, and the complaint complete interpretation.",
+              "body": [
+                "Do not dismiss severe symptoms because of one normal number.",
+                "Unexpected results should be confirmed when possible.",
+                "In the game, read the monitor and timeline together."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "Which interpretation is safest?",
+            "options": [
+              "One normal vital sign excludes serious disease",
+              "Every out-of-range value confirms a disease",
+              "The set, trend, technique, and symptoms must be analyzed together",
+              "Oxygen saturation is the only important datum"
+            ],
+            "correctIndex": 2,
+            "explanation": "Vital signs gain meaning when combined with clinical context, measurement quality, and change over time."
+          }
+        },
+        "es": {
+          "title": "Signos vitales y tendencias",
+          "summary": "Interpreta presión, pulso, respiración, temperatura y saturación como un conjunto, nunca como números aislados.",
+          "objectives": [
+            "Leer los signos vitales como conjunto",
+            "Compararlos con síntomas y contexto",
+            "Valorar tendencias y reevaluación"
+          ],
+          "lessons": [
+            {
+              "id": "meaning",
+              "title": "Qué representa cada signo",
+              "summary": "Los signos vitales resumen funciones circulatorias, respiratorias y térmicas, pero no establecen el diagnóstico.",
+              "body": [
+                "La presión arterial depende de la técnica, el contexto y mediciones repetidas.",
+                "La frecuencia cardíaca y respiratoria cambian con dolor, fiebre, ansiedad, esfuerzo y enfermedad.",
+                "La saturación requiere una señal fiable y correlación clínica."
+              ],
+              "checks": []
+            },
+            {
+              "id": "trend",
+              "title": "La tendencia es más útil que una fotografía",
+              "summary": "Una secuencia de mediciones puede revelar mejoría o deterioro.",
+              "body": [
+                "Compara horario, posición, tratamiento y calidad de la medición.",
+                "Un cambio rápido puede ser más importante que un valor todavía “normal”.",
+                "Registra antes y después de acciones relevantes."
+              ],
+              "checks": []
+            },
+            {
+              "id": "context",
+              "title": "Los números no sustituyen al paciente",
+              "summary": "Habla, trabajo respiratorio, perfusión, conciencia y motivo completan la interpretación.",
+              "body": [
+                "No descartes síntomas graves por un único número normal.",
+                "Los resultados inesperados deben confirmarse cuando sea posible.",
+                "En el juego, observa juntos el monitor y la línea de tiempo."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "¿Cuál interpretación es más segura?",
+            "options": [
+              "Un signo vital normal excluye enfermedad grave",
+              "Todo valor fuera de rango confirma una enfermedad",
+              "Conjunto, tendencia, técnica y síntomas deben analizarse juntos",
+              "La saturación es el único dato importante"
+            ],
+            "correctIndex": 2,
+            "explanation": "Los signos vitales adquieren significado junto al contexto clínico, la calidad de medición y la evolución."
+          }
+        }
+      }
+    },
+    {
+      "id": "history-taking",
+      "order": 4,
+      "icon": "💬",
+      "estimatedMinutes": 24,
+      "difficulty": "beginner",
+      "sourceIds": [
+        "WHO-PATIENT-SAFETY-2011",
+        "AHRQ-SBAR-TEAMSTEPPS"
+      ],
+      "prerequisites": [
+        "vital-signs"
+      ],
+      "status": "development-only",
+      "publishable": false,
+      "locales": {
+        "pt-BR": {
+          "title": "Anamnese, comunicação e sinais de alarme",
+          "summary": "Converta uma queixa inicial em uma história organizada, respeitosa e orientada por risco.",
+          "objectives": [
+            "Fazer perguntas abertas e dirigidas",
+            "Investigar alergias e medicamentos",
+            "Identificar sinais de alarme"
+          ],
+          "lessons": [
+            {
+              "id": "open-focus",
+              "title": "Do aberto ao específico",
+              "summary": "Comece permitindo o relato e depois detalhe início, localização, qualidade, intensidade, duração, fatores e sintomas associados.",
+              "body": [
+                "Evite interromper cedo demais.",
+                "Use perguntas dirigidas para confirmar risco, não para induzir respostas.",
+                "Resuma e peça confirmação ao paciente."
+              ],
+              "checks": []
+            },
+            {
+              "id": "background",
+              "title": "Contexto que muda decisões",
+              "summary": "Antecedentes, medicamentos, alergias, gestação possível, hábitos e histórico familiar podem mudar a prioridade.",
+              "body": [
+                "Pergunte o que a pessoa usa, como usa e quando usou por último.",
+                "Diferencie alergia, efeito adverso e intolerância quando o caso permitir.",
+                "Considere barreiras de linguagem e compreensão."
+              ],
+              "checks": []
+            },
+            {
+              "id": "red-flags",
+              "title": "Sinais de alarme",
+              "summary": "Sinais de alarme não dão o diagnóstico, mas indicam necessidade de avaliação rápida ou investigação diferente.",
+              "body": [
+                "Dor torácica com esforço, déficit neurológico, desmaio, falta de ar importante e deterioração exigem atenção.",
+                "Para cefaleia, início súbito, déficit focal, febre com rigidez e padrão novo são exemplos de alerta.",
+                "No simulador, sinais de alarme devem pesar mais que respostas de baixa relevância."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "Qual sequência produz uma anamnese mais segura?",
+            "options": [
+              "Perguntar apenas o diagnóstico que o jogador suspeita",
+              "Ouvir a queixa, organizar detalhes, buscar contexto e sinais de alarme, resumir e confirmar",
+              "Solicitar todos os exames antes de conversar",
+              "Ignorar medicamentos se o paciente parecer jovem"
+            ],
+            "correctIndex": 1,
+            "explanation": "Uma história organizada combina escuta, perguntas dirigidas, risco, contexto e confirmação."
+          }
+        },
+        "en": {
+          "title": "History taking, communication, and red flags",
+          "summary": "Turn an initial complaint into an organized, respectful, risk-oriented history.",
+          "objectives": [
+            "Use open and focused questions",
+            "Check allergies and medicines",
+            "Identify red flags"
+          ],
+          "lessons": [
+            {
+              "id": "open-focus",
+              "title": "From open to specific",
+              "summary": "Allow the story first, then detail onset, location, quality, severity, duration, modifiers, and associated symptoms.",
+              "body": [
+                "Avoid interrupting too early.",
+                "Use focused questions to confirm risk, not to lead the answer.",
+                "Summarize and ask the patient to confirm."
+              ],
+              "checks": []
+            },
+            {
+              "id": "background",
+              "title": "Context that changes decisions",
+              "summary": "History, medicines, allergies, possible pregnancy, habits, and family history may change priority.",
+              "body": [
+                "Ask what the person takes, how, and when it was last used.",
+                "Distinguish allergy, adverse effect, and intolerance when the case allows.",
+                "Consider language and health-literacy barriers."
+              ],
+              "checks": []
+            },
+            {
+              "id": "red-flags",
+              "title": "Red flags",
+              "summary": "Red flags do not establish the diagnosis, but they indicate a need for rapid assessment or a different investigation path.",
+              "body": [
+                "Exertional chest pain, neurologic deficit, fainting, major breathlessness, and deterioration require attention.",
+                "For headache, sudden onset, focal deficit, fever with neck stiffness, and a new pattern are examples.",
+                "In the simulator, red flags should outweigh low-value answers."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "Which sequence produces a safer history?",
+            "options": [
+              "Ask only about the diagnosis the player suspects",
+              "Listen, organize details, check context and red flags, summarize, and confirm",
+              "Order every test before speaking",
+              "Ignore medicines if the patient looks young"
+            ],
+            "correctIndex": 1,
+            "explanation": "A structured history combines listening, focused questions, risk, context, and confirmation."
+          }
+        },
+        "es": {
+          "title": "Anamnesis, comunicación y signos de alarma",
+          "summary": "Convierte una queja inicial en una historia organizada, respetuosa y orientada por riesgo.",
+          "objectives": [
+            "Usar preguntas abiertas y dirigidas",
+            "Investigar alergias y medicamentos",
+            "Identificar signos de alarma"
+          ],
+          "lessons": [
+            {
+              "id": "open-focus",
+              "title": "De lo abierto a lo específico",
+              "summary": "Permite primero el relato y luego detalla inicio, localización, calidad, intensidad, duración, modificadores y síntomas asociados.",
+              "body": [
+                "Evita interrumpir demasiado pronto.",
+                "Usa preguntas dirigidas para confirmar riesgo, no para inducir la respuesta.",
+                "Resume y pide confirmación al paciente."
+              ],
+              "checks": []
+            },
+            {
+              "id": "background",
+              "title": "Contexto que cambia decisiones",
+              "summary": "Antecedentes, medicamentos, alergias, posible embarazo, hábitos e historia familiar pueden cambiar la prioridad.",
+              "body": [
+                "Pregunta qué usa la persona, cómo y cuándo fue la última dosis.",
+                "Distingue alergia, efecto adverso e intolerancia cuando el caso lo permita.",
+                "Considera barreras de idioma y comprensión."
+              ],
+              "checks": []
+            },
+            {
+              "id": "red-flags",
+              "title": "Signos de alarma",
+              "summary": "Los signos de alarma no establecen el diagnóstico, pero indican necesidad de evaluación rápida o una ruta distinta.",
+              "body": [
+                "Dolor torácico con esfuerzo, déficit neurológico, síncope, falta de aire importante y deterioro requieren atención.",
+                "En cefalea, inicio súbito, déficit focal, fiebre con rigidez y patrón nuevo son ejemplos.",
+                "En el simulador, las alarmas deben pesar más que respuestas de baja relevancia."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "¿Qué secuencia produce una anamnesis más segura?",
+            "options": [
+              "Preguntar solo por el diagnóstico sospechado",
+              "Escuchar, organizar detalles, buscar contexto y alarmas, resumir y confirmar",
+              "Pedir todas las pruebas antes de hablar",
+              "Ignorar medicamentos si el paciente parece joven"
+            ],
+            "correctIndex": 1,
+            "explanation": "Una historia estructurada combina escucha, preguntas dirigidas, riesgo, contexto y confirmación."
+          }
+        }
+      }
+    },
+    {
+      "id": "physical-exam",
+      "order": 5,
+      "icon": "🩺",
+      "estimatedMinutes": 22,
+      "difficulty": "beginner",
+      "sourceIds": [
+        "WHO-PATIENT-SAFETY-2011"
+      ],
+      "prerequisites": [
+        "history-taking"
+      ],
+      "status": "development-only",
+      "publishable": false,
+      "locales": {
+        "pt-BR": {
+          "title": "Exame físico orientado e respeitoso",
+          "summary": "Entenda como o exame físico testa hipóteses, identifica gravidade e reduz decisões por suposição.",
+          "objectives": [
+            "Escolher exame conforme a queixa",
+            "Respeitar consentimento e privacidade",
+            "Registrar achados positivos e negativos"
+          ],
+          "lessons": [
+            {
+              "id": "purpose",
+              "title": "Examine para responder uma pergunta",
+              "summary": "Cada manobra deve ter uma finalidade: confirmar estabilidade, buscar um achado ou afastar uma ameaça.",
+              "body": [
+                "Exame geral começa antes do estetoscópio: aparência, fala, postura e esforço contam.",
+                "Escolha sistemas relacionados à queixa e ao risco.",
+                "Um exame normal reduz algumas probabilidades, mas raramente zera todas."
+              ],
+              "checks": []
+            },
+            {
+              "id": "respect",
+              "title": "Consentimento, conforto e limites",
+              "summary": "Explique o que será feito, peça permissão e preserve privacidade.",
+              "body": [
+                "Interrompa se houver dor intensa ou recusa.",
+                "Use acompanhante ou apoio institucional quando apropriado.",
+                "O simulador representa achados; ele não ensina habilidade manual."
+              ],
+              "checks": []
+            },
+            {
+              "id": "document",
+              "title": "Registro útil",
+              "summary": "Registre achados objetivos e evite frases vagas.",
+              "body": [
+                "Diga o que foi examinado e o que foi encontrado.",
+                "Achados negativos relevantes ajudam a explicar o raciocínio.",
+                "Não copie um exame completo que não foi realizado."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "Qual é a melhor justificativa para escolher um procedimento de exame físico?",
+            "options": [
+              "Porque está disponível no menu",
+              "Porque todos os pacientes precisam de todos os exames",
+              "Porque responde a uma pergunta clínica e avalia risco",
+              "Porque aumenta o número de ações"
+            ],
+            "correctIndex": 2,
+            "explanation": "O exame deve ser orientado pela queixa, risco e hipótese, com consentimento e registro."
+          }
+        },
+        "en": {
+          "title": "Focused and respectful physical examination",
+          "summary": "Understand how the physical examination tests hypotheses, identifies severity, and reduces assumption-based decisions.",
+          "objectives": [
+            "Choose examination based on the complaint",
+            "Respect consent and privacy",
+            "Document positive and negative findings"
+          ],
+          "lessons": [
+            {
+              "id": "purpose",
+              "title": "Examine to answer a question",
+              "summary": "Each maneuver should have a purpose: confirm stability, find a sign, or reduce concern about a threat.",
+              "body": [
+                "General examination starts before the stethoscope: appearance, speech, posture, and effort matter.",
+                "Choose systems related to the complaint and risk.",
+                "A normal examination lowers some probabilities but rarely makes all risk zero."
+              ],
+              "checks": []
+            },
+            {
+              "id": "respect",
+              "title": "Consent, comfort, and limits",
+              "summary": "Explain what will happen, ask permission, and preserve privacy.",
+              "body": [
+                "Stop if there is severe pain or refusal.",
+                "Use a chaperone or institutional support when appropriate.",
+                "The simulator represents findings; it does not teach manual skill."
+              ],
+              "checks": []
+            },
+            {
+              "id": "document",
+              "title": "Useful documentation",
+              "summary": "Record objective findings and avoid vague phrases.",
+              "body": [
+                "State what was examined and what was found.",
+                "Relevant negative findings help explain reasoning.",
+                "Do not copy a full examination that was not performed."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "What is the best reason to choose a physical examination action?",
+            "options": [
+              "It is available in the menu",
+              "Every patient needs every examination",
+              "It answers a clinical question and assesses risk",
+              "It increases the action count"
+            ],
+            "correctIndex": 2,
+            "explanation": "Examination should be guided by complaint, risk, and hypothesis, with consent and documentation."
+          }
+        },
+        "es": {
+          "title": "Exploración física dirigida y respetuosa",
+          "summary": "Comprende cómo la exploración física prueba hipótesis, identifica gravedad y reduce decisiones por suposición.",
+          "objectives": [
+            "Elegir la exploración según la queja",
+            "Respetar consentimiento y privacidad",
+            "Registrar hallazgos positivos y negativos"
+          ],
+          "lessons": [
+            {
+              "id": "purpose",
+              "title": "Explorar para responder una pregunta",
+              "summary": "Cada maniobra debe tener un propósito: confirmar estabilidad, buscar un signo o reducir una amenaza.",
+              "body": [
+                "La exploración general empieza antes del estetoscopio: aspecto, habla, postura y esfuerzo importan.",
+                "Elige sistemas relacionados con la queja y el riesgo.",
+                "Una exploración normal reduce algunas probabilidades, pero rara vez elimina todo riesgo."
+              ],
+              "checks": []
+            },
+            {
+              "id": "respect",
+              "title": "Consentimiento, comodidad y límites",
+              "summary": "Explica lo que harás, pide permiso y protege la privacidad.",
+              "body": [
+                "Detente ante dolor intenso o rechazo.",
+                "Usa acompañante o apoyo institucional cuando corresponda.",
+                "El simulador representa hallazgos; no enseña destreza manual."
+              ],
+              "checks": []
+            },
+            {
+              "id": "document",
+              "title": "Registro útil",
+              "summary": "Registra hallazgos objetivos y evita frases vagas.",
+              "body": [
+                "Indica qué se examinó y qué se encontró.",
+                "Los hallazgos negativos relevantes ayudan a explicar el razonamiento.",
+                "No copies una exploración completa que no realizaste."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "¿Cuál es la mejor razón para elegir una acción de exploración física?",
+            "options": [
+              "Está disponible en el menú",
+              "Todos necesitan todas las exploraciones",
+              "Responde una pregunta clínica y evalúa riesgo",
+              "Aumenta el número de acciones"
+            ],
+            "correctIndex": 2,
+            "explanation": "La exploración debe guiarse por la queja, el riesgo y la hipótesis, con consentimiento y registro."
+          }
+        }
+      }
+    },
+    {
+      "id": "tests-uncertainty",
+      "order": 6,
+      "icon": "🧪",
+      "estimatedMinutes": 26,
+      "difficulty": "intermediate",
+      "sourceIds": [
+        "WHO-PATIENT-SAFETY-2011",
+        "CDC-DIAGNOSTIC-EXCELLENCE-2026"
+      ],
+      "prerequisites": [
+        "physical-exam"
+      ],
+      "status": "development-only",
+      "publishable": false,
+      "locales": {
+        "pt-BR": {
+          "title": "Exames, probabilidade e incerteza",
+          "summary": "Aprenda por que pedir tudo pode gerar dano, atraso e resultados enganosos.",
+          "objectives": [
+            "Vincular exame a uma decisão",
+            "Compreender falso positivo e falso negativo",
+            "Reavaliar após resultados"
+          ],
+          "lessons": [
+            {
+              "id": "question",
+              "title": "Antes de pedir: o que mudará?",
+              "summary": "Um exame tem valor quando seu resultado pode mudar hipótese, urgência, tratamento ou seguimento.",
+              "body": [
+                "Defina a pergunta clínica antes do clique.",
+                "Considere tempo, custo, desconforto, radiação e achados incidentais.",
+                "No jogo, exames excessivos podem reduzir eficiência."
+              ],
+              "checks": []
+            },
+            {
+              "id": "probability",
+              "title": "Nenhum teste é perfeito",
+              "summary": "Sensibilidade e especificidade descrevem desempenho, mas o significado depende da probabilidade antes do teste.",
+              "body": [
+                "Em risco muito baixo, um resultado positivo pode ser falso.",
+                "Um resultado negativo não exclui tudo quando o risco prévio é alto.",
+                "Repita, combine ou escale conforme o cenário e o protocolo."
+              ],
+              "checks": []
+            },
+            {
+              "id": "after-result",
+              "title": "Resultado é início de nova decisão",
+              "summary": "Interprete o resultado junto da história, exame físico e evolução.",
+              "body": [
+                "Confirme se o resultado pertence ao paciente correto e ao momento correto.",
+                "Revise hipóteses em vez de apenas acumular dados.",
+                "Comunique incerteza e plano de contingência."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "Quando um exame tende a ter maior utilidade?",
+            "options": [
+              "Quando está no topo da lista",
+              "Quando seu resultado pode mudar uma decisão clínica",
+              "Quando o jogador ainda não conversou com o paciente",
+              "Quando todos os outros jogadores pedem"
+            ],
+            "correctIndex": 1,
+            "explanation": "A utilidade depende da pergunta clínica e de como um resultado mudará a conduta."
+          }
+        },
+        "en": {
+          "title": "Tests, probability, and uncertainty",
+          "summary": "Learn why ordering everything can cause harm, delay, and misleading results.",
+          "objectives": [
+            "Link a test to a decision",
+            "Understand false positives and false negatives",
+            "Reassess after results"
+          ],
+          "lessons": [
+            {
+              "id": "question",
+              "title": "Before ordering: what will change?",
+              "summary": "A test has value when its result can change the hypothesis, urgency, treatment, or follow-up.",
+              "body": [
+                "Define the clinical question before clicking.",
+                "Consider time, cost, discomfort, radiation, and incidental findings.",
+                "In the game, excessive testing may reduce efficiency."
+              ],
+              "checks": []
+            },
+            {
+              "id": "probability",
+              "title": "No test is perfect",
+              "summary": "Sensitivity and specificity describe performance, but meaning depends on pretest probability.",
+              "body": [
+                "At very low risk, a positive result may be false.",
+                "A negative result may not exclude disease when prior risk is high.",
+                "Repeat, combine, or escalate according to the scenario and protocol."
+              ],
+              "checks": []
+            },
+            {
+              "id": "after-result",
+              "title": "A result starts a new decision",
+              "summary": "Interpret the result with history, examination, and change over time.",
+              "body": [
+                "Confirm it belongs to the right patient and time point.",
+                "Revise hypotheses instead of merely accumulating data.",
+                "Communicate uncertainty and a contingency plan."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "When is a test usually most useful?",
+            "options": [
+              "When it is at the top of the list",
+              "When its result can change a clinical decision",
+              "Before speaking with the patient",
+              "When every other player orders it"
+            ],
+            "correctIndex": 1,
+            "explanation": "Usefulness depends on the clinical question and how the result changes management."
+          }
+        },
+        "es": {
+          "title": "Pruebas, probabilidad e incertidumbre",
+          "summary": "Aprende por qué pedirlo todo puede causar daño, retraso y resultados engañosos.",
+          "objectives": [
+            "Vincular una prueba a una decisión",
+            "Comprender falsos positivos y negativos",
+            "Reevaluar tras los resultados"
+          ],
+          "lessons": [
+            {
+              "id": "question",
+              "title": "Antes de pedir: ¿qué cambiará?",
+              "summary": "Una prueba tiene valor cuando su resultado puede cambiar hipótesis, urgencia, tratamiento o seguimiento.",
+              "body": [
+                "Define la pregunta clínica antes de hacer clic.",
+                "Considera tiempo, costo, incomodidad, radiación y hallazgos incidentales.",
+                "En el juego, el exceso de pruebas puede reducir eficiencia."
+              ],
+              "checks": []
+            },
+            {
+              "id": "probability",
+              "title": "Ninguna prueba es perfecta",
+              "summary": "Sensibilidad y especificidad describen rendimiento, pero el significado depende de la probabilidad previa.",
+              "body": [
+                "Con riesgo muy bajo, un positivo puede ser falso.",
+                "Un negativo puede no excluir enfermedad si el riesgo previo es alto.",
+                "Repite, combina o escala según el escenario y el protocolo."
+              ],
+              "checks": []
+            },
+            {
+              "id": "after-result",
+              "title": "Un resultado inicia una nueva decisión",
+              "summary": "Interpreta el resultado con la historia, exploración y evolución.",
+              "body": [
+                "Confirma que corresponde al paciente y momento correctos.",
+                "Revisa hipótesis en vez de solo acumular datos.",
+                "Comunica incertidumbre y un plan de contingencia."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "¿Cuándo suele ser más útil una prueba?",
+            "options": [
+              "Cuando aparece primero en la lista",
+              "Cuando su resultado puede cambiar una decisión clínica",
+              "Antes de hablar con el paciente",
+              "Cuando todos los jugadores la piden"
+            ],
+            "correctIndex": 1,
+            "explanation": "La utilidad depende de la pregunta clínica y de cómo el resultado cambia la conducta."
+          }
+        }
+      }
+    },
+    {
+      "id": "medication-safety",
+      "order": 7,
+      "icon": "💊",
+      "estimatedMinutes": 24,
+      "difficulty": "intermediate",
+      "sourceIds": [
+        "WHO-PATIENT-SAFETY-2011",
+        "CDC-MEDICATION-SAFETY-2024"
+      ],
+      "prerequisites": [
+        "tests-uncertainty"
+      ],
+      "status": "development-only",
+      "publishable": false,
+      "locales": {
+        "pt-BR": {
+          "title": "Segurança medicamentosa e reavaliação",
+          "summary": "Entenda os controles essenciais antes, durante e depois de uma decisão medicamentosa simulada.",
+          "objectives": [
+            "Checar paciente, medicamento, dose, via e tempo",
+            "Investigar alergias e contraindicações",
+            "Monitorar resposta e dano"
+          ],
+          "lessons": [
+            {
+              "id": "checks",
+              "title": "Checagens fundamentais",
+              "summary": "Antes de administrar, confirme paciente, indicação, medicamento, dose, via, horário e registro.",
+              "body": [
+                "As checagens são uma barreira, não uma garantia absoluta.",
+                "Peso, idade, gestação, rim, fígado e interações podem mudar a segurança.",
+                "No jogo atual, doses ainda não são simuladas; não extrapole para uso real."
+              ],
+              "checks": []
+            },
+            {
+              "id": "allergy",
+              "title": "Alergia, contraindicação e interação",
+              "summary": "Pergunte, confirme e diferencie o tipo de reação.",
+              "body": [
+                "A ausência de alergia conhecida não elimina todos os eventos adversos.",
+                "Contraindicação depende do contexto e do protocolo local.",
+                "Medicamentos podem interagir entre si, com doenças e com alimentos."
+              ],
+              "checks": []
+            },
+            {
+              "id": "monitor",
+              "title": "Depois de administrar, reavalie",
+              "summary": "Uma decisão medicamentosa só termina após observar benefício, efeitos adversos e necessidade de nova ação.",
+              "body": [
+                "Defina o que será monitorado e quando.",
+                "Registre resposta e comunique deterioração.",
+                "Eventos adversos e erros devem ser reconhecidos e tratados pelo sistema, não ocultados."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "Qual item completa uma decisão medicamentosa segura?",
+            "options": [
+              "Somente selecionar o nome correto",
+              "Selecionar e não registrar",
+              "Checar contexto, administrar conforme protocolo e reavaliar resposta e dano",
+              "Usar a mesma dose para todos"
+            ],
+            "correctIndex": 2,
+            "explanation": "Segurança medicamentosa inclui checagens antes, administração apropriada, registro e monitorização depois."
+          }
+        },
+        "en": {
+          "title": "Medication safety and reassessment",
+          "summary": "Understand essential checks before, during, and after a simulated medication decision.",
+          "objectives": [
+            "Check patient, medicine, dose, route, and timing",
+            "Check allergies and contraindications",
+            "Monitor response and harm"
+          ],
+          "lessons": [
+            {
+              "id": "checks",
+              "title": "Core checks",
+              "summary": "Before administration, confirm patient, indication, medicine, dose, route, timing, and documentation.",
+              "body": [
+                "Checks are a barrier, not an absolute guarantee.",
+                "Weight, age, pregnancy, kidney, liver, and interactions may change safety.",
+                "The current game does not simulate doses; do not extrapolate it to real use."
+              ],
+              "checks": []
+            },
+            {
+              "id": "allergy",
+              "title": "Allergy, contraindication, and interaction",
+              "summary": "Ask, verify, and distinguish the type of reaction.",
+              "body": [
+                "No known allergy does not eliminate all adverse events.",
+                "Contraindications depend on context and local protocols.",
+                "Medicines may interact with each other, disease, and food."
+              ],
+              "checks": []
+            },
+            {
+              "id": "monitor",
+              "title": "After administration, reassess",
+              "summary": "A medication decision ends only after observing benefit, harm, and need for further action.",
+              "body": [
+                "Define what will be monitored and when.",
+                "Document response and communicate deterioration.",
+                "Adverse events and errors should be recognized and managed by the system, not hidden."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "What completes a safer medication decision?",
+            "options": [
+              "Only selecting the correct name",
+              "Selecting without documenting",
+              "Check context, administer under protocol, and reassess benefit and harm",
+              "Use the same dose for everyone"
+            ],
+            "correctIndex": 2,
+            "explanation": "Medication safety includes checks before, appropriate administration, documentation, and monitoring afterward."
+          }
+        },
+        "es": {
+          "title": "Seguridad de medicamentos y reevaluación",
+          "summary": "Comprende controles esenciales antes, durante y después de una decisión simulada sobre medicamentos.",
+          "objectives": [
+            "Verificar paciente, medicamento, dosis, vía y momento",
+            "Investigar alergias y contraindicaciones",
+            "Vigilar respuesta y daño"
+          ],
+          "lessons": [
+            {
+              "id": "checks",
+              "title": "Comprobaciones fundamentales",
+              "summary": "Antes de administrar, confirma paciente, indicación, medicamento, dosis, vía, momento y registro.",
+              "body": [
+                "Las comprobaciones son una barrera, no una garantía absoluta.",
+                "Peso, edad, embarazo, riñón, hígado e interacciones pueden cambiar la seguridad.",
+                "El juego actual no simula dosis; no lo extrapoles al uso real."
+              ],
+              "checks": []
+            },
+            {
+              "id": "allergy",
+              "title": "Alergia, contraindicación e interacción",
+              "summary": "Pregunta, verifica y distingue el tipo de reacción.",
+              "body": [
+                "No conocer alergias no elimina todos los eventos adversos.",
+                "Las contraindicaciones dependen del contexto y protocolos locales.",
+                "Los medicamentos pueden interactuar entre sí, con enfermedades y alimentos."
+              ],
+              "checks": []
+            },
+            {
+              "id": "monitor",
+              "title": "Después de administrar, reevalúa",
+              "summary": "Una decisión medicamentosa termina solo después de observar beneficio, daño y necesidad de nuevas acciones.",
+              "body": [
+                "Define qué se vigilará y cuándo.",
+                "Registra la respuesta y comunica el deterioro.",
+                "Eventos adversos y errores deben reconocerse y gestionarse, no ocultarse."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "¿Qué completa una decisión más segura sobre medicamentos?",
+            "options": [
+              "Solo elegir el nombre correcto",
+              "Elegir sin registrar",
+              "Verificar contexto, administrar según protocolo y reevaluar beneficio y daño",
+              "Usar la misma dosis para todos"
+            ],
+            "correctIndex": 2,
+            "explanation": "La seguridad incluye comprobaciones previas, administración apropiada, registro y vigilancia posterior."
+          }
+        }
+      }
+    },
+    {
+      "id": "protocol-map",
+      "order": 8,
+      "icon": "🗺️",
+      "estimatedMinutes": 30,
+      "difficulty": "intermediate",
+      "sourceIds": [
+        "AHA-ACC-HBP-2025",
+        "IHS-ICHD3-TTH",
+        "ESC-CCS-2024",
+        "EAU-UTI-2026",
+        "ACG-GERD-2022",
+        "AAD-AD-TOPICAL-2023"
+      ],
+      "prerequisites": [
+        "medication-safety"
+      ],
+      "status": "development-only",
+      "publishable": false,
+      "locales": {
+        "pt-BR": {
+          "title": "Mapa dos protocolos já presentes no jogo",
+          "summary": "Conheça o objetivo educacional, os sinais de segurança e as limitações dos seis casos ativos.",
+          "objectives": [
+            "Relacionar cada caso à sua fonte",
+            "Reconhecer pendências de validação",
+            "Evitar decorar respostas sem raciocínio"
+          ],
+          "lessons": [
+            {
+              "id": "cardio-neuro",
+              "title": "Pressão, cefaleia e dor torácica",
+              "summary": "Os casos treinam medição e contexto da pressão, investigação de sinais de alarme em cefaleia e segurança na dor torácica.",
+              "body": [
+                "Uma medida isolada de PA não confirma automaticamente hipertensão.",
+                "Cefaleia exige caracterização e busca de causas secundárias.",
+                "Dor torácica com sinais de risco não deve ser rotulada como estável antes de excluir urgência."
+              ],
+              "checks": []
+            },
+            {
+              "id": "infection-gi",
+              "title": "Sintomas urinários e refluxo",
+              "summary": "Os casos treinam diferenciação de infecção localizada/sistêmica e reconhecimento de sinais de alarme digestivos.",
+              "body": [
+                "Gestação, febre, dor lombar e estado geral mudam o caso urinário.",
+                "Antibiótico exige indicação e protocolo local.",
+                "No refluxo, disfagia, perda de peso, sangramento e refratariedade mudam a investigação."
+              ],
+              "checks": []
+            },
+            {
+              "id": "skin-governance",
+              "title": "Dermatite e governança clínica",
+              "summary": "O caso de dermatite treina história de gatilhos, barreira cutânea e uso responsável de terapia, mas não prescrição real.",
+              "body": [
+                "Potência e duração de terapias tópicas dependem de local, idade e gravidade.",
+                "Todos os seis casos estão apenas com fontes mapeadas nesta build.",
+                "A liberação comercial continua bloqueada até revisão clínica independente e trilíngue."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "O que significa “fonte mapeada” nesta build?",
+            "options": [
+              "O caso já foi aprovado para uso comercial",
+              "Existe uma referência vinculada, mas a revisão clínica e editorial ainda não terminou",
+              "O caso não precisa de revisor",
+              "A tradução automática é suficiente"
+            ],
+            "correctIndex": 1,
+            "explanation": "Fonte mapeada é uma etapa de governança; não equivale a aprovação clínica ou comercial."
+          }
+        },
+        "en": {
+          "title": "Map of protocols already present in the game",
+          "summary": "Learn the educational purpose, safety signals, and limitations of the six active cases.",
+          "objectives": [
+            "Link each case to its source",
+            "Recognize validation gaps",
+            "Avoid memorizing answers without reasoning"
+          ],
+          "lessons": [
+            {
+              "id": "cardio-neuro",
+              "title": "Blood pressure, headache, and chest pain",
+              "summary": "Cases train pressure measurement in context, headache red-flag review, and chest-pain safety.",
+              "body": [
+                "A single blood-pressure reading does not automatically establish hypertension.",
+                "Headache requires characterization and a search for secondary causes.",
+                "Chest pain with risk features should not be labeled stable before urgent conditions are excluded."
+              ],
+              "checks": []
+            },
+            {
+              "id": "infection-gi",
+              "title": "Urinary symptoms and reflux",
+              "summary": "Cases train differentiation of localized/systemic infection and digestive red flags.",
+              "body": [
+                "Pregnancy, fever, flank pain, and general condition change the urinary case.",
+                "Antibiotics require an indication and local protocol.",
+                "For reflux, dysphagia, weight loss, bleeding, and refractory symptoms change the investigation."
+              ],
+              "checks": []
+            },
+            {
+              "id": "skin-governance",
+              "title": "Dermatitis and clinical governance",
+              "summary": "The dermatitis case trains trigger history, skin barrier, and responsible therapy use, not real prescribing.",
+              "body": [
+                "Topical potency and duration depend on site, age, and severity.",
+                "All six cases have sources mapped only in this build.",
+                "Commercial release remains blocked pending independent clinical and trilingual review."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "What does “source mapped” mean in this build?",
+            "options": [
+              "The case is commercially approved",
+              "A reference is linked, but clinical and editorial review is incomplete",
+              "No reviewer is needed",
+              "Machine translation is sufficient"
+            ],
+            "correctIndex": 1,
+            "explanation": "Source mapping is a governance step; it is not clinical or commercial approval."
+          }
+        },
+        "es": {
+          "title": "Mapa de protocolos ya presentes en el juego",
+          "summary": "Conoce el objetivo educativo, las señales de seguridad y las limitaciones de los seis casos activos.",
+          "objectives": [
+            "Vincular cada caso con su fuente",
+            "Reconocer pendientes de validación",
+            "Evitar memorizar respuestas sin razonar"
+          ],
+          "lessons": [
+            {
+              "id": "cardio-neuro",
+              "title": "Presión, cefalea y dolor torácico",
+              "summary": "Los casos entrenan medición de presión con contexto, alarmas en cefalea y seguridad en dolor torácico.",
+              "body": [
+                "Una medición aislada no confirma automáticamente hipertensión.",
+                "La cefalea exige caracterización y búsqueda de causas secundarias.",
+                "El dolor torácico con riesgo no debe llamarse estable antes de excluir urgencias."
+              ],
+              "checks": []
+            },
+            {
+              "id": "infection-gi",
+              "title": "Síntomas urinarios y reflujo",
+              "summary": "Los casos entrenan diferenciación de infección localizada/sistémica y alarmas digestivas.",
+              "body": [
+                "Embarazo, fiebre, dolor lumbar y estado general cambian el caso urinario.",
+                "Los antibióticos requieren indicación y protocolo local.",
+                "En reflujo, disfagia, pérdida de peso, sangrado y refractariedad cambian la investigación."
+              ],
+              "checks": []
+            },
+            {
+              "id": "skin-governance",
+              "title": "Dermatitis y gobernanza clínica",
+              "summary": "El caso de dermatitis entrena historia de desencadenantes, barrera cutánea y uso responsable, no prescripción real.",
+              "body": [
+                "Potencia y duración tópicas dependen de zona, edad y gravedad.",
+                "Los seis casos solo tienen fuentes mapeadas en esta versión.",
+                "La publicación comercial sigue bloqueada hasta revisión clínica independiente y trilingüe."
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "¿Qué significa “fuente vinculada” en esta versión?",
+            "options": [
+              "El caso está aprobado comercialmente",
+              "Hay una referencia vinculada, pero la revisión clínica y editorial está incompleta",
+              "No se necesita revisor",
+              "La traducción automática es suficiente"
+            ],
+            "correctIndex": 1,
+            "explanation": "Vincular fuentes es una etapa de gobernanza; no equivale a aprobación clínica o comercial."
+          }
+        }
+      }
+    },
+    {
+      "id": "guided-reasoning",
+      "order": 9,
+      "icon": "🧠",
+      "estimatedMinutes": 32,
+      "difficulty": "intermediate",
+      "sourceIds": [
+        "WHO-PATIENT-SAFETY-2011",
+        "AHRQ-SBAR-TEAMSTEPPS",
+        "ESC-CCS-2024"
+      ],
+      "prerequisites": [
+        "protocol-map"
+      ],
+      "status": "development-only",
+      "publishable": false,
+      "locales": {
+        "pt-BR": {
+          "title": "Raciocínio clínico guiado e debriefing",
+          "summary": "Integre segurança, história, exame, testes, comunicação e incerteza em um caso de risco.",
+          "objectives": [
+            "Evitar ancoragem prematura",
+            "Priorizar risco antes do rótulo",
+            "Construir um plano com contingência"
+          ],
+          "lessons": [
+            {
+              "id": "reasoning",
+              "title": "Hipótese é provisória",
+              "summary": "Uma hipótese organiza dados, mas deve permanecer aberta a revisão.",
+              "body": [
+                "Liste o que apoia e o que contradiz cada hipótese.",
+                "Considere a alternativa perigosa que não pode ser perdida.",
+                "Atualize o raciocínio quando surgem novos dados."
+              ],
+              "checks": []
+            },
+            {
+              "id": "plan",
+              "title": "Plano inclui contingência",
+              "summary": "Um bom plano diz o que fazer agora, o que observar e o que fazer se houver piora.",
+              "body": [
+                "Defina reavaliação e critérios de escalada.",
+                "Explique incerteza sem abandonar o paciente.",
+                "Registre por que a decisão foi tomada."
+              ],
+              "checks": []
+            },
+            {
+              "id": "debrief",
+              "title": "Debriefing estruturado",
+              "summary": "Depois do caso, descreva fatos, analise decisões e formule uma melhoria específica.",
+              "body": [
+                "O que você percebeu primeiro?",
+                "Qual dado mudou sua hipótese?",
+                "Que regra de segurança levará para o próximo caso?"
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "Qual frase representa melhor o raciocínio clínico seguro?",
+            "options": [
+              "Minha primeira hipótese deve permanecer até o fim",
+              "Mais exames sempre corrigem um raciocínio fraco",
+              "Hipóteses são atualizadas com evidências, risco e reavaliação",
+              "Incerteza nunca deve ser registrada"
+            ],
+            "correctIndex": 2,
+            "explanation": "Raciocínio seguro é iterativo e considera evidências favoráveis, contrárias e alternativas perigosas."
+          },
+          "guidedCase": {
+            "title": "Caso guiado: dor no peito durante esforço",
+            "scenario": "Ricardo, 56 anos, relata aperto no peito ao subir escadas, com melhora no repouso e episódio de suor frio. O objetivo é reconhecer risco e organizar a avaliação, não prescrever.",
+            "steps": [
+              {
+                "prompt": "Qual é a primeira prioridade?",
+                "options": [
+                  "Escolher imediatamente “angina estável”",
+                  "Avaliar estabilidade, sinais vitais e características de alto risco",
+                  "Dar alta porque a dor melhorou",
+                  "Solicitar apenas perfil lipídico"
+                ],
+                "correctIndex": 1,
+                "explanation": "Antes do rótulo diagnóstico, é necessário avaliar estabilidade e excluir cenários urgentes."
+              },
+              {
+                "prompt": "Qual pergunta tem maior valor de segurança?",
+                "options": [
+                  "Cor favorita",
+                  "Irradiação, duração, esforço, falta de ar, síncope e fatores de risco",
+                  "Preferência alimentar",
+                  "Número de consultas anteriores"
+                ],
+                "correctIndex": 1,
+                "explanation": "Características, associados e fatores de risco mudam a urgência e o diferencial."
+              },
+              {
+                "prompt": "Uma primeira troponina negativa significa:",
+                "options": [
+                  "Risco zero",
+                  "Infarto definitivamente excluído",
+                  "Um dado que precisa ser interpretado com tempo, risco e protocolo",
+                  "Que não é necessário ECG"
+                ],
+                "correctIndex": 2,
+                "explanation": "Um resultado isolado não elimina todos os cenários; tempo e estratificação importam."
+              },
+              {
+                "prompt": "Qual comunicação é mais segura?",
+                "options": [
+                  "“Está tudo bem, pode ir”",
+                  "“Há sinais que exigem avaliação e monitorização; vou escalar e explicar os próximos passos”",
+                  "“O jogo diz que é estável”",
+                  "“Espere sem reavaliação”"
+                ],
+                "correctIndex": 1,
+                "explanation": "A comunicação deve reconhecer risco, plano e necessidade de reavaliação."
+              },
+              {
+                "prompt": "No debriefing, qual erro deve ser evitado?",
+                "options": [
+                  "Revisar o raciocínio",
+                  "Ancorar cedo em um diagnóstico e ignorar sinais conflitantes",
+                  "Registrar incerteza",
+                  "Comparar com fontes"
+                ],
+                "correctIndex": 1,
+                "explanation": "Ancoragem precoce pode fazer o jogador interpretar todos os dados para confirmar uma ideia inicial."
+              }
+            ]
+          }
+        },
+        "en": {
+          "title": "Guided clinical reasoning and debriefing",
+          "summary": "Integrate safety, history, examination, tests, communication, and uncertainty in a risk case.",
+          "objectives": [
+            "Avoid premature anchoring",
+            "Prioritize risk before labels",
+            "Build a plan with contingencies"
+          ],
+          "lessons": [
+            {
+              "id": "reasoning",
+              "title": "A hypothesis is provisional",
+              "summary": "A hypothesis organizes data but must remain open to revision.",
+              "body": [
+                "List what supports and contradicts each hypothesis.",
+                "Consider the dangerous alternative that must not be missed.",
+                "Update reasoning when new data arrive."
+              ],
+              "checks": []
+            },
+            {
+              "id": "plan",
+              "title": "A plan includes contingencies",
+              "summary": "A good plan states what to do now, what to monitor, and what to do if the condition worsens.",
+              "body": [
+                "Define reassessment and escalation criteria.",
+                "Explain uncertainty without abandoning the patient.",
+                "Document why the decision was made."
+              ],
+              "checks": []
+            },
+            {
+              "id": "debrief",
+              "title": "Structured debriefing",
+              "summary": "After the case, describe facts, analyze decisions, and define one specific improvement.",
+              "body": [
+                "What did you notice first?",
+                "Which datum changed your hypothesis?",
+                "Which safety rule will you carry into the next case?"
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "Which statement best represents safer clinical reasoning?",
+            "options": [
+              "My first hypothesis must remain until the end",
+              "More tests always fix weak reasoning",
+              "Hypotheses are updated with evidence, risk, and reassessment",
+              "Uncertainty should never be documented"
+            ],
+            "correctIndex": 2,
+            "explanation": "Safer reasoning is iterative and considers supporting, conflicting, and dangerous alternative evidence."
+          },
+          "guidedCase": {
+            "title": "Guided case: exertional chest pain",
+            "scenario": "Ricardo, 56, reports chest pressure when climbing stairs, relief with rest, and an episode of cold sweating. The goal is to recognize risk and organize assessment, not prescribe.",
+            "steps": [
+              {
+                "prompt": "What is the first priority?",
+                "options": [
+                  "Immediately choose “stable angina”",
+                  "Assess stability, vital signs, and high-risk features",
+                  "Discharge because the pain improved",
+                  "Order only a lipid panel"
+                ],
+                "correctIndex": 1,
+                "explanation": "Before applying a diagnosis label, assess stability and exclude urgent scenarios."
+              },
+              {
+                "prompt": "Which question has the greatest safety value?",
+                "options": [
+                  "Favorite color",
+                  "Radiation, duration, exertion, breathlessness, fainting, and risk factors",
+                  "Food preference",
+                  "Number of previous visits"
+                ],
+                "correctIndex": 1,
+                "explanation": "Features, associated symptoms, and risk factors change urgency and the differential."
+              },
+              {
+                "prompt": "A first negative troponin means:",
+                "options": [
+                  "Zero risk",
+                  "Myocardial infarction is definitely excluded",
+                  "One result that must be interpreted with timing, risk, and protocol",
+                  "No ECG is needed"
+                ],
+                "correctIndex": 2,
+                "explanation": "An isolated result does not exclude every scenario; timing and risk stratification matter."
+              },
+              {
+                "prompt": "Which communication is safer?",
+                "options": [
+                  "“Everything is fine; you can go”",
+                  "“There are findings that require assessment and monitoring; I will escalate and explain next steps”",
+                  "“The game says it is stable”",
+                  "“Wait without reassessment”"
+                ],
+                "correctIndex": 1,
+                "explanation": "Communication should acknowledge risk, plan, and reassessment."
+              },
+              {
+                "prompt": "Which error should debriefing address?",
+                "options": [
+                  "Reviewing reasoning",
+                  "Anchoring early on one diagnosis and ignoring conflicting signs",
+                  "Documenting uncertainty",
+                  "Comparing with sources"
+                ],
+                "correctIndex": 1,
+                "explanation": "Early anchoring can make the player bend every finding to confirm the initial idea."
+              }
+            ]
+          }
+        },
+        "es": {
+          "title": "Razonamiento clínico guiado y debriefing",
+          "summary": "Integra seguridad, historia, exploración, pruebas, comunicación e incertidumbre en un caso de riesgo.",
+          "objectives": [
+            "Evitar anclaje prematuro",
+            "Priorizar riesgo antes de etiquetas",
+            "Construir un plan con contingencia"
+          ],
+          "lessons": [
+            {
+              "id": "reasoning",
+              "title": "Una hipótesis es provisional",
+              "summary": "Una hipótesis organiza datos, pero debe permanecer abierta a revisión.",
+              "body": [
+                "Enumera lo que apoya y contradice cada hipótesis.",
+                "Considera la alternativa peligrosa que no debe pasarse por alto.",
+                "Actualiza el razonamiento cuando llegan nuevos datos."
+              ],
+              "checks": []
+            },
+            {
+              "id": "plan",
+              "title": "Un plan incluye contingencias",
+              "summary": "Un buen plan indica qué hacer ahora, qué vigilar y qué hacer si empeora.",
+              "body": [
+                "Define reevaluación y criterios de escalamiento.",
+                "Explica incertidumbre sin abandonar al paciente.",
+                "Registra por qué se tomó la decisión."
+              ],
+              "checks": []
+            },
+            {
+              "id": "debrief",
+              "title": "Debriefing estructurado",
+              "summary": "Después del caso, describe hechos, analiza decisiones y define una mejora específica.",
+              "body": [
+                "¿Qué notaste primero?",
+                "¿Qué dato cambió tu hipótesis?",
+                "¿Qué regla de seguridad llevarás al siguiente caso?"
+              ],
+              "checks": []
+            }
+          ],
+          "checkpoint": {
+            "question": "¿Qué frase representa mejor un razonamiento clínico seguro?",
+            "options": [
+              "Mi primera hipótesis debe mantenerse hasta el final",
+              "Más pruebas siempre corrigen un razonamiento débil",
+              "Las hipótesis se actualizan con evidencia, riesgo y reevaluación",
+              "La incertidumbre nunca debe registrarse"
+            ],
+            "correctIndex": 2,
+            "explanation": "El razonamiento seguro es iterativo y considera evidencia favorable, contraria y alternativas peligrosas."
+          },
+          "guidedCase": {
+            "title": "Caso guiado: dolor torácico con esfuerzo",
+            "scenario": "Ricardo, 56 años, refiere opresión al subir escaleras, mejoría con reposo y un episodio de sudor frío. El objetivo es reconocer riesgo y organizar la evaluación, no prescribir.",
+            "steps": [
+              {
+                "prompt": "¿Cuál es la primera prioridad?",
+                "options": [
+                  "Elegir inmediatamente “angina estable”",
+                  "Evaluar estabilidad, signos vitales y características de alto riesgo",
+                  "Dar alta porque mejoró",
+                  "Pedir solo perfil lipídico"
+                ],
+                "correctIndex": 1,
+                "explanation": "Antes de aplicar una etiqueta diagnóstica, hay que evaluar estabilidad y excluir urgencias."
+              },
+              {
+                "prompt": "¿Qué pregunta tiene mayor valor de seguridad?",
+                "options": [
+                  "Color favorito",
+                  "Irradiación, duración, esfuerzo, falta de aire, síncope y factores de riesgo",
+                  "Preferencia alimentaria",
+                  "Número de consultas previas"
+                ],
+                "correctIndex": 1,
+                "explanation": "Características, síntomas asociados y factores de riesgo cambian urgencia y diferencial."
+              },
+              {
+                "prompt": "Una primera troponina negativa significa:",
+                "options": [
+                  "Riesgo cero",
+                  "Infarto definitivamente excluido",
+                  "Un dato que debe interpretarse con tiempo, riesgo y protocolo",
+                  "Que no hace falta ECG"
+                ],
+                "correctIndex": 2,
+                "explanation": "Un resultado aislado no excluye todos los escenarios; importan el tiempo y la estratificación."
+              },
+              {
+                "prompt": "¿Qué comunicación es más segura?",
+                "options": [
+                  "“Todo está bien, puede irse”",
+                  "“Hay señales que requieren evaluación y vigilancia; escalaré y explicaré los próximos pasos”",
+                  "“El juego dice que es estable”",
+                  "“Espere sin reevaluación”"
+                ],
+                "correctIndex": 1,
+                "explanation": "La comunicación debe reconocer riesgo, plan y necesidad de reevaluación."
+              },
+              {
+                "prompt": "¿Qué error debe abordar el debriefing?",
+                "options": [
+                  "Revisar el razonamiento",
+                  "Anclarse pronto en un diagnóstico e ignorar señales conflictivas",
+                  "Registrar incertidumbre",
+                  "Comparar con fuentes"
+                ],
+                "correctIndex": 1,
+                "explanation": "El anclaje temprano puede hacer que el jugador fuerce todos los datos para confirmar una idea inicial."
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+});

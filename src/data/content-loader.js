@@ -4,12 +4,19 @@ import {createEnvelope,verifyEnvelope} from '../core/checksum.js';
 
 const FILES={
   cases:'data/core-cases.json',gameplay:'data/gameplay.json',queue:'data/queue.json',
-  specialties:'data/specialties.json',missions:'data/missions.json',responses:'data/clinical-responses.json'
+  specialties:'data/specialties.json',missions:'data/missions.json',responses:'data/clinical-responses.json',governance:'data/governance.json',academy:'data/academy.json'
 };
-const CACHE_KEY='medsim-last-known-good-content-v015';
-const LEGACY_CACHE_KEYS=['medsim-last-known-good-content-v014','medsim-last-known-good-content-v013','medsim-last-known-good-content-v012'];
+const CACHE_KEY='medsim-last-known-good-content-v018';
+const LEGACY_CACHE_KEYS=['medsim-last-known-good-content-v017','medsim-last-known-good-content-v016','medsim-last-known-good-content-v015','medsim-last-known-good-content-v014','medsim-last-known-good-content-v013','medsim-last-known-good-content-v012'];
 
 const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+
+function normalizeContentPackage(content,fallback){
+  const normalized={...(content||{})};
+  if(!normalized.governance)normalized.governance=fallback.governance;
+  if(!normalized.academy)normalized.academy=fallback.academy;
+  return normalized;
+}
 
 async function fetchJson(path,version,{timeoutMs=5000,retries=1}={}){
   let lastError=null;
@@ -40,15 +47,17 @@ function readCachedContent(){
     const parsed=JSON.parse(raw);
     const verified=verifyEnvelope(parsed,{kind:'vale-clinical-content'});
     if(!verified.ok)return verified;
-    const validation=validateGameContent(verified.payload.content);
+    const fallback=getFallbackContent();
+    const normalized=normalizeContentPackage(verified.payload.content,fallback);
+    const validation=validateGameContent(normalized);
     if(!validation.ok)return {ok:false,error:`Cache clínico inválido: ${validation.errors.join(' | ')}`};
-    return {ok:true,content:verified.payload.content,metadata:verified.payload.metadata||{},validation};
+    return {ok:true,content:normalized,metadata:verified.payload.metadata||{},validation};
   }catch(error){return {ok:false,error:error.message};}
 }
 
 function writeCachedContent(content,metadata){
   try{
-    const envelope=createEnvelope({content,metadata:{...metadata,cachedAt:new Date().toISOString()}},{kind:'vale-clinical-content',schema:1,label:'last-known-good'});
+    const envelope=createEnvelope({content,metadata:{...metadata,cachedAt:new Date().toISOString()}},{kind:'vale-clinical-content',schema:2,label:'last-known-good'});
     localStorage.setItem(CACHE_KEY,JSON.stringify(envelope));
     return {ok:true,checksum:envelope.checksum};
   }catch(error){return {ok:false,error:error.message};}
@@ -72,13 +81,14 @@ export async function loadGameContent({version='dev',safeMode=false,diagnostics=
       content[key]=result.data;externalCount+=1;timings[path]={ok:true,attempts:result.attempt+1,durationMs:result.durationMs};
     }catch(error){content[key]=fallback[key];warnings.push(`${path} usou fallback: ${error.message}`);timings[path]={ok:false,error:error.message};}
   }));
-  const validation=validateGameContent(content);
+  const normalizedContent=normalizeContentPackage(content,fallback);
+  const validation=validateGameContent(normalizedContent);
   if(validation.ok){
     const mode=externalCount===total?'external':externalCount===0?'fallback':'hybrid';
-    const cacheResult=writeCachedContent(content,{version,mode,externalCount,total});
+    const cacheResult=writeCachedContent(normalizedContent,{version,mode,externalCount,total});
     if(!cacheResult.ok)warnings.push(`Cache clínico não pôde ser atualizado: ${cacheResult.error}`);
     diagnostics?.info?.('content','Conteúdo clínico validado antes da ativação.',{mode,externalCount,total,cache:cacheResult.ok});
-    return {content,status:{mode,source:externalCount?'network+fallback':'internal',externalCount,total,warnings:[...warnings,...validation.warnings],validation,timings,cache:cacheResult}};
+    return {content:normalizedContent,status:{mode,source:externalCount?'network+fallback':'internal',externalCount,total,warnings:[...warnings,...validation.warnings],validation,timings,cache:cacheResult}};
   }
   warnings.push(...validation.errors.map(item=>`Validação: ${item}`));
   const cached=readCachedContent();

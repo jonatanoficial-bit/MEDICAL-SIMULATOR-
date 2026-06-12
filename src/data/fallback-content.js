@@ -1,3 +1,5 @@
+import {FALLBACK_GOVERNANCE} from './fallback-governance.js';
+import {FALLBACK_ACADEMY} from './fallback-academy.js';
 // Fallback anti-quebra gerado a partir dos mesmos dados externos da build.
 const FALLBACK_CONTENT = {
   "cases": [
@@ -663,7 +665,10 @@ const FALLBACK_CONTENT = {
 };
 
 export function getFallbackContent(){
-  return structuredCloneSafe(FALLBACK_CONTENT);
+  const content=structuredCloneSafe(FALLBACK_CONTENT);
+  content.governance=structuredCloneSafe(FALLBACK_GOVERNANCE);
+  content.academy=structuredCloneSafe(FALLBACK_ACADEMY);
+  return content;
 }
 
 function structuredCloneSafe(value){
