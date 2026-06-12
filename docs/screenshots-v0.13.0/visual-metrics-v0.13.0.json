@@ -1,0 +1,363 @@
+[
+  {
+    "name": "setup-mobile",
+    "metrics": {
+      "inner": [
+        360,
+        800
+      ],
+      "doc": [
+        360,
+        800
+      ],
+      "horizontalOverflow": false,
+      "activePanels": [],
+      "dock": null,
+      "build": {
+        "position": "static",
+        "rect": [
+          670,
+          694
+        ]
+      },
+      "minButtonHeight": 50,
+      "visibleButtons": 6
+    }
+  },
+  {
+    "name": "shift-mobile-summary",
+    "metrics": {
+      "inner": [
+        360,
+        800
+      ],
+      "doc": [
+        360,
+        1183
+      ],
+      "horizontalOverflow": false,
+      "activePanels": [
+        {
+          "class": "case panel shift-panel panel-summary",
+          "height": 680,
+          "top": 384
+        }
+      ],
+      "dock": {
+        "display": "grid",
+        "height": 66
+      },
+      "build": {
+        "position": "static",
+        "rect": [
+          1078,
+          1101
+        ]
+      },
+      "minButtonHeight": 44,
+      "visibleButtons": 13
+    }
+  },
+  {
+    "name": "shift-mobile-questions",
+    "metrics": {
+      "inner": [
+        360,
+        800
+      ],
+      "doc": [
+        360,
+        1548
+      ],
+      "horizontalOverflow": false,
+      "activePanels": [
+        {
+          "class": "card shift-panel panel-questions",
+          "height": 1045,
+          "top": 384
+        }
+      ],
+      "dock": {
+        "display": "grid",
+        "height": 66
+      },
+      "build": {
+        "position": "static",
+        "rect": [
+          1442,
+          1466
+        ]
+      },
+      "minButtonHeight": 38,
+      "visibleButtons": 27
+    }
+  },
+  {
+    "name": "shift-mobile-exams",
+    "metrics": {
+      "inner": [
+        360,
+        800
+      ],
+      "doc": [
+        360,
+        1484
+      ],
+      "horizontalOverflow": false,
+      "activePanels": [
+        {
+          "class": "card action-card action-exams",
+          "height": 981,
+          "top": 384
+        }
+      ],
+      "dock": {
+        "display": "grid",
+        "height": 66
+      },
+      "build": {
+        "position": "static",
+        "rect": [
+          1378,
+          1402
+        ]
+      },
+      "minButtonHeight": 38,
+      "visibleButtons": 27
+    }
+  },
+  {
+    "name": "shift-mobile-procedures",
+    "metrics": {
+      "inner": [
+        360,
+        800
+      ],
+      "doc": [
+        360,
+        1228
+      ],
+      "horizontalOverflow": false,
+      "activePanels": [
+        {
+          "class": "card action-card action-procedures",
+          "height": 725,
+          "top": 384
+        }
+      ],
+      "dock": {
+        "display": "grid",
+        "height": 66
+      },
+      "build": {
+        "position": "static",
+        "rect": [
+          1122,
+          1146
+        ]
+      },
+      "minButtonHeight": 38,
+      "visibleButtons": 23
+    }
+  },
+  {
+    "name": "shift-mobile-diagnosis",
+    "metrics": {
+      "inner": [
+        360,
+        800
+      ],
+      "doc": [
+        360,
+        1979
+      ],
+      "horizontalOverflow": false,
+      "activePanels": [
+        {
+          "class": "card action-card action-diagnosis",
+          "height": 1476,
+          "top": 384
+        }
+      ],
+      "dock": {
+        "display": "grid",
+        "height": 66
+      },
+      "build": {
+        "position": "static",
+        "rect": [
+          1873,
+          1897
+        ]
+      },
+      "minButtonHeight": 44,
+      "visibleButtons": 35
+    }
+  },
+  {
+    "name": "shift-mobile-record",
+    "metrics": {
+      "inner": [
+        360,
+        800
+      ],
+      "doc": [
+        360,
+        1166
+      ],
+      "horizontalOverflow": false,
+      "activePanels": [
+        {
+          "class": "panel shift-panel panel-record",
+          "height": 663,
+          "top": 384
+        }
+      ],
+      "dock": {
+        "display": "grid",
+        "height": 66
+      },
+      "build": {
+        "position": "static",
+        "rect": [
+          1061,
+          1084
+        ]
+      },
+      "minButtonHeight": 38,
+      "visibleButtons": 13
+    }
+  },
+  {
+    "name": "shift-mobile-queue",
+    "metrics": {
+      "inner": [
+        360,
+        800
+      ],
+      "doc": [
+        360,
+        1106
+      ],
+      "horizontalOverflow": false,
+      "activePanels": [
+        {
+          "class": "patient-list panel shift-panel panel-queue",
+          "height": 603,
+          "top": 384
+        }
+      ],
+      "dock": {
+        "display": "grid",
+        "height": 66
+      },
+      "build": {
+        "position": "static",
+        "rect": [
+          1001,
+          1024
+        ]
+      },
+      "minButtonHeight": 38,
+      "visibleButtons": 13
+    }
+  },
+  {
+    "name": "shift-tablet-summary",
+    "metrics": {
+      "inner": [
+        768,
+        1024
+      ],
+      "doc": [
+        768,
+        1181
+      ],
+      "horizontalOverflow": false,
+      "activePanels": [
+        {
+          "class": "case panel shift-panel panel-summary",
+          "height": 692,
+          "top": 379
+        }
+      ],
+      "dock": {
+        "display": "grid",
+        "height": 68
+      },
+      "build": {
+        "position": "static",
+        "rect": [
+          1085,
+          1109
+        ]
+      },
+      "minButtonHeight": 44,
+      "visibleButtons": 13
+    }
+  },
+  {
+    "name": "shift-desktop",
+    "metrics": {
+      "inner": [
+        1366,
+        768
+      ],
+      "doc": [
+        1351,
+        3478
+      ],
+      "horizontalOverflow": false,
+      "activePanels": [
+        {
+          "class": "patient-list panel shift-panel panel-queue",
+          "height": 712,
+          "top": 306
+        },
+        {
+          "class": "case panel shift-panel panel-summary",
+          "height": 941,
+          "top": 306
+        },
+        {
+          "class": "panel shift-panel panel-record",
+          "height": 566,
+          "top": 1434
+        },
+        {
+          "class": "card shift-panel panel-questions",
+          "height": 958,
+          "top": 2187
+        },
+        {
+          "class": "card action-card action-exams",
+          "height": 878,
+          "top": 306
+        },
+        {
+          "class": "card action-card action-procedures",
+          "height": 638,
+          "top": 1196
+        },
+        {
+          "class": "card action-card action-diagnosis",
+          "height": 1471,
+          "top": 1847
+        }
+      ],
+      "dock": {
+        "display": "none",
+        "height": 0
+      },
+      "build": {
+        "position": "fixed",
+        "rect": [
+          734,
+          760
+        ]
+      },
+      "minButtonHeight": 44,
+      "visibleButtons": 60
+    }
+  }
+]

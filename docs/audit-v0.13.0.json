@@ -1,0 +1,22 @@
+{
+  "build": "v0.13.0 | build 2026-06-12 11:31:30 BRT",
+  "phase": "Mobile, PWA e Tela Cheia",
+  "automatedAudit": "passed",
+  "clinicalCases": 6,
+  "specialties": 9,
+  "missions": 6,
+  "saveSchema": 4,
+  "clinicalTabsMobile": 7,
+  "serviceWorkerAssets": {"critical": 28, "data": 7, "optional": 16},
+  "pwaIcons": 5,
+  "safeAreas": true,
+  "dynamicViewport": true,
+  "horizontalOverflow": false,
+  "visualAudit": {
+    "method": "isolated Chromium CSS/DOM harness",
+    "resolutions": ["360x800", "768x1024", "1366x768"],
+    "screens": ["setup", "shift-summary", "shift-questions", "shift-exams", "shift-procedures", "shift-diagnosis", "shift-record", "shift-queue"],
+    "note": "Direct localhost navigation was blocked by the execution environment policy; runtime and visual layers were audited separately."
+  },
+  "physicalDevicePending": ["Android PWA install", "iOS add-to-home-screen", "offline update over HTTPS"]
+}

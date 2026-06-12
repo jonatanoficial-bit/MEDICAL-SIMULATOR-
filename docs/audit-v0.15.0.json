@@ -1,0 +1,335 @@
+{
+  "product": "Medical Simulator - Vale Edition",
+  "version": "0.15.0",
+  "build": "20260612-161518-BRT",
+  "phase": "Design System e Acessibilidade",
+  "ok": true,
+  "content": {
+    "activeCases": 6,
+    "specialties": 9,
+    "missions": 6,
+    "contentSchema": 1
+  },
+  "save": {
+    "schema": 6,
+    "migrationFrom": "0.14.0",
+    "transactional": true,
+    "checksum": true,
+    "rotatingBackups": 5,
+    "accessibilityPreferencesPersisted": true
+  },
+  "accessibility": {
+    "textSizes": 4,
+    "highContrast": true,
+    "reducedMotion": true,
+    "systemReducedMotion": true,
+    "enhancedFocus": true,
+    "skipLink": true,
+    "liveRegions": 2,
+    "keyboardTabs": true,
+    "escapeClosesLayers": true,
+    "shortcuts": [
+      "Alt+1",
+      "Alt+2",
+      "Alt+3",
+      "Alt+4",
+      "Alt+5"
+    ],
+    "dialogSemantics": true,
+    "forcedColors": true,
+    "minimumVisibleControlPx": 48,
+    "modalFocusTrap": true
+  },
+  "contrastRatios": {
+    "primaryTextOnBackground": 19.28,
+    "secondaryTextOnBackground": 11.73,
+    "accentTextOnBackground": 14.13,
+    "whiteOnHighContrastBlue": 8.89,
+    "yellowFocusOnBlack": 16.57
+  },
+  "pwa": {
+    "serviceWorkerAssets": 52,
+    "critical": 29,
+    "clinicalData": 7,
+    "optional": 16,
+    "previousCacheRetention": true
+  },
+  "layoutAudit": {
+    "ok": true,
+    "method": "Actual generated game DOM + production CSS in isolated Chromium/Playwright harness",
+    "failures": [],
+    "profiles": [
+      {
+        "viewport": {
+          "w": 360,
+          "h": 800
+        },
+        "document": {
+          "w": 360,
+          "h": 3584
+        },
+        "overflowX": false,
+        "minControlHeight": 48,
+        "rootFont": 16,
+        "bodyColor": "rgb(247, 251, 255)",
+        "bodyBackground": "rgb(2, 8, 20)",
+        "focusOutline": "4px solid rgb(248, 225, 108)",
+        "motion": "smooth",
+        "skipLink": true,
+        "liveRegions": 3,
+        "dialogs": 0,
+        "modalDialogs": 0,
+        "dialogHasLabel": true,
+        "activeElementRole": "BUTTON",
+        "escapeCount": 1,
+        "selectedControls": 5,
+        "profile": "settings-mobile-standard",
+        "screen": "settings",
+        "preferences": {
+          "contrast": "standard",
+          "textSize": "medium",
+          "reduceMotion": false,
+          "focusMode": true,
+          "descriptions": true
+        },
+        "tabCount": 0,
+        "focusedAfterArrow": null,
+        "focusTrap": null,
+        "pageErrors": []
+      },
+      {
+        "viewport": {
+          "w": 360,
+          "h": 800
+        },
+        "document": {
+          "w": 360,
+          "h": 4485
+        },
+        "overflowX": false,
+        "minControlHeight": 48,
+        "rootFont": 20,
+        "bodyColor": "rgb(255, 255, 255)",
+        "bodyBackground": "rgb(0, 0, 0)",
+        "focusOutline": "4px solid rgb(255, 230, 0)",
+        "motion": "auto",
+        "skipLink": true,
+        "liveRegions": 3,
+        "dialogs": 0,
+        "modalDialogs": 0,
+        "dialogHasLabel": true,
+        "activeElementRole": "BUTTON",
+        "escapeCount": 1,
+        "selectedControls": 5,
+        "profile": "settings-mobile-high-extra",
+        "screen": "settings",
+        "preferences": {
+          "contrast": "high",
+          "textSize": "extra-large",
+          "reduceMotion": true,
+          "focusMode": true,
+          "descriptions": true
+        },
+        "tabCount": 0,
+        "focusedAfterArrow": null,
+        "focusTrap": null,
+        "pageErrors": []
+      },
+      {
+        "viewport": {
+          "w": 360,
+          "h": 800
+        },
+        "document": {
+          "w": 360,
+          "h": 1642
+        },
+        "overflowX": false,
+        "minControlHeight": 48,
+        "rootFont": 20,
+        "bodyColor": "rgb(247, 251, 255)",
+        "bodyBackground": "rgb(2, 8, 20)",
+        "focusOutline": "4px solid rgb(248, 225, 108)",
+        "motion": "auto",
+        "skipLink": true,
+        "liveRegions": 3,
+        "dialogs": 0,
+        "modalDialogs": 0,
+        "dialogHasLabel": true,
+        "activeElementRole": "tab",
+        "escapeCount": 1,
+        "selectedControls": 2,
+        "profile": "shift-mobile-extra",
+        "screen": "shift",
+        "preferences": {
+          "contrast": "standard",
+          "textSize": "extra-large",
+          "reduceMotion": true,
+          "focusMode": true,
+          "descriptions": true
+        },
+        "tabCount": 13,
+        "focusedAfterArrow": "💬Anamnese",
+        "focusTrap": null,
+        "pageErrors": []
+      },
+      {
+        "viewport": {
+          "w": 768,
+          "h": 1024
+        },
+        "document": {
+          "w": 768,
+          "h": 1558
+        },
+        "overflowX": false,
+        "minControlHeight": 48,
+        "rootFont": 18,
+        "bodyColor": "rgb(247, 251, 255)",
+        "bodyBackground": "rgb(2, 8, 20)",
+        "focusOutline": "4px solid rgb(248, 225, 108)",
+        "motion": "smooth",
+        "skipLink": true,
+        "liveRegions": 3,
+        "dialogs": 0,
+        "modalDialogs": 0,
+        "dialogHasLabel": true,
+        "activeElementRole": "tab",
+        "escapeCount": 1,
+        "selectedControls": 2,
+        "profile": "shift-tablet-large",
+        "screen": "shift",
+        "preferences": {
+          "contrast": "standard",
+          "textSize": "large",
+          "reduceMotion": false,
+          "focusMode": true,
+          "descriptions": true
+        },
+        "tabCount": 13,
+        "focusedAfterArrow": "💬Anamnese",
+        "focusTrap": null,
+        "pageErrors": []
+      },
+      {
+        "viewport": {
+          "w": 1366,
+          "h": 768
+        },
+        "document": {
+          "w": 1366,
+          "h": 1980
+        },
+        "overflowX": false,
+        "minControlHeight": 48,
+        "rootFont": 16,
+        "bodyColor": "rgb(247, 251, 255)",
+        "bodyBackground": "rgb(2, 8, 20)",
+        "focusOutline": "4px solid rgb(248, 225, 108)",
+        "motion": "smooth",
+        "skipLink": true,
+        "liveRegions": 3,
+        "dialogs": 0,
+        "modalDialogs": 0,
+        "dialogHasLabel": true,
+        "activeElementRole": "tab",
+        "escapeCount": 1,
+        "selectedControls": 2,
+        "profile": "shift-desktop-standard",
+        "screen": "shift",
+        "preferences": {
+          "contrast": "standard",
+          "textSize": "medium",
+          "reduceMotion": false,
+          "focusMode": true,
+          "descriptions": true
+        },
+        "tabCount": 13,
+        "focusedAfterArrow": "💬Anamnese",
+        "focusTrap": null,
+        "pageErrors": []
+      },
+      {
+        "viewport": {
+          "w": 360,
+          "h": 800
+        },
+        "document": {
+          "w": 360,
+          "h": 1605
+        },
+        "overflowX": false,
+        "minControlHeight": 48,
+        "rootFont": 18,
+        "bodyColor": "rgb(255, 255, 255)",
+        "bodyBackground": "rgb(0, 0, 0)",
+        "focusOutline": "4px auto rgb(16, 16, 16)",
+        "motion": "auto",
+        "skipLink": true,
+        "liveRegions": 3,
+        "dialogs": 1,
+        "modalDialogs": 1,
+        "dialogHasLabel": true,
+        "activeElementRole": "BUTTON",
+        "escapeCount": 1,
+        "selectedControls": 2,
+        "profile": "dialog-results-mobile",
+        "screen": "shift-results",
+        "preferences": {
+          "contrast": "high",
+          "textSize": "large",
+          "reduceMotion": true,
+          "focusMode": true,
+          "descriptions": true
+        },
+        "tabCount": 13,
+        "focusedAfterArrow": null,
+        "focusTrap": true,
+        "pageErrors": []
+      },
+      {
+        "viewport": {
+          "w": 1366,
+          "h": 768
+        },
+        "document": {
+          "w": 1366,
+          "h": 1976
+        },
+        "overflowX": false,
+        "minControlHeight": 48,
+        "rootFont": 16,
+        "bodyColor": "rgb(247, 251, 255)",
+        "bodyBackground": "rgb(2, 8, 20)",
+        "focusOutline": "0px solid rgb(0, 0, 0)",
+        "motion": "smooth",
+        "skipLink": true,
+        "liveRegions": 3,
+        "dialogs": 1,
+        "modalDialogs": 1,
+        "dialogHasLabel": true,
+        "activeElementRole": "BUTTON",
+        "escapeCount": 1,
+        "selectedControls": 2,
+        "profile": "dialog-review-desktop",
+        "screen": "shift-review",
+        "preferences": {
+          "contrast": "standard",
+          "textSize": "medium",
+          "reduceMotion": false,
+          "focusMode": true,
+          "descriptions": true
+        },
+        "tabCount": 13,
+        "focusedAfterArrow": null,
+        "focusTrap": true,
+        "pageErrors": []
+      }
+    ]
+  },
+  "knownLimitations": [
+    "Navegação Chromium direta por localhost/file foi bloqueada pelo ambiente.",
+    "Captura de screenshot do Chromium não ficou disponível; a auditoria usou o DOM real gerado pelo jogo com o CSS de produção em harness Chromium isolado.",
+    "TalkBack, VoiceOver, NVDA, instalação PWA, fullscreen e atualização offline ainda requerem aparelho real/HTTPS."
+  ]
+}

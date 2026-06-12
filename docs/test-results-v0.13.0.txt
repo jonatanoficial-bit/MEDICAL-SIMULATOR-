@@ -1,0 +1,92 @@
+
+> medical-simulator-vale-edition@0.13.0 audit
+> node tests/audit-content.mjs && node tests/audit-architecture.mjs && node tests/audit-loader.mjs && node tests/audit-storage.mjs && node tests/audit-diagnostics.mjs && node tests/audit-build-consistency.mjs && node tests/audit-antibreak.mjs && node tests/audit-runtime-smoke.mjs && node tests/audit-sw-assets.mjs && node tests/audit-mobile-pwa.mjs
+
+{
+  "ok": true,
+  "cases": 6,
+  "specialties": 9,
+  "missions": 6,
+  "warnings": []
+}
+{
+  "ok": true,
+  "requiredModules": 14,
+  "appBytes": 46312
+}
+{
+  "ok": true,
+  "mode": "external",
+  "recoveredMode": "last-known-good",
+  "safeMode": "safe-fallback",
+  "cases": 6,
+  "resources": 6
+}
+{
+  "ok": true,
+  "saveSchema": 4,
+  "player": "Dr. Save Antigo",
+  "xp": 906,
+  "backups": 5,
+  "pending": false,
+  "mainIntegrity": true
+}
+{
+  "ok": true,
+  "total": 3,
+  "warnings": 1,
+  "errors": 1,
+  "viewport": "390x844"
+}
+{
+  "ok": true,
+  "version": "0.13.0",
+  "checks": {
+    "build": true,
+    "package": true,
+    "webmanifest": true,
+    "content": true,
+    "config": true,
+    "index": true,
+    "serviceWorker": true
+  }
+}
+{
+  "ok": true,
+  "groups": [
+    "storage",
+    "boot",
+    "loader",
+    "sw",
+    "app"
+  ],
+  "assertions": 21
+}
+{
+  "ok": true,
+  "initialScreen": "setup",
+  "contentMode": "external",
+  "cases": 6,
+  "screens": {
+    "hub": 3788,
+    "specialty": 4409,
+    "shift": 15027,
+    "settings": 3475,
+    "recovery": 3964
+  }
+}
+{
+  "ok": true,
+  "assets": 51,
+  "critical": 28,
+  "data": 7,
+  "optional": 16
+}
+{
+  "ok": true,
+  "display": "fullscreen",
+  "icons": 4,
+  "clinicalTabs": 7,
+  "safeAreas": true,
+  "dynamicViewport": true
+}

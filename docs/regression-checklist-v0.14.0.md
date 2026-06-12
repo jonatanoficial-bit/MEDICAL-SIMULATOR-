@@ -1,0 +1,26 @@
+# Checklist de regressão — v0.14.0
+
+- [x] Sintaxe do módulo principal.
+- [x] Abertura protegida e tela inicial.
+- [x] Migração do save v0.13.0 para schema 5.
+- [x] Gravação transacional e recuperação de escrita interrompida.
+- [x] Rotação limitada a cinco backups.
+- [x] Carregamento dos seis recursos clínicos externos.
+- [x] Fallback interno e último pacote íntegro.
+- [x] Lobby e especialidades.
+- [x] Plantão em 360×800.
+- [x] Plantão em 768×1024.
+- [x] Plantão em 1366×768.
+- [x] Ausência de estouro horizontal nas três resoluções.
+- [x] Painel de comando do paciente.
+- [x] Fluxo clínico de cinco etapas.
+- [x] Prontuário com seis abas.
+- [x] Central de resultados.
+- [x] Registro de observação livre.
+- [x] Revisão antes do encerramento.
+- [x] Pós-consulta premium.
+- [x] Score previsto removido durante o caso.
+- [x] Service worker com 51 recursos declarados.
+- [ ] Instalação PWA em Android físico.
+- [ ] Atualização offline em hospedagem HTTPS.
+- [ ] Fullscreen físico em Android e iOS.

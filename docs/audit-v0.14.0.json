@@ -1,0 +1,108 @@
+{
+  "product": "Medical Simulator - Vale Edition",
+  "version": "0.14.0",
+  "build": "20260612-123619-BRT",
+  "phase": "Nova Interface Clínica Premium",
+  "status": "approved-with-environment-limitation",
+  "automated": {
+    "contentCases": 6,
+    "specialties": 9,
+    "missions": 6,
+    "loaderExternal": true,
+    "lastKnownGoodRecovery": true,
+    "safeFallback": true,
+    "saveSchema": 5,
+    "rotatingBackups": 5,
+    "runtimeScreens": 5,
+    "serviceWorkerAssets": 51,
+    "clinicalWorkflowSteps": 5,
+    "recordTabs": 6,
+    "predictedScoreVisible": false
+  },
+  "visual": {
+    "mobile-summary": {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "overflowHorizontal": false,
+      "scrollHeight": 1460,
+      "errors": []
+    },
+    "mobile-record": {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "overflowHorizontal": false,
+      "scrollHeight": 1912,
+      "errors": []
+    },
+    "mobile-results": {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "overflowHorizontal": false,
+      "scrollHeight": 1912,
+      "errors": []
+    },
+    "mobile-review": {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "overflowHorizontal": false,
+      "scrollHeight": 1912,
+      "errors": []
+    },
+    "tablet-record": {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "overflowHorizontal": false,
+      "scrollHeight": 1668,
+      "errors": []
+    },
+    "desktop-summary": {
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "overflowHorizontal": false,
+      "scrollHeight": 1974,
+      "errors": []
+    },
+    "desktop-results": {
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "overflowHorizontal": false,
+      "scrollHeight": 1486,
+      "errors": []
+    },
+    "desktop-review": {
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "overflowHorizontal": false,
+      "scrollHeight": 1486,
+      "errors": []
+    }
+  },
+  "limitations": [
+    "A política do ambiente bloqueou navegação Chromium por localhost e file://. A inspeção visual foi realizada em Chromium isolado com o DOM e CSS reais renderizados em harness, enquanto o runtime modular foi testado separadamente.",
+    "Instalação PWA, atualização offline e tela cheia real ainda exigem hospedagem HTTPS e aparelho físico."
+  ],
+  "integrity": {
+    "manifest": "SHA-256",
+    "files": 175,
+    "missing": 0,
+    "unlisted": 0,
+    "hashMismatch": 0,
+    "empty": 0
+  }
+}
