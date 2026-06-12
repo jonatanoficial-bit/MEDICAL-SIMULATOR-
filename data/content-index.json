@@ -1,21 +1,24 @@
 {
   "id": "medical-simulator-vale-content",
-  "schemaVersion": 1,
-  "contentVersion": "0.15.0",
+  "schemaVersion": 3,
+  "contentVersion": "0.18.0",
   "required": [
     "data/core-cases.json",
     "data/gameplay.json",
     "data/queue.json",
     "data/specialties.json",
     "data/missions.json",
-    "data/clinical-responses.json"
+    "data/clinical-responses.json",
+    "data/governance.json",
+    "data/academy.json"
   ],
   "staged": [
     "data/legacy-cases-v0.8.json",
     "data/catalog.json"
   ],
   "notes": [
-    "Os seis casos jogáveis da build anterior foram externalizados sem alterar o fluxo principal.",
-    "Os três casos avançados antigos permanecem preservados, mas não são ativados até serem adaptados ao schema atual e revisados."
+    "A Academia Clínica possui 9 módulos, 27 lições, pré-teste e um caso guiado em PT-BR, inglês e espanhol.",
+    "O conteúdo educacional permanece no canal development e não substitui formação ou atendimento profissional.",
+    "Os seis casos ativos continuam bloqueados para publicação comercial até revisão clínica independente."
   ]
 }

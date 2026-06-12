@@ -1,8 +1,8 @@
 {
   "id": "medical-simulator-vale-edition-core",
   "name": "Medical Simulator - Vale Edition Core",
-  "version": "0.15.0",
-  "build": "20260612_161518_BRT",
+  "version": "0.18.0",
+  "build": "20260612_171520_BRT",
   "architecture": {
     "entry": "src/core/boot-guard.js -> src/app.js",
     "modules": [
@@ -13,8 +13,8 @@
       "compat",
       "observability"
     ],
-    "contentSchema": 1,
-    "saveSchema": 6
+    "contentSchema": 3,
+    "saveSchema": 9
   },
   "activeCases": 6,
   "stagedCases": 3,
@@ -35,6 +35,40 @@
     "design_system",
     "accessibility_preferences",
     "keyboard_navigation",
-    "screen_reader_semantics"
-  ]
+    "screen_reader_semantics",
+    "trilingual_i18n",
+    "live_language_switch",
+    "browser_locale_detection",
+    "canonical_gameplay_localization",
+    "medical_governance_registry",
+    "official_source_mapping",
+    "clinical_review_status",
+    "release_publication_gate",
+    "governance_report_export",
+    "academy_content",
+    "introductory_pretest",
+    "sequential_learning_path",
+    "guided_clinical_case",
+    "structured_debriefing",
+    "academy_progress_persistence"
+  ],
+  "medicalGovernance": {
+    "channel": "development",
+    "approvedCases": 0,
+    "registeredCases": 6,
+    "releaseReady": false,
+    "registry": "data/governance.json"
+  },
+  "academy": {
+    "modules": 9,
+    "lessons": 27,
+    "guidedCases": 1,
+    "locales": [
+      "pt-BR",
+      "en",
+      "es"
+    ],
+    "releaseReady": false,
+    "registry": "data/academy.json"
+  }
 }
