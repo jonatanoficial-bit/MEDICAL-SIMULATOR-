@@ -1,0 +1,315 @@
+{
+  "ok": true,
+  "method": "Generated production DOM + production CSS in isolated Chromium",
+  "failures": [],
+  "profiles": [
+    {
+      "locale": "pt-BR",
+      "view": "catalog",
+      "viewport": [
+        360,
+        800
+      ],
+      "marker": "Academia Clínica Introdutória",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 360,
+        "w": 360,
+        "h": 4632,
+        "minControl": 48,
+        "modules": 9,
+        "options": 0,
+        "lessonTabs": 0
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.18.0/academy-pt-BR-catalog-360x800.png"
+    },
+    {
+      "locale": "pt-BR",
+      "view": "module",
+      "viewport": [
+        360,
+        800
+      ],
+      "marker": "Segurança, limites e papel do simulador",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 360,
+        "w": 360,
+        "h": 2745,
+        "minControl": 48,
+        "modules": 0,
+        "options": 0,
+        "lessonTabs": 4
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.18.0/academy-pt-BR-module-360x800.png"
+    },
+    {
+      "locale": "pt-BR",
+      "view": "quiz",
+      "viewport": [
+        360,
+        800
+      ],
+      "marker": "Checkpoint de aprendizagem",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 360,
+        "w": 360,
+        "h": 1628,
+        "minControl": 48,
+        "modules": 0,
+        "options": 4,
+        "lessonTabs": 0
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.18.0/academy-pt-BR-quiz-360x800.png"
+    },
+    {
+      "locale": "pt-BR",
+      "view": "guided",
+      "viewport": [
+        360,
+        800
+      ],
+      "marker": "Caso guiado: dor no peito durante esforço",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 360,
+        "w": 360,
+        "h": 1826,
+        "minControl": 48,
+        "modules": 0,
+        "options": 4,
+        "lessonTabs": 0
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.18.0/academy-pt-BR-guided-360x800.png"
+    },
+    {
+      "locale": "en",
+      "view": "catalog",
+      "viewport": [
+        360,
+        800
+      ],
+      "marker": "Introductory Clinical Academy",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 360,
+        "w": 360,
+        "h": 4771,
+        "minControl": 48,
+        "modules": 9,
+        "options": 0,
+        "lessonTabs": 0
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.18.0/academy-en-catalog-360x800.png"
+    },
+    {
+      "locale": "en",
+      "view": "module",
+      "viewport": [
+        360,
+        800
+      ],
+      "marker": "Safety, limits, and the role of the simulator",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 360,
+        "w": 360,
+        "h": 2746,
+        "minControl": 48,
+        "modules": 0,
+        "options": 0,
+        "lessonTabs": 4
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.18.0/academy-en-module-360x800.png"
+    },
+    {
+      "locale": "en",
+      "view": "quiz",
+      "viewport": [
+        360,
+        800
+      ],
+      "marker": "Learning checkpoint",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 360,
+        "w": 360,
+        "h": 1628,
+        "minControl": 48,
+        "modules": 0,
+        "options": 4,
+        "lessonTabs": 0
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.18.0/academy-en-quiz-360x800.png"
+    },
+    {
+      "locale": "en",
+      "view": "guided",
+      "viewport": [
+        360,
+        800
+      ],
+      "marker": "Guided case: exertional chest pain",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 360,
+        "w": 360,
+        "h": 1739,
+        "minControl": 48,
+        "modules": 0,
+        "options": 4,
+        "lessonTabs": 0
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.18.0/academy-en-guided-360x800.png"
+    },
+    {
+      "locale": "es",
+      "view": "catalog",
+      "viewport": [
+        360,
+        800
+      ],
+      "marker": "Academia Clínica Introductoria",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 360,
+        "w": 360,
+        "h": 4692,
+        "minControl": 48,
+        "modules": 9,
+        "options": 0,
+        "lessonTabs": 0
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.18.0/academy-es-catalog-360x800.png"
+    },
+    {
+      "locale": "es",
+      "view": "module",
+      "viewport": [
+        360,
+        800
+      ],
+      "marker": "Seguridad, límites y función del simulador",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 360,
+        "w": 360,
+        "h": 2782,
+        "minControl": 48,
+        "modules": 0,
+        "options": 0,
+        "lessonTabs": 4
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.18.0/academy-es-module-360x800.png"
+    },
+    {
+      "locale": "es",
+      "view": "quiz",
+      "viewport": [
+        360,
+        800
+      ],
+      "marker": "Checkpoint de aprendizaje",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 360,
+        "w": 360,
+        "h": 1622,
+        "minControl": 48,
+        "modules": 0,
+        "options": 4,
+        "lessonTabs": 0
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.18.0/academy-es-quiz-360x800.png"
+    },
+    {
+      "locale": "es",
+      "view": "guided",
+      "viewport": [
+        360,
+        800
+      ],
+      "marker": "Caso guiado: dolor torácico con esfuerzo",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 360,
+        "w": 360,
+        "h": 1778,
+        "minControl": 48,
+        "modules": 0,
+        "options": 4,
+        "lessonTabs": 0
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.18.0/academy-es-guided-360x800.png"
+    },
+    {
+      "locale": "pt-BR",
+      "view": "catalog",
+      "viewport": [
+        768,
+        1024
+      ],
+      "marker": "Academia Clínica Introdutória",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 768,
+        "w": 768,
+        "h": 3825,
+        "minControl": 48,
+        "modules": 9,
+        "options": 0,
+        "lessonTabs": 0
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.18.0/academy-pt-BR-catalog-768x1024.png"
+    },
+    {
+      "locale": "en",
+      "view": "module",
+      "viewport": [
+        1366,
+        768
+      ],
+      "marker": "Safety, limits, and the role of the simulator",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 1366,
+        "w": 1366,
+        "h": 3008,
+        "minControl": 48,
+        "modules": 0,
+        "options": 0,
+        "lessonTabs": 4
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.18.0/academy-en-module-1366x768.png"
+    }
+  ]
+}

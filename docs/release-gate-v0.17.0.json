@@ -1,0 +1,148 @@
+{
+  "product": "Medical Simulator - Vale Edition",
+  "build": "v0.17.0 | build 2026-06-12 17:00:59 BRT",
+  "checkedAt": "2026-06-12T20:10:12.134Z",
+  "releaseReady": false,
+  "approved": 0,
+  "total": 6,
+  "cases": [
+    {
+      "caseId": "hipertensao-1",
+      "status": "reference-mapped",
+      "approved": false,
+      "sourceIds": [
+        "AHA-ACC-HBP-2025",
+        "WHO-PATIENT-SAFETY-2011"
+      ],
+      "sourcesFresh": true,
+      "reviewCurrent": false,
+      "blockers": [
+        "aprovação clínica pendente",
+        "publicação desativada",
+        "responsável clínico ausente",
+        "revisor médico ausente",
+        "auditoria de segurança pendente",
+        "revisão trilíngue pendente",
+        "data de revisão clínica ausente",
+        "data de revisão trilíngue ausente",
+        "data de QA ausente",
+        "próxima revisão não agendada"
+      ]
+    },
+    {
+      "caseId": "cefaleia-tensional",
+      "status": "reference-mapped",
+      "approved": false,
+      "sourceIds": [
+        "IHS-ICHD3-TTH",
+        "WHO-PATIENT-SAFETY-2011"
+      ],
+      "sourcesFresh": true,
+      "reviewCurrent": false,
+      "blockers": [
+        "aprovação clínica pendente",
+        "publicação desativada",
+        "responsável clínico ausente",
+        "revisor médico ausente",
+        "auditoria de segurança pendente",
+        "revisão trilíngue pendente",
+        "data de revisão clínica ausente",
+        "data de revisão trilíngue ausente",
+        "data de QA ausente",
+        "próxima revisão não agendada"
+      ]
+    },
+    {
+      "caseId": "angina-estavel",
+      "status": "reference-mapped",
+      "approved": false,
+      "sourceIds": [
+        "ESC-CCS-2024",
+        "WHO-PATIENT-SAFETY-2011"
+      ],
+      "sourcesFresh": true,
+      "reviewCurrent": false,
+      "blockers": [
+        "aprovação clínica pendente",
+        "publicação desativada",
+        "responsável clínico ausente",
+        "revisor médico ausente",
+        "auditoria de segurança pendente",
+        "revisão trilíngue pendente",
+        "data de revisão clínica ausente",
+        "data de revisão trilíngue ausente",
+        "data de QA ausente",
+        "próxima revisão não agendada"
+      ]
+    },
+    {
+      "caseId": "itu-nao-complicada",
+      "status": "reference-mapped",
+      "approved": false,
+      "sourceIds": [
+        "EAU-UTI-2026",
+        "WHO-PATIENT-SAFETY-2011"
+      ],
+      "sourcesFresh": true,
+      "reviewCurrent": false,
+      "blockers": [
+        "aprovação clínica pendente",
+        "publicação desativada",
+        "responsável clínico ausente",
+        "revisor médico ausente",
+        "auditoria de segurança pendente",
+        "revisão trilíngue pendente",
+        "data de revisão clínica ausente",
+        "data de revisão trilíngue ausente",
+        "data de QA ausente",
+        "próxima revisão não agendada"
+      ]
+    },
+    {
+      "caseId": "refluxo-gastroesofagico",
+      "status": "reference-mapped",
+      "approved": false,
+      "sourceIds": [
+        "ACG-GERD-2022",
+        "WHO-PATIENT-SAFETY-2011"
+      ],
+      "sourcesFresh": true,
+      "reviewCurrent": false,
+      "blockers": [
+        "aprovação clínica pendente",
+        "publicação desativada",
+        "responsável clínico ausente",
+        "revisor médico ausente",
+        "auditoria de segurança pendente",
+        "revisão trilíngue pendente",
+        "data de revisão clínica ausente",
+        "data de revisão trilíngue ausente",
+        "data de QA ausente",
+        "próxima revisão não agendada"
+      ]
+    },
+    {
+      "caseId": "dermatite-atopica",
+      "status": "reference-mapped",
+      "approved": false,
+      "sourceIds": [
+        "AAD-AD-TOPICAL-2023",
+        "WHO-PATIENT-SAFETY-2011"
+      ],
+      "sourcesFresh": true,
+      "reviewCurrent": false,
+      "blockers": [
+        "aprovação clínica pendente",
+        "publicação desativada",
+        "responsável clínico ausente",
+        "revisor médico ausente",
+        "auditoria de segurança pendente",
+        "revisão trilíngue pendente",
+        "data de revisão clínica ausente",
+        "data de revisão trilíngue ausente",
+        "data de QA ausente",
+        "próxima revisão não agendada"
+      ]
+    }
+  ]
+}

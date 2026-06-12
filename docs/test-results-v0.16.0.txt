@@ -1,0 +1,172 @@
+Medical Simulator v0.16.0 — Test Results
+Build: v0.16.0 | build 2026-06-12 16:40:52 BRT
+Executed in release workspace
+
+
+> medical-simulator-vale-edition@0.16.0 audit
+> node tests/audit-content.mjs && node tests/audit-architecture.mjs && node tests/audit-loader.mjs && node tests/audit-storage.mjs && node tests/audit-diagnostics.mjs && node tests/audit-build-consistency.mjs && node tests/audit-antibreak.mjs && node tests/audit-runtime-smoke.mjs && node tests/audit-sw-assets.mjs && node tests/audit-mobile-pwa.mjs && node tests/audit-clinical-ui.mjs && node tests/audit-accessibility.mjs && node tests/audit-i18n.mjs
+
+{
+  "ok": true,
+  "cases": 6,
+  "specialties": 9,
+  "missions": 6,
+  "warnings": []
+}
+{
+  "ok": true,
+  "requiredModules": 15,
+  "appBytes": 69357
+}
+{
+  "ok": true,
+  "mode": "external",
+  "recoveredMode": "last-known-good",
+  "safeMode": "safe-fallback",
+  "cases": 6,
+  "resources": 6
+}
+{
+  "ok": true,
+  "saveSchema": 7,
+  "player": "Dr. Save Antigo",
+  "xp": 906,
+  "accessibility": {
+    "contrast": "high",
+    "textSize": "large",
+    "reduceMotion": true,
+    "focusMode": true,
+    "descriptions": true
+  },
+  "backups": 5,
+  "pending": false,
+  "mainIntegrity": true
+}
+{
+  "ok": true,
+  "total": 3,
+  "warnings": 1,
+  "errors": 1,
+  "viewport": "390x844"
+}
+{
+  "ok": true,
+  "version": "0.16.0",
+  "checks": {
+    "build": true,
+    "package": true,
+    "webmanifest": true,
+    "content": true,
+    "coreManifest": true,
+    "config": true,
+    "index": true,
+    "serviceWorker": true
+  }
+}
+{
+  "ok": true,
+  "groups": [
+    "storage",
+    "boot",
+    "loader",
+    "sw",
+    "app"
+  ],
+  "assertions": 21
+}
+{
+  "ok": true,
+  "initialScreen": "setup",
+  "contentMode": "external",
+  "cases": 6,
+  "screens": {
+    "hub": 4642,
+    "specialty": 6076,
+    "shift": 22461,
+    "settings": 7775,
+    "recovery": 4769
+  },
+  "accessibility": "applied-and-reset"
+}
+{
+  "ok": true,
+  "assets": 53,
+  "critical": 30,
+  "data": 7,
+  "optional": 16
+}
+{
+  "ok": true,
+  "display": "fullscreen",
+  "icons": 4,
+  "clinicalTabs": 7,
+  "safeAreas": true,
+  "dynamicViewport": true
+}
+{
+  "ok": true,
+  "patientCommand": true,
+  "workflowSteps": 5,
+  "recordTabs": 6,
+  "resultsCenter": true,
+  "closureReview": true,
+  "predictedScoreVisible": false
+}
+{
+  "ok": true,
+  "textSizes": 4,
+  "highContrast": true,
+  "reducedMotion": true,
+  "keyboardNavigation": true,
+  "liveRegions": 2,
+  "dialogSemantics": true,
+  "forcedColors": true
+}
+{
+  "ok": true,
+  "locales": [
+    "pt-BR",
+    "en",
+    "es"
+  ],
+  "stats": {
+    "pt-BR": {
+      "ui": 0,
+      "terms": 0,
+      "responses": 0,
+      "ready": true
+    },
+    "en": {
+      "ui": 380,
+      "terms": 111,
+      "responses": 46,
+      "ready": true
+    },
+    "es": {
+      "ui": 380,
+      "terms": 111,
+      "responses": 46,
+      "ready": true
+    }
+  },
+  "canonicalTerms": 86,
+  "clinicalResponses": 46,
+  "liveSwitch": true,
+  "canonicalGameplayPreserved": true
+}
+
+Visual i18n audit summary:
+ok: True
+method: Generated production DOM + production CSS + live i18n catalogs in isolated Chromium
+profiles: 10
+failures: 0
+- pt-BR setup 360x800: overflowX=False, minControl=50.00, pageErrors=0
+- en setup 360x800: overflowX=False, minControl=49.99, pageErrors=0
+- es setup 360x800: overflowX=False, minControl=49.94, pageErrors=0
+- pt-BR shift 360x800: overflowX=False, minControl=48.00, pageErrors=0
+- en shift 360x800: overflowX=False, minControl=48.00, pageErrors=0
+- es shift 360x800: overflowX=False, minControl=48.00, pageErrors=0
+- en settings 360x800: overflowX=False, minControl=48.00, pageErrors=0
+- es settings 360x800: overflowX=False, minControl=48.00, pageErrors=0
+- en shift 1366x768: overflowX=False, minControl=48.00, pageErrors=0
+- es shift 1366x768: overflowX=False, minControl=48.00, pageErrors=0

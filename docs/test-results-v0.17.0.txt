@@ -1,0 +1,188 @@
+
+> medical-simulator-vale-edition@0.17.0 audit
+> node tests/audit-content.mjs && node tests/audit-governance.mjs && node tests/audit-architecture.mjs && node tests/audit-loader.mjs && node tests/audit-storage.mjs && node tests/audit-diagnostics.mjs && node tests/audit-build-consistency.mjs && node tests/audit-antibreak.mjs && node tests/audit-runtime-smoke.mjs && node tests/audit-sw-assets.mjs && node tests/audit-mobile-pwa.mjs && node tests/audit-clinical-ui.mjs && node tests/audit-accessibility.mjs && node tests/audit-i18n.mjs
+
+{
+  "ok": true,
+  "cases": 6,
+  "specialties": 9,
+  "missions": 6,
+  "governanceCases": 6,
+  "warnings": [
+    "Caso hipertensao-1 permanece somente para desenvolvimento: Fontes mapeadas.",
+    "Caso cefaleia-tensional permanece somente para desenvolvimento: Fontes mapeadas.",
+    "Caso angina-estavel permanece somente para desenvolvimento: Fontes mapeadas.",
+    "Caso itu-nao-complicada permanece somente para desenvolvimento: Fontes mapeadas.",
+    "Caso refluxo-gastroesofagico permanece somente para desenvolvimento: Fontes mapeadas.",
+    "Caso dermatite-atopica permanece somente para desenvolvimento: Fontes mapeadas."
+  ]
+}
+{
+  "ok": true,
+  "channel": "development",
+  "cases": 6,
+  "approved": 0,
+  "blocked": 6,
+  "sources": 7,
+  "warnings": 6
+}
+{
+  "ok": true,
+  "requiredModules": 18,
+  "appBytes": 75346
+}
+{
+  "ok": true,
+  "mode": "external",
+  "recoveredMode": "last-known-good",
+  "safeMode": "safe-fallback",
+  "cases": 6,
+  "resources": 7
+}
+{
+  "ok": true,
+  "saveSchema": 8,
+  "player": "Dr. Save Antigo",
+  "xp": 906,
+  "accessibility": {
+    "contrast": "high",
+    "textSize": "large",
+    "reduceMotion": true,
+    "focusMode": true,
+    "descriptions": true
+  },
+  "backups": 5,
+  "pending": false,
+  "mainIntegrity": true
+}
+{
+  "ok": true,
+  "total": 3,
+  "warnings": 1,
+  "errors": 1,
+  "viewport": "390x844"
+}
+{
+  "ok": true,
+  "version": "0.17.0",
+  "checks": {
+    "build": true,
+    "package": true,
+    "webmanifest": true,
+    "content": true,
+    "coreManifest": true,
+    "config": true,
+    "index": true,
+    "serviceWorker": true
+  }
+}
+{
+  "ok": true,
+  "groups": [
+    "storage",
+    "boot",
+    "loader",
+    "sw",
+    "app"
+  ],
+  "assertions": 21
+}
+{
+  "ok": true,
+  "initialScreen": "setup",
+  "contentMode": "external",
+  "cases": 6,
+  "screens": {
+    "hub": 4649,
+    "specialty": 6076,
+    "shift": 22870,
+    "settings": 19712,
+    "recovery": 4769
+  },
+  "accessibility": "applied-and-reset"
+}
+{
+  "ok": true,
+  "assets": 56,
+  "critical": 32,
+  "data": 8,
+  "optional": 16
+}
+{
+  "ok": true,
+  "display": "fullscreen",
+  "icons": 4,
+  "clinicalTabs": 7,
+  "safeAreas": true,
+  "dynamicViewport": true
+}
+{
+  "ok": true,
+  "patientCommand": true,
+  "workflowSteps": 5,
+  "recordTabs": 6,
+  "resultsCenter": true,
+  "closureReview": true,
+  "predictedScoreVisible": false
+}
+{
+  "ok": true,
+  "textSizes": 4,
+  "highContrast": true,
+  "reducedMotion": true,
+  "keyboardNavigation": true,
+  "liveRegions": 2,
+  "dialogSemantics": true,
+  "forcedColors": true
+}
+{
+  "ok": true,
+  "locales": [
+    "pt-BR",
+    "en",
+    "es"
+  ],
+  "stats": {
+    "pt-BR": {
+      "ui": 0,
+      "terms": 0,
+      "responses": 0,
+      "ready": true
+    },
+    "en": {
+      "ui": 418,
+      "terms": 111,
+      "responses": 46,
+      "ready": true
+    },
+    "es": {
+      "ui": 418,
+      "terms": 111,
+      "responses": 46,
+      "ready": true
+    }
+  },
+  "canonicalTerms": 86,
+  "clinicalResponses": 46,
+  "liveSwitch": true,
+  "canonicalGameplayPreserved": true
+}
+
+=== RELEASE GATE (EXPECTED BLOCK) ===
+
+> medical-simulator-vale-edition@0.17.0 release-gate
+> node tools/release-gate.mjs
+
+PUBLICAÇÃO CLÍNICA BLOQUEADA: 6/6 casos possuem pendências.
+- hipertensao-1: aprovação clínica pendente, publicação desativada, responsável clínico ausente, revisor médico ausente, auditoria de segurança pendente, revisão trilíngue pendente, data de revisão clínica ausente, data de revisão trilíngue ausente, data de QA ausente, próxima revisão não agendada
+- cefaleia-tensional: aprovação clínica pendente, publicação desativada, responsável clínico ausente, revisor médico ausente, auditoria de segurança pendente, revisão trilíngue pendente, data de revisão clínica ausente, data de revisão trilíngue ausente, data de QA ausente, próxima revisão não agendada
+- angina-estavel: aprovação clínica pendente, publicação desativada, responsável clínico ausente, revisor médico ausente, auditoria de segurança pendente, revisão trilíngue pendente, data de revisão clínica ausente, data de revisão trilíngue ausente, data de QA ausente, próxima revisão não agendada
+- itu-nao-complicada: aprovação clínica pendente, publicação desativada, responsável clínico ausente, revisor médico ausente, auditoria de segurança pendente, revisão trilíngue pendente, data de revisão clínica ausente, data de revisão trilíngue ausente, data de QA ausente, próxima revisão não agendada
+- refluxo-gastroesofagico: aprovação clínica pendente, publicação desativada, responsável clínico ausente, revisor médico ausente, auditoria de segurança pendente, revisão trilíngue pendente, data de revisão clínica ausente, data de revisão trilíngue ausente, data de QA ausente, próxima revisão não agendada
+- dermatite-atopica: aprovação clínica pendente, publicação desativada, responsável clínico ausente, revisor médico ausente, auditoria de segurança pendente, revisão trilíngue pendente, data de revisão clínica ausente, data de revisão trilíngue ausente, data de QA ausente, próxima revisão não agendada
+
+Expected release gate exit code: 2 (blocked by design)
+
+=== VISUAL AUDITS ===
+- i18n layout: PASS — 10 profiles, no horizontal overflow, min visible control 48 px.
+- accessibility layout: PASS — 7 profiles, no horizontal overflow, focus trap and keyboard navigation validated.
