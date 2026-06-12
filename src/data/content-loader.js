@@ -6,7 +6,8 @@ const FILES={
   cases:'data/core-cases.json',gameplay:'data/gameplay.json',queue:'data/queue.json',
   specialties:'data/specialties.json',missions:'data/missions.json',responses:'data/clinical-responses.json'
 };
-const CACHE_KEY='medsim-last-known-good-content-v012';
+const CACHE_KEY='medsim-last-known-good-content-v015';
+const LEGACY_CACHE_KEYS=['medsim-last-known-good-content-v014','medsim-last-known-good-content-v013','medsim-last-known-good-content-v012'];
 
 const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 
@@ -31,7 +32,10 @@ async function fetchJson(path,version,{timeoutMs=5000,retries=1}={}){
 
 function readCachedContent(){
   try{
-    const raw=localStorage.getItem(CACHE_KEY);
+    let raw=localStorage.getItem(CACHE_KEY);
+    if(!raw){
+      for(const legacyKey of LEGACY_CACHE_KEYS){raw=localStorage.getItem(legacyKey);if(raw)break;}
+    }
     if(!raw)return {ok:false,error:'Cache clínico ainda não criado.'};
     const parsed=JSON.parse(raw);
     const verified=verifyEnvelope(parsed,{kind:'vale-clinical-content'});

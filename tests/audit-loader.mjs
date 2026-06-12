@@ -12,11 +12,11 @@ globalThis.fetch=async input=>{
   return {ok:true,status:200,json:async()=>JSON.parse(fs.readFileSync(file,'utf8'))};
 };
 const {loadGameContent}=await import('../src/data/content-loader.js');
-const result=await loadGameContent({version:'0.12.0-test'});
+const result=await loadGameContent({version:'0.15.0-test'});
 if(result.status.mode!=='external'||result.content.cases.length!==6)throw new Error('Carregamento externo válido falhou.');
 malformed=true;
-const recovered=await loadGameContent({version:'0.12.0-corrupt'});
+const recovered=await loadGameContent({version:'0.15.0-corrupt'});
 if(recovered.status.mode!=='last-known-good'||recovered.content.cases.length!==6)throw new Error('Último pacote válido não foi restaurado após conteúdo malformado.');
-const safe=await loadGameContent({version:'0.12.0-safe',safeMode:true});
+const safe=await loadGameContent({version:'0.15.0-safe',safeMode:true});
 if(safe.status.mode!=='safe-fallback'||safe.content.cases.length!==6)throw new Error('Modo seguro do conteúdo falhou.');
 console.log(JSON.stringify({ok:true,mode:result.status.mode,recoveredMode:recovered.status.mode,safeMode:safe.status.mode,cases:result.content.cases.length,resources:result.status.externalCount},null,2));
