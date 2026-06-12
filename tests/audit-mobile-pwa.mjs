@@ -21,7 +21,7 @@ require(index.includes('apple-touch-icon'),'apple touch icon');
 for(const token of ['env(safe-area-inset-bottom)','--app-height','shift-mobile-tabs','mobile-shift-dock','min-height:var(--touch-target)'])require(css.includes(token),`CSS ${token}`);
 for(const token of ["['summary','👤','Resumo']",'setShiftTab','mobileClinicalStrip','installGame'])require(app.includes(token),`app ${token}`);
 for(const token of ['beforeinstallprompt','visualViewport','requestFullscreen','displayMode'])require(mobile.includes(token),`mobile ${token}`);
-require(sw.includes("VERSION='0.15.0'"),'versão SW');
+require(sw.includes("VERSION='0.18.0'"),'versão SW');
 require(sw.includes('icon-maskable-512.png'),'ícone no cache SW');
 require(sw.includes('navigationPreload'),'navigation preload');
 if(failures.length)throw new Error(`Auditoria mobile/PWA falhou: ${failures.join(' | ')}`);

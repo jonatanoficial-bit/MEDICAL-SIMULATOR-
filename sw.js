@@ -1,4 +1,4 @@
-const VERSION='0.15.0';
+const VERSION='0.18.0';
 const CACHE_PREFIX='medical-simulator-vale-edition-v';
 const CACHE_NAME=`${CACHE_PREFIX}${VERSION.replaceAll('.','-')}`;
 const OFFLINE_FALLBACK='./index.html';
@@ -7,14 +7,14 @@ const CRITICAL_ASSETS=[
   './src/core/boot-guard.js','./src/app.js','./src/styles.css','./src/config/build.js',
   './src/core/default-state.js','./src/core/object.js','./src/core/checksum.js','./src/core/storage.js',
   './src/core/diagnostics.js','./src/core/runtime-health.js','./src/core/sw-manager.js','./src/core/mobile-experience.js','./src/core/accessibility.js',
-  './src/data/content-loader.js','./src/data/content-schema.js','./src/data/fallback-content.js',
-  './src/i18n/index.js','./src/compat/legacy-guards.js',
+  './src/data/content-loader.js','./src/data/content-schema.js','./src/data/clinical-governance.js','./src/data/academy-schema.js','./src/data/fallback-content.js','./src/data/fallback-governance.js','./src/data/fallback-academy.js',
+  './src/i18n/index.js','./src/i18n/catalogs.js','./src/i18n/academy-ui.js','./src/compat/legacy-guards.js',
   './assets/icons/pwa/icon-192.png','./assets/icons/pwa/icon-512.png',
   './assets/icons/pwa/icon-maskable-192.png','./assets/icons/pwa/icon-maskable-512.png','./assets/icons/pwa/apple-touch-icon.png'
 ];
 const DATA_ASSETS=[
   './data/content-index.json','./data/core-cases.json','./data/gameplay.json','./data/queue.json',
-  './data/specialties.json','./data/missions.json','./data/clinical-responses.json'
+  './data/specialties.json','./data/missions.json','./data/clinical-responses.json','./data/governance.json','./data/academy.json'
 ];
 const OPTIONAL_ASSETS=[
   './assets/backgrounds/background_01.png','./assets/backgrounds/background_04.png','./assets/backgrounds/background_05.png',

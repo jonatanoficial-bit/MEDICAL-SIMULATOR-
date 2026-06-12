@@ -2,7 +2,7 @@
   "id": "./medical-simulator-vale-edition",
   "name": "Medical Simulator - Vale Edition",
   "short_name": "Med Vale",
-  "start_url": "./index.html?source=pwa&v=0.15.0",
+  "start_url": "./index.html?source=pwa&v=0.18.0",
   "scope": "./",
   "display": "fullscreen",
   "display_override": [
@@ -13,7 +13,7 @@
   "background_color": "#020814",
   "theme_color": "#06131f",
   "orientation": "any",
-  "description": "Simulador clínico educacional acessível com prontuário eletrônico, central de resultados, carreira e experiência mobile imersiva.",
+  "description": "Trilingual educational clinical simulator with a 9-module introductory Clinical Academy, traceable medical governance, accessible records, and mobile-first immersive play.",
   "lang": "pt-BR",
   "dir": "ltr",
   "categories": [
@@ -50,9 +50,9 @@
   ],
   "shortcuts": [
     {
-      "name": "Iniciar plantão",
+      "name": "Iniciar plantão / Start shift / Iniciar guardia",
       "short_name": "Plantão",
-      "description": "Abrir seleção de especialidade",
+      "description": "Abrir seleção de especialidade / Open specialty selection / Abrir especialidades",
       "url": "./index.html?screen=specialty&source=shortcut",
       "icons": [
         {
@@ -62,9 +62,9 @@
       ]
     },
     {
-      "name": "Aprendizagem médica",
+      "name": "Aprendizagem médica / Medical learning / Aprendizaje médico",
       "short_name": "Aprender",
-      "description": "Abrir módulos de aprendizagem",
+      "description": "Abrir módulos de aprendizagem / Open learning modules / Abrir módulos de aprendizaje",
       "url": "./index.html?screen=learning&source=shortcut",
       "icons": [
         {

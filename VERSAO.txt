@@ -1,3 +1,4 @@
-v0.15.0 | build 2026-06-12 16:15:18 BRT
-Fase 6 — Design System e Acessibilidade
-Save schema: 6
+Medical Simulator - Vale Edition
+v0.18.0 | build 2026-06-12 17:15:20 BRT
+Fase 9: Academia Clínica Introdutória trilíngue
+Save schema 9 | Content schema 3 | Academy schema 1

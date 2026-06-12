@@ -1,8 +1,17 @@
 {
-  "game": "Medical Simulator - Vale Edition",
-  "build": "v0.15.0 | build 2026-06-12 16:15:18 BRT",
-  "status": "active-development",
+  "version": "0.18.0",
+  "build": "2026-06-12 17:15:20 BRT",
+  "phase": "Academia Clínica Introdutória trilíngue",
   "frozen": false,
-  "phase": "Design System e Acessibilidade",
-  "rule": "Toda alteração exige ZIP completo, auditoria, manifesto SHA-256 e rollback."
+  "next_phase": "Motor fisiológico e simulação temporal",
+  "status": "phase-9-complete-internal-release-blocked",
+  "scope": "introductory-clinical-academy-guided-learning",
+  "save_schema": 9,
+  "content_schema": 3,
+  "medical_release_ready": false,
+  "blocked_cases": 6,
+  "frozen_at": "2026-06-12T17:15:20-03:00",
+  "academy_release_ready": false,
+  "academy_modules": 9,
+  "academy_lessons": 27
 }

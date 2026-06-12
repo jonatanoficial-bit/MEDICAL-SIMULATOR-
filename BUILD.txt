@@ -1,5 +1,8 @@
-Medical Simulator - Vale Edition
-Version: 0.15.0
-Phase: Design System e Acessibilidade
-Build: 2026-06-12 16:15:18 BRT
-Timezone: America/Sao_Paulo
+MEDICAL SIMULATOR - VALE EDITION
+VERSION: 0.18.0
+BUILD: 2026-06-12 17:15:20 BRT
+PHASE: 9 - Academia Clínica Introdutória
+SAVE SCHEMA: 9
+CONTENT SCHEMA: 3
+ACADEMY: 9 modules / 27 lessons / 3 languages / 1 guided case
+STATUS: development build; commercial medical release blocked pending independent review

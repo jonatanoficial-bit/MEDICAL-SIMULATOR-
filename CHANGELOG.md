@@ -1,5 +1,44 @@
 # Changelog
 
+## 0.18.0 — Academia Clínica Introdutória — 2026-06-12 17:15:20 BRT
+
+- Academia trilíngue com 9 módulos e 27 lições.
+- Pré-teste diagnóstico sem penalidade.
+- Checkpoints sequenciais, progresso persistente e XP concedido uma única vez.
+- Caso guiado de dor torácica com cinco decisões e debriefing estruturado.
+- Fontes oficiais vinculadas por módulo e aviso educacional permanente.
+- Save schema 9 e content schema 3 com fallback integral da Academia.
+- Conteúdo continua bloqueado para publicação clínica/comercial até revisão independente.
+
+
+## v0.17.0 — Governança Médica — 2026-06-12 17:00:59 BRT
+
+- registro central de governança em `data/governance.json`;
+- sete fontes oficiais vinculadas aos seis casos clínicos ativos;
+- identificação de região, ano, organização e data de verificação de cada fonte;
+- status clínico por caso: rascunho, fontes mapeadas, em revisão, aprovado, suspenso ou retirado;
+- histórico de alteração, riscos, pendências, responsáveis e datas de revisão;
+- aviso educacional trilíngue dentro do atendimento;
+- painel de governança nas configurações e resumo na área de aprendizagem;
+- exportação do relatório técnico de governança;
+- validação automática da vigência das fontes e do agendamento de revisão;
+- release gate que encerra com erro enquanto houver caso ativo sem aprovação clínica completa;
+- os seis casos permanecem jogáveis apenas no canal de desenvolvimento e não estão liberados para publicação comercial;
+- save schema 8, content schema 2 e service worker atualizados para v0.17.0.
+
+## v0.16.0 — Internacionalização PT-BR, English e Español — 2026-06-12 16:40:52 BRT
+
+- interface completa em português do Brasil, inglês e espanhol;
+- detecção inicial pelo idioma do navegador e suporte a `?lang=`;
+- seletor PT/EN/ES no cabeçalho e nas configurações;
+- troca instantânea de idioma sem reiniciar a consulta;
+- idioma persistido no save schema 7, com migração da v0.15.0;
+- tradução dos 6 casos ativos, 9 especialidades, 6 missões e respostas clínicas;
+- 380 entradas de interface, 111 termos clínicos e 46 respostas detalhadas por catálogo traduzido;
+- datas e horários formatados por localidade;
+- valores internos canônicos preservados para não alterar score, histórico ou save;
+- PWA, service worker, testes e build atualizados para v0.16.0.
+
 ## v0.15.0 — Design System e Acessibilidade — 2026-06-12 16:15:18 BRT
 
 - design system com tokens reutilizáveis e controles padronizados;
