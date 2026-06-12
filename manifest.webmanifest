@@ -1,13 +1,77 @@
 {
+  "id": "./medical-simulator-vale-edition",
   "name": "Medical Simulator - Vale Edition",
   "short_name": "Med Vale",
-  "start_url": "./index.html?v=0.12.0",
-  "display": "fullscreen",
-  "background_color": "#020814",
-  "theme_color": "#020814",
-  "orientation": "any",
+  "start_url": "./index.html?source=pwa&v=0.15.0",
   "scope": "./",
-  "description": "Medical Simulator - Vale Edition v0.12.0 Anti-quebra 2.0 e Observabilidade",
+  "display": "fullscreen",
+  "display_override": [
+    "fullscreen",
+    "standalone",
+    "minimal-ui"
+  ],
+  "background_color": "#020814",
+  "theme_color": "#06131f",
+  "orientation": "any",
+  "description": "Simulador clínico educacional acessível com prontuário eletrônico, central de resultados, carreira e experiência mobile imersiva.",
   "lang": "pt-BR",
-  "categories": ["games", "education", "medical"]
+  "dir": "ltr",
+  "categories": [
+    "games",
+    "education",
+    "medical"
+  ],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "assets/icons/pwa/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/pwa/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/pwa/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/icons/pwa/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Iniciar plantão",
+      "short_name": "Plantão",
+      "description": "Abrir seleção de especialidade",
+      "url": "./index.html?screen=specialty&source=shortcut",
+      "icons": [
+        {
+          "src": "assets/icons/pwa/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Aprendizagem médica",
+      "short_name": "Aprender",
+      "description": "Abrir módulos de aprendizagem",
+      "url": "./index.html?screen=learning&source=shortcut",
+      "icons": [
+        {
+          "src": "assets/icons/pwa/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
 }

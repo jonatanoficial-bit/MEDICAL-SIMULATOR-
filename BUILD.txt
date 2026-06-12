@@ -1,7 +1,5 @@
-MEDICAL SIMULATOR - VALE EDITION
-Versão: 0.12.0
-Fase: Anti-quebra 2.0 e Observabilidade
-Build: 2026-06-11 19:01:22 BRT
-Save schema: 3
-Content schema: 1
-Prioridade: Mobile > Tablet > PC
+Medical Simulator - Vale Edition
+Version: 0.15.0
+Phase: Design System e Acessibilidade
+Build: 2026-06-12 16:15:18 BRT
+Timezone: America/Sao_Paulo

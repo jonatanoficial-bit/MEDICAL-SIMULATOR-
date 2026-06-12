@@ -24,3 +24,8 @@ ui,ui_02.png,assets/ui/ui_02.png,ui/ChatGPT_Image_24_de_abr._de_2026__09_30_57-r
 ui,ui_03.png,assets/ui/ui_03.png,ui/ChatGPT_Image_24_de_abr._de_2026__09_30_59-removebg-preview.png
 ui,ui_04.png,assets/ui/ui_04.png,ui/ChatGPT_Image_24_de_abr._de_2026__09_31_01-removebg-preview.png
 ui,ui_05.png,assets/ui/ui_05.png,ui/ChatGPT_Image_24_de_abr._de_2026__09_31_03-removebg-preview.png
+pwa,icon-192.png,assets/icons/pwa/icon-192.png,gerado-na-fase-v0.14.0
+pwa,icon-512.png,assets/icons/pwa/icon-512.png,gerado-na-fase-v0.14.0
+pwa,icon-maskable-192.png,assets/icons/pwa/icon-maskable-192.png,gerado-na-fase-v0.14.0
+pwa,icon-maskable-512.png,assets/icons/pwa/icon-maskable-512.png,gerado-na-fase-v0.14.0
+pwa,apple-touch-icon.png,assets/icons/pwa/apple-touch-icon.png,gerado-na-fase-v0.14.0

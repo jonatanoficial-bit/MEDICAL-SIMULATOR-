@@ -1,13 +1,16 @@
-const VERSION='0.12.0';
+const VERSION='0.15.0';
 const CACHE_PREFIX='medical-simulator-vale-edition-v';
 const CACHE_NAME=`${CACHE_PREFIX}${VERSION.replaceAll('.','-')}`;
+const OFFLINE_FALLBACK='./index.html';
 const CRITICAL_ASSETS=[
   './','./index.html','./manifest.webmanifest','./favicon.ico','./BUILD.json','./VERSAO.txt',
   './src/core/boot-guard.js','./src/app.js','./src/styles.css','./src/config/build.js',
   './src/core/default-state.js','./src/core/object.js','./src/core/checksum.js','./src/core/storage.js',
-  './src/core/diagnostics.js','./src/core/runtime-health.js','./src/core/sw-manager.js',
+  './src/core/diagnostics.js','./src/core/runtime-health.js','./src/core/sw-manager.js','./src/core/mobile-experience.js','./src/core/accessibility.js',
   './src/data/content-loader.js','./src/data/content-schema.js','./src/data/fallback-content.js',
-  './src/i18n/index.js','./src/compat/legacy-guards.js'
+  './src/i18n/index.js','./src/compat/legacy-guards.js',
+  './assets/icons/pwa/icon-192.png','./assets/icons/pwa/icon-512.png',
+  './assets/icons/pwa/icon-maskable-192.png','./assets/icons/pwa/icon-maskable-512.png','./assets/icons/pwa/apple-touch-icon.png'
 ];
 const DATA_ASSETS=[
   './data/content-index.json','./data/core-cases.json','./data/gameplay.json','./data/queue.json',
@@ -23,18 +26,17 @@ const OPTIONAL_ASSETS=[
 async function installVerifiedCache(){
   const cache=await caches.open(CACHE_NAME);
   await cache.addAll(CRITICAL_ASSETS);
-  const criticalChecks=await Promise.all(CRITICAL_ASSETS.map(async asset=>({asset,ok:!!(await cache.match(asset,{ignoreSearch:true}))})));
-  const missing=criticalChecks.filter(item=>!item.ok);
+  const checks=await Promise.all(CRITICAL_ASSETS.map(async asset=>({asset,ok:!!(await cache.match(asset,{ignoreSearch:true}))})));
+  const missing=checks.filter(item=>!item.ok);
   if(missing.length)throw new Error(`Cache crítico incompleto: ${missing.map(x=>x.asset).join(', ')}`);
   await Promise.allSettled([...DATA_ASSETS,...OPTIONAL_ASSETS].map(asset=>cache.add(asset)));
 }
 
-self.addEventListener('install',event=>{
-  event.waitUntil(installVerifiedCache());
-});
+self.addEventListener('install',event=>event.waitUntil(installVerifiedCache()));
 
 self.addEventListener('activate',event=>{
   event.waitUntil((async()=>{
+    if(self.registration.navigationPreload)await self.registration.navigationPreload.enable().catch(()=>{});
     const keys=(await caches.keys()).filter(key=>key.startsWith(CACHE_PREFIX)).sort().reverse();
     const keep=new Set([CACHE_NAME,...keys.filter(key=>key!==CACHE_NAME).slice(0,1)]);
     await Promise.all(keys.filter(key=>!keep.has(key)).map(key=>caches.delete(key)));
@@ -51,47 +53,60 @@ async function matchAcrossCaches(request){
   return null;
 }
 
-async function fetchWithTimeout(request,timeoutMs=5000){
+async function fetchWithTimeout(request,timeoutMs=6000){
   const controller=new AbortController();
   const timer=setTimeout(()=>controller.abort(),timeoutMs);
   try{return await fetch(request,{signal:controller.signal});}finally{clearTimeout(timer);}
 }
 
+async function navigationNetworkFirst(event){
+  const cache=await caches.open(CACHE_NAME);
+  try{
+    const preload=await event.preloadResponse;
+    const response=preload||await fetchWithTimeout(event.request,6000);
+    if(response?.ok)cache.put(OFFLINE_FALLBACK,response.clone()).catch(()=>{});
+    return response;
+  }catch{
+    return (await matchAcrossCaches(OFFLINE_FALLBACK))||Response.error();
+  }
+}
+
 async function networkFirst(request){
   const cache=await caches.open(CACHE_NAME);
   try{
-    const response=await fetchWithTimeout(request,5000);
-    if(response&&response.ok)cache.put(request,response.clone()).catch(()=>{});
+    const response=await fetchWithTimeout(request,6000);
+    if(response?.ok)cache.put(request,response.clone()).catch(()=>{});
     return response;
   }catch(error){
     const cached=await matchAcrossCaches(request);
     if(cached)return cached;
-    if(request.mode==='navigate')return matchAcrossCaches('./index.html');
     throw error;
   }
 }
 
-async function cacheFirst(request){
+async function staleWhileRevalidate(request){
   const cached=await matchAcrossCaches(request);
-  if(cached)return cached;
-  const response=await fetchWithTimeout(request,7000);
-  if(response&&response.ok)(await caches.open(CACHE_NAME)).put(request,response.clone()).catch(()=>{});
-  return response;
+  const update=fetchWithTimeout(request,8000).then(async response=>{
+    if(response?.ok)(await caches.open(CACHE_NAME)).put(request,response.clone()).catch(()=>{});
+    return response;
+  }).catch(()=>null);
+  return cached||await update||Response.error();
 }
 
 self.addEventListener('fetch',event=>{
   if(event.request.method!=='GET')return;
   const url=new URL(event.request.url);
   if(url.origin!==self.location.origin)return;
+  if(event.request.mode==='navigate'){event.respondWith(navigationNetworkFirst(event));return;}
   const path=url.pathname;
-  const isCodeOrData=/\.(?:html|js|css|json|webmanifest)$/.test(path)||path.endsWith('/');
-  event.respondWith(isCodeOrData?networkFirst(event.request):cacheFirst(event.request));
+  const isVersionedCode=/\.(?:js|css|json|webmanifest)$/.test(path);
+  event.respondWith(isVersionedCode?networkFirst(event.request):staleWhileRevalidate(event.request));
 });
 
 self.addEventListener('message',event=>{
   const type=event.data?.type;
   if(type==='SKIP_WAITING')self.skipWaiting();
   if(type==='GET_VERSION')event.source?.postMessage({type:'SW_VERSION',version:VERSION,cache:CACHE_NAME});
-  if(type==='HEALTH_CHECK')event.source?.postMessage({type:'SW_HEALTH',version:VERSION,cache:CACHE_NAME,ok:true});
+  if(type==='HEALTH_CHECK')event.source?.postMessage({type:'SW_HEALTH',version:VERSION,cache:CACHE_NAME,ok:true,criticalAssets:CRITICAL_ASSETS.length});
   if(type==='CLEAR_CURRENT_CACHE')event.waitUntil(caches.delete(CACHE_NAME));
 });

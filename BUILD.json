@@ -1,17 +1,50 @@
 {
   "product": "Medical Simulator - Vale Edition",
-  "version": "0.12.0",
-  "phase": "Anti-quebra 2.0 e Observabilidade",
-  "build": "20260611-190122-BRT",
-  "build_label": "v0.12.0 | build 2026-06-11 19:01:22 BRT",
+  "version": "0.15.0",
+  "phase": "Design System e Acessibilidade",
+  "build": "20260612-161518-BRT",
+  "build_label": "v0.15.0 | build 2026-06-12 16:15:18 BRT",
   "timezone": "America/Sao_Paulo",
-  "release_type": "fase-3-antiquebra-observabilidade",
+  "release_type": "fase-6-design-system-acessibilidade",
   "core_entry": "index.html -> src/core/boot-guard.js -> src/app.js",
-  "save_schema": 3,
+  "save_schema": 6,
   "content_schema": 1,
   "active_cases": 6,
   "staged_legacy_cases": 3,
-  "compatibility_priority": ["mobile", "tablet", "desktop"],
+  "compatibility_priority": [
+    "mobile",
+    "tablet",
+    "desktop"
+  ],
+  "clinical_ui": {
+    "patient_command_center": true,
+    "workflow_steps": 5,
+    "electronic_record_tabs": 6,
+    "results_center": true,
+    "closure_review": true,
+    "custom_clinical_notes": true,
+    "post_consultation_debrief": true,
+    "predicted_score_hidden": true
+  },
+  "mobile": {
+    "dynamic_viewport": true,
+    "safe_areas": true,
+    "clinical_tabs": 7,
+    "touch_target_min_px": 48,
+    "mobile_dock": true,
+    "compact_hud": true
+  },
+  "pwa": {
+    "install_prompt": true,
+    "display_override": [
+      "fullscreen",
+      "standalone",
+      "minimal-ui"
+    ],
+    "maskable_icons": true,
+    "offline_navigation_fallback": true,
+    "previous_cache_retention": true
+  },
   "anti_break": {
     "transactional_save": true,
     "save_checksum": "FNV-1a 32-bit",
@@ -24,5 +57,28 @@
     "diagnostics_log": true,
     "service_worker_previous_cache_retention": true,
     "manifest_sha256": true
+  },
+  "accessibility": {
+    "text_sizes": [
+      "small",
+      "medium",
+      "large",
+      "extra-large"
+    ],
+    "high_contrast": true,
+    "reduced_motion": true,
+    "enhanced_focus": true,
+    "screen_reader_live_regions": true,
+    "keyboard_navigation": true,
+    "skip_link": true,
+    "dialog_semantics": true,
+    "forced_colors_support": true
+  },
+  "design_system": {
+    "tokenized_spacing": true,
+    "tokenized_surfaces": true,
+    "minimum_control_px": 48,
+    "consistent_focus_ring": true,
+    "responsive_typography": true
   }
 }

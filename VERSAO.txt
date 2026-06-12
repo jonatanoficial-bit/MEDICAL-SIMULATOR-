@@ -1,1 +1,3 @@
-v0.12.0 | build 2026-06-11 19:01:22 BRT | Anti-quebra 2.0 e Observabilidade
+v0.15.0 | build 2026-06-12 16:15:18 BRT
+Fase 6 — Design System e Acessibilidade
+Save schema: 6

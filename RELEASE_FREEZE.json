@@ -1,8 +1,8 @@
 {
   "game": "Medical Simulator - Vale Edition",
-  "build": "v0.12.0 | build 2026-06-11 19:01:22 BRT",
+  "build": "v0.15.0 | build 2026-06-12 16:15:18 BRT",
   "status": "active-development",
   "frozen": false,
-  "phase": "Anti-quebra 2.0 e Observabilidade",
+  "phase": "Design System e Acessibilidade",
   "rule": "Toda alteração exige ZIP completo, auditoria, manifesto SHA-256 e rollback."
 }

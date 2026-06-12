@@ -1,34 +1,35 @@
 # Medical Simulator - Vale Edition
 
-**Build ativa:** v0.12.0 | build 2026-06-11 19:01:22 BRT  
-**Fase:** Anti-quebra 2.0 e Observabilidade
+Build atual: **v0.15.0 | build 2026-06-12 16:15:18 BRT**  
+Fase 6: **Design System e Acessibilidade**
 
-## Como executar
+## Execução
 
-Hospede a pasta em um servidor HTTP/HTTPS, como GitHub Pages. A abertura direta por `file://` mantém o fallback interno, mas PWA, service worker e carregamento externo de JSON dependem de hospedagem.
-
-## Arquitetura ativa
-
-- `src/app.js`: composição da interface e fluxo atual.
-- `src/config/`: versão e caminhos.
-- `src/core/`: estado padrão, merge e armazenamento versionado.
-- `src/data/`: carregador, schema e fallback anti-quebra.
-- `src/i18n/`: fundação para PT-BR, EN e ES.
-- `src/compat/`: proteções históricas isoladas do núcleo.
-- `data/`: casos, catálogos, fila, missões e respostas clínicas.
-- `legacy/`: motor anterior arquivado; não é carregado.
-
-## Conteúdo clínico
-
-A build mantém os seis casos jogáveis anteriores. Três casos avançados antigos estão preservados em `data/legacy-cases-v0.8.json`, mas permanecem desativados até adaptação ao schema atual e revisão médica.
-
-## Auditoria
-
-Execute:
+Hospede a raiz em um servidor HTTP/HTTPS e abra `index.html`. Para validar localmente:
 
 ```bash
 npm run audit
 npm run manifest
+npm run verify-manifest
 ```
 
-Consulte `docs/build-report-v0.12.0-antiquebra-observabilidade.md` para o relatório integral.
+## Evoluções desta fase
+
+- design system com tokens de espaço, superfícies, bordas, foco e controles;
+- quatro tamanhos de texto: pequeno, médio, grande e muito grande;
+- alto contraste aplicável em tempo real;
+- redução de movimento manual e respeito a `prefers-reduced-motion`;
+- foco visível reforçado para teclado e controles;
+- skip link para o conteúdo principal;
+- regiões de anúncio para leitores de tela;
+- diálogos com semântica, rótulos e fechamento por Esc;
+- navegação por setas entre abas;
+- atalhos Alt+1 a Alt+5;
+- suporte a Windows Forced Colors;
+- alvos de toque com mínimo de 48 px;
+- preferências preservadas no save schema 6;
+- migração automática da v0.14.0.
+
+## Garantias anti-quebra
+
+A build preserva gravação transacional, checksum, cinco backups rotativos, watchdog de inicialização, fallback clínico, service worker com cache anterior e manifesto SHA-256.

@@ -1,10 +1,10 @@
 {
   "name": "medical-simulator-vale-edition",
-  "version": "0.12.0",
+  "version": "0.15.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "audit": "node tests/audit-content.mjs && node tests/audit-architecture.mjs && node tests/audit-loader.mjs && node tests/audit-storage.mjs && node tests/audit-diagnostics.mjs && node tests/audit-build-consistency.mjs && node tests/audit-antibreak.mjs && node tests/audit-runtime-smoke.mjs && node tests/audit-sw-assets.mjs",
+    "audit": "node tests/audit-content.mjs && node tests/audit-architecture.mjs && node tests/audit-loader.mjs && node tests/audit-storage.mjs && node tests/audit-diagnostics.mjs && node tests/audit-build-consistency.mjs && node tests/audit-antibreak.mjs && node tests/audit-runtime-smoke.mjs && node tests/audit-sw-assets.mjs && node tests/audit-mobile-pwa.mjs && node tests/audit-clinical-ui.mjs && node tests/audit-accessibility.mjs",
     "manifest": "node tools/generate-build-manifest.mjs",
     "verify-manifest": "node tests/audit-manifest.mjs"
   }

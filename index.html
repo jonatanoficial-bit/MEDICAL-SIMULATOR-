@@ -1,29 +1,41 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<base href="./">
+  <base href="./">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1">
   <meta name="theme-color" content="#06131f">
-  <title>Medical Simulator - Vale Edition v0.12.0</title>
+  <meta name="color-scheme" content="dark">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Med Vale">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="Medical Simulator - Vale Edition: simulador clínico educacional com foco mobile.">
+  <title>Medical Simulator - Vale Edition v0.15.0</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="assets/icons/pwa/apple-touch-icon.png">
   <link rel="stylesheet" href="src/styles.css">
   <link rel="preload" href="src/styles.css" as="style">
   <link rel="modulepreload" href="src/app.js">
   <link rel="modulepreload" href="src/config/build.js">
+  <link rel="modulepreload" href="src/core/mobile-experience.js">
+  <link rel="modulepreload" href="src/core/accessibility.js">
   <link rel="modulepreload" href="src/data/content-loader.js">
   <link rel="modulepreload" href="src/core/storage.js">
   <script src="src/core/boot-guard.js"></script>
 </head>
 <body>
-<noscript>
-  <main style="min-height:100vh;background:#020814;color:#eff8ff;font-family:Arial;padding:24px">
-    <h1>Medical Simulator - Vale Edition</h1>
-    <p>Este jogo precisa de JavaScript ativado.</p>
-  </main>
-</noscript>
-  <div id="app"><main class="boot-shell" aria-live="polite"><div class="boot-spinner"></div><h1>Medical Simulator</h1><p>Validando build e protegendo o progresso...</p><small>v0.12.0</small></main></div>
+  <div id="a11y-live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+  <div id="a11y-alert" class="sr-only" role="alert" aria-live="assertive" aria-atomic="true"></div>
+  <noscript>
+    <main style="min-height:100vh;background:#020814;color:#eff8ff;font-family:Arial;padding:24px">
+      <h1>Medical Simulator - Vale Edition</h1>
+      <p>Este jogo precisa de JavaScript ativado.</p>
+    </main>
+  </noscript>
+  <div id="app"><main class="boot-shell" aria-live="polite"><div class="boot-spinner"></div><h1>Medical Simulator</h1><p>Preparando design system acessível e protegendo o progresso...</p><small>v0.15.0</small></main></div>
   <script type="module" src="src/app.js"></script>
 </body>
 </html>
