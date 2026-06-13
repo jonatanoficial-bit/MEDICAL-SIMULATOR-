@@ -1,5 +1,11 @@
 import {validateGovernance} from './clinical-governance.js';
 import {validateAcademy} from './academy-schema.js';
+import {validatePhysiologyRegistry} from '../simulation/physiology-engine.js';
+import {validateAssessmentRegistry} from './assessment-schema.js';
+import {validateTherapeuticsRegistry} from '../simulation/therapeutics-engine.js';
+import {validateEmergencyRegistry} from '../simulation/emergency-engine.js';
+import {validateOutpatientRegistry} from '../simulation/outpatient-engine.js';
+import {validateBranchingRegistry} from '../simulation/branching-engine.js';
 const nonEmptyString=value=>typeof value==='string' && value.trim().length>0;
 const stringArray=value=>Array.isArray(value) && value.every(nonEmptyString);
 
@@ -15,6 +21,12 @@ export function validateGameContent(content){
   const responses=content.responses||{};
   const governance=content.governance||null;
   const academy=content.academy||null;
+  const physiology=content.physiology||null;
+  const assessment=content.assessment||null;
+  const therapeutics=content.therapeutics||null;
+  const emergency=content.emergency||null;
+  const outpatient=content.outpatient||null;
+  const branching=content.branching||null;
   if(!Array.isArray(cases)||!cases.length) errors.push('Nenhum caso clínico válido foi fornecido.');
   if(!stringArray(gameplay.exams)) errors.push('Lista de exames inválida.');
   if(!stringArray(gameplay.procedures)) errors.push('Lista de procedimentos inválida.');
@@ -31,6 +43,21 @@ export function validateGameContent(content){
   const academyValidation=validateAcademy(academy);
   if(!academyValidation.ok)errors.push(...academyValidation.errors);
   warnings.push(...academyValidation.warnings);
+  const physiologyValidation=validatePhysiologyRegistry(physiology,Array.isArray(cases)?cases.map(item=>item?.id).filter(Boolean):[]);
+  if(!physiologyValidation.ok)errors.push(...physiologyValidation.errors);
+  warnings.push(...physiologyValidation.warnings);
+  const therapeuticsValidation=validateTherapeuticsRegistry(therapeutics,Array.isArray(cases)?cases.map(item=>item?.id).filter(Boolean):[]);
+  if(!therapeuticsValidation.ok)errors.push(...therapeuticsValidation.errors);
+  warnings.push(...therapeuticsValidation.warnings);
+  const emergencyValidation=validateEmergencyRegistry(emergency);
+  if(!emergencyValidation.ok)errors.push(...emergencyValidation.errors);
+  warnings.push(...emergencyValidation.warnings);
+  const outpatientValidation=validateOutpatientRegistry(outpatient);
+  if(!outpatientValidation.ok)errors.push(...outpatientValidation.errors);
+  warnings.push(...outpatientValidation.warnings);
+  const branchingValidation=validateBranchingRegistry(branching,Array.isArray(cases)?cases.map(item=>item?.id).filter(Boolean):[]);
+  if(!branchingValidation.ok)errors.push(...branchingValidation.errors);
+  warnings.push(...branchingValidation.warnings);
 
   const ids=new Set();
   const safeSpecialties=Array.isArray(specialties)?specialties:[];
@@ -50,5 +77,8 @@ export function validateGameContent(content){
     for(const procedure of item.correctProcedures||[]) if(!gameplay.procedures?.includes(procedure)) errors.push(`Procedimento desconhecido em ${item.id}: ${procedure}.`);
     for(const conduct of item.idealConduct||[]) if(!gameplay.conducts?.includes(conduct)) errors.push(`Conduta desconhecida em ${item.id}: ${conduct}.`);
   }
+  const assessmentValidation=validateAssessmentRegistry(assessment,Array.isArray(cases)?cases:[]);
+  if(!assessmentValidation.ok)errors.push(...assessmentValidation.errors);
+  warnings.push(...assessmentValidation.warnings);
   return {ok:errors.length===0,errors:[...new Set(errors)],warnings:[...new Set(warnings)]};
 }

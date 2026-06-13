@@ -1,7 +1,7 @@
 // Fallback de governança médica gerado a partir do registro oficial da build.
 export const FALLBACK_GOVERNANCE = Object.freeze({
   "schemaVersion": 1,
-  "contentVersion": "0.18.0",
+  "contentVersion": "0.24.0",
   "releaseChannel": "development",
   "policy": {
     "productScope": "educational-clinical-simulation",

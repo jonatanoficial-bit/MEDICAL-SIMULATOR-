@@ -1,5 +1,11 @@
 import {FALLBACK_GOVERNANCE} from './fallback-governance.js';
 import {FALLBACK_ACADEMY} from './fallback-academy.js';
+import {FALLBACK_PHYSIOLOGY} from './fallback-physiology.js';
+import {FALLBACK_ASSESSMENT} from './fallback-assessment.js';
+import {FALLBACK_THERAPEUTICS} from './fallback-therapeutics.js';
+import {FALLBACK_EMERGENCY} from './fallback-emergency.js';
+import {FALLBACK_OUTPATIENT} from './fallback-outpatient.js';
+import {FALLBACK_BRANCHING} from './fallback-branching.js';
 // Fallback anti-quebra gerado a partir dos mesmos dados externos da build.
 const FALLBACK_CONTENT = {
   "cases": [
@@ -661,13 +667,21 @@ const FALLBACK_CONTENT = {
       "Orientação terapêutica": "Paciente recebeu orientação inicial clara, com checagem de compreensão e sinais de alarme para retorno."
     },
     "schemaVersion": 1
-  }
+  },
+  "emergency": FALLBACK_EMERGENCY,
+  "outpatient": FALLBACK_OUTPATIENT
 };
 
+FALLBACK_CONTENT.branching=FALLBACK_BRANCHING;
 export function getFallbackContent(){
   const content=structuredCloneSafe(FALLBACK_CONTENT);
   content.governance=structuredCloneSafe(FALLBACK_GOVERNANCE);
   content.academy=structuredCloneSafe(FALLBACK_ACADEMY);
+  content.physiology=structuredCloneSafe(FALLBACK_PHYSIOLOGY);
+  content.assessment=structuredCloneSafe(FALLBACK_ASSESSMENT);
+  content.therapeutics=structuredCloneSafe(FALLBACK_THERAPEUTICS);
+  content.emergency=structuredCloneSafe(FALLBACK_EMERGENCY);
+  content.outpatient=structuredCloneSafe(FALLBACK_OUTPATIENT);
   return content;
 }
 

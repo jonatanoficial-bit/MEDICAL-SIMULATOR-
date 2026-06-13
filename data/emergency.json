@@ -1,0 +1,1370 @@
+{
+  "schemaVersion": 1,
+  "engineVersion": "1.0.0",
+  "contentVersion": "0.24.0",
+  "status": "development-only",
+  "publishable": false,
+  "policy": {
+    "independentClinicalReviewRequired": true,
+    "simulationSafetyReviewRequired": true,
+    "trilingualTerminologyReviewRequired": true,
+    "commercialReleaseBlockedUntilApproved": true,
+    "disclaimer": {
+      "pt-BR": "Simulação educacional. Não substitui treinamento certificado, protocolos locais nem atendimento real.",
+      "en": "Educational simulation. It does not replace certified training, local protocols, or real care.",
+      "es": "Simulación educativa. No sustituye formación certificada, protocolos locales ni atención real."
+    }
+  },
+  "tick": {
+    "realSecondsPerClinicalMinute": 10,
+    "maxCatchupMinutes": 3
+  },
+  "stages": [
+    {
+      "id": "A",
+      "name": {
+        "pt-BR": "Via aérea",
+        "en": "Airway",
+        "es": "Vía aérea"
+      }
+    },
+    {
+      "id": "B",
+      "name": {
+        "pt-BR": "Respiração",
+        "en": "Breathing",
+        "es": "Respiración"
+      }
+    },
+    {
+      "id": "C",
+      "name": {
+        "pt-BR": "Circulação",
+        "en": "Circulation",
+        "es": "Circulación"
+      }
+    },
+    {
+      "id": "D",
+      "name": {
+        "pt-BR": "Neurológico",
+        "en": "Disability",
+        "es": "Neurológico"
+      }
+    },
+    {
+      "id": "E",
+      "name": {
+        "pt-BR": "Exposição e reavaliação",
+        "en": "Exposure and reassessment",
+        "es": "Exposición y reevaluación"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": "scene-safety",
+      "stage": "A",
+      "icon": "🛡️",
+      "timeCost": 0.5,
+      "label": {
+        "pt-BR": "Garantir segurança da cena e EPI",
+        "en": "Ensure scene safety and PPE",
+        "es": "Garantizar seguridad de la escena y EPP"
+      },
+      "description": {
+        "pt-BR": "Confirme que a equipe pode se aproximar com segurança.",
+        "en": "Confirm that the team can approach safely.",
+        "es": "Confirme que el equipo puede acercarse con seguridad."
+      }
+    },
+    {
+      "id": "assess-responsiveness",
+      "stage": "A",
+      "icon": "👁️",
+      "timeCost": 0.5,
+      "label": {
+        "pt-BR": "Avaliar responsividade",
+        "en": "Assess responsiveness",
+        "es": "Evaluar respuesta"
+      },
+      "description": {
+        "pt-BR": "Verifique resposta verbal e motora e peça ajuda precocemente.",
+        "en": "Check verbal and motor response and call for help early.",
+        "es": "Compruebe respuesta verbal y motora y pida ayuda pronto."
+      }
+    },
+    {
+      "id": "call-emergency-team",
+      "stage": "A",
+      "icon": "📣",
+      "timeCost": 0.5,
+      "label": {
+        "pt-BR": "Acionar equipe de emergência",
+        "en": "Activate emergency team",
+        "es": "Activar equipo de emergencia"
+      },
+      "description": {
+        "pt-BR": "Mobilize recursos e defina liderança e funções.",
+        "en": "Mobilize resources and assign leadership and roles.",
+        "es": "Movilice recursos y asigne liderazgo y funciones."
+      }
+    },
+    {
+      "id": "open-airway",
+      "stage": "A",
+      "icon": "🫁",
+      "timeCost": 1,
+      "label": {
+        "pt-BR": "Abrir e avaliar via aérea",
+        "en": "Open and assess airway",
+        "es": "Abrir y evaluar vía aérea"
+      },
+      "description": {
+        "pt-BR": "Procure obstrução, edema, secreções ou necessidade de suporte.",
+        "en": "Look for obstruction, edema, secretions, or need for support.",
+        "es": "Busque obstrucción, edema, secreciones o necesidad de soporte."
+      }
+    },
+    {
+      "id": "airway-adjunct",
+      "stage": "A",
+      "icon": "🧰",
+      "timeCost": 1,
+      "label": {
+        "pt-BR": "Preparar suporte avançado de via aérea",
+        "en": "Prepare advanced airway support",
+        "es": "Preparar soporte avanzado de vía aérea"
+      },
+      "description": {
+        "pt-BR": "Antecipe deterioração e chame profissional habilitado.",
+        "en": "Anticipate deterioration and call a trained professional.",
+        "es": "Anticipe deterioro y llame a un profesional capacitado."
+      }
+    },
+    {
+      "id": "assess-breathing",
+      "stage": "B",
+      "icon": "🫁",
+      "timeCost": 0.5,
+      "label": {
+        "pt-BR": "Avaliar respiração e SpO₂",
+        "en": "Assess breathing and SpO₂",
+        "es": "Evaluar respiración y SpO₂"
+      },
+      "description": {
+        "pt-BR": "Observe esforço, frequência, simetria e oxigenação.",
+        "en": "Assess effort, rate, symmetry, and oxygenation.",
+        "es": "Evalúe esfuerzo, frecuencia, simetría y oxigenación."
+      }
+    },
+    {
+      "id": "oxygen-support",
+      "stage": "B",
+      "icon": "💨",
+      "timeCost": 1,
+      "label": {
+        "pt-BR": "Ofertar oxigênio conforme necessidade",
+        "en": "Provide oxygen as needed",
+        "es": "Administrar oxígeno según necesidad"
+      },
+      "description": {
+        "pt-BR": "Titule suporte conforme quadro e protocolo local.",
+        "en": "Titrate support to the condition and local protocol.",
+        "es": "Ajuste el soporte al cuadro y protocolo local."
+      }
+    },
+    {
+      "id": "bag-mask-ventilation",
+      "stage": "B",
+      "icon": "🫧",
+      "timeCost": 1,
+      "label": {
+        "pt-BR": "Ventilar com bolsa-válvula-máscara",
+        "en": "Ventilate with bag-mask device",
+        "es": "Ventilar con bolsa-válvula-mascarilla"
+      },
+      "description": {
+        "pt-BR": "Priorize ventilação eficaz quando houver apneia ou hipoventilação grave.",
+        "en": "Prioritize effective ventilation for apnea or severe hypoventilation.",
+        "es": "Priorice ventilación eficaz ante apnea o hipoventilación grave."
+      }
+    },
+    {
+      "id": "bronchodilator",
+      "stage": "B",
+      "icon": "🌬️",
+      "timeCost": 2,
+      "label": {
+        "pt-BR": "Administrar broncodilatador protocolar",
+        "en": "Give protocol bronchodilator",
+        "es": "Administrar broncodilatador protocolario"
+      },
+      "description": {
+        "pt-BR": "Use conforme prescrição e protocolo do cenário; reavalie resposta.",
+        "en": "Use per scenario order and protocol; reassess response.",
+        "es": "Use según orden y protocolo del escenario; reevalúe respuesta."
+      }
+    },
+    {
+      "id": "assess-circulation",
+      "stage": "C",
+      "icon": "❤️",
+      "timeCost": 0.5,
+      "label": {
+        "pt-BR": "Avaliar pulso, perfusão e pressão",
+        "en": "Assess pulse, perfusion, and pressure",
+        "es": "Evaluar pulso, perfusión y presión"
+      },
+      "description": {
+        "pt-BR": "Procure choque, sangramento, arritmia e má perfusão.",
+        "en": "Look for shock, bleeding, arrhythmia, and poor perfusion.",
+        "es": "Busque shock, sangrado, arritmia y mala perfusión."
+      }
+    },
+    {
+      "id": "attach-monitor",
+      "stage": "C",
+      "icon": "📟",
+      "timeCost": 1,
+      "label": {
+        "pt-BR": "Conectar monitor e desfibrilador",
+        "en": "Attach monitor and defibrillator",
+        "es": "Conectar monitor y desfibrilador"
+      },
+      "description": {
+        "pt-BR": "Monitore ritmo, pressão, oximetria e prepare desfibrilação.",
+        "en": "Monitor rhythm, pressure, oximetry, and prepare defibrillation.",
+        "es": "Monitorice ritmo, presión, oximetría y prepare desfibrilación."
+      }
+    },
+    {
+      "id": "iv-io-access",
+      "stage": "C",
+      "icon": "💉",
+      "timeCost": 2,
+      "label": {
+        "pt-BR": "Obter acesso IV/IO",
+        "en": "Obtain IV/IO access",
+        "es": "Obtener acceso IV/IO"
+      },
+      "description": {
+        "pt-BR": "Garanta acesso para exames e terapias protocoladas.",
+        "en": "Secure access for tests and protocol therapies.",
+        "es": "Asegure acceso para pruebas y terapias protocolarias."
+      }
+    },
+    {
+      "id": "start-cpr",
+      "stage": "C",
+      "icon": "🫀",
+      "timeCost": 0.5,
+      "label": {
+        "pt-BR": "Iniciar RCP de alta qualidade",
+        "en": "Start high-quality CPR",
+        "es": "Iniciar RCP de alta calidad"
+      },
+      "description": {
+        "pt-BR": "Compressões imediatas, mínimas interrupções e revezamento da equipe.",
+        "en": "Immediate compressions, minimal interruptions, and team rotation.",
+        "es": "Compresiones inmediatas, interrupciones mínimas y rotación del equipo."
+      }
+    },
+    {
+      "id": "analyze-rhythm",
+      "stage": "C",
+      "icon": "〰️",
+      "timeCost": 1,
+      "label": {
+        "pt-BR": "Analisar ritmo",
+        "en": "Analyze rhythm",
+        "es": "Analizar ritmo"
+      },
+      "description": {
+        "pt-BR": "Classifique ritmo chocável ou não chocável com pausa mínima.",
+        "en": "Classify shockable or non-shockable rhythm with minimal pause.",
+        "es": "Clasifique ritmo desfibrilable o no desfibrilable con pausa mínima."
+      }
+    },
+    {
+      "id": "defibrillate",
+      "stage": "C",
+      "icon": "⚡",
+      "timeCost": 0.5,
+      "label": {
+        "pt-BR": "Desfibrilar se ritmo chocável",
+        "en": "Defibrillate if rhythm is shockable",
+        "es": "Desfibrilar si el ritmo es desfibrilable"
+      },
+      "description": {
+        "pt-BR": "Choque somente quando indicado pelo algoritmo, retomando RCP imediatamente.",
+        "en": "Shock only when indicated by the algorithm, then resume CPR immediately.",
+        "es": "Descarga solo cuando lo indique el algoritmo y reanude RCP de inmediato."
+      }
+    },
+    {
+      "id": "arrest-medication",
+      "stage": "C",
+      "icon": "💊",
+      "timeCost": 1,
+      "label": {
+        "pt-BR": "Administrar medicação do algoritmo de parada",
+        "en": "Give cardiac-arrest algorithm medication",
+        "es": "Administrar medicación del algoritmo de paro"
+      },
+      "description": {
+        "pt-BR": "Utilize somente conforme ritmo, tempo e protocolo institucional.",
+        "en": "Use only according to rhythm, timing, and institutional protocol.",
+        "es": "Use solo según ritmo, tiempo y protocolo institucional."
+      }
+    },
+    {
+      "id": "reversible-causes",
+      "stage": "C",
+      "icon": "🔎",
+      "timeCost": 2,
+      "label": {
+        "pt-BR": "Pesquisar causas reversíveis",
+        "en": "Search for reversible causes",
+        "es": "Buscar causas reversibles"
+      },
+      "description": {
+        "pt-BR": "Considere causas tratáveis durante a ressuscitação.",
+        "en": "Consider treatable causes during resuscitation.",
+        "es": "Considere causas tratables durante la reanimación."
+      }
+    },
+    {
+      "id": "ecg-12lead",
+      "stage": "C",
+      "icon": "📈",
+      "timeCost": 2,
+      "label": {
+        "pt-BR": "Realizar ECG de 12 derivações",
+        "en": "Obtain 12-lead ECG",
+        "es": "Realizar ECG de 12 derivaciones"
+      },
+      "description": {
+        "pt-BR": "Registre precocemente sem atrasar estabilização.",
+        "en": "Obtain early without delaying stabilization.",
+        "es": "Registre precozmente sin retrasar la estabilización."
+      }
+    },
+    {
+      "id": "acs-antiplatelet",
+      "stage": "C",
+      "icon": "💊",
+      "timeCost": 1,
+      "label": {
+        "pt-BR": "Iniciar terapia antiplaquetária conforme protocolo",
+        "en": "Start antiplatelet therapy per protocol",
+        "es": "Iniciar terapia antiplaquetaria según protocolo"
+      },
+      "description": {
+        "pt-BR": "Confirme contraindicações e siga protocolo local de síndrome coronariana.",
+        "en": "Check contraindications and follow the local ACS protocol.",
+        "es": "Confirme contraindicaciones y siga el protocolo local de SCA."
+      }
+    },
+    {
+      "id": "activate-cathlab",
+      "stage": "C",
+      "icon": "🏥",
+      "timeCost": 1,
+      "label": {
+        "pt-BR": "Ativar estratégia de reperfusão",
+        "en": "Activate reperfusion pathway",
+        "es": "Activar estrategia de reperfusión"
+      },
+      "description": {
+        "pt-BR": "Acione cardiologia/hemodinâmica conforme ECG e risco.",
+        "en": "Activate cardiology/cath lab based on ECG and risk.",
+        "es": "Active cardiología/hemodinámica según ECG y riesgo."
+      }
+    },
+    {
+      "id": "fluid-bolus",
+      "stage": "C",
+      "icon": "💧",
+      "timeCost": 2,
+      "label": {
+        "pt-BR": "Realizar expansão volêmica guiada",
+        "en": "Give guided fluid resuscitation",
+        "es": "Realizar expansión de volumen guiada"
+      },
+      "description": {
+        "pt-BR": "Administre e reavalie perfusão, evitando excesso.",
+        "en": "Administer and reassess perfusion while avoiding overload.",
+        "es": "Administre y reevalúe perfusión evitando sobrecarga."
+      }
+    },
+    {
+      "id": "sepsis-antibiotics",
+      "stage": "C",
+      "icon": "🧫",
+      "timeCost": 2,
+      "label": {
+        "pt-BR": "Iniciar antimicrobiano após avaliação protocolar",
+        "en": "Start antimicrobial therapy after protocol assessment",
+        "es": "Iniciar antimicrobiano tras evaluación protocolaria"
+      },
+      "description": {
+        "pt-BR": "Priorize tempo, coleta apropriada e stewardship conforme protocolo.",
+        "en": "Prioritize timing, appropriate cultures, and stewardship per protocol.",
+        "es": "Priorice tiempo, cultivos apropiados y uso responsable según protocolo."
+      }
+    },
+    {
+      "id": "im-epinephrine",
+      "stage": "C",
+      "icon": "💉",
+      "timeCost": 0.5,
+      "label": {
+        "pt-BR": "Administrar epinefrina IM para anafilaxia",
+        "en": "Give IM epinephrine for anaphylaxis",
+        "es": "Administrar epinefrina IM para anafilaxia"
+      },
+      "description": {
+        "pt-BR": "Primeira linha quando anafilaxia é reconhecida; siga algoritmo e protocolo local.",
+        "en": "First-line when anaphylaxis is recognized; follow the algorithm and local protocol.",
+        "es": "Primera línea al reconocer anafilaxia; siga algoritmo y protocolo local."
+      }
+    },
+    {
+      "id": "naloxone-support",
+      "stage": "B",
+      "icon": "🧪",
+      "timeCost": 1,
+      "label": {
+        "pt-BR": "Ventilar e administrar naloxona conforme protocolo",
+        "en": "Ventilate and give naloxone per protocol",
+        "es": "Ventilar y administrar naloxona según protocolo"
+      },
+      "description": {
+        "pt-BR": "A ventilação e o acionamento de emergência não devem ser atrasados.",
+        "en": "Ventilation and emergency activation must not be delayed.",
+        "es": "No se deben retrasar la ventilación ni la activación de emergencias."
+      }
+    },
+    {
+      "id": "pe-pathway",
+      "stage": "C",
+      "icon": "🫁",
+      "timeCost": 2,
+      "label": {
+        "pt-BR": "Ativar investigação/estratificação para TEP",
+        "en": "Activate PE investigation/risk pathway",
+        "es": "Activar investigación/estratificación para TEP"
+      },
+      "description": {
+        "pt-BR": "Use probabilidade clínica, estabilidade e exames apropriados.",
+        "en": "Use clinical probability, stability, and appropriate tests.",
+        "es": "Use probabilidad clínica, estabilidad y pruebas apropiadas."
+      }
+    },
+    {
+      "id": "stroke-screen",
+      "stage": "D",
+      "icon": "🧠",
+      "timeCost": 1,
+      "label": {
+        "pt-BR": "Aplicar triagem neurológica de AVC",
+        "en": "Perform stroke neurologic screen",
+        "es": "Realizar cribado neurológico de ictus"
+      },
+      "description": {
+        "pt-BR": "Documente déficit focal e gravidade de forma estruturada.",
+        "en": "Document focal deficit and severity in a structured way.",
+        "es": "Documente déficit focal y gravedad de forma estructurada."
+      }
+    },
+    {
+      "id": "last-known-well",
+      "stage": "D",
+      "icon": "⏱️",
+      "timeCost": 1,
+      "label": {
+        "pt-BR": "Definir último momento bem conhecido",
+        "en": "Establish last known well",
+        "es": "Establecer última vez bien conocido"
+      },
+      "description": {
+        "pt-BR": "Tempo de início é essencial para decisões de reperfusão.",
+        "en": "Onset timing is essential for reperfusion decisions.",
+        "es": "El tiempo de inicio es esencial para decisiones de reperfusión."
+      }
+    },
+    {
+      "id": "glucose-check",
+      "stage": "D",
+      "icon": "🩸",
+      "timeCost": 0.5,
+      "label": {
+        "pt-BR": "Verificar glicemia capilar",
+        "en": "Check point-of-care glucose",
+        "es": "Comprobar glucemia capilar"
+      },
+      "description": {
+        "pt-BR": "Identifique hipoglicemia e imitadores neurológicos rapidamente.",
+        "en": "Rapidly identify hypoglycemia and neurologic mimics.",
+        "es": "Identifique rápidamente hipoglucemia e imitadores neurológicos."
+      }
+    },
+    {
+      "id": "stroke-pathway",
+      "stage": "D",
+      "icon": "🚑",
+      "timeCost": 1,
+      "label": {
+        "pt-BR": "Ativar protocolo de AVC e neuroimagem",
+        "en": "Activate stroke and imaging pathway",
+        "es": "Activar protocolo de ictus y neuroimagen"
+      },
+      "description": {
+        "pt-BR": "Não atrase transporte, imagem e avaliação de elegibilidade.",
+        "en": "Do not delay transport, imaging, and eligibility assessment.",
+        "es": "No retrase transporte, imagen y evaluación de elegibilidad."
+      }
+    },
+    {
+      "id": "treat-hypoglycemia",
+      "stage": "D",
+      "icon": "🍬",
+      "timeCost": 1,
+      "label": {
+        "pt-BR": "Corrigir hipoglicemia conforme consciência e acesso",
+        "en": "Treat hypoglycemia according to consciousness and access",
+        "es": "Tratar hipoglucemia según conciencia y acceso"
+      },
+      "description": {
+        "pt-BR": "Escolha via segura e reavalie glicemia e estado mental.",
+        "en": "Choose a safe route and reassess glucose and mental status.",
+        "es": "Elija una vía segura y reevalúe glucosa y estado mental."
+      }
+    },
+    {
+      "id": "assess-disability",
+      "stage": "D",
+      "icon": "🧠",
+      "timeCost": 0.5,
+      "label": {
+        "pt-BR": "Avaliar consciência, pupilas e déficit",
+        "en": "Assess consciousness, pupils, and deficit",
+        "es": "Evaluar conciencia, pupilas y déficit"
+      },
+      "description": {
+        "pt-BR": "Registre alteração neurológica e tendência.",
+        "en": "Document neurologic change and trend.",
+        "es": "Documente cambios neurológicos y tendencia."
+      }
+    },
+    {
+      "id": "expose-examine",
+      "stage": "E",
+      "icon": "🔦",
+      "timeCost": 1,
+      "label": {
+        "pt-BR": "Expor e examinar preservando temperatura e privacidade",
+        "en": "Expose and examine while preserving warmth and privacy",
+        "es": "Exponer y examinar preservando temperatura y privacidad"
+      },
+      "description": {
+        "pt-BR": "Procure rash, trauma, sangramento, edema e pistas diagnósticas.",
+        "en": "Look for rash, trauma, bleeding, edema, and diagnostic clues.",
+        "es": "Busque erupción, trauma, sangrado, edema y pistas diagnósticas."
+      }
+    },
+    {
+      "id": "reassess-abcde",
+      "stage": "E",
+      "icon": "🔁",
+      "timeCost": 1,
+      "repeatable": true,
+      "label": {
+        "pt-BR": "Reavaliar ABCDE após intervenção",
+        "en": "Reassess ABCDE after intervention",
+        "es": "Reevaluar ABCDE tras intervención"
+      },
+      "description": {
+        "pt-BR": "Compare resposta, identifique piora e ajuste prioridades.",
+        "en": "Compare response, identify deterioration, and adjust priorities.",
+        "es": "Compare respuesta, identifique deterioro y ajuste prioridades."
+      }
+    },
+    {
+      "id": "wrong-delay",
+      "stage": "E",
+      "icon": "⏳",
+      "timeCost": 3,
+      "label": {
+        "pt-BR": "Aguardar sem intervenção prioritária",
+        "en": "Wait without priority intervention",
+        "es": "Esperar sin intervención prioritaria"
+      },
+      "description": {
+        "pt-BR": "Atrasos injustificados podem piorar desfechos em emergência.",
+        "en": "Unjustified delays can worsen emergency outcomes.",
+        "es": "Las demoras injustificadas pueden empeorar los resultados."
+      }
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "cardiac-arrest-vf",
+      "title": {
+        "pt-BR": "Parada cardiorrespiratória — ritmo chocável",
+        "en": "Cardiac arrest — shockable rhythm",
+        "es": "Paro cardiorrespiratorio — ritmo desfibrilable"
+      },
+      "patient": {
+        "pt-BR": "Carlos Mendes",
+        "en": "Carlos Mendes",
+        "es": "Carlos Mendes"
+      },
+      "age": 62,
+      "sex": {
+        "pt-BR": "Masculino",
+        "en": "Male",
+        "es": "Masculino"
+      },
+      "complaint": {
+        "pt-BR": "Paciente colapsou, não responde e não respira normalmente.",
+        "en": "Patient collapsed, is unresponsive, and is not breathing normally.",
+        "es": "El paciente colapsó, no responde y no respira normalmente."
+      },
+      "priority": "resuscitation",
+      "initialVitals": {
+        "systolic": 0,
+        "diastolic": 0,
+        "heartRate": 0,
+        "respiratoryRate": 0,
+        "spo2": 58,
+        "glucose": 112,
+        "consciousness": "unresponsive"
+      },
+      "maxMinutes": 10,
+      "criticalActions": [
+        "assess-responsiveness",
+        "call-emergency-team",
+        "start-cpr",
+        "attach-monitor",
+        "analyze-rhythm",
+        "defibrillate",
+        "reassess-abcde"
+      ],
+      "expectedSequence": [
+        "scene-safety",
+        "assess-responsiveness",
+        "call-emergency-team",
+        "assess-breathing",
+        "assess-circulation",
+        "start-cpr",
+        "attach-monitor",
+        "analyze-rhythm",
+        "defibrillate",
+        "reassess-abcde"
+      ],
+      "harmfulActions": [
+        "wrong-delay"
+      ],
+      "actionEffects": {
+        "start-cpr": {
+          "spo2": 8
+        },
+        "defibrillate": {
+          "heartRate": 86,
+          "systolic": 108,
+          "diastolic": 68,
+          "spo2": 90,
+          "consciousness": "reduced"
+        },
+        "reassess-abcde": {
+          "spo2": 4
+        }
+      },
+      "stableOutcome": "rosc",
+      "sourceIds": [
+        "AHA-CPR-ECC-2025"
+      ],
+      "redFlags": {
+        "pt-BR": "Ausência de resposta, respiração agônica e ausência de pulso central.",
+        "en": "Unresponsiveness, agonal breathing, and no central pulse.",
+        "es": "Falta de respuesta, respiración agónica y ausencia de pulso central."
+      },
+      "status": "development-only",
+      "publishable": false
+    },
+    {
+      "id": "acute-coronary-syndrome",
+      "title": {
+        "pt-BR": "Síndrome coronariana aguda com supra de ST",
+        "en": "ST-elevation acute coronary syndrome",
+        "es": "Síndrome coronario agudo con elevación del ST"
+      },
+      "patient": {
+        "pt-BR": "Márcia Ribeiro",
+        "en": "Marcia Ribeiro",
+        "es": "Marcia Ribeiro"
+      },
+      "age": 58,
+      "sex": {
+        "pt-BR": "Feminino",
+        "en": "Female",
+        "es": "Femenino"
+      },
+      "complaint": {
+        "pt-BR": "Dor torácica intensa há 35 minutos, sudorese e náusea.",
+        "en": "Severe chest pain for 35 minutes with sweating and nausea.",
+        "es": "Dolor torácico intenso desde hace 35 minutos, sudoración y náuseas."
+      },
+      "priority": "critical",
+      "initialVitals": {
+        "systolic": 102,
+        "diastolic": 66,
+        "heartRate": 108,
+        "respiratoryRate": 24,
+        "spo2": 94,
+        "glucose": 138,
+        "consciousness": "alert"
+      },
+      "maxMinutes": 18,
+      "criticalActions": [
+        "call-emergency-team",
+        "assess-circulation",
+        "attach-monitor",
+        "ecg-12lead",
+        "acs-antiplatelet",
+        "activate-cathlab",
+        "reassess-abcde"
+      ],
+      "expectedSequence": [
+        "scene-safety",
+        "assess-responsiveness",
+        "assess-breathing",
+        "assess-circulation",
+        "attach-monitor",
+        "ecg-12lead",
+        "iv-io-access",
+        "acs-antiplatelet",
+        "activate-cathlab",
+        "call-emergency-team",
+        "reassess-abcde"
+      ],
+      "harmfulActions": [
+        "wrong-delay",
+        "bronchodilator"
+      ],
+      "actionEffects": {
+        "attach-monitor": {
+          "stability": 4
+        },
+        "ecg-12lead": {
+          "stability": 5
+        },
+        "acs-antiplatelet": {
+          "stability": 8,
+          "symptom": -8
+        },
+        "activate-cathlab": {
+          "stability": 16
+        },
+        "reassess-abcde": {
+          "symptom": -5
+        }
+      },
+      "stableOutcome": "reperfusion-pathway",
+      "sourceIds": [
+        "AHA-ACS-2025"
+      ],
+      "redFlags": {
+        "pt-BR": "Dor persistente, instabilidade hemodinâmica ou arritmia são sinais de alto risco.",
+        "en": "Persistent pain, hemodynamic instability, or arrhythmia are high-risk signs.",
+        "es": "Dolor persistente, inestabilidad hemodinámica o arritmia son signos de alto riesgo."
+      },
+      "status": "development-only",
+      "publishable": false
+    },
+    {
+      "id": "acute-ischemic-stroke",
+      "title": {
+        "pt-BR": "AVC isquêmico agudo",
+        "en": "Acute ischemic stroke",
+        "es": "Ictus isquémico agudo"
+      },
+      "patient": {
+        "pt-BR": "João Batista",
+        "en": "Joao Batista",
+        "es": "Joao Batista"
+      },
+      "age": 71,
+      "sex": {
+        "pt-BR": "Masculino",
+        "en": "Male",
+        "es": "Masculino"
+      },
+      "complaint": {
+        "pt-BR": "Início súbito de fraqueza à direita e fala arrastada.",
+        "en": "Sudden right-sided weakness and slurred speech.",
+        "es": "Inicio súbito de debilidad derecha y habla arrastrada."
+      },
+      "priority": "critical",
+      "initialVitals": {
+        "systolic": 178,
+        "diastolic": 98,
+        "heartRate": 86,
+        "respiratoryRate": 18,
+        "spo2": 96,
+        "glucose": 104,
+        "consciousness": "confused"
+      },
+      "maxMinutes": 20,
+      "criticalActions": [
+        "assess-responsiveness",
+        "glucose-check",
+        "stroke-screen",
+        "last-known-well",
+        "stroke-pathway",
+        "reassess-abcde"
+      ],
+      "expectedSequence": [
+        "scene-safety",
+        "assess-responsiveness",
+        "open-airway",
+        "assess-breathing",
+        "assess-circulation",
+        "glucose-check",
+        "stroke-screen",
+        "last-known-well",
+        "stroke-pathway",
+        "reassess-abcde"
+      ],
+      "harmfulActions": [
+        "wrong-delay",
+        "treat-hypoglycemia"
+      ],
+      "actionEffects": {
+        "glucose-check": {
+          "stability": 3
+        },
+        "stroke-screen": {
+          "stability": 4
+        },
+        "last-known-well": {
+          "stability": 6
+        },
+        "stroke-pathway": {
+          "stability": 18
+        }
+      },
+      "stableOutcome": "stroke-pathway-activated",
+      "sourceIds": [
+        "AHA-ASA-STROKE-2026"
+      ],
+      "redFlags": {
+        "pt-BR": "Rebaixamento, piora rápida, cefaleia explosiva ou vômitos exigem reavaliação imediata.",
+        "en": "Reduced consciousness, rapid worsening, thunderclap headache, or vomiting require immediate reassessment.",
+        "es": "Disminución de conciencia, empeoramiento rápido, cefalea explosiva o vómitos requieren reevaluación inmediata."
+      },
+      "status": "development-only",
+      "publishable": false
+    },
+    {
+      "id": "septic-shock",
+      "title": {
+        "pt-BR": "Sepse com hipoperfusão",
+        "en": "Sepsis with hypoperfusion",
+        "es": "Sepsis con hipoperfusión"
+      },
+      "patient": {
+        "pt-BR": "Ana Paula Souza",
+        "en": "Ana Paula Souza",
+        "es": "Ana Paula Souza"
+      },
+      "age": 49,
+      "sex": {
+        "pt-BR": "Feminino",
+        "en": "Female",
+        "es": "Femenino"
+      },
+      "complaint": {
+        "pt-BR": "Febre, confusão, hipotensão e respiração rápida após infecção urinária.",
+        "en": "Fever, confusion, hypotension, and rapid breathing after urinary infection.",
+        "es": "Fiebre, confusión, hipotensión y respiración rápida tras infección urinaria."
+      },
+      "priority": "critical",
+      "initialVitals": {
+        "systolic": 82,
+        "diastolic": 48,
+        "heartRate": 126,
+        "respiratoryRate": 30,
+        "spo2": 92,
+        "glucose": 154,
+        "temperature": 39.1,
+        "consciousness": "confused"
+      },
+      "maxMinutes": 24,
+      "criticalActions": [
+        "call-emergency-team",
+        "assess-circulation",
+        "iv-io-access",
+        "fluid-bolus",
+        "sepsis-antibiotics",
+        "reassess-abcde"
+      ],
+      "expectedSequence": [
+        "scene-safety",
+        "assess-responsiveness",
+        "assess-breathing",
+        "assess-circulation",
+        "iv-io-access",
+        "glucose-check",
+        "fluid-bolus",
+        "sepsis-antibiotics",
+        "call-emergency-team",
+        "reassess-abcde"
+      ],
+      "harmfulActions": [
+        "wrong-delay"
+      ],
+      "actionEffects": {
+        "fluid-bolus": {
+          "systolic": 12,
+          "diastolic": 7,
+          "heartRate": -8,
+          "stability": 12
+        },
+        "sepsis-antibiotics": {
+          "stability": 12
+        },
+        "reassess-abcde": {
+          "stability": 6
+        }
+      },
+      "stableOutcome": "stabilized-transfer",
+      "sourceIds": [
+        "SSC-SEPSIS-2026"
+      ],
+      "redFlags": {
+        "pt-BR": "Hipotensão, alteração mental, oligúria e má perfusão indicam disfunção orgânica.",
+        "en": "Hypotension, altered mental state, oliguria, and poor perfusion indicate organ dysfunction.",
+        "es": "Hipotensión, alteración mental, oliguria y mala perfusión indican disfunción orgánica."
+      },
+      "status": "development-only",
+      "publishable": false
+    },
+    {
+      "id": "anaphylaxis",
+      "title": {
+        "pt-BR": "Anafilaxia com comprometimento respiratório",
+        "en": "Anaphylaxis with respiratory compromise",
+        "es": "Anafilaxia con compromiso respiratorio"
+      },
+      "patient": {
+        "pt-BR": "Felipe Nunes",
+        "en": "Felipe Nunes",
+        "es": "Felipe Nunes"
+      },
+      "age": 27,
+      "sex": {
+        "pt-BR": "Masculino",
+        "en": "Male",
+        "es": "Masculino"
+      },
+      "complaint": {
+        "pt-BR": "Urticária difusa, chiado, edema labial e tontura após alimento.",
+        "en": "Diffuse hives, wheeze, lip swelling, and dizziness after food exposure.",
+        "es": "Urticaria difusa, sibilancias, edema labial y mareo tras alimento."
+      },
+      "priority": "resuscitation",
+      "initialVitals": {
+        "systolic": 76,
+        "diastolic": 42,
+        "heartRate": 132,
+        "respiratoryRate": 32,
+        "spo2": 88,
+        "glucose": 116,
+        "consciousness": "confused"
+      },
+      "maxMinutes": 12,
+      "criticalActions": [
+        "call-emergency-team",
+        "open-airway",
+        "oxygen-support",
+        "im-epinephrine",
+        "fluid-bolus",
+        "reassess-abcde"
+      ],
+      "expectedSequence": [
+        "scene-safety",
+        "assess-responsiveness",
+        "call-emergency-team",
+        "open-airway",
+        "assess-breathing",
+        "oxygen-support",
+        "assess-circulation",
+        "im-epinephrine",
+        "fluid-bolus",
+        "reassess-abcde"
+      ],
+      "harmfulActions": [
+        "wrong-delay",
+        "sepsis-antibiotics"
+      ],
+      "actionEffects": {
+        "oxygen-support": {
+          "spo2": 4
+        },
+        "im-epinephrine": {
+          "systolic": 20,
+          "diastolic": 12,
+          "heartRate": -18,
+          "spo2": 5,
+          "stability": 24,
+          "symptom": -20
+        },
+        "fluid-bolus": {
+          "systolic": 10,
+          "diastolic": 6,
+          "stability": 8
+        }
+      },
+      "stableOutcome": "anaphylaxis-stabilized",
+      "sourceIds": [
+        "RCUK-ANAPHYLAXIS-2021"
+      ],
+      "redFlags": {
+        "pt-BR": "Edema de via aérea, broncoespasmo e choque podem progredir rapidamente.",
+        "en": "Airway edema, bronchospasm, and shock can progress rapidly.",
+        "es": "Edema de vía aérea, broncoespasmo y shock pueden progresar rápidamente."
+      },
+      "status": "development-only",
+      "publishable": false
+    },
+    {
+      "id": "opioid-overdose",
+      "title": {
+        "pt-BR": "Overdose por opioides com depressão respiratória",
+        "en": "Opioid overdose with respiratory depression",
+        "es": "Sobredosis de opioides con depresión respiratoria"
+      },
+      "patient": {
+        "pt-BR": "Renato Alves",
+        "en": "Renato Alves",
+        "es": "Renato Alves"
+      },
+      "age": 33,
+      "sex": {
+        "pt-BR": "Masculino",
+        "en": "Male",
+        "es": "Masculino"
+      },
+      "complaint": {
+        "pt-BR": "Encontrado sonolento, pupilas puntiformes e respiração muito lenta.",
+        "en": "Found drowsy with pinpoint pupils and very slow breathing.",
+        "es": "Encontrado somnoliento, pupilas puntiformes y respiración muy lenta."
+      },
+      "priority": "resuscitation",
+      "initialVitals": {
+        "systolic": 96,
+        "diastolic": 58,
+        "heartRate": 54,
+        "respiratoryRate": 5,
+        "spo2": 72,
+        "glucose": 92,
+        "consciousness": "unresponsive"
+      },
+      "maxMinutes": 12,
+      "criticalActions": [
+        "call-emergency-team",
+        "open-airway",
+        "bag-mask-ventilation",
+        "naloxone-support",
+        "glucose-check",
+        "reassess-abcde"
+      ],
+      "expectedSequence": [
+        "scene-safety",
+        "assess-responsiveness",
+        "call-emergency-team",
+        "open-airway",
+        "assess-breathing",
+        "bag-mask-ventilation",
+        "naloxone-support",
+        "glucose-check",
+        "reassess-abcde"
+      ],
+      "harmfulActions": [
+        "wrong-delay",
+        "treat-hypoglycemia"
+      ],
+      "actionEffects": {
+        "bag-mask-ventilation": {
+          "respiratoryRate": 8,
+          "spo2": 12,
+          "stability": 12
+        },
+        "naloxone-support": {
+          "respiratoryRate": 8,
+          "spo2": 10,
+          "heartRate": 14,
+          "consciousness": "reduced",
+          "stability": 20
+        }
+      },
+      "stableOutcome": "ventilation-restored",
+      "sourceIds": [
+        "CDC-NALOXONE-2025"
+      ],
+      "redFlags": {
+        "pt-BR": "Apneia, cianose e ausência de resposta exigem ventilação imediata e acionamento de emergência.",
+        "en": "Apnea, cyanosis, and unresponsiveness require immediate ventilation and emergency activation.",
+        "es": "Apnea, cianosis y falta de respuesta requieren ventilación inmediata y activación de emergencia."
+      },
+      "status": "development-only",
+      "publishable": false
+    },
+    {
+      "id": "pulmonary-embolism-highrisk",
+      "title": {
+        "pt-BR": "Tromboembolismo pulmonar de alto risco",
+        "en": "High-risk pulmonary embolism",
+        "es": "Tromboembolismo pulmonar de alto riesgo"
+      },
+      "patient": {
+        "pt-BR": "Luciana Prado",
+        "en": "Luciana Prado",
+        "es": "Luciana Prado"
+      },
+      "age": 45,
+      "sex": {
+        "pt-BR": "Feminino",
+        "en": "Female",
+        "es": "Femenino"
+      },
+      "complaint": {
+        "pt-BR": "Dispneia súbita, dor pleurítica e síncope recente após cirurgia.",
+        "en": "Sudden dyspnea, pleuritic pain, and recent syncope after surgery.",
+        "es": "Disnea súbita, dolor pleurítico y síncope reciente tras cirugía."
+      },
+      "priority": "critical",
+      "initialVitals": {
+        "systolic": 86,
+        "diastolic": 54,
+        "heartRate": 128,
+        "respiratoryRate": 32,
+        "spo2": 84,
+        "glucose": 122,
+        "consciousness": "confused"
+      },
+      "maxMinutes": 18,
+      "criticalActions": [
+        "call-emergency-team",
+        "assess-breathing",
+        "oxygen-support",
+        "assess-circulation",
+        "attach-monitor",
+        "iv-io-access",
+        "pe-pathway",
+        "reassess-abcde"
+      ],
+      "expectedSequence": [
+        "scene-safety",
+        "assess-responsiveness",
+        "call-emergency-team",
+        "assess-breathing",
+        "oxygen-support",
+        "assess-circulation",
+        "attach-monitor",
+        "iv-io-access",
+        "pe-pathway",
+        "reassess-abcde"
+      ],
+      "harmfulActions": [
+        "wrong-delay",
+        "fluid-bolus"
+      ],
+      "actionEffects": {
+        "oxygen-support": {
+          "spo2": 7
+        },
+        "attach-monitor": {
+          "stability": 4
+        },
+        "pe-pathway": {
+          "stability": 18
+        },
+        "reassess-abcde": {
+          "stability": 5
+        }
+      },
+      "stableOutcome": "pe-team-activated",
+      "sourceIds": [
+        "ESC-PE-2019"
+      ],
+      "redFlags": {
+        "pt-BR": "Hipotensão, síncope, hipoxemia e sinais de choque indicam alto risco.",
+        "en": "Hypotension, syncope, hypoxemia, and signs of shock indicate high risk.",
+        "es": "Hipotensión, síncope, hipoxemia y signos de shock indican alto riesgo."
+      },
+      "status": "development-only",
+      "publishable": false
+    },
+    {
+      "id": "severe-asthma",
+      "title": {
+        "pt-BR": "Exacerbação grave de asma",
+        "en": "Severe asthma exacerbation",
+        "es": "Exacerbación grave de asma"
+      },
+      "patient": {
+        "pt-BR": "Beatriz Lima",
+        "en": "Beatriz Lima",
+        "es": "Beatriz Lima"
+      },
+      "age": 22,
+      "sex": {
+        "pt-BR": "Feminino",
+        "en": "Female",
+        "es": "Femenino"
+      },
+      "complaint": {
+        "pt-BR": "Falta de ar intensa, fala entrecortada e chiado após exposição a poeira.",
+        "en": "Severe breathlessness, broken speech, and wheeze after dust exposure.",
+        "es": "Falta de aire intensa, habla entrecortada y sibilancias tras exposición a polvo."
+      },
+      "priority": "critical",
+      "initialVitals": {
+        "systolic": 118,
+        "diastolic": 72,
+        "heartRate": 134,
+        "respiratoryRate": 36,
+        "spo2": 86,
+        "glucose": 109,
+        "consciousness": "alert"
+      },
+      "maxMinutes": 16,
+      "criticalActions": [
+        "call-emergency-team",
+        "assess-breathing",
+        "oxygen-support",
+        "bronchodilator",
+        "attach-monitor",
+        "reassess-abcde"
+      ],
+      "expectedSequence": [
+        "scene-safety",
+        "assess-responsiveness",
+        "call-emergency-team",
+        "open-airway",
+        "assess-breathing",
+        "oxygen-support",
+        "bronchodilator",
+        "attach-monitor",
+        "reassess-abcde"
+      ],
+      "harmfulActions": [
+        "wrong-delay"
+      ],
+      "actionEffects": {
+        "oxygen-support": {
+          "spo2": 5
+        },
+        "bronchodilator": {
+          "respiratoryRate": -8,
+          "heartRate": -6,
+          "spo2": 7,
+          "symptom": -22,
+          "stability": 20
+        }
+      },
+      "stableOutcome": "breathing-improved",
+      "sourceIds": [
+        "GINA-ASTHMA-2025"
+      ],
+      "redFlags": {
+        "pt-BR": "Silêncio auscultatório, exaustão, confusão ou hipoxemia persistente indicam risco de parada.",
+        "en": "Silent chest, exhaustion, confusion, or persistent hypoxemia indicate arrest risk.",
+        "es": "Silencio auscultatorio, agotamiento, confusión o hipoxemia persistente indican riesgo de paro."
+      },
+      "status": "development-only",
+      "publishable": false
+    },
+    {
+      "id": "severe-hypoglycemia",
+      "title": {
+        "pt-BR": "Hipoglicemia grave com alteração de consciência",
+        "en": "Severe hypoglycemia with altered consciousness",
+        "es": "Hipoglucemia grave con alteración de conciencia"
+      },
+      "patient": {
+        "pt-BR": "Paulo Henrique",
+        "en": "Paulo Henrique",
+        "es": "Paulo Henrique"
+      },
+      "age": 64,
+      "sex": {
+        "pt-BR": "Masculino",
+        "en": "Male",
+        "es": "Masculino"
+      },
+      "complaint": {
+        "pt-BR": "Sudorese, tremor e confusão após uso de insulina sem alimentação.",
+        "en": "Sweating, tremor, and confusion after insulin without food.",
+        "es": "Sudoración, temblor y confusión tras insulina sin alimentación."
+      },
+      "priority": "critical",
+      "initialVitals": {
+        "systolic": 138,
+        "diastolic": 82,
+        "heartRate": 112,
+        "respiratoryRate": 20,
+        "spo2": 97,
+        "glucose": 34,
+        "consciousness": "confused"
+      },
+      "maxMinutes": 12,
+      "criticalActions": [
+        "assess-responsiveness",
+        "glucose-check",
+        "treat-hypoglycemia",
+        "assess-disability",
+        "reassess-abcde"
+      ],
+      "expectedSequence": [
+        "scene-safety",
+        "assess-responsiveness",
+        "open-airway",
+        "assess-breathing",
+        "assess-circulation",
+        "glucose-check",
+        "treat-hypoglycemia",
+        "assess-disability",
+        "reassess-abcde"
+      ],
+      "harmfulActions": [
+        "wrong-delay",
+        "stroke-pathway"
+      ],
+      "actionEffects": {
+        "treat-hypoglycemia": {
+          "glucose": 72,
+          "heartRate": -16,
+          "consciousness": "alert",
+          "symptom": -25,
+          "stability": 24
+        }
+      },
+      "stableOutcome": "glucose-corrected",
+      "sourceIds": [
+        "ADA-HYPOGLYCEMIA-2026"
+      ],
+      "redFlags": {
+        "pt-BR": "Convulsão, coma, incapacidade de deglutir ou recorrência exigem suporte avançado.",
+        "en": "Seizure, coma, inability to swallow, or recurrence require advanced support.",
+        "es": "Convulsión, coma, incapacidad para tragar o recurrencia requieren soporte avanzado."
+      },
+      "status": "development-only",
+      "publishable": false
+    }
+  ]
+}

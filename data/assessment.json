@@ -1,0 +1,1295 @@
+{
+  "schemaVersion": 1,
+  "engineVersion": "1.0.0",
+  "policy": {
+    "status": "development-only",
+    "publishable": false,
+    "independentClinicalReviewRequired": true,
+    "trilingualTerminologyReviewRequired": true,
+    "commercialReleaseBlockedUntilApproved": true,
+    "disclaimer": {
+      "pt-BR": "Conteúdo educacional estruturado. Não substitui exame presencial, decisão médica real ou treinamento supervisionado.",
+      "en": "Structured educational content. It does not replace in-person examination, real medical decisions, or supervised training.",
+      "es": "Contenido educativo estructurado. No sustituye el examen presencial, las decisiones médicas reales ni la formación supervisada."
+    }
+  },
+  "domains": {
+    "history": {
+      "pt-BR": "História e evolução",
+      "en": "History and progression",
+      "es": "Historia y evolución"
+    },
+    "symptoms": {
+      "pt-BR": "Caracterização dos sintomas",
+      "en": "Symptom characterization",
+      "es": "Caracterización de síntomas"
+    },
+    "safety": {
+      "pt-BR": "Sinais de alarme",
+      "en": "Warning signs",
+      "es": "Señales de alarma"
+    },
+    "background": {
+      "pt-BR": "Antecedentes e risco",
+      "en": "Background and risk",
+      "es": "Antecedentes y riesgo"
+    },
+    "context": {
+      "pt-BR": "Contexto e hábitos",
+      "en": "Context and habits",
+      "es": "Contexto y hábitos"
+    },
+    "medications": {
+      "pt-BR": "Medicamentos e substâncias",
+      "en": "Medicines and substances",
+      "es": "Medicamentos y sustancias"
+    },
+    "differential": {
+      "pt-BR": "Diagnósticos diferenciais",
+      "en": "Differential diagnoses",
+      "es": "Diagnósticos diferenciales"
+    },
+    "triggers": {
+      "pt-BR": "Gatilhos",
+      "en": "Triggers",
+      "es": "Desencadenantes"
+    },
+    "exposure": {
+      "pt-BR": "Exposições",
+      "en": "Exposures",
+      "es": "Exposiciones"
+    }
+  },
+  "cases": [
+    {
+      "caseId": "hipertensao-1",
+      "interview": [
+        {
+          "id": "hx-onset",
+          "domain": "history",
+          "legacyValue": "tempo dos sintomas",
+          "priority": "essential",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Quando os sintomas começaram e como evoluíram?",
+            "en": "When did the symptoms begin and how have they changed?",
+            "es": "¿Cuándo comenzaron los síntomas y cómo han evolucionado?"
+          },
+          "response": {
+            "pt-BR": "Há cerca de três meses, de forma intermitente; a cefaleia costuma surgir no fim do dia.",
+            "en": "About three months ago, intermittently; the headache is usually worse late in the day.",
+            "es": "Hace unos tres meses, de forma intermitente; la cefalea suele aparecer al final del día."
+          },
+          "rationale": {
+            "pt-BR": "Define duração, padrão e necessidade de investigar mudança recente.",
+            "en": "Establishes duration, pattern, and whether a recent change needs investigation.",
+            "es": "Define la duración, el patrón y si un cambio reciente requiere investigación."
+          }
+        },
+        {
+          "id": "hx-family",
+          "domain": "background",
+          "legacyValue": "histórico familiar",
+          "priority": "essential",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Há histórico familiar de doença cardiovascular?",
+            "en": "Is there a family history of cardiovascular disease?",
+            "es": "¿Hay antecedentes familiares de enfermedad cardiovascular?"
+          },
+          "response": {
+            "pt-BR": "O pai teve infarto aos 54 anos e a mãe trata hipertensão.",
+            "en": "His father had a myocardial infarction at 54 and his mother is treated for hypertension.",
+            "es": "Su padre tuvo un infarto a los 54 años y su madre recibe tratamiento para hipertensión."
+          },
+          "rationale": {
+            "pt-BR": "Ajuda a reconhecer risco cardiovascular e necessidade de estratificação.",
+            "en": "Helps identify cardiovascular risk and the need for risk stratification.",
+            "es": "Ayuda a reconocer el riesgo cardiovascular y la necesidad de estratificación."
+          }
+        },
+        {
+          "id": "hx-exertion",
+          "domain": "symptoms",
+          "legacyValue": "dor em esforço",
+          "priority": "essential",
+          "redFlag": true,
+          "label": {
+            "pt-BR": "O aperto no peito aparece com esforço e melhora em repouso?",
+            "en": "Does the chest pressure occur with exertion and improve with rest?",
+            "es": "¿La presión en el pecho aparece con el esfuerzo y mejora con el reposo?"
+          },
+          "response": {
+            "pt-BR": "Às vezes ocorre ao subir escadas e melhora após alguns minutos parado.",
+            "en": "It sometimes occurs while climbing stairs and improves after a few minutes of rest.",
+            "es": "A veces aparece al subir escaleras y mejora después de unos minutos de reposo."
+          },
+          "rationale": {
+            "pt-BR": "Caracteriza possível componente isquêmico e evita reduzir o caso apenas à pressão arterial.",
+            "en": "Characterizes a possible ischemic component and avoids reducing the case to blood pressure alone.",
+            "es": "Caracteriza un posible componente isquémico y evita reducir el caso solo a la presión arterial."
+          }
+        },
+        {
+          "id": "hx-medications",
+          "domain": "medications",
+          "legacyValue": "fatores de risco",
+          "priority": "recommended",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Usa medicamentos, estimulantes, descongestionantes ou suplementos?",
+            "en": "Do you use medicines, stimulants, decongestants, or supplements?",
+            "es": "¿Usa medicamentos, estimulantes, descongestionantes o suplementos?"
+          },
+          "response": {
+            "pt-BR": "Usa energético com frequência e descongestionante nasal em alguns dias.",
+            "en": "He frequently uses energy drinks and occasionally a nasal decongestant.",
+            "es": "Usa bebidas energéticas con frecuencia y a veces un descongestionante nasal."
+          },
+          "rationale": {
+            "pt-BR": "Substâncias podem interferir nos sintomas e nas medidas pressóricas.",
+            "en": "Substances may influence symptoms and blood pressure measurements.",
+            "es": "Las sustancias pueden influir en los síntomas y en las mediciones de presión arterial."
+          }
+        },
+        {
+          "id": "hx-redflags",
+          "domain": "safety",
+          "legacyValue": "sinais de alarme",
+          "priority": "essential",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Há dor em repouso, desmaio, falta de ar intensa ou déficit neurológico?",
+            "en": "Is there pain at rest, fainting, severe shortness of breath, or a neurological deficit?",
+            "es": "¿Hay dolor en reposo, desmayo, falta de aire intensa o déficit neurológico?"
+          },
+          "response": {
+            "pt-BR": "Nega desmaio, déficit focal e falta de ar intensa; o aperto não ocorreu em repouso.",
+            "en": "He denies fainting, focal deficits, and severe dyspnea; the pressure has not occurred at rest.",
+            "es": "Niega desmayo, déficit focal y disnea intensa; la presión no ha ocurrido en reposo."
+          },
+          "rationale": {
+            "pt-BR": "Busca sinais que mudariam prioridade e segurança do atendimento.",
+            "en": "Checks for findings that would change priority and safety.",
+            "es": "Busca hallazgos que cambiarían la prioridad y la seguridad."
+          }
+        }
+      ],
+      "physicalExam": [
+        {
+          "id": "pe-vitals",
+          "system": "general",
+          "legacyValue": "Aferir sinais vitais",
+          "priority": "essential",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Repetir sinais vitais após repouso",
+            "en": "Repeat vital signs after rest",
+            "es": "Repetir signos vitales tras reposo"
+          },
+          "finding": {
+            "pt-BR": "PA 130/84 mmHg em nova medida, FC 86 bpm, sem alteração respiratória.",
+            "en": "BP 130/84 mmHg on repeat measurement, HR 86 bpm, no respiratory change.",
+            "es": "PA 130/84 mmHg en nueva medición, FC 86 lpm, sin cambios respiratorios."
+          },
+          "rationale": {
+            "pt-BR": "Confirma tendência e reduz interpretação baseada em uma única medida.",
+            "en": "Confirms the trend and reduces reliance on a single measurement.",
+            "es": "Confirma la tendencia y reduce la interpretación basada en una sola medición."
+          }
+        },
+        {
+          "id": "pe-general",
+          "system": "general",
+          "legacyValue": "Exame físico geral",
+          "priority": "recommended",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Avaliação geral e perfusão",
+            "en": "General assessment and perfusion",
+            "es": "Evaluación general y perfusión"
+          },
+          "finding": {
+            "pt-BR": "Paciente alerta, corado, sem sudorese, perfusão periférica preservada.",
+            "en": "Alert, well perfused, no diaphoresis, peripheral perfusion preserved.",
+            "es": "Paciente alerta, bien perfundido, sin diaforesis, perfusión periférica conservada."
+          },
+          "rationale": {
+            "pt-BR": "Ajuda a identificar instabilidade não evidente apenas pelos números.",
+            "en": "Helps identify instability not evident from numbers alone.",
+            "es": "Ayuda a identificar inestabilidad no evidente solo por los números."
+          }
+        },
+        {
+          "id": "pe-cardiac",
+          "system": "cardiovascular",
+          "legacyValue": "Ausculta cardíaca",
+          "priority": "essential",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Ausculta cardíaca e pulsos",
+            "en": "Cardiac auscultation and pulses",
+            "es": "Auscultación cardíaca y pulsos"
+          },
+          "finding": {
+            "pt-BR": "Ritmo regular, sem sopros evidentes, pulsos simétricos.",
+            "en": "Regular rhythm, no obvious murmur, symmetric pulses.",
+            "es": "Ritmo regular, sin soplos evidentes, pulsos simétricos."
+          },
+          "rationale": {
+            "pt-BR": "Integra sintomas torácicos, ritmo e perfusão.",
+            "en": "Integrates chest symptoms, rhythm, and perfusion.",
+            "es": "Integra síntomas torácicos, ritmo y perfusión."
+          }
+        },
+        {
+          "id": "pe-neuro",
+          "system": "neurological",
+          "legacyValue": "Avaliação neurológica",
+          "priority": "recommended",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Triagem neurológica breve",
+            "en": "Brief neurological screen",
+            "es": "Cribado neurológico breve"
+          },
+          "finding": {
+            "pt-BR": "Força, fala e simetria facial preservadas; sem déficit focal.",
+            "en": "Strength, speech, and facial symmetry are preserved; no focal deficit.",
+            "es": "Fuerza, habla y simetría facial conservadas; sin déficit focal."
+          },
+          "rationale": {
+            "pt-BR": "Procura sinais de alarme associados à cefaleia.",
+            "en": "Looks for warning signs associated with the headache.",
+            "es": "Busca señales de alarma asociadas con la cefalea."
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "cefaleia-tensional",
+      "interview": [
+        {
+          "id": "hx-onset",
+          "domain": "history",
+          "legacyValue": "tempo dos sintomas",
+          "priority": "essential",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Quando começou, quanto dura e qual o padrão da dor?",
+            "en": "When did it start, how long does it last, and what is the pattern?",
+            "es": "¿Cuándo comenzó, cuánto dura y cuál es el patrón?"
+          },
+          "response": {
+            "pt-BR": "Começou há dois meses, dura algumas horas e piora no fim de dias de trabalho.",
+            "en": "It began two months ago, lasts a few hours, and worsens after busy workdays.",
+            "es": "Comenzó hace dos meses, dura algunas horas y empeora al final de días intensos."
+          },
+          "rationale": {
+            "pt-BR": "Diferencia padrão recorrente de início súbito ou progressivo.",
+            "en": "Distinguishes a recurrent pattern from sudden or progressive onset.",
+            "es": "Distingue un patrón recurrente de un inicio súbito o progresivo."
+          }
+        },
+        {
+          "id": "hx-stress",
+          "domain": "context",
+          "legacyValue": "estresse e sono",
+          "priority": "essential",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Como estão estresse, sono e postura durante o trabalho?",
+            "en": "How are stress, sleep, and posture at work?",
+            "es": "¿Cómo están el estrés, el sueño y la postura en el trabajo?"
+          },
+          "response": {
+            "pt-BR": "Dormindo cerca de cinco horas, com tensão cervical e muitas horas no computador.",
+            "en": "Sleeping about five hours, with neck tension and long hours at a computer.",
+            "es": "Duerme unas cinco horas, con tensión cervical y muchas horas frente al ordenador."
+          },
+          "rationale": {
+            "pt-BR": "Relaciona fatores precipitantes sem concluir o diagnóstico isoladamente.",
+            "en": "Links precipitating factors without making the diagnosis from them alone.",
+            "es": "Relaciona factores precipitantes sin concluir el diagnóstico por sí solos."
+          }
+        },
+        {
+          "id": "hx-redflags",
+          "domain": "safety",
+          "legacyValue": "sinais de alarme",
+          "priority": "essential",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Houve início súbito, febre, rigidez de nuca, alteração visual ou fraqueza?",
+            "en": "Was there sudden onset, fever, neck stiffness, visual change, or weakness?",
+            "es": "¿Hubo inicio súbito, fiebre, rigidez de nuca, cambios visuales o debilidad?"
+          },
+          "response": {
+            "pt-BR": "Nega início súbito, febre, rigidez de nuca, perda visual e déficit focal.",
+            "en": "She denies sudden onset, fever, neck stiffness, visual loss, and focal deficit.",
+            "es": "Niega inicio súbito, fiebre, rigidez de nuca, pérdida visual y déficit focal."
+          },
+          "rationale": {
+            "pt-BR": "A triagem de sinais de alarme vem antes de assumir cefaleia primária.",
+            "en": "Warning-sign screening comes before assuming a primary headache.",
+            "es": "El cribado de señales de alarma precede a asumir una cefalea primaria."
+          }
+        },
+        {
+          "id": "hx-medication",
+          "domain": "medications",
+          "legacyValue": "fatores de risco",
+          "priority": "recommended",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Com que frequência usa analgésicos ou cafeína?",
+            "en": "How often do you use painkillers or caffeine?",
+            "es": "¿Con qué frecuencia usa analgésicos o cafeína?"
+          },
+          "response": {
+            "pt-BR": "Usa analgésico uma ou duas vezes por semana e quatro cafés por dia.",
+            "en": "She uses a painkiller once or twice weekly and drinks four coffees daily.",
+            "es": "Usa analgésico una o dos veces por semana y toma cuatro cafés al día."
+          },
+          "rationale": {
+            "pt-BR": "Ajuda a avaliar gatilhos e risco de uso excessivo.",
+            "en": "Helps assess triggers and the risk of overuse.",
+            "es": "Ayuda a valorar desencadenantes y riesgo de uso excesivo."
+          }
+        },
+        {
+          "id": "hx-associated",
+          "domain": "symptoms",
+          "legacyValue": "histórico familiar",
+          "priority": "optional",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Há náusea, vômitos, fotofobia ou piora com atividade?",
+            "en": "Is there nausea, vomiting, photophobia, or worsening with activity?",
+            "es": "¿Hay náuseas, vómitos, fotofobia o empeora con la actividad?"
+          },
+          "response": {
+            "pt-BR": "Nega vômitos; refere apenas leve incômodo com luz quando a dor está forte.",
+            "en": "She denies vomiting and reports only mild light sensitivity when pain is intense.",
+            "es": "Niega vómitos y refiere solo leve molestia con la luz cuando el dolor es intenso."
+          },
+          "rationale": {
+            "pt-BR": "Caracteriza sintomas associados e diagnósticos diferenciais.",
+            "en": "Characterizes associated symptoms and differential diagnoses.",
+            "es": "Caracteriza síntomas asociados y diagnósticos diferenciales."
+          }
+        }
+      ],
+      "physicalExam": [
+        {
+          "id": "pe-vitals",
+          "system": "general",
+          "legacyValue": "Aferir sinais vitais",
+          "priority": "essential",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Sinais vitais e estado geral",
+            "en": "Vital signs and general condition",
+            "es": "Signos vitales y estado general"
+          },
+          "finding": {
+            "pt-BR": "Sinais vitais estáveis, paciente alerta e orientada.",
+            "en": "Vital signs are stable; the patient is alert and oriented.",
+            "es": "Signos vitales estables; paciente alerta y orientada."
+          },
+          "rationale": {
+            "pt-BR": "Confirma estabilidade antes do exame focal.",
+            "en": "Confirms stability before the focused examination.",
+            "es": "Confirma estabilidad antes del examen focal."
+          }
+        },
+        {
+          "id": "pe-neuro",
+          "system": "neurological",
+          "legacyValue": "Avaliação neurológica",
+          "priority": "essential",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Exame neurológico focal",
+            "en": "Focused neurological examination",
+            "es": "Examen neurológico focal"
+          },
+          "finding": {
+            "pt-BR": "Pupilas simétricas, fala clara, força e coordenação preservadas.",
+            "en": "Pupils symmetric, speech clear, strength and coordination preserved.",
+            "es": "Pupilas simétricas, habla clara, fuerza y coordinación conservadas."
+          },
+          "rationale": {
+            "pt-BR": "Busca déficit focal e outros sinais de alarme.",
+            "en": "Looks for focal deficits and other warning signs.",
+            "es": "Busca déficit focal y otras señales de alarma."
+          }
+        },
+        {
+          "id": "pe-neck",
+          "system": "musculoskeletal",
+          "legacyValue": "Exame físico geral",
+          "priority": "recommended",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Palpação cervical e amplitude de movimento",
+            "en": "Neck palpation and range of motion",
+            "es": "Palpación cervical y rango de movimiento"
+          },
+          "finding": {
+            "pt-BR": "Tensão em musculatura cervical e trapézios, sem rigidez de nuca.",
+            "en": "Tension in cervical and trapezius muscles, without neck stiffness.",
+            "es": "Tensión en musculatura cervical y trapecios, sin rigidez de nuca."
+          },
+          "rationale": {
+            "pt-BR": "Diferencia tensão muscular de rigidez meníngea.",
+            "en": "Distinguishes muscular tension from meningeal stiffness.",
+            "es": "Distingue tensión muscular de rigidez meníngea."
+          }
+        },
+        {
+          "id": "pe-eye",
+          "system": "neurological",
+          "legacyValue": "Exame físico geral",
+          "priority": "optional",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Avaliação ocular básica",
+            "en": "Basic eye assessment",
+            "es": "Evaluación ocular básica"
+          },
+          "finding": {
+            "pt-BR": "Sem alteração visual aguda ou assimetria pupilar observável.",
+            "en": "No acute visual change or observable pupillary asymmetry.",
+            "es": "Sin cambios visuales agudos ni asimetría pupilar observable."
+          },
+          "rationale": {
+            "pt-BR": "Complementa a busca de sinais de alarme, dentro dos limites do simulador.",
+            "en": "Complements warning-sign screening within simulator limits.",
+            "es": "Complementa la búsqueda de señales de alarma dentro de los límites del simulador."
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "angina-estavel",
+      "interview": [
+        {
+          "id": "hx-character",
+          "domain": "symptoms",
+          "legacyValue": "dor em esforço",
+          "priority": "essential",
+          "redFlag": true,
+          "label": {
+            "pt-BR": "Como é a dor e qual a relação com esforço?",
+            "en": "What is the pain like and how is it related to exertion?",
+            "es": "¿Cómo es el dolor y qué relación tiene con el esfuerzo?"
+          },
+          "response": {
+            "pt-BR": "É um aperto retroesternal que surge ao caminhar rápido ou subir ladeira.",
+            "en": "It is retrosternal pressure that appears during brisk walking or climbing a hill.",
+            "es": "Es una presión retroesternal que aparece al caminar rápido o subir una pendiente."
+          },
+          "rationale": {
+            "pt-BR": "Caracteriza padrão de esforço e qualidade do desconforto.",
+            "en": "Characterizes exertional pattern and discomfort quality.",
+            "es": "Caracteriza el patrón de esfuerzo y la calidad del malestar."
+          }
+        },
+        {
+          "id": "hx-radiation",
+          "domain": "symptoms",
+          "legacyValue": "irradiação da dor",
+          "priority": "essential",
+          "redFlag": true,
+          "label": {
+            "pt-BR": "A dor irradia para braço, mandíbula, costas ou ombro?",
+            "en": "Does the pain radiate to the arm, jaw, back, or shoulder?",
+            "es": "¿El dolor se irradia al brazo, mandíbula, espalda u hombro?"
+          },
+          "response": {
+            "pt-BR": "Às vezes irradia para o braço esquerdo.",
+            "en": "It sometimes radiates to the left arm.",
+            "es": "A veces se irradia al brazo izquierdo."
+          },
+          "rationale": {
+            "pt-BR": "Refina a caracterização da dor torácica.",
+            "en": "Refines chest-pain characterization.",
+            "es": "Refina la caracterización del dolor torácico."
+          }
+        },
+        {
+          "id": "hx-duration",
+          "domain": "history",
+          "legacyValue": "tempo dos sintomas",
+          "priority": "essential",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Quanto dura e o que faz melhorar?",
+            "en": "How long does it last and what makes it improve?",
+            "es": "¿Cuánto dura y qué hace que mejore?"
+          },
+          "response": {
+            "pt-BR": "Dura de três a cinco minutos e melhora ao repousar.",
+            "en": "It lasts three to five minutes and improves with rest.",
+            "es": "Dura de tres a cinco minutos y mejora con el reposo."
+          },
+          "rationale": {
+            "pt-BR": "Duração e alívio ajudam a diferenciar padrões clínicos.",
+            "en": "Duration and relief help distinguish clinical patterns.",
+            "es": "La duración y el alivio ayudan a distinguir patrones clínicos."
+          }
+        },
+        {
+          "id": "hx-risk",
+          "domain": "background",
+          "legacyValue": "fatores de risco",
+          "priority": "essential",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Há tabagismo, diabetes, colesterol alto ou doença cardiovascular na família?",
+            "en": "Is there smoking, diabetes, high cholesterol, or family cardiovascular disease?",
+            "es": "¿Hay tabaquismo, diabetes, colesterol alto o enfermedad cardiovascular familiar?"
+          },
+          "response": {
+            "pt-BR": "Fumou por 20 anos, parou há três; tem colesterol alto e pai infartado aos 58.",
+            "en": "He smoked for 20 years, quit three years ago, has high cholesterol, and his father had an MI at 58.",
+            "es": "Fumó durante 20 años, dejó hace tres; tiene colesterol alto y su padre tuvo un infarto a los 58."
+          },
+          "rationale": {
+            "pt-BR": "Identifica fatores que alteram a probabilidade pré-teste.",
+            "en": "Identifies factors that change pre-test probability.",
+            "es": "Identifica factores que cambian la probabilidad preprueba."
+          }
+        },
+        {
+          "id": "hx-unstable",
+          "domain": "safety",
+          "legacyValue": "sinais de alarme",
+          "priority": "essential",
+          "redFlag": true,
+          "label": {
+            "pt-BR": "A dor está ocorrendo em repouso, está mais frequente ou dura mais tempo?",
+            "en": "Is the pain occurring at rest, becoming more frequent, or lasting longer?",
+            "es": "¿El dolor ocurre en reposo, es más frecuente o dura más?"
+          },
+          "response": {
+            "pt-BR": "Hoje ocorreu com esforço habitual, sem dor em repouso; percebe episódios um pouco mais frequentes.",
+            "en": "Today it occurred with usual exertion, not at rest; episodes seem slightly more frequent.",
+            "es": "Hoy ocurrió con el esfuerzo habitual, no en reposo; nota episodios algo más frecuentes."
+          },
+          "rationale": {
+            "pt-BR": "Procura mudança de padrão que exige maior urgência.",
+            "en": "Checks for a pattern change that requires greater urgency.",
+            "es": "Busca un cambio de patrón que exige mayor urgencia."
+          }
+        }
+      ],
+      "physicalExam": [
+        {
+          "id": "pe-vitals",
+          "system": "general",
+          "legacyValue": "Aferir sinais vitais",
+          "priority": "essential",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Sinais vitais e monitorização inicial",
+            "en": "Vital signs and initial monitoring",
+            "es": "Signos vitales y monitorización inicial"
+          },
+          "finding": {
+            "pt-BR": "PA 142/88 mmHg, FC 92 bpm, SpO₂ 97%, sem desconforto em repouso.",
+            "en": "BP 142/88 mmHg, HR 92 bpm, SpO₂ 97%, no discomfort at rest.",
+            "es": "PA 142/88 mmHg, FC 92 lpm, SpO₂ 97%, sin malestar en reposo."
+          },
+          "rationale": {
+            "pt-BR": "Documenta estabilidade e cria linha de base.",
+            "en": "Documents stability and creates a baseline.",
+            "es": "Documenta estabilidad y crea una línea basal."
+          }
+        },
+        {
+          "id": "pe-cardiac",
+          "system": "cardiovascular",
+          "legacyValue": "Ausculta cardíaca",
+          "priority": "essential",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Ausculta cardíaca, pulsos e perfusão",
+            "en": "Cardiac auscultation, pulses, and perfusion",
+            "es": "Auscultación cardíaca, pulsos y perfusión"
+          },
+          "finding": {
+            "pt-BR": "Ritmo regular, sem sopro evidente, pulsos presentes e simétricos.",
+            "en": "Regular rhythm, no obvious murmur, pulses present and symmetric.",
+            "es": "Ritmo regular, sin soplo evidente, pulsos presentes y simétricos."
+          },
+          "rationale": {
+            "pt-BR": "Avalia ritmo, perfusão e diagnósticos diferenciais.",
+            "en": "Assesses rhythm, perfusion, and differential diagnoses.",
+            "es": "Evalúa ritmo, perfusión y diagnósticos diferenciales."
+          }
+        },
+        {
+          "id": "pe-lungs",
+          "system": "respiratory",
+          "legacyValue": "Ausculta pulmonar",
+          "priority": "recommended",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Ausculta pulmonar",
+            "en": "Pulmonary auscultation",
+            "es": "Auscultación pulmonar"
+          },
+          "finding": {
+            "pt-BR": "Murmúrio vesicular presente, sem estertores ou sibilos.",
+            "en": "Breath sounds present, without crackles or wheeze.",
+            "es": "Murmullo vesicular presente, sin estertores ni sibilancias."
+          },
+          "rationale": {
+            "pt-BR": "Busca congestão e causas respiratórias de dor ou dispneia.",
+            "en": "Looks for congestion and respiratory causes of pain or dyspnea.",
+            "es": "Busca congestión y causas respiratorias de dolor o disnea."
+          }
+        },
+        {
+          "id": "pe-access",
+          "system": "safety",
+          "legacyValue": "Solicitar acesso venoso",
+          "priority": "recommended",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Preparar acesso e monitorização conforme risco",
+            "en": "Prepare access and monitoring according to risk",
+            "es": "Preparar acceso y monitorización según el riesgo"
+          },
+          "finding": {
+            "pt-BR": "Acesso periférico obtido sem intercorrência; paciente permanece estável.",
+            "en": "Peripheral access obtained without complication; the patient remains stable.",
+            "es": "Acceso periférico obtenido sin incidencias; el paciente permanece estable."
+          },
+          "rationale": {
+            "pt-BR": "Aumenta prontidão caso o quadro mude, sem substituir avaliação.",
+            "en": "Improves readiness if the condition changes, without replacing assessment.",
+            "es": "Aumenta la preparación si el cuadro cambia, sin sustituir la evaluación."
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "itu-nao-complicada",
+      "interview": [
+        {
+          "id": "hx-urinary",
+          "domain": "symptoms",
+          "legacyValue": "tempo dos sintomas",
+          "priority": "essential",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Quando começaram ardência e frequência urinária?",
+            "en": "When did the burning and urinary frequency begin?",
+            "es": "¿Cuándo comenzaron el ardor y la frecuencia urinaria?"
+          },
+          "response": {
+            "pt-BR": "Começaram há dois dias e estão mais intensos desde ontem.",
+            "en": "They began two days ago and have been more intense since yesterday.",
+            "es": "Comenzaron hace dos días y son más intensos desde ayer."
+          },
+          "rationale": {
+            "pt-BR": "Define evolução e gravidade temporal.",
+            "en": "Defines progression and temporal severity.",
+            "es": "Define evolución y gravedad temporal."
+          }
+        },
+        {
+          "id": "hx-flank",
+          "domain": "safety",
+          "legacyValue": "dor lombar",
+          "priority": "essential",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Há dor lombar ou dor no flanco?",
+            "en": "Is there low-back or flank pain?",
+            "es": "¿Hay dolor lumbar o en el flanco?"
+          },
+          "response": {
+            "pt-BR": "Nega dor lombar e dor no flanco.",
+            "en": "She denies low-back and flank pain.",
+            "es": "Niega dolor lumbar y dolor en el flanco."
+          },
+          "rationale": {
+            "pt-BR": "Ajuda a buscar acometimento do trato urinário alto.",
+            "en": "Helps screen for upper urinary tract involvement.",
+            "es": "Ayuda a buscar afectación del tracto urinario superior."
+          }
+        },
+        {
+          "id": "hx-fever",
+          "domain": "safety",
+          "legacyValue": "febre recente",
+          "priority": "essential",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Teve febre, calafrios, vômitos ou mal-estar importante?",
+            "en": "Have you had fever, chills, vomiting, or marked malaise?",
+            "es": "¿Ha tenido fiebre, escalofríos, vómitos o malestar importante?"
+          },
+          "response": {
+            "pt-BR": "Nega febre, calafrios e vômitos.",
+            "en": "She denies fever, chills, and vomiting.",
+            "es": "Niega fiebre, escalofríos y vómitos."
+          },
+          "rationale": {
+            "pt-BR": "Procura sinais sistêmicos que mudam a classificação do caso.",
+            "en": "Screens for systemic signs that change case classification.",
+            "es": "Busca signos sistémicos que cambian la clasificación del caso."
+          }
+        },
+        {
+          "id": "hx-pregnancy",
+          "domain": "safety",
+          "legacyValue": "gestação",
+          "priority": "essential",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Existe possibilidade de gestação?",
+            "en": "Is pregnancy possible?",
+            "es": "¿Existe posibilidad de embarazo?"
+          },
+          "response": {
+            "pt-BR": "Refere método contraceptivo e teste recente negativo, mas aceita nova avaliação se indicada.",
+            "en": "She reports contraception and a recent negative test, but accepts reassessment if indicated.",
+            "es": "Refiere anticoncepción y una prueba reciente negativa, pero acepta nueva valoración si está indicada."
+          },
+          "rationale": {
+            "pt-BR": "Gestação altera investigação, segurança e opções terapêuticas.",
+            "en": "Pregnancy changes investigation, safety, and treatment options.",
+            "es": "El embarazo cambia la investigación, la seguridad y las opciones terapéuticas."
+          }
+        },
+        {
+          "id": "hx-vaginal",
+          "domain": "differential",
+          "legacyValue": "sinais de alarme",
+          "priority": "recommended",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Há corrimento, sangramento ou dor pélvica diferente?",
+            "en": "Is there discharge, bleeding, or different pelvic pain?",
+            "es": "¿Hay flujo, sangrado o dolor pélvico diferente?"
+          },
+          "response": {
+            "pt-BR": "Nega corrimento e sangramento; refere apenas desconforto suprapúbico leve.",
+            "en": "She denies discharge and bleeding and reports only mild suprapubic discomfort.",
+            "es": "Niega flujo y sangrado y refiere solo molestia suprapúbica leve."
+          },
+          "rationale": {
+            "pt-BR": "Ajuda a considerar diagnósticos diferenciais.",
+            "en": "Helps consider differential diagnoses.",
+            "es": "Ayuda a considerar diagnósticos diferenciales."
+          }
+        }
+      ],
+      "physicalExam": [
+        {
+          "id": "pe-vitals",
+          "system": "general",
+          "legacyValue": "Aferir sinais vitais",
+          "priority": "essential",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Sinais vitais e estado geral",
+            "en": "Vital signs and general condition",
+            "es": "Signos vitales y estado general"
+          },
+          "finding": {
+            "pt-BR": "Afebril, sinais vitais estáveis, sem aparência tóxica.",
+            "en": "Afebrile, vital signs stable, no toxic appearance.",
+            "es": "Afebril, signos vitales estables, sin aspecto tóxico."
+          },
+          "rationale": {
+            "pt-BR": "Busca repercussão sistêmica.",
+            "en": "Screens for systemic involvement.",
+            "es": "Busca repercusión sistémica."
+          }
+        },
+        {
+          "id": "pe-abdomen",
+          "system": "abdominal",
+          "legacyValue": "Palpação abdominal",
+          "priority": "essential",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Palpação abdominal e suprapúbica",
+            "en": "Abdominal and suprapubic palpation",
+            "es": "Palpación abdominal y suprapúbica"
+          },
+          "finding": {
+            "pt-BR": "Desconforto suprapúbico leve, sem defesa ou dor abdominal difusa.",
+            "en": "Mild suprapubic discomfort, without guarding or diffuse abdominal pain.",
+            "es": "Molestia suprapúbica leve, sin defensa ni dolor abdominal difuso."
+          },
+          "rationale": {
+            "pt-BR": "Localiza desconforto e busca sinais de outra causa abdominal.",
+            "en": "Localizes discomfort and looks for signs of another abdominal cause.",
+            "es": "Localiza la molestia y busca signos de otra causa abdominal."
+          }
+        },
+        {
+          "id": "pe-cva",
+          "system": "renal",
+          "legacyValue": "Exame físico geral",
+          "priority": "essential",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Pesquisa de dor em flancos",
+            "en": "Assessment for flank tenderness",
+            "es": "Evaluación de dolor en flancos"
+          },
+          "finding": {
+            "pt-BR": "Sem dor à percussão lombar bilateral no cenário simulado.",
+            "en": "No bilateral costovertebral tenderness in the simulated scenario.",
+            "es": "Sin dolor a la percusión lumbar bilateral en el escenario simulado."
+          },
+          "rationale": {
+            "pt-BR": "Ajuda a diferenciar quadro baixo de possível acometimento alto.",
+            "en": "Helps distinguish lower-tract symptoms from possible upper involvement.",
+            "es": "Ayuda a distinguir síntomas bajos de posible afectación alta."
+          }
+        },
+        {
+          "id": "pe-hydration",
+          "system": "general",
+          "legacyValue": "Exame físico geral",
+          "priority": "recommended",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Hidratação e perfusão",
+            "en": "Hydration and perfusion",
+            "es": "Hidratación y perfusión"
+          },
+          "finding": {
+            "pt-BR": "Mucosas úmidas e perfusão periférica preservada.",
+            "en": "Mucous membranes moist and peripheral perfusion preserved.",
+            "es": "Mucosas húmedas y perfusión periférica conservada."
+          },
+          "rationale": {
+            "pt-BR": "Complementa a avaliação geral de segurança.",
+            "en": "Complements the general safety assessment.",
+            "es": "Complementa la evaluación general de seguridad."
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "refluxo-gastroesofagico",
+      "interview": [
+        {
+          "id": "hx-meals",
+          "domain": "triggers",
+          "legacyValue": "gatilhos alimentares",
+          "priority": "essential",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Os sintomas se relacionam a refeições ou alimentos específicos?",
+            "en": "Are symptoms related to meals or specific foods?",
+            "es": "¿Los síntomas se relacionan con comidas o alimentos específicos?"
+          },
+          "response": {
+            "pt-BR": "Pioram após refeições grandes, café e quando se deita logo após comer.",
+            "en": "They worsen after large meals, coffee, and lying down soon after eating.",
+            "es": "Empeoran tras comidas abundantes, café y al acostarse poco después de comer."
+          },
+          "rationale": {
+            "pt-BR": "Identifica padrão e gatilhos sem excluir outras causas.",
+            "en": "Identifies pattern and triggers without excluding other causes.",
+            "es": "Identifica patrón y desencadenantes sin excluir otras causas."
+          }
+        },
+        {
+          "id": "hx-alarm",
+          "domain": "safety",
+          "legacyValue": "sinais de alarme",
+          "priority": "essential",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Há dificuldade para engolir, perda de peso, vômitos persistentes ou sangramento?",
+            "en": "Is there difficulty swallowing, weight loss, persistent vomiting, or bleeding?",
+            "es": "¿Hay dificultad para tragar, pérdida de peso, vómitos persistentes o sangrado?"
+          },
+          "response": {
+            "pt-BR": "Nega disfagia, perda de peso, vômitos persistentes e sinais de sangramento.",
+            "en": "She denies dysphagia, weight loss, persistent vomiting, and bleeding signs.",
+            "es": "Niega disfagia, pérdida de peso, vómitos persistentes y signos de sangrado."
+          },
+          "rationale": {
+            "pt-BR": "Sinais de alarme mudam investigação e urgência.",
+            "en": "Alarm features change investigation and urgency.",
+            "es": "Las señales de alarma cambian la investigación y la urgencia."
+          }
+        },
+        {
+          "id": "hx-exertion",
+          "domain": "differential",
+          "legacyValue": "dor em esforço",
+          "priority": "essential",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "O desconforto aparece com esforço ou é acompanhado de falta de ar e suor frio?",
+            "en": "Does the discomfort occur with exertion or come with dyspnea and cold sweat?",
+            "es": "¿La molestia aparece con el esfuerzo o se acompaña de disnea y sudor frío?"
+          },
+          "response": {
+            "pt-BR": "Não ocorre com esforço; aparece principalmente após alimentação.",
+            "en": "It does not occur with exertion and appears mainly after meals.",
+            "es": "No ocurre con el esfuerzo y aparece principalmente después de comer."
+          },
+          "rationale": {
+            "pt-BR": "Evita atribuir automaticamente dor torácica ou epigástrica ao refluxo.",
+            "en": "Avoids automatically attributing chest or epigastric discomfort to reflux.",
+            "es": "Evita atribuir automáticamente el dolor torácico o epigástrico al reflujo."
+          }
+        },
+        {
+          "id": "hx-medications",
+          "domain": "medications",
+          "legacyValue": "fatores de risco",
+          "priority": "recommended",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Usa anti-inflamatórios, álcool, tabaco ou medicamentos novos?",
+            "en": "Do you use NSAIDs, alcohol, tobacco, or new medicines?",
+            "es": "¿Usa antiinflamatorios, alcohol, tabaco o medicamentos nuevos?"
+          },
+          "response": {
+            "pt-BR": "Usa ibuprofeno ocasionalmente e consome café em excesso; não fuma.",
+            "en": "She uses ibuprofen occasionally and drinks excessive coffee; she does not smoke.",
+            "es": "Usa ibuprofeno ocasionalmente y consume café en exceso; no fuma."
+          },
+          "rationale": {
+            "pt-BR": "Ajuda a reconhecer fatores que agravam sintomas.",
+            "en": "Helps identify factors that worsen symptoms.",
+            "es": "Ayuda a reconocer factores que empeoran los síntomas."
+          }
+        },
+        {
+          "id": "hx-night",
+          "domain": "history",
+          "legacyValue": "tempo dos sintomas",
+          "priority": "recommended",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Os sintomas acordam à noite ou melhoram com alguma medida?",
+            "en": "Do symptoms wake you at night or improve with any measure?",
+            "es": "¿Los síntomas la despiertan por la noche o mejoran con alguna medida?"
+          },
+          "response": {
+            "pt-BR": "Às vezes acorda com queimação; melhora ao elevar a cabeceira e evitar deitar após comer.",
+            "en": "She sometimes wakes with burning; it improves by elevating the head and avoiding lying down after meals.",
+            "es": "A veces se despierta con ardor; mejora al elevar la cabecera y evitar acostarse después de comer."
+          },
+          "rationale": {
+            "pt-BR": "Caracteriza frequência, impacto e resposta a medidas simples.",
+            "en": "Characterizes frequency, impact, and response to simple measures.",
+            "es": "Caracteriza frecuencia, impacto y respuesta a medidas simples."
+          }
+        }
+      ],
+      "physicalExam": [
+        {
+          "id": "pe-vitals",
+          "system": "general",
+          "legacyValue": "Aferir sinais vitais",
+          "priority": "essential",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Sinais vitais e estabilidade",
+            "en": "Vital signs and stability",
+            "es": "Signos vitales y estabilidad"
+          },
+          "finding": {
+            "pt-BR": "Sinais vitais estáveis, sem desconforto respiratório.",
+            "en": "Vital signs stable, no respiratory distress.",
+            "es": "Signos vitales estables, sin dificultad respiratoria."
+          },
+          "rationale": {
+            "pt-BR": "Confirma estabilidade antes de assumir quadro ambulatorial.",
+            "en": "Confirms stability before treating the case as outpatient.",
+            "es": "Confirma estabilidad antes de considerar el cuadro ambulatorio."
+          }
+        },
+        {
+          "id": "pe-abdomen",
+          "system": "abdominal",
+          "legacyValue": "Palpação abdominal",
+          "priority": "essential",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Exame abdominal focal",
+            "en": "Focused abdominal examination",
+            "es": "Examen abdominal focal"
+          },
+          "finding": {
+            "pt-BR": "Abdome flácido, discreto desconforto epigástrico, sem defesa.",
+            "en": "Abdomen soft, mild epigastric discomfort, no guarding.",
+            "es": "Abdomen blando, leve molestia epigástrica, sin defensa."
+          },
+          "rationale": {
+            "pt-BR": "Procura sinais de outra causa abdominal e complicação.",
+            "en": "Looks for another abdominal cause and complications.",
+            "es": "Busca otra causa abdominal y complicaciones."
+          }
+        },
+        {
+          "id": "pe-cardiac",
+          "system": "cardiovascular",
+          "legacyValue": "Ausculta cardíaca",
+          "priority": "recommended",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Avaliação cardiovascular breve",
+            "en": "Brief cardiovascular assessment",
+            "es": "Evaluación cardiovascular breve"
+          },
+          "finding": {
+            "pt-BR": "Ritmo regular, sem achado agudo no exame simulado.",
+            "en": "Regular rhythm, no acute finding in the simulated examination.",
+            "es": "Ritmo regular, sin hallazgo agudo en el examen simulado."
+          },
+          "rationale": {
+            "pt-BR": "Mantém atenção a diagnósticos diferenciais de desconforto torácico.",
+            "en": "Maintains attention to differential diagnoses of chest discomfort.",
+            "es": "Mantiene atención a diagnósticos diferenciales del malestar torácico."
+          }
+        },
+        {
+          "id": "pe-general",
+          "system": "general",
+          "legacyValue": "Exame físico geral",
+          "priority": "recommended",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Estado geral e sinais de anemia ou desidratação",
+            "en": "General condition and signs of anemia or dehydration",
+            "es": "Estado general y signos de anemia o deshidratación"
+          },
+          "finding": {
+            "pt-BR": "Paciente corada, hidratada e sem sinais clínicos de sangramento.",
+            "en": "Patient appears well perfused and hydrated, with no clinical signs of bleeding.",
+            "es": "Paciente bien perfundida e hidratada, sin signos clínicos de sangrado."
+          },
+          "rationale": {
+            "pt-BR": "Complementa a busca de sinais de alarme.",
+            "en": "Complements alarm-feature screening.",
+            "es": "Complementa la búsqueda de señales de alarma."
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "dermatite-atopica",
+      "interview": [
+        {
+          "id": "hx-course",
+          "domain": "history",
+          "legacyValue": "tempo dos sintomas",
+          "priority": "essential",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Quando as lesões começaram e como mudaram?",
+            "en": "When did the lesions begin and how have they changed?",
+            "es": "¿Cuándo comenzaron las lesiones y cómo han cambiado?"
+          },
+          "response": {
+            "pt-BR": "Começaram há semanas, pioram em crises e coçam mais à noite.",
+            "en": "They began weeks ago, flare intermittently, and itch more at night.",
+            "es": "Comenzaron hace semanas, empeoran en brotes y pican más por la noche."
+          },
+          "rationale": {
+            "pt-BR": "Define curso, recorrência e impacto.",
+            "en": "Defines course, recurrence, and impact.",
+            "es": "Define curso, recurrencia e impacto."
+          }
+        },
+        {
+          "id": "hx-triggers",
+          "domain": "triggers",
+          "legacyValue": "alergias e gatilhos",
+          "priority": "essential",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Há relação com calor, suor, tecidos, poeira ou produtos?",
+            "en": "Is there a relation to heat, sweat, fabrics, dust, or products?",
+            "es": "¿Hay relación con calor, sudor, tejidos, polvo o productos?"
+          },
+          "response": {
+            "pt-BR": "Piora com calor, suor e contato com roupas ásperas.",
+            "en": "It worsens with heat, sweat, and rough clothing.",
+            "es": "Empeora con calor, sudor y ropa áspera."
+          },
+          "rationale": {
+            "pt-BR": "Ajuda a reconhecer gatilhos modificáveis.",
+            "en": "Helps identify modifiable triggers.",
+            "es": "Ayuda a reconocer desencadenantes modificables."
+          }
+        },
+        {
+          "id": "hx-products",
+          "domain": "exposure",
+          "legacyValue": "uso de produtos na pele",
+          "priority": "essential",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Usou sabonete, creme, perfume ou produto novo?",
+            "en": "Have you used a new soap, cream, perfume, or skin product?",
+            "es": "¿Ha usado jabón, crema, perfume o producto nuevo?"
+          },
+          "response": {
+            "pt-BR": "Trocou o sabonete recentemente e usa hidratante apenas ocasionalmente.",
+            "en": "She recently changed soap and uses moisturizer only occasionally.",
+            "es": "Cambió el jabón recientemente y usa hidratante solo ocasionalmente."
+          },
+          "rationale": {
+            "pt-BR": "Diferencia exposição irritativa ou de contato e orienta prevenção.",
+            "en": "Helps distinguish irritant/contact exposure and guides prevention.",
+            "es": "Ayuda a distinguir exposición irritativa o de contacto y orientar la prevención."
+          }
+        },
+        {
+          "id": "hx-infection",
+          "domain": "safety",
+          "legacyValue": "sinais de alarme",
+          "priority": "essential",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Há dor intensa, febre, pus, crostas amareladas ou rápida expansão?",
+            "en": "Is there severe pain, fever, pus, yellow crusting, or rapid spread?",
+            "es": "¿Hay dolor intenso, fiebre, pus, costras amarillentas o rápida expansión?"
+          },
+          "response": {
+            "pt-BR": "Nega febre, pus e dor intensa; há escoriações pelo ato de coçar.",
+            "en": "She denies fever, pus, and severe pain; there are scratch marks from itching.",
+            "es": "Niega fiebre, pus y dolor intenso; hay excoriaciones por rascado."
+          },
+          "rationale": {
+            "pt-BR": "Busca infecção secundária e outros sinais que mudariam a conduta.",
+            "en": "Screens for secondary infection and other findings that would change management.",
+            "es": "Busca infección secundaria y otros hallazgos que cambiarían la conducta."
+          }
+        },
+        {
+          "id": "hx-atopy",
+          "domain": "background",
+          "legacyValue": "histórico familiar",
+          "priority": "recommended",
+          "redFlag": false,
+          "label": {
+            "pt-BR": "Há asma, rinite ou dermatite na pessoa ou na família?",
+            "en": "Is there asthma, rhinitis, or dermatitis in the patient or family?",
+            "es": "¿Hay asma, rinitis o dermatitis en la persona o la familia?"
+          },
+          "response": {
+            "pt-BR": "Refere rinite desde a infância e irmã com dermatite semelhante.",
+            "en": "She reports rhinitis since childhood and a sister with similar dermatitis.",
+            "es": "Refiere rinitis desde la infancia y una hermana con dermatitis similar."
+          },
+          "rationale": {
+            "pt-BR": "Contextualiza história atópica sem substituir avaliação das lesões.",
+            "en": "Provides atopic context without replacing lesion assessment.",
+            "es": "Contextualiza la historia atópica sin sustituir la evaluación de las lesiones."
+          }
+        }
+      ],
+      "physicalExam": [
+        {
+          "id": "pe-skin",
+          "system": "dermatological",
+          "legacyValue": "Avaliação dermatológica",
+          "priority": "essential",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Inspeção da distribuição e morfologia",
+            "en": "Inspect distribution and morphology",
+            "es": "Inspeccionar distribución y morfología"
+          },
+          "finding": {
+            "pt-BR": "Placas eritematosas e ressecadas em áreas flexurais, com escoriações superficiais.",
+            "en": "Erythematous dry plaques in flexural areas with superficial excoriations.",
+            "es": "Placas eritematosas y secas en zonas flexurales con excoriaciones superficiales."
+          },
+          "rationale": {
+            "pt-BR": "Morfologia e distribuição orientam o raciocínio dermatológico.",
+            "en": "Morphology and distribution guide dermatological reasoning.",
+            "es": "La morfología y distribución orientan el razonamiento dermatológico."
+          }
+        },
+        {
+          "id": "pe-infection",
+          "system": "dermatological",
+          "legacyValue": "Avaliação dermatológica",
+          "priority": "essential",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Pesquisar sinais de infecção secundária",
+            "en": "Check for secondary infection",
+            "es": "Buscar signos de infección secundaria"
+          },
+          "finding": {
+            "pt-BR": "Sem secreção purulenta, calor local importante ou crostas melicéricas extensas.",
+            "en": "No purulent drainage, marked warmth, or extensive honey-colored crusting.",
+            "es": "Sin secreción purulenta, calor local importante ni costras melicéricas extensas."
+          },
+          "rationale": {
+            "pt-BR": "Identifica complicações que exigem outra abordagem.",
+            "en": "Identifies complications requiring a different approach.",
+            "es": "Identifica complicaciones que requieren otro enfoque."
+          }
+        },
+        {
+          "id": "pe-general",
+          "system": "general",
+          "legacyValue": "Exame físico geral",
+          "priority": "recommended",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Estado geral e extensão corporal",
+            "en": "General condition and body-surface extent",
+            "es": "Estado general y extensión corporal"
+          },
+          "finding": {
+            "pt-BR": "Paciente em bom estado geral; lesões localizadas, sem comprometimento sistêmico.",
+            "en": "Patient is well; lesions are localized with no systemic involvement.",
+            "es": "Paciente en buen estado general; lesiones localizadas, sin afectación sistémica."
+          },
+          "rationale": {
+            "pt-BR": "Avalia extensão e repercussão além da área principal.",
+            "en": "Assesses extent and impact beyond the main area.",
+            "es": "Evalúa extensión y repercusión más allá del área principal."
+          }
+        },
+        {
+          "id": "pe-hydration",
+          "system": "dermatological",
+          "legacyValue": "Orientação terapêutica",
+          "priority": "recommended",
+          "abnormal": false,
+          "label": {
+            "pt-BR": "Avaliar ressecamento e barreira cutânea",
+            "en": "Assess dryness and skin barrier",
+            "es": "Evaluar sequedad y barrera cutánea"
+          },
+          "finding": {
+            "pt-BR": "Ressecamento difuso leve, mais intenso nas áreas lesionadas.",
+            "en": "Mild diffuse dryness, more intense in affected areas.",
+            "es": "Sequedad difusa leve, más intensa en las áreas lesionadas."
+          },
+          "rationale": {
+            "pt-BR": "Relaciona achados à proteção da barreira cutânea.",
+            "en": "Links findings to skin-barrier protection.",
+            "es": "Relaciona los hallazgos con la protección de la barrera cutánea."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 // Camada de compatibilidade isolada do núcleo modular.
 /* v0.8.8 stability polish safe patch */
 (function(){
-  window.VALE_BUILD_LABEL = 'v0.18.0 | build 2026-06-12 17:15:20 BRT';
+  window.VALE_BUILD_LABEL = 'v0.24.0 | build 2026-06-13 11:57:41 BRT';
   window.addEventListener('error', function(ev){
     try{ console.warn('[ValeSafeGuard]', ev.message); document.body.classList.add('safe-runtime'); }catch(e){}
   });
@@ -22,7 +22,7 @@
     if(document.querySelector('.build')) return;
     const b=document.createElement('div');
     b.className='build';
-    b.textContent='v0.18.0 | build 2026-06-12 17:15:20 BRT';
+    b.textContent='v0.24.0 | build 2026-06-13 11:57:41 BRT';
     document.body.appendChild(b);
   }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ensureBuildBadge);
@@ -32,7 +32,7 @@
 
 /* v0.8.9 release readiness safe patch */
 (function(){
-  window.VALE_BUILD_LABEL = 'v0.18.0 | build 2026-06-12 17:15:20 BRT';
+  window.VALE_BUILD_LABEL = 'v0.24.0 | build 2026-06-13 11:57:41 BRT';
   function preloadBackgrounds(){
     try {
       var paths = [
@@ -67,10 +67,10 @@
 
 /* v0.9.0 release candidate safe patch */
 (function(){
-  window.VALE_BUILD_LABEL = 'v0.18.0 | build 2026-06-12 17:15:20 BRT';
+  window.VALE_BUILD_LABEL = 'v0.24.0 | build 2026-06-13 11:57:41 BRT';
   window.ValeReleaseCandidate = {
     version: '0.9.0',
-    build: 'v0.18.0 | build 2026-06-12 17:15:20 BRT',
+    build: 'v0.24.0 | build 2026-06-13 11:57:41 BRT',
     safeMode: true,
     exportSave: function(){
       try {
@@ -118,7 +118,7 @@
 
 /* v0.9.1 diagnostics safe patch */
 (function(){
-  window.VALE_BUILD_LABEL = 'v0.18.0 | build 2026-06-12 17:15:20 BRT';
+  window.VALE_BUILD_LABEL = 'v0.24.0 | build 2026-06-13 11:57:41 BRT';
   var LOG_KEY = 'medical_simulator_diagnostics_v091';
   function readLog(){
     try { return JSON.parse(localStorage.getItem(LOG_KEY) || '[]'); } catch(e) { return []; }
@@ -127,7 +127,7 @@
   function addLog(type, detail){
     try {
       var log = readLog();
-      log.push({type:type, detail:String(detail||''), at:new Date().toISOString(), build:'v0.18.0 | build 2026-06-12 17:15:20 BRT', width:innerWidth, height:innerHeight});
+      log.push({type:type, detail:String(detail||''), at:new Date().toISOString(), build:'v0.24.0 | build 2026-06-13 11:57:41 BRT', width:innerWidth, height:innerHeight});
       writeLog(log);
     } catch(e) {}
   }
@@ -135,7 +135,7 @@
     log:addLog,
     export:function(){
       try {
-        var payload = {build:'v0.18.0 | build 2026-06-12 17:15:20 BRT', diagnostics:readLog()};
+        var payload = {build:'v0.24.0 | build 2026-06-13 11:57:41 BRT', diagnostics:readLog()};
         var blob = new Blob([JSON.stringify(payload,null,2)], {type:'application/json'});
         var a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
@@ -167,7 +167,7 @@
 
 /* v0.9.2 prefinal ui safe patch */
 (function(){
-  window.VALE_BUILD_LABEL = 'v0.18.0 | build 2026-06-12 17:15:20 BRT';
+  window.VALE_BUILD_LABEL = 'v0.24.0 | build 2026-06-13 11:57:41 BRT';
   function setTechVisible(visible){
     try {
       document.body.classList.toggle('show-tech-tools', !!visible);
@@ -211,7 +211,7 @@
 
 /* v0.9.3 final test polish safe patch */
 (function(){
-  window.VALE_BUILD_LABEL = 'v0.18.0 | build 2026-06-12 17:15:20 BRT';
+  window.VALE_BUILD_LABEL = 'v0.24.0 | build 2026-06-13 11:57:41 BRT';
   var checklist = [
     'Lobby com fundo visível',
     'Atendimento abre sem tela branca',
@@ -266,10 +266,10 @@
 
 /* v0.9.4 release freeze safe patch */
 (function(){
-  window.VALE_BUILD_LABEL = 'v0.18.0 | build 2026-06-12 17:15:20 BRT';
+  window.VALE_BUILD_LABEL = 'v0.24.0 | build 2026-06-13 11:57:41 BRT';
   window.VALE_RELEASE_FREEZE = {
     frozen: false,
-    build: 'v0.18.0 | build 2026-06-12 17:15:20 BRT',
+    build: 'v0.24.0 | build 2026-06-13 11:57:41 BRT',
     policy: 'No core gameplay changes after this build without explicit rollback plan.'
   };
   function addFreezeMarker(){
@@ -287,10 +287,10 @@
 
 /* v0.9.5 gold candidate safe patch */
 (function(){
-  window.VALE_BUILD_LABEL = 'v0.18.0 | build 2026-06-12 17:15:20 BRT';
+  window.VALE_BUILD_LABEL = 'v0.24.0 | build 2026-06-13 11:57:41 BRT';
   window.VALE_GOLD_CANDIDATE = {
     candidate: false,
-    build: 'v0.18.0 | build 2026-06-12 17:15:20 BRT',
+    build: 'v0.24.0 | build 2026-06-13 11:57:41 BRT',
     rule: 'Only critical fixes after this build.'
   };
   function marker(){

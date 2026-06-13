@@ -1,8 +1,8 @@
 {
   "id": "medical-simulator-vale-edition-core",
   "name": "Medical Simulator - Vale Edition Core",
-  "version": "0.18.0",
-  "build": "20260612_171520_BRT",
+  "version": "0.24.0",
+  "build": "20260613_122500_BRT",
   "architecture": {
     "entry": "src/core/boot-guard.js -> src/app.js",
     "modules": [
@@ -11,10 +11,11 @@
       "data",
       "i18n",
       "compat",
-      "observability"
+      "observability",
+      "simulation"
     ],
-    "contentSchema": 3,
-    "saveSchema": 9
+    "contentSchema": 9,
+    "saveSchema": 15
   },
   "activeCases": 6,
   "stagedCases": 3,
@@ -50,7 +51,34 @@
     "sequential_learning_path",
     "guided_clinical_case",
     "structured_debriefing",
-    "academy_progress_persistence"
+    "academy_progress_persistence",
+    "continuous_physiology_engine",
+    "case_specific_natural_course",
+    "case_specific_action_effects",
+    "physiology_reassessment",
+    "physiology_trend_history",
+    "physiology_score_component",
+    "structured_history",
+    "structured_physical_exam",
+    "contextual_clinical_responses",
+    "native_mobile_vertical_scroll",
+    "explicit_fullscreen_only",
+    "emergency_abcde",
+    "deterministic_emergency_deterioration",
+    "emergency_timeline",
+    "emergency_debriefing",
+    "emergency_release_gate",
+    "outpatient_longitudinal_care",
+    "outpatient_adherence_engine",
+    "outpatient_goal_tracking",
+    "outpatient_barrier_management",
+    "outpatient_visit_history",
+    "outpatient_release_gate",
+    "branched_cases",
+    "difficulty_levels",
+    "conditional_clues",
+    "differential_diagnoses",
+    "multiple_case_outcomes"
   ],
   "medicalGovernance": {
     "channel": "development",
@@ -70,5 +98,57 @@
     ],
     "releaseReady": false,
     "registry": "data/academy.json"
+  },
+  "physiology": {
+    "schema": 1,
+    "engineVersion": "1.0.0",
+    "profiles": 6,
+    "continuousTime": true,
+    "educationalOnly": true,
+    "releaseReady": false,
+    "registry": "data/physiology.json"
+  },
+  "assessment": {
+    "schema": 1,
+    "profiles": 6,
+    "locales": [
+      "pt-BR",
+      "en",
+      "es"
+    ],
+    "releaseReady": false,
+    "registry": "data/assessment.json"
+  },
+  "emergency": {
+    "schema": 1,
+    "engineVersion": "1.0.0",
+    "scenarios": 9,
+    "actions": 34,
+    "stages": 5,
+    "deterministic": true,
+    "educationalOnly": true,
+    "releaseReady": false,
+    "registry": "data/emergency.json"
+  },
+  "outpatient": {
+    "schema": 1,
+    "engineVersion": "1.0.0",
+    "programs": 10,
+    "actions": 15,
+    "longitudinalVisits": true,
+    "deterministic": true,
+    "educationalOnly": true,
+    "releaseReady": false,
+    "registry": "data/outpatient.json"
+  },
+  "branching": {
+    "schema": 1,
+    "engineVersion": "1.0.0",
+    "profiles": 6,
+    "difficulties": 4,
+    "clues": 18,
+    "outcomes": 4,
+    "releaseReady": false,
+    "registry": "data/branching.json"
   }
 }

@@ -1,7 +1,7 @@
 // Fallback anti-quebra gerado a partir de data/academy.json.
 export const FALLBACK_ACADEMY = Object.freeze({
   "schemaVersion": 1,
-  "contentVersion": "0.18.0",
+  "contentVersion": "0.24.0",
   "status": "development-only",
   "publishable": false,
   "locales": [

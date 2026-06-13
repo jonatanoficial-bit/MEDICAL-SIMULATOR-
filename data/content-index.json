@@ -1,7 +1,7 @@
 {
   "id": "medical-simulator-vale-content",
-  "schemaVersion": 3,
-  "contentVersion": "0.18.0",
+  "schemaVersion": 9,
+  "contentVersion": "0.24.0",
   "required": [
     "data/core-cases.json",
     "data/gameplay.json",
@@ -10,15 +10,21 @@
     "data/missions.json",
     "data/clinical-responses.json",
     "data/governance.json",
-    "data/academy.json"
+    "data/academy.json",
+    "data/physiology.json",
+    "data/assessment.json",
+    "data/emergency.json",
+    "data/outpatient.json",
+    "data/branching.json"
   ],
   "staged": [
     "data/legacy-cases-v0.8.json",
     "data/catalog.json"
   ],
   "notes": [
-    "A Academia Clínica possui 9 módulos, 27 lições, pré-teste e um caso guiado em PT-BR, inglês e espanhol.",
-    "O conteúdo educacional permanece no canal development e não substitui formação ou atendimento profissional.",
-    "Os seis casos ativos continuam bloqueados para publicação comercial até revisão clínica independente."
+    "Casos ramificados com quatro níveis de dificuldade, pistas condicionais e múltiplos desfechos.",
+    "Pacote ambulatorial com 10 linhas de cuidado, metas, adesão, retornos e barreiras longitudinais.",
+    "Rolagem vertical mobile nativa preservada; tela cheia somente por botão explícito.",
+    "Todo conteúdo ambulatorial permanece bloqueado até revisão clínica, terminológica e de segurança independente."
   ]
 }

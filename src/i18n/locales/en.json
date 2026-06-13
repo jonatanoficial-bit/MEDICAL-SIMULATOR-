@@ -5,5 +5,16 @@
     "app.name": "Medical Simulator - Vale Edition",
     "system.safeMode": "Safe mode active",
     "settings.language": "Language"
+  },
+  "ui": {
+    "Emergência": "Emergency",
+    "ABCDE": "ABCDE",
+    "Treino de emergência": "Emergency training",
+    "Centro de emergência": "Emergency center",
+    "Iniciar cenário": "Start scenario",
+    "Ações críticas": "Critical actions",
+    "Deterioração crítica": "Critical deterioration",
+    "Estabilizado": "Stabilized",
+    "Em andamento": "In progress"
   }
 }

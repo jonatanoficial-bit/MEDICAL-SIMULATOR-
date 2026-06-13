@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "0.18.0",
+  "contentVersion": "0.24.0",
   "releaseChannel": "development",
   "policy": {
     "productScope": "educational-clinical-simulation",
@@ -179,6 +179,138 @@
       "accessedAt": "2026-06-12T17:15:20-03:00",
       "status": "active",
       "notes": "Referência de qualidade para melhorar processos diagnósticos, monitorar resultados e reduzir dano."
+    },
+    {
+      "id": "WHO-MEDICATION-WITHOUT-HARM-2024",
+      "title": "Medication without harm: policy brief",
+      "organization": "World Health Organization",
+      "year": 2024,
+      "region": "global",
+      "type": "medication-safety-framework",
+      "url": "https://www.who.int/publications/i/item/9789240062764",
+      "accessedAt": "2026-06-13T10:01:34-03:00",
+      "status": "active",
+      "notes": "Base transversal para reconciliação, barreiras de segurança e prevenção de dano evitável relacionado a medicamentos."
+    },
+    {
+      "id": "AHRQ-MED-RECONCILIATION",
+      "title": "Medications at Transitions and Clinical Handoffs (MATCH) Toolkit",
+      "organization": "Agency for Healthcare Research and Quality",
+      "year": 2012,
+      "region": "United States / international education reference",
+      "type": "medication-reconciliation-toolkit",
+      "url": "https://www.ahrq.gov/patient-safety/settings/hospital/match/index.html",
+      "accessedAt": "2026-06-13T10:01:34-03:00",
+      "status": "active",
+      "notes": "Referência de processo para comparar medicamentos atuais, ordens propostas e discrepâncias de segurança."
+    },
+    {
+      "id": "WHO-LAB-QMS-2011",
+      "title": "Laboratory quality management system: handbook",
+      "organization": "World Health Organization",
+      "year": 2011,
+      "region": "global",
+      "type": "laboratory-quality-framework",
+      "url": "https://www.who.int/publications/i/item/9789241548274",
+      "accessedAt": "2026-06-13T10:01:34-03:00",
+      "status": "active",
+      "notes": "Base para identificação, amostra, processamento, confiabilidade e revisão de resultados laboratoriais."
+    },
+    {
+      "id": "AHA-ACS-2025",
+      "title": "2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes",
+      "organization": "American Heart Association / American College of Cardiology",
+      "year": 2025,
+      "region": "United States / international reference",
+      "type": "clinical-practice-guideline",
+      "url": "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes",
+      "accessedAt": "2026-06-13T11:13:08-03:00",
+      "status": "active",
+      "notes": "Base para reconhecimento, ECG precoce, estratificação e ativação de reperfusão no cenário educacional."
+    },
+    {
+      "id": "AHA-ASA-STROKE-2026",
+      "title": "2026 Guideline for the Early Management of Patients With Acute Ischemic Stroke",
+      "organization": "American Heart Association / American Stroke Association",
+      "year": 2026,
+      "region": "United States / international reference",
+      "type": "clinical-practice-guideline",
+      "url": "https://www.stroke.org/en/professionals/stroke-resource-library/acute-ischemic-stroke-resources",
+      "accessedAt": "2026-06-13T11:13:08-03:00",
+      "status": "active",
+      "notes": "Base para tempo de início, triagem neurológica, glicemia, imagem e via de reperfusão."
+    },
+    {
+      "id": "SSC-SEPSIS-2026",
+      "title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2026",
+      "organization": "Society of Critical Care Medicine / European Society of Intensive Care Medicine",
+      "year": 2026,
+      "region": "global",
+      "type": "clinical-practice-guideline",
+      "url": "https://www.sccm.org/clinical-resources/guidelines/guidelines/surviving-sepsis-campaign-international-guidelines-for-management-of-sepsis-and-septic-shock-2026",
+      "accessedAt": "2026-06-13T11:13:08-03:00",
+      "status": "active",
+      "notes": "Base para reconhecimento, antimicrobianos responsáveis, ressuscitação guiada e reavaliação hemodinâmica."
+    },
+    {
+      "id": "RCUK-ANAPHYLAXIS-2021",
+      "title": "Emergency treatment of anaphylactic reactions — guideline for healthcare providers",
+      "organization": "Resuscitation Council UK",
+      "year": 2021,
+      "region": "United Kingdom / international reference",
+      "type": "emergency-algorithm",
+      "url": "https://www.resus.org.uk/library/additional-guidance/guidance-anaphylaxis/emergency-treatment-anaphylactic-reactions",
+      "accessedAt": "2026-06-13T11:13:08-03:00",
+      "status": "active",
+      "notes": "Base para reconhecimento, ajuda precoce, epinefrina IM e reavaliação. Revisar quando a atualização específica for publicada."
+    },
+    {
+      "id": "CDC-NALOXONE-2025",
+      "title": "Lifesaving Naloxone",
+      "organization": "Centers for Disease Control and Prevention",
+      "year": 2025,
+      "region": "United States / public safety reference",
+      "type": "overdose-emergency-guidance",
+      "url": "https://www.cdc.gov/stop-overdose/caring/naloxone.html",
+      "accessedAt": "2026-06-13T11:13:08-03:00",
+      "status": "active",
+      "notes": "Base para naloxona, suporte ventilatório, acionamento de emergência e reavaliação."
+    },
+    {
+      "id": "GINA-ASTHMA-2025",
+      "title": "Global Strategy for Asthma Management and Prevention 2025",
+      "organization": "Global Initiative for Asthma",
+      "year": 2025,
+      "region": "global",
+      "type": "clinical-strategy-report",
+      "url": "https://ginasthma.org/2025-gina-strategy-report/",
+      "accessedAt": "2026-06-13T11:13:08-03:00",
+      "status": "active",
+      "notes": "Base para avaliação de gravidade, oxigenação, broncodilatadores e sinais de falência respiratória."
+    },
+    {
+      "id": "ESC-PE-2019",
+      "title": "2019 ESC Guidelines on Acute Pulmonary Embolism",
+      "organization": "European Society of Cardiology",
+      "year": 2019,
+      "region": "Europe / international reference",
+      "type": "clinical-practice-guideline",
+      "url": "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/acute-pulmonary-embolism-diagnosis-and-management-of/",
+      "accessedAt": "2026-06-13T11:13:08-03:00",
+      "status": "active",
+      "notes": "Referência vigente no registro para avaliação de estabilidade, risco e via de tratamento do TEP."
+    },
+    {
+      "id": "ADA-HYPOGLYCEMIA-2026",
+      "title": "Standards of Care in Diabetes—2026: Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises",
+      "organization": "American Diabetes Association",
+      "year": 2026,
+      "region": "United States / international reference",
+      "type": "clinical-practice-standard",
+      "url": "https://diabetesjournals.org/care/article/49/Supplement_1/S132/163927/6-Glycemic-Goals-Hypoglycemia-and-Hyperglycemic",
+      "accessedAt": "2026-06-13T11:13:08-03:00",
+      "status": "active",
+      "notes": "Base para reconhecimento, tratamento imediato e reavaliação de hipoglicemia."
     }
   ],
   "cases": {
@@ -449,6 +581,13 @@
       "action": "governance-registry-created",
       "build": "0.17.0",
       "detail": "Fontes oficiais mapeadas. Nenhum caso recebeu aprovação clínica automática."
+    },
+    {
+      "at": "2026-06-13T12:25:00-03:00",
+      "actor": "build-system",
+      "action": "branching-registry-added",
+      "build": "0.24.0",
+      "detail": "Seis perfis ramificados e quatro níveis adicionados. Conteúdo permanece bloqueado para publicação."
     }
   ]
 }

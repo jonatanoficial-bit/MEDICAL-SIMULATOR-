@@ -1,0 +1,935 @@
+{
+  "schemaVersion": 1,
+  "engineVersion": "1.0.0",
+  "policy": {
+    "status": "development-only",
+    "publishable": false,
+    "medicalAdvice": false,
+    "independentClinicalReviewRequired": true,
+    "pharmacyReviewRequired": true,
+    "trilingualTerminologyReviewRequired": true,
+    "commercialReleaseBlockedUntilApproved": true,
+    "disclaimer": {
+      "pt-BR": "Ordens, doses e tempos são componentes educacionais do cenário. Não devem ser reutilizados para tratar pessoas reais.",
+      "en": "Orders, doses, and timing are educational scenario components. They must not be reused to treat real people.",
+      "es": "Las órdenes, dosis y tiempos son componentes educativos del escenario. No deben reutilizarse para tratar personas reales."
+    },
+    "sources": [
+      "WHO-MEDICATION-WITHOUT-HARM-2024",
+      "AHRQ-MED-RECONCILIATION",
+      "WHO-LAB-QMS-2011"
+    ]
+  },
+  "requiredSafetyChecks": [
+    "identity",
+    "allergies",
+    "currentMedications",
+    "renalHepatic",
+    "pregnancy",
+    "indicationRoute"
+  ],
+  "examCatalog": [
+    {
+      "id": "cbc",
+      "legacyValue": "Hemograma completo",
+      "category": "laboratory",
+      "turnaroundMinutes": 12,
+      "specimen": {
+        "pt-BR": "Sangue venoso",
+        "en": "Venous blood",
+        "es": "Sangre venosa"
+      },
+      "label": {
+        "pt-BR": "Hemograma",
+        "en": "Complete blood count",
+        "es": "Hemograma completo"
+      },
+      "statusFlow": [
+        "requested",
+        "processing",
+        "ready"
+      ],
+      "qualityChecks": [
+        "patient-identity",
+        "indication",
+        "sample-or-preparation",
+        "result-review"
+      ],
+      "educationalNote": {
+        "pt-BR": "Tempo comprimido para o cenário; não representa prazo real de laboratório.",
+        "en": "Compressed scenario timing; it does not represent real laboratory turnaround.",
+        "es": "Tiempo comprimido para el escenario; no representa el plazo real del laboratorio."
+      }
+    },
+    {
+      "id": "ecg",
+      "legacyValue": "Eletrocardiograma (ECG)",
+      "category": "cardiology",
+      "turnaroundMinutes": 2,
+      "specimen": {
+        "pt-BR": "Sem amostra",
+        "en": "No specimen",
+        "es": "Sin muestra"
+      },
+      "label": {
+        "pt-BR": "Eletrocardiograma",
+        "en": "Electrocardiogram",
+        "es": "Electrocardiograma"
+      },
+      "statusFlow": [
+        "requested",
+        "processing",
+        "ready"
+      ],
+      "qualityChecks": [
+        "patient-identity",
+        "indication",
+        "sample-or-preparation",
+        "result-review"
+      ],
+      "educationalNote": {
+        "pt-BR": "Tempo comprimido para o cenário; não representa prazo real de laboratório.",
+        "en": "Compressed scenario timing; it does not represent real laboratory turnaround.",
+        "es": "Tiempo comprimido para el escenario; no representa el plazo real del laboratorio."
+      }
+    },
+    {
+      "id": "chest-xray",
+      "legacyValue": "Raio-X de tórax",
+      "category": "imaging",
+      "turnaroundMinutes": 12,
+      "specimen": {
+        "pt-BR": "Sem amostra",
+        "en": "No specimen",
+        "es": "Sin muestra"
+      },
+      "label": {
+        "pt-BR": "Radiografia de tórax",
+        "en": "Chest X-ray",
+        "es": "Radiografía de tórax"
+      },
+      "statusFlow": [
+        "requested",
+        "processing",
+        "ready"
+      ],
+      "qualityChecks": [
+        "patient-identity",
+        "indication",
+        "sample-or-preparation",
+        "result-review"
+      ],
+      "educationalNote": {
+        "pt-BR": "Tempo comprimido para o cenário; não representa prazo real de laboratório.",
+        "en": "Compressed scenario timing; it does not represent real laboratory turnaround.",
+        "es": "Tiempo comprimido para el escenario; no representa el plazo real del laboratorio."
+      }
+    },
+    {
+      "id": "fasting-glucose",
+      "legacyValue": "Glicemia de jejum",
+      "category": "laboratory",
+      "turnaroundMinutes": 5,
+      "specimen": {
+        "pt-BR": "Sangue venoso",
+        "en": "Venous blood",
+        "es": "Sangre venosa"
+      },
+      "label": {
+        "pt-BR": "Glicemia de jejum",
+        "en": "Fasting glucose",
+        "es": "Glucemia en ayunas"
+      },
+      "statusFlow": [
+        "requested",
+        "processing",
+        "ready"
+      ],
+      "qualityChecks": [
+        "patient-identity",
+        "indication",
+        "sample-or-preparation",
+        "result-review"
+      ],
+      "educationalNote": {
+        "pt-BR": "Tempo comprimido para o cenário; não representa prazo real de laboratório.",
+        "en": "Compressed scenario timing; it does not represent real laboratory turnaround.",
+        "es": "Tiempo comprimido para el escenario; no representa el plazo real del laboratorio."
+      }
+    },
+    {
+      "id": "lipid-panel",
+      "legacyValue": "Perfil lipídico",
+      "category": "laboratory",
+      "turnaroundMinutes": 20,
+      "specimen": {
+        "pt-BR": "Sangue venoso",
+        "en": "Venous blood",
+        "es": "Sangre venosa"
+      },
+      "label": {
+        "pt-BR": "Perfil lipídico",
+        "en": "Lipid panel",
+        "es": "Perfil lipídico"
+      },
+      "statusFlow": [
+        "requested",
+        "processing",
+        "ready"
+      ],
+      "qualityChecks": [
+        "patient-identity",
+        "indication",
+        "sample-or-preparation",
+        "result-review"
+      ],
+      "educationalNote": {
+        "pt-BR": "Tempo comprimido para o cenário; não representa prazo real de laboratório.",
+        "en": "Compressed scenario timing; it does not represent real laboratory turnaround.",
+        "es": "Tiempo comprimido para el escenario; no representa el plazo real del laboratorio."
+      }
+    },
+    {
+      "id": "troponin",
+      "legacyValue": "Troponina",
+      "category": "laboratory",
+      "turnaroundMinutes": 8,
+      "specimen": {
+        "pt-BR": "Sangue venoso",
+        "en": "Venous blood",
+        "es": "Sangre venosa"
+      },
+      "label": {
+        "pt-BR": "Troponina cardíaca",
+        "en": "Cardiac troponin",
+        "es": "Troponina cardíaca"
+      },
+      "statusFlow": [
+        "requested",
+        "processing",
+        "ready"
+      ],
+      "qualityChecks": [
+        "patient-identity",
+        "indication",
+        "sample-or-preparation",
+        "result-review"
+      ],
+      "educationalNote": {
+        "pt-BR": "Tempo comprimido para o cenário; não representa prazo real de laboratório.",
+        "en": "Compressed scenario timing; it does not represent real laboratory turnaround.",
+        "es": "Tiempo comprimido para el escenario; no representa el plazo real del laboratorio."
+      }
+    },
+    {
+      "id": "renal-function",
+      "legacyValue": "Ureia e Creatinina",
+      "category": "laboratory",
+      "turnaroundMinutes": 15,
+      "specimen": {
+        "pt-BR": "Sangue venoso",
+        "en": "Venous blood",
+        "es": "Sangre venosa"
+      },
+      "label": {
+        "pt-BR": "Função renal",
+        "en": "Renal function",
+        "es": "Función renal"
+      },
+      "statusFlow": [
+        "requested",
+        "processing",
+        "ready"
+      ],
+      "qualityChecks": [
+        "patient-identity",
+        "indication",
+        "sample-or-preparation",
+        "result-review"
+      ],
+      "educationalNote": {
+        "pt-BR": "Tempo comprimido para o cenário; não representa prazo real de laboratório.",
+        "en": "Compressed scenario timing; it does not represent real laboratory turnaround.",
+        "es": "Tiempo comprimido para el escenario; no representa el plazo real del laboratorio."
+      }
+    },
+    {
+      "id": "tsh",
+      "legacyValue": "TSH",
+      "category": "laboratory",
+      "turnaroundMinutes": 25,
+      "specimen": {
+        "pt-BR": "Sangue venoso",
+        "en": "Venous blood",
+        "es": "Sangre venosa"
+      },
+      "label": {
+        "pt-BR": "TSH",
+        "en": "TSH",
+        "es": "TSH"
+      },
+      "statusFlow": [
+        "requested",
+        "processing",
+        "ready"
+      ],
+      "qualityChecks": [
+        "patient-identity",
+        "indication",
+        "sample-or-preparation",
+        "result-review"
+      ],
+      "educationalNote": {
+        "pt-BR": "Tempo comprimido para o cenário; não representa prazo real de laboratório.",
+        "en": "Compressed scenario timing; it does not represent real laboratory turnaround.",
+        "es": "Tiempo comprimido para el escenario; no representa el plazo real del laboratorio."
+      }
+    },
+    {
+      "id": "urinalysis",
+      "legacyValue": "Urina tipo 1",
+      "category": "laboratory",
+      "turnaroundMinutes": 7,
+      "specimen": {
+        "pt-BR": "Urina jato médio",
+        "en": "Midstream urine",
+        "es": "Orina de chorro medio"
+      },
+      "label": {
+        "pt-BR": "Urina tipo 1",
+        "en": "Urinalysis",
+        "es": "Análisis de orina"
+      },
+      "statusFlow": [
+        "requested",
+        "processing",
+        "ready"
+      ],
+      "qualityChecks": [
+        "patient-identity",
+        "indication",
+        "sample-or-preparation",
+        "result-review"
+      ],
+      "educationalNote": {
+        "pt-BR": "Tempo comprimido para o cenário; não representa prazo real de laboratório.",
+        "en": "Compressed scenario timing; it does not represent real laboratory turnaround.",
+        "es": "Tiempo comprimido para el escenario; no representa el plazo real del laboratorio."
+      }
+    },
+    {
+      "id": "urine-culture",
+      "legacyValue": "Urocultura",
+      "category": "microbiology",
+      "turnaroundMinutes": 60,
+      "specimen": {
+        "pt-BR": "Urina jato médio",
+        "en": "Midstream urine",
+        "es": "Orina de chorro medio"
+      },
+      "label": {
+        "pt-BR": "Urocultura",
+        "en": "Urine culture",
+        "es": "Urocultivo"
+      },
+      "statusFlow": [
+        "requested",
+        "processing",
+        "ready"
+      ],
+      "qualityChecks": [
+        "patient-identity",
+        "indication",
+        "sample-or-preparation",
+        "result-review"
+      ],
+      "educationalNote": {
+        "pt-BR": "Tempo comprimido para o cenário; não representa prazo real de laboratório.",
+        "en": "Compressed scenario timing; it does not represent real laboratory turnaround.",
+        "es": "Tiempo comprimido para el escenario; no representa el plazo real del laboratorio."
+      }
+    },
+    {
+      "id": "upper-endoscopy",
+      "legacyValue": "Endoscopia digestiva alta",
+      "category": "procedure",
+      "turnaroundMinutes": 30,
+      "specimen": {
+        "pt-BR": "Sem amostra",
+        "en": "No specimen",
+        "es": "Sin muestra"
+      },
+      "label": {
+        "pt-BR": "Endoscopia digestiva alta",
+        "en": "Upper endoscopy",
+        "es": "Endoscopia digestiva alta"
+      },
+      "statusFlow": [
+        "requested",
+        "processing",
+        "ready"
+      ],
+      "qualityChecks": [
+        "patient-identity",
+        "indication",
+        "sample-or-preparation",
+        "result-review"
+      ],
+      "educationalNote": {
+        "pt-BR": "Tempo comprimido para o cenário; não representa prazo real de laboratório.",
+        "en": "Compressed scenario timing; it does not represent real laboratory turnaround.",
+        "es": "Tiempo comprimido para el escenario; no representa el plazo real del laboratorio."
+      }
+    },
+    {
+      "id": "ppi-trial",
+      "legacyValue": "Teste terapêutico IBP",
+      "category": "therapeutic-trial",
+      "turnaroundMinutes": 120,
+      "specimen": {
+        "pt-BR": "Sem amostra",
+        "en": "No specimen",
+        "es": "Sin muestra"
+      },
+      "label": {
+        "pt-BR": "Teste terapêutico com IBP",
+        "en": "PPI therapeutic trial",
+        "es": "Prueba terapéutica con IBP"
+      },
+      "statusFlow": [
+        "requested",
+        "processing",
+        "ready"
+      ],
+      "qualityChecks": [
+        "patient-identity",
+        "indication",
+        "sample-or-preparation",
+        "result-review"
+      ],
+      "educationalNote": {
+        "pt-BR": "Tempo comprimido para o cenário; não representa prazo real de laboratório.",
+        "en": "Compressed scenario timing; it does not represent real laboratory turnaround.",
+        "es": "Tiempo comprimido para el escenario; no representa el plazo real del laboratorio."
+      }
+    },
+    {
+      "id": "dermoscopy",
+      "legacyValue": "Dermatoscopia",
+      "category": "procedure",
+      "turnaroundMinutes": 3,
+      "specimen": {
+        "pt-BR": "Sem amostra",
+        "en": "No specimen",
+        "es": "Sin muestra"
+      },
+      "label": {
+        "pt-BR": "Dermatoscopia",
+        "en": "Dermoscopy",
+        "es": "Dermatoscopia"
+      },
+      "statusFlow": [
+        "requested",
+        "processing",
+        "ready"
+      ],
+      "qualityChecks": [
+        "patient-identity",
+        "indication",
+        "sample-or-preparation",
+        "result-review"
+      ],
+      "educationalNote": {
+        "pt-BR": "Tempo comprimido para o cenário; não representa prazo real de laboratório.",
+        "en": "Compressed scenario timing; it does not represent real laboratory turnaround.",
+        "es": "Tiempo comprimido para el escenario; no representa el plazo real del laboratorio."
+      }
+    }
+  ],
+  "interventions": [
+    {
+      "id": "lifestyle",
+      "legacyValue": "orientar estilo de vida",
+      "kind": "plan",
+      "label": {
+        "pt-BR": "Orientação de estilo de vida",
+        "en": "Lifestyle counselling",
+        "es": "Orientación sobre estilo de vida"
+      },
+      "recommendedFor": [
+        "hipertensao-1"
+      ],
+      "order": {
+        "pt-BR": "Plano individualizado e decisão compartilhada.",
+        "en": "Individualized plan and shared decision-making.",
+        "es": "Plan individualizado y decisión compartida."
+      },
+      "contraindicationFlags": [],
+      "warnings": {
+        "pt-BR": "Revisar indicação, riscos e seguimento.",
+        "en": "Review indication, risks, and follow-up.",
+        "es": "Revisar indicación, riesgos y seguimiento."
+      }
+    },
+    {
+      "id": "bp-monitor",
+      "legacyValue": "monitorar pressão",
+      "kind": "monitoring",
+      "label": {
+        "pt-BR": "Monitorização da pressão",
+        "en": "Blood-pressure monitoring",
+        "es": "Monitorización de la presión"
+      },
+      "recommendedFor": [
+        "hipertensao-1"
+      ],
+      "order": {
+        "pt-BR": "Confirmar medidas seriadas e seguimento.",
+        "en": "Confirm serial measurements and follow-up.",
+        "es": "Confirmar mediciones seriadas y seguimiento."
+      },
+      "contraindicationFlags": [],
+      "warnings": {
+        "pt-BR": "Revisar indicação, riscos e seguimento.",
+        "en": "Review indication, risks, and follow-up.",
+        "es": "Revisar indicación, riesgos y seguimiento."
+      }
+    },
+    {
+      "id": "followup",
+      "legacyValue": "retorno ambulatorial",
+      "kind": "plan",
+      "label": {
+        "pt-BR": "Retorno ambulatorial",
+        "en": "Outpatient follow-up",
+        "es": "Seguimiento ambulatorio"
+      },
+      "recommendedFor": [
+        "hipertensao-1"
+      ],
+      "order": {
+        "pt-BR": "Retorno conforme risco e protocolo local.",
+        "en": "Follow-up according to risk and local protocol.",
+        "es": "Seguimiento según riesgo y protocolo local."
+      },
+      "contraindicationFlags": [],
+      "warnings": {
+        "pt-BR": "Revisar indicação, riscos e seguimento.",
+        "en": "Review indication, risks, and follow-up.",
+        "es": "Revisar indicación, riesgos y seguimiento."
+      }
+    },
+    {
+      "id": "paracetamol",
+      "legacyValue": "analgesia simples",
+      "kind": "medication",
+      "label": {
+        "pt-BR": "Paracetamol — ordem simulada",
+        "en": "Paracetamol — simulated order",
+        "es": "Paracetamol — orden simulada"
+      },
+      "recommendedFor": [
+        "cefaleia-tensional"
+      ],
+      "ingredient": "paracetamol",
+      "order": {
+        "dose": "750 mg",
+        "route": "VO",
+        "frequency": "dose única no cenário",
+        "duration": "reavaliar em 60 min"
+      },
+      "contraindicationFlags": [
+        "severe-hepatic-disease",
+        "paracetamol-allergy"
+      ],
+      "warnings": {
+        "pt-BR": "Verificar doença hepática, álcool e produtos combinados com paracetamol.",
+        "en": "Check liver disease, alcohol use, and combination products containing paracetamol.",
+        "es": "Verificar enfermedad hepática, alcohol y productos combinados con paracetamol."
+      }
+    },
+    {
+      "id": "sleep-hygiene",
+      "legacyValue": "higiene do sono",
+      "kind": "plan",
+      "label": {
+        "pt-BR": "Higiene do sono",
+        "en": "Sleep hygiene",
+        "es": "Higiene del sueño"
+      },
+      "recommendedFor": [
+        "cefaleia-tensional"
+      ],
+      "order": {
+        "pt-BR": "Plano não farmacológico e revisão de gatilhos.",
+        "en": "Non-drug plan and trigger review.",
+        "es": "Plan no farmacológico y revisión de desencadenantes."
+      },
+      "contraindicationFlags": [],
+      "warnings": {
+        "pt-BR": "Revisar indicação, riscos e seguimento.",
+        "en": "Review indication, risks, and follow-up.",
+        "es": "Revisar indicación, riesgos y seguimiento."
+      }
+    },
+    {
+      "id": "serial-ecg",
+      "legacyValue": "ECG seriado",
+      "kind": "monitoring",
+      "label": {
+        "pt-BR": "ECG seriado",
+        "en": "Serial ECG",
+        "es": "ECG seriado"
+      },
+      "recommendedFor": [
+        "angina-estavel"
+      ],
+      "order": {
+        "pt-BR": "Repetir conforme evolução e protocolo do cenário.",
+        "en": "Repeat according to progression and scenario protocol.",
+        "es": "Repetir según evolución y protocolo del escenario."
+      },
+      "contraindicationFlags": [],
+      "warnings": {
+        "pt-BR": "Revisar indicação, riscos e seguimento.",
+        "en": "Review indication, risks, and follow-up.",
+        "es": "Revisar indicación, riesgos y seguimiento."
+      }
+    },
+    {
+      "id": "risk-stratification",
+      "legacyValue": "estratificação de risco",
+      "kind": "plan",
+      "label": {
+        "pt-BR": "Estratificação de risco",
+        "en": "Risk stratification",
+        "es": "Estratificación de riesgo"
+      },
+      "recommendedFor": [
+        "angina-estavel"
+      ],
+      "order": {
+        "pt-BR": "Integrar história, ECG, biomarcador e evolução.",
+        "en": "Integrate history, ECG, biomarker, and progression.",
+        "es": "Integrar historia, ECG, biomarcador y evolución."
+      },
+      "contraindicationFlags": [],
+      "warnings": {
+        "pt-BR": "Revisar indicação, riscos e seguimento.",
+        "en": "Review indication, risks, and follow-up.",
+        "es": "Revisar indicación, riesgos y seguimiento."
+      }
+    },
+    {
+      "id": "cardiology-referral",
+      "legacyValue": "encaminhar cardiologia",
+      "kind": "referral",
+      "label": {
+        "pt-BR": "Encaminhamento à cardiologia",
+        "en": "Cardiology referral",
+        "es": "Derivación a cardiología"
+      },
+      "recommendedFor": [
+        "angina-estavel"
+      ],
+      "order": {
+        "pt-BR": "Definir urgência conforme estabilidade e sinais de alarme.",
+        "en": "Set urgency according to stability and warning signs.",
+        "es": "Definir urgencia según estabilidad y señales de alarma."
+      },
+      "contraindicationFlags": [],
+      "warnings": {
+        "pt-BR": "Revisar indicação, riscos e seguimento.",
+        "en": "Review indication, risks, and follow-up.",
+        "es": "Revisar indicación, riesgos y seguimiento."
+      }
+    },
+    {
+      "id": "nitrofurantoin",
+      "legacyValue": "antibioticoterapia guiada",
+      "kind": "medication",
+      "label": {
+        "pt-BR": "Nitrofurantoína — ordem simulada",
+        "en": "Nitrofurantoin — simulated order",
+        "es": "Nitrofurantoína — orden simulada"
+      },
+      "recommendedFor": [
+        "itu-nao-complicada"
+      ],
+      "ingredient": "nitrofurantoin",
+      "order": {
+        "dose": "100 mg",
+        "route": "VO",
+        "frequency": "12/12 h",
+        "duration": "5 dias no cenário"
+      },
+      "contraindicationFlags": [
+        "nitrofurantoin-allergy",
+        "renal-function-reduced",
+        "systemic-uti",
+        "near-term-pregnancy"
+      ],
+      "warnings": {
+        "pt-BR": "Confirmar localização da infecção, gestação, alergias e função renal; seguir protocolo local.",
+        "en": "Confirm infection localization, pregnancy, allergies, and renal function; follow local protocol.",
+        "es": "Confirmar localización de la infección, embarazo, alergias y función renal; seguir protocolo local."
+      }
+    },
+    {
+      "id": "oral-hydration",
+      "legacyValue": "hidratação",
+      "kind": "supportive",
+      "label": {
+        "pt-BR": "Hidratação oral",
+        "en": "Oral hydration",
+        "es": "Hidratación oral"
+      },
+      "recommendedFor": [
+        "itu-nao-complicada"
+      ],
+      "order": {
+        "pt-BR": "Oferta fracionada conforme tolerância e estado clínico.",
+        "en": "Divided intake according to tolerance and clinical status.",
+        "es": "Ingesta fraccionada según tolerancia y estado clínico."
+      },
+      "contraindicationFlags": [],
+      "warnings": {
+        "pt-BR": "Revisar indicação, riscos e seguimento.",
+        "en": "Review indication, risks, and follow-up.",
+        "es": "Revisar indicación, riesgos y seguimiento."
+      }
+    },
+    {
+      "id": "omeprazole",
+      "legacyValue": "inibidor de bomba de prótons",
+      "kind": "medication",
+      "label": {
+        "pt-BR": "Omeprazol — ordem simulada",
+        "en": "Omeprazole — simulated order",
+        "es": "Omeprazol — orden simulada"
+      },
+      "recommendedFor": [
+        "refluxo-gastroesofagico"
+      ],
+      "ingredient": "omeprazole",
+      "order": {
+        "dose": "20 mg",
+        "route": "VO",
+        "frequency": "1 vez ao dia",
+        "duration": "8 semanas no cenário"
+      },
+      "contraindicationFlags": [
+        "ppi-allergy",
+        "alarm-features-unresolved"
+      ],
+      "warnings": {
+        "pt-BR": "Confirmar ausência de sinais de alarme e revisar interações e necessidade de investigação.",
+        "en": "Confirm no unresolved alarm features and review interactions and need for investigation.",
+        "es": "Confirmar ausencia de señales de alarma y revisar interacciones y necesidad de investigación."
+      }
+    },
+    {
+      "id": "food-triggers",
+      "legacyValue": "evitar gatilhos alimentares",
+      "kind": "plan",
+      "label": {
+        "pt-BR": "Orientar gatilhos alimentares",
+        "en": "Food-trigger counselling",
+        "es": "Orientación sobre desencadenantes alimentarios"
+      },
+      "recommendedFor": [
+        "refluxo-gastroesofagico"
+      ],
+      "order": {
+        "pt-BR": "Plano individualizado, evitando restrições genéricas excessivas.",
+        "en": "Individualized plan, avoiding excessive generic restrictions.",
+        "es": "Plan individualizado, evitando restricciones genéricas excesivas."
+      },
+      "contraindicationFlags": [],
+      "warnings": {
+        "pt-BR": "Revisar indicação, riscos e seguimento.",
+        "en": "Review indication, risks, and follow-up.",
+        "es": "Revisar indicación, riesgos y seguimiento."
+      }
+    },
+    {
+      "id": "emollient",
+      "legacyValue": "hidratação da pele",
+      "kind": "supportive",
+      "label": {
+        "pt-BR": "Hidratante sem fragrância",
+        "en": "Fragrance-free emollient",
+        "es": "Emoliente sin fragancia"
+      },
+      "recommendedFor": [
+        "dermatite-atopica"
+      ],
+      "order": {
+        "pt-BR": "Aplicação regular e reforço da barreira cutânea.",
+        "en": "Regular application and skin-barrier support.",
+        "es": "Aplicación regular y refuerzo de la barrera cutánea."
+      },
+      "contraindicationFlags": [],
+      "warnings": {
+        "pt-BR": "Revisar indicação, riscos e seguimento.",
+        "en": "Review indication, risks, and follow-up.",
+        "es": "Revisar indicación, riesgos y seguimiento."
+      }
+    },
+    {
+      "id": "hydrocortisone",
+      "legacyValue": "corticoide tópico leve",
+      "kind": "medication",
+      "label": {
+        "pt-BR": "Hidrocortisona 1% — ordem simulada",
+        "en": "Hydrocortisone 1% — simulated order",
+        "es": "Hidrocortisona 1% — orden simulada"
+      },
+      "recommendedFor": [
+        "dermatite-atopica"
+      ],
+      "ingredient": "hydrocortisone",
+      "order": {
+        "dose": "camada fina",
+        "route": "tópica",
+        "frequency": "1 vez ao dia",
+        "duration": "até 7 dias no cenário"
+      },
+      "contraindicationFlags": [
+        "topical-steroid-allergy",
+        "untreated-skin-infection",
+        "ocular-area"
+      ],
+      "warnings": {
+        "pt-BR": "Definir local, potência, duração e sinais de infecção; evitar olhos e uso indiscriminado.",
+        "en": "Define site, potency, duration, and infection signs; avoid eyes and indiscriminate use.",
+        "es": "Definir sitio, potencia, duración y signos de infección; evitar ojos y uso indiscriminado."
+      }
+    }
+  ],
+  "procedureCatalog": [
+    {
+      "id": "peripheral-iv",
+      "legacyValue": "Solicitar acesso venoso",
+      "kind": "invasive-support",
+      "requiresChecklist": true,
+      "attemptMinutes": 4,
+      "label": {
+        "pt-BR": "Acesso venoso periférico",
+        "en": "Peripheral venous access",
+        "es": "Acceso venoso periférico"
+      },
+      "risks": {
+        "pt-BR": "Dor, hematoma, infiltração, flebite e falha de punção.",
+        "en": "Pain, hematoma, infiltration, phlebitis, and failed cannulation.",
+        "es": "Dolor, hematoma, infiltración, flebitis y fallo de canalización."
+      },
+      "outcomes": {
+        "angina-estavel": [
+          "success"
+        ]
+      }
+    },
+    {
+      "id": "therapeutic-counselling",
+      "legacyValue": "Orientação terapêutica",
+      "kind": "communication",
+      "requiresChecklist": false,
+      "attemptMinutes": 2,
+      "label": {
+        "pt-BR": "Orientação terapêutica com confirmação de entendimento",
+        "en": "Therapeutic counselling with teach-back",
+        "es": "Orientación terapéutica con verificación de comprensión"
+      },
+      "risks": {
+        "pt-BR": "Falha de comunicação, baixa compreensão e plano inseguro.",
+        "en": "Communication failure, poor understanding, and unsafe plan.",
+        "es": "Fallo de comunicación, baja comprensión y plan inseguro."
+      },
+      "outcomes": {
+        "dermatite-atopica": [
+          "success"
+        ]
+      }
+    }
+  ],
+  "patientProfiles": [
+    {
+      "caseId": "hipertensao-1",
+      "weightKg": 92,
+      "allergies": [],
+      "currentMedications": [
+        "descongestionante nasal eventual",
+        "bebidas energéticas"
+      ],
+      "renalStatus": "preserved",
+      "hepaticStatus": "preserved",
+      "pregnancyStatus": "not-applicable",
+      "flags": []
+    },
+    {
+      "caseId": "cefaleia-tensional",
+      "weightKg": 64,
+      "allergies": [],
+      "currentMedications": [
+        "contraceptivo oral"
+      ],
+      "renalStatus": "preserved",
+      "hepaticStatus": "preserved",
+      "pregnancyStatus": "negative",
+      "flags": []
+    },
+    {
+      "caseId": "angina-estavel",
+      "weightKg": 88,
+      "allergies": [
+        "ibuprofeno — urticária"
+      ],
+      "currentMedications": [
+        "sinvastatina irregular"
+      ],
+      "renalStatus": "preserved",
+      "hepaticStatus": "preserved",
+      "pregnancyStatus": "not-applicable",
+      "flags": [
+        "nsaid-allergy"
+      ]
+    },
+    {
+      "caseId": "itu-nao-complicada",
+      "weightKg": 70,
+      "allergies": [
+        "sulfonamidas — exantema"
+      ],
+      "currentMedications": [],
+      "renalStatus": "preserved",
+      "hepaticStatus": "preserved",
+      "pregnancyStatus": "negative",
+      "flags": []
+    },
+    {
+      "caseId": "refluxo-gastroesofagico",
+      "weightKg": 83,
+      "allergies": [],
+      "currentMedications": [
+        "ibuprofeno eventual"
+      ],
+      "renalStatus": "preserved",
+      "hepaticStatus": "preserved",
+      "pregnancyStatus": "not-applicable",
+      "flags": []
+    },
+    {
+      "caseId": "dermatite-atopica",
+      "weightKg": 61,
+      "allergies": [],
+      "currentMedications": [
+        "hidratante perfumado irregular"
+      ],
+      "renalStatus": "preserved",
+      "hepaticStatus": "preserved",
+      "pregnancyStatus": "negative",
+      "flags": []
+    }
+  ]
+}

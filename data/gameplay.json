@@ -32,7 +32,18 @@
     "Refluxo gastroesofágico",
     "Cefaleia tensional",
     "ITU não complicada",
-    "Dermatite atópica"
+    "Dermatite atópica",
+    "Hipertensão mascarada",
+    "Enxaqueca sem aura",
+    "Cefaleia secundária",
+    "Síndrome coronariana aguda",
+    "Pielonefrite",
+    "Vaginite",
+    "Gestação com sintomas urinários",
+    "Doença ulcerosa péptica",
+    "Dermatite de contato",
+    "Psoríase",
+    "Infecção cutânea secundária"
   ],
   "conducts": [
     "orientar estilo de vida",

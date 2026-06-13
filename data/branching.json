@@ -1,0 +1,496 @@
+{
+  "schemaVersion": 1,
+  "engineVersion": "1.0.0",
+  "contentVersion": "0.24.0",
+  "policy": {
+    "status": "development-only",
+    "publishable": false,
+    "medicalAdvice": false,
+    "independentClinicalReviewRequired": true,
+    "branchSafetyReviewRequired": true,
+    "trilingualTerminologyReviewRequired": true,
+    "commercialReleaseBlockedUntilApproved": true,
+    "disclaimer": {
+      "pt-BR": "Ramificações e níveis são recursos educacionais simulados. Não representam decisão clínica real.",
+      "en": "Branches and difficulty levels are simulated educational features. They do not represent real clinical decisions.",
+      "es": "Las ramificaciones y niveles son recursos educativos simulados. No representan decisiones clínicas reales."
+    }
+  },
+  "difficulties": [
+    {
+      "id": "beginner",
+      "label": {
+        "pt-BR": "Iniciante",
+        "en": "Beginner",
+        "es": "Principiante"
+      },
+      "description": {
+        "pt-BR": "Mais pistas, três hipóteses simultâneas e penalidades reduzidas.",
+        "en": "More clues, three simultaneous hypotheses, and reduced penalties.",
+        "es": "Más pistas, tres hipótesis simultáneas y penalizaciones reducidas."
+      },
+      "initialClues": 2,
+      "maxHypotheses": 3,
+      "excessPenaltyMultiplier": 0.55,
+      "requiredEvidenceRatio": 0.35,
+      "scoreMultiplier": 0.92,
+      "xpMultiplier": 0.85,
+      "showHintCategories": true
+    },
+    {
+      "id": "student",
+      "label": {
+        "pt-BR": "Estudante",
+        "en": "Student",
+        "es": "Estudiante"
+      },
+      "description": {
+        "pt-BR": "Equilíbrio entre orientação, investigação e responsabilidade.",
+        "en": "Balanced guidance, investigation, and responsibility.",
+        "es": "Equilibrio entre orientación, investigación y responsabilidad."
+      },
+      "initialClues": 1,
+      "maxHypotheses": 3,
+      "excessPenaltyMultiplier": 1,
+      "requiredEvidenceRatio": 0.5,
+      "scoreMultiplier": 1,
+      "xpMultiplier": 1,
+      "showHintCategories": true
+    },
+    {
+      "id": "professional",
+      "label": {
+        "pt-BR": "Profissional",
+        "en": "Professional",
+        "es": "Profesional"
+      },
+      "description": {
+        "pt-BR": "Pistas apenas após evidência, duas hipóteses e maior exigência.",
+        "en": "Clues only after evidence, two hypotheses, and higher requirements.",
+        "es": "Pistas solo tras evidencia, dos hipótesis y mayor exigencia."
+      },
+      "initialClues": 0,
+      "maxHypotheses": 2,
+      "excessPenaltyMultiplier": 1.3,
+      "requiredEvidenceRatio": 0.67,
+      "scoreMultiplier": 1.06,
+      "xpMultiplier": 1.2,
+      "showHintCategories": false
+    },
+    {
+      "id": "challenge",
+      "label": {
+        "pt-BR": "Desafio",
+        "en": "Challenge",
+        "es": "Desafío"
+      },
+      "description": {
+        "pt-BR": "Uma hipótese final, nenhuma pista inicial e tolerância mínima a falhas.",
+        "en": "One final hypothesis, no initial clues, and minimal tolerance for errors.",
+        "es": "Una hipótesis final, sin pistas iniciales y tolerancia mínima a errores."
+      },
+      "initialClues": 0,
+      "maxHypotheses": 1,
+      "excessPenaltyMultiplier": 1.65,
+      "requiredEvidenceRatio": 0.84,
+      "scoreMultiplier": 1.12,
+      "xpMultiplier": 1.45,
+      "showHintCategories": false
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "safe-resolution",
+      "label": {
+        "pt-BR": "Condução segura",
+        "en": "Safe management",
+        "es": "Manejo seguro"
+      },
+      "description": {
+        "pt-BR": "Hipótese, evidências e plano ficaram coerentes com o cenário.",
+        "en": "The hypothesis, evidence, and plan were coherent with the scenario.",
+        "es": "La hipótesis, la evidencia y el plan fueron coherentes con el escenario."
+      }
+    },
+    {
+      "id": "follow-up-required",
+      "label": {
+        "pt-BR": "Seguimento necessário",
+        "en": "Follow-up required",
+        "es": "Seguimiento necesario"
+      },
+      "description": {
+        "pt-BR": "O raciocínio principal foi reconhecido, mas o plano ou a documentação ficaram incompletos.",
+        "en": "The main reasoning was recognized, but the plan or documentation remained incomplete.",
+        "es": "Se reconoció el razonamiento principal, pero el plan o la documentación quedaron incompletos."
+      }
+    },
+    {
+      "id": "unresolved-risk",
+      "label": {
+        "pt-BR": "Risco não resolvido",
+        "en": "Unresolved risk",
+        "es": "Riesgo no resuelto"
+      },
+      "description": {
+        "pt-BR": "Evidências essenciais ou segurança do paciente ficaram insuficientes.",
+        "en": "Essential evidence or patient safety remained insufficient.",
+        "es": "La evidencia esencial o la seguridad del paciente quedaron insuficientes."
+      }
+    },
+    {
+      "id": "unsafe-closure",
+      "label": {
+        "pt-BR": "Encerramento inseguro",
+        "en": "Unsafe closure",
+        "es": "Cierre inseguro"
+      },
+      "description": {
+        "pt-BR": "A hipótese principal não foi sustentada ou houve incidente relevante.",
+        "en": "The main hypothesis was not supported or a relevant incident occurred.",
+        "es": "La hipótesis principal no fue sustentada o hubo un incidente relevante."
+      }
+    }
+  ],
+  "cases": [
+    {
+      "caseId": "hipertensao-1",
+      "referenceDiagnosis": "Hipertensão Arterial Estágio 1",
+      "differentials": [
+        "Hipertensão Arterial Estágio 1",
+        "Angina estável",
+        "Ansiedade",
+        "Cefaleia tensional",
+        "Hipertensão mascarada"
+      ],
+      "essentialEvidenceIds": [
+        "hx-exertion",
+        "pe-vitals"
+      ],
+      "clues": [
+        {
+          "id": "bp-repeat",
+          "category": "Tendência pressórica",
+          "trigger": {
+            "type": "physicalExam",
+            "value": "pe-vitals"
+          },
+          "text": {
+            "pt-BR": "A repetição em repouso permanece próxima do limite, sem crise hipertensiva.",
+            "en": "Repeated resting measurements remain near the threshold, without a hypertensive crisis.",
+            "es": "Las mediciones repetidas en reposo permanecen cerca del límite, sin crisis hipertensiva."
+          }
+        },
+        {
+          "id": "exertional-pressure",
+          "category": "Sintoma que muda a prioridade",
+          "trigger": {
+            "type": "interview",
+            "value": "hx-exertion"
+          },
+          "text": {
+            "pt-BR": "O aperto aos esforços exige diferenciar risco cardiovascular de um achado pressórico isolado.",
+            "en": "Exertional pressure requires separating cardiovascular risk from an isolated blood-pressure finding.",
+            "es": "La presión con el esfuerzo exige diferenciar riesgo cardiovascular de un hallazgo aislado de presión arterial."
+          }
+        },
+        {
+          "id": "family-risk",
+          "category": "Risco familiar",
+          "trigger": {
+            "type": "interview",
+            "value": "hx-family"
+          },
+          "text": {
+            "pt-BR": "O histórico familiar aumenta a necessidade de estratificação, mas não confirma sozinho o diagnóstico.",
+            "en": "Family history increases the need for risk stratification but does not confirm the diagnosis alone.",
+            "es": "Los antecedentes familiares aumentan la necesidad de estratificación, pero no confirman por sí solos el diagnóstico."
+          }
+        }
+      ],
+      "status": "development-only",
+      "publishable": false
+    },
+    {
+      "caseId": "cefaleia-tensional",
+      "referenceDiagnosis": "Cefaleia tensional",
+      "differentials": [
+        "Cefaleia tensional",
+        "Enxaqueca sem aura",
+        "Cefaleia secundária",
+        "Ansiedade"
+      ],
+      "essentialEvidenceIds": [
+        "hx-redflags",
+        "pe-neuro"
+      ],
+      "clues": [
+        {
+          "id": "pattern",
+          "category": "Padrão temporal",
+          "trigger": {
+            "type": "interview",
+            "value": "hx-onset"
+          },
+          "text": {
+            "pt-BR": "Dor em aperto no fim do dia favorece um padrão primário, mas sinais de alarme ainda precisam ser excluídos.",
+            "en": "A pressure-like headache late in the day favors a primary pattern, but warning signs still need exclusion.",
+            "es": "Una cefalea opresiva al final del día favorece un patrón primario, pero aún deben excluirse señales de alarma."
+          }
+        },
+        {
+          "id": "redflags",
+          "category": "Segurança primeiro",
+          "trigger": {
+            "type": "interview",
+            "value": "hx-redflags"
+          },
+          "text": {
+            "pt-BR": "A ausência de déficit focal, febre e vômitos reduz a urgência, sem eliminar toda possibilidade secundária.",
+            "en": "Absence of focal deficit, fever, and vomiting lowers urgency without eliminating every secondary cause.",
+            "es": "La ausencia de déficit focal, fiebre y vómitos reduce la urgencia sin eliminar todas las causas secundarias."
+          }
+        },
+        {
+          "id": "neuro",
+          "category": "Exame neurológico",
+          "trigger": {
+            "type": "physicalExam",
+            "value": "pe-neuro"
+          },
+          "text": {
+            "pt-BR": "Triagem neurológica preservada apoia manejo não emergencial dentro do cenário.",
+            "en": "A preserved neurological screen supports non-emergency management in this scenario.",
+            "es": "Un cribado neurológico conservado respalda el manejo no urgente en este escenario."
+          }
+        }
+      ],
+      "status": "development-only",
+      "publishable": false
+    },
+    {
+      "caseId": "angina-estavel",
+      "referenceDiagnosis": "Angina estável",
+      "differentials": [
+        "Angina estável",
+        "Síndrome coronariana aguda",
+        "Refluxo gastroesofágico",
+        "Ansiedade"
+      ],
+      "essentialEvidenceIds": [],
+      "clues": [
+        {
+          "id": "exertion",
+          "category": "Relação com esforço",
+          "trigger": {
+            "type": "interview",
+            "value": "hx-duration"
+          },
+          "text": {
+            "pt-BR": "Dor previsível ao esforço e alívio em repouso direcionam o raciocínio, mas não excluem instabilidade.",
+            "en": "Predictable exertional pain relieved by rest guides reasoning but does not exclude instability.",
+            "es": "El dolor predecible con esfuerzo y alivio en reposo orienta el razonamiento, pero no excluye inestabilidad."
+          }
+        },
+        {
+          "id": "rest-pain",
+          "category": "Janela de segurança",
+          "trigger": {
+            "type": "interview",
+            "value": "hx-duration"
+          },
+          "text": {
+            "pt-BR": "Dor em repouso, síncope ou piora recente mudariam o caso para maior prioridade.",
+            "en": "Pain at rest, syncope, or recent worsening would move the case to a higher priority.",
+            "es": "El dolor en reposo, síncope o empeoramiento reciente cambiarían el caso a mayor prioridad."
+          }
+        },
+        {
+          "id": "ecg",
+          "category": "Evidência complementar",
+          "trigger": {
+            "type": "exam",
+            "value": "Eletrocardiograma (ECG)"
+          },
+          "text": {
+            "pt-BR": "O ECG deve ser interpretado no contexto; resultado isolado não encerra o diferencial.",
+            "en": "The ECG must be interpreted in context; an isolated result does not close the differential.",
+            "es": "El ECG debe interpretarse en contexto; un resultado aislado no cierra el diferencial."
+          }
+        }
+      ],
+      "status": "development-only",
+      "publishable": false
+    },
+    {
+      "caseId": "itu-nao-complicada",
+      "referenceDiagnosis": "ITU não complicada",
+      "differentials": [
+        "ITU não complicada",
+        "Pielonefrite",
+        "Vaginite",
+        "Gestação com sintomas urinários"
+      ],
+      "essentialEvidenceIds": [
+        "hx-flank",
+        "hx-pregnancy"
+      ],
+      "clues": [
+        {
+          "id": "flank",
+          "category": "Extensão da infecção",
+          "trigger": {
+            "type": "interview",
+            "value": "hx-flank"
+          },
+          "text": {
+            "pt-BR": "Dor lombar ou sintomas sistêmicos sugeririam acometimento alto e mudariam a conduta.",
+            "en": "Flank pain or systemic symptoms would suggest upper-tract involvement and change management.",
+            "es": "El dolor lumbar o síntomas sistémicos sugerirían afectación alta y cambiarían el manejo."
+          }
+        },
+        {
+          "id": "pregnancy",
+          "category": "Condição modificadora",
+          "trigger": {
+            "type": "interview",
+            "value": "hx-pregnancy"
+          },
+          "text": {
+            "pt-BR": "Possibilidade de gestação altera investigação, risco e escolha terapêutica.",
+            "en": "Possible pregnancy changes investigation, risk, and therapeutic choices.",
+            "es": "La posibilidad de embarazo cambia la investigación, el riesgo y las opciones terapéuticas."
+          }
+        },
+        {
+          "id": "urinalysis",
+          "category": "Confirmação contextual",
+          "trigger": {
+            "type": "exam",
+            "value": "Urina tipo 1"
+          },
+          "text": {
+            "pt-BR": "O exame de urina apoia o quadro quando combinado à história; não substitui avaliação de gravidade.",
+            "en": "Urinalysis supports the picture when combined with history; it does not replace severity assessment.",
+            "es": "El análisis de orina apoya el cuadro junto con la historia; no sustituye la evaluación de gravedad."
+          }
+        }
+      ],
+      "status": "development-only",
+      "publishable": false
+    },
+    {
+      "caseId": "refluxo-gastroesofagico",
+      "referenceDiagnosis": "Refluxo gastroesofágico",
+      "differentials": [
+        "Refluxo gastroesofágico",
+        "Angina estável",
+        "Doença ulcerosa péptica",
+        "Ansiedade"
+      ],
+      "essentialEvidenceIds": [
+        "hx-meals"
+      ],
+      "clues": [
+        {
+          "id": "meal",
+          "category": "Relação alimentar",
+          "trigger": {
+            "type": "interview",
+            "value": "hx-meals"
+          },
+          "text": {
+            "pt-BR": "Piora após refeições e ao deitar favorece refluxo, mas dor torácica exige triagem de segurança.",
+            "en": "Worsening after meals and when lying down favors reflux, but chest pain still requires safety screening.",
+            "es": "El empeoramiento tras comidas y al acostarse favorece reflujo, pero el dolor torácico requiere cribado de seguridad."
+          }
+        },
+        {
+          "id": "alarm",
+          "category": "Sinais de alarme digestivos",
+          "trigger": {
+            "type": "interview",
+            "value": "hx-exertion"
+          },
+          "text": {
+            "pt-BR": "Disfagia, perda de peso, sangramento ou anemia mudariam a estratégia de investigação.",
+            "en": "Dysphagia, weight loss, bleeding, or anemia would change the investigation strategy.",
+            "es": "Disfagia, pérdida de peso, sangrado o anemia cambiarían la estrategia de investigación."
+          }
+        },
+        {
+          "id": "response",
+          "category": "Resposta não é prova isolada",
+          "trigger": {
+            "type": "exam",
+            "value": "Teste terapêutico IBP"
+          },
+          "text": {
+            "pt-BR": "Melhora no cenário aumenta a coerência da hipótese, mas não funciona como confirmação absoluta.",
+            "en": "Improvement in the scenario increases coherence but is not absolute confirmation.",
+            "es": "La mejoría en el escenario aumenta la coherencia, pero no es una confirmación absoluta."
+          }
+        }
+      ],
+      "status": "development-only",
+      "publishable": false
+    },
+    {
+      "caseId": "dermatite-atopica",
+      "referenceDiagnosis": "Dermatite atópica",
+      "differentials": [
+        "Dermatite atópica",
+        "Dermatite de contato",
+        "Psoríase",
+        "Infecção cutânea secundária"
+      ],
+      "essentialEvidenceIds": [
+        "hx-products",
+        "pe-infection"
+      ],
+      "clues": [
+        {
+          "id": "distribution",
+          "category": "Distribuição das lesões",
+          "trigger": {
+            "type": "physicalExam",
+            "value": "pe-skin"
+          },
+          "text": {
+            "pt-BR": "Predomínio em dobras e recorrência apoiam dermatite atópica dentro do cenário.",
+            "en": "Flexural distribution and recurrence support atopic dermatitis in this scenario.",
+            "es": "La distribución en pliegues y la recurrencia apoyan dermatitis atópica en este escenario."
+          }
+        },
+        {
+          "id": "products",
+          "category": "Exposição de contato",
+          "trigger": {
+            "type": "interview",
+            "value": "hx-products"
+          },
+          "text": {
+            "pt-BR": "Produtos novos podem indicar dermatite de contato e precisam entrar no diferencial.",
+            "en": "New products may suggest contact dermatitis and should remain in the differential.",
+            "es": "Productos nuevos pueden sugerir dermatitis de contacto y deben permanecer en el diferencial."
+          }
+        },
+        {
+          "id": "infection",
+          "category": "Complicação possível",
+          "trigger": {
+            "type": "interview",
+            "value": "pe-hydration"
+          },
+          "text": {
+            "pt-BR": "Febre, dor, secreção ou rápida piora sugeririam complicação infecciosa.",
+            "en": "Fever, pain, discharge, or rapid worsening would suggest infectious complication.",
+            "es": "Fiebre, dolor, secreción o empeoramiento rápido sugerirían complicación infecciosa."
+          }
+        }
+      ],
+      "status": "development-only",
+      "publishable": false
+    }
+  ]
+}

@@ -1,0 +1,1617 @@
+{
+  "schemaVersion": 1,
+  "engineVersion": "1.0.0",
+  "contentVersion": "0.24.0",
+  "status": "development-only",
+  "publishable": false,
+  "policy": {
+    "independentClinicalReviewRequired": true,
+    "simulationSafetyReviewRequired": true,
+    "trilingualTerminologyReviewRequired": true,
+    "commercialReleaseBlockedUntilApproved": true,
+    "disclaimer": {
+      "pt-BR": "Simulação educacional de seguimento longitudinal. Não substitui consulta, prescrição, protocolo local ou acompanhamento real.",
+      "en": "Educational longitudinal-care simulation. It does not replace consultation, prescribing, local protocols, or real follow-up.",
+      "es": "Simulación educativa de seguimiento longitudinal. No sustituye consulta, prescripción, protocolos locales ni seguimiento real."
+    }
+  },
+  "actions": [
+    {
+      "id": "review-symptoms",
+      "icon": "💬",
+      "category": "assessment",
+      "label": {
+        "pt-BR": "Revisar sintomas e evolução",
+        "en": "Review symptoms and course",
+        "es": "Revisar síntomas y evolución"
+      },
+      "description": {
+        "pt-BR": "Compara sintomas atuais com a consulta anterior.",
+        "en": "Compares current symptoms with the previous visit.",
+        "es": "Compara los síntomas actuales con la consulta anterior."
+      },
+      "effects": {
+        "engagement": 2
+      },
+      "repeatable": false
+    },
+    {
+      "id": "review-adherence",
+      "icon": "🧾",
+      "category": "assessment",
+      "label": {
+        "pt-BR": "Revisar adesão sem julgamento",
+        "en": "Review adherence without judgment",
+        "es": "Revisar adherencia sin juzgar"
+      },
+      "description": {
+        "pt-BR": "Investiga doses perdidas, rotina e dificuldades reais.",
+        "en": "Explores missed doses, routine, and real-world difficulties.",
+        "es": "Explora dosis omitidas, rutina y dificultades reales."
+      },
+      "effects": {
+        "adherence": 4,
+        "engagement": 4
+      },
+      "repeatable": false
+    },
+    {
+      "id": "review-adverse-effects",
+      "icon": "⚠️",
+      "category": "safety",
+      "label": {
+        "pt-BR": "Investigar efeitos adversos",
+        "en": "Check adverse effects",
+        "es": "Investigar efectos adversos"
+      },
+      "description": {
+        "pt-BR": "Procura sintomas relacionados ao plano atual.",
+        "en": "Looks for symptoms related to the current plan.",
+        "es": "Busca síntomas relacionados con el plan actual."
+      },
+      "effects": {
+        "risk": -2
+      },
+      "repeatable": false
+    },
+    {
+      "id": "measure-vitals",
+      "icon": "🩺",
+      "category": "monitoring",
+      "label": {
+        "pt-BR": "Atualizar medidas e sinais vitais",
+        "en": "Update measurements and vital signs",
+        "es": "Actualizar medidas y signos vitales"
+      },
+      "description": {
+        "pt-BR": "Registra tendência em vez de um valor isolado.",
+        "en": "Records a trend rather than an isolated value.",
+        "es": "Registra una tendencia en lugar de un valor aislado."
+      },
+      "effects": {},
+      "repeatable": false
+    },
+    {
+      "id": "review-labs",
+      "icon": "🧪",
+      "category": "monitoring",
+      "label": {
+        "pt-BR": "Revisar exames indicados",
+        "en": "Review indicated tests",
+        "es": "Revisar estudios indicados"
+      },
+      "description": {
+        "pt-BR": "Interpreta apenas exames pertinentes à linha de cuidado.",
+        "en": "Interprets only tests relevant to the care pathway.",
+        "es": "Interpreta solo estudios pertinentes a la línea de cuidado."
+      },
+      "effects": {
+        "risk": -1
+      },
+      "repeatable": false
+    },
+    {
+      "id": "reinforce-lifestyle",
+      "icon": "🥗",
+      "category": "plan",
+      "label": {
+        "pt-BR": "Reforçar mudança de estilo de vida",
+        "en": "Reinforce lifestyle change",
+        "es": "Reforzar cambios de estilo de vida"
+      },
+      "description": {
+        "pt-BR": "Define uma mudança pequena, mensurável e realista.",
+        "en": "Defines one small, measurable, realistic change.",
+        "es": "Define un cambio pequeño, medible y realista."
+      },
+      "effects": {
+        "adherence": 3,
+        "engagement": 3,
+        "symptom": -2
+      },
+      "repeatable": false
+    },
+    {
+      "id": "shared-goals",
+      "icon": "🎯",
+      "category": "communication",
+      "label": {
+        "pt-BR": "Definir meta compartilhada",
+        "en": "Set a shared goal",
+        "es": "Definir una meta compartida"
+      },
+      "description": {
+        "pt-BR": "Paciente e equipe escolhem uma meta para o próximo retorno.",
+        "en": "Patient and team choose one goal for the next visit.",
+        "es": "Paciente y equipo eligen una meta para el próximo control."
+      },
+      "effects": {
+        "engagement": 9,
+        "adherence": 3
+      },
+      "repeatable": false
+    },
+    {
+      "id": "simplify-regimen",
+      "icon": "🗓️",
+      "category": "plan",
+      "label": {
+        "pt-BR": "Simplificar o plano",
+        "en": "Simplify the plan",
+        "es": "Simplificar el plan"
+      },
+      "description": {
+        "pt-BR": "Reduz complexidade quando a rotina dificulta adesão.",
+        "en": "Reduces complexity when routine impairs adherence.",
+        "es": "Reduce complejidad cuando la rutina dificulta la adherencia."
+      },
+      "effects": {
+        "adherence": 11,
+        "engagement": 3
+      },
+      "repeatable": false
+    },
+    {
+      "id": "address-cost",
+      "icon": "💳",
+      "category": "barrier",
+      "label": {
+        "pt-BR": "Abordar custo e acesso",
+        "en": "Address cost and access",
+        "es": "Abordar costo y acceso"
+      },
+      "description": {
+        "pt-BR": "Reconhece barreiras financeiras e busca alternativa segura.",
+        "en": "Recognizes financial barriers and seeks a safe alternative.",
+        "es": "Reconoce barreras financieras y busca una alternativa segura."
+      },
+      "effects": {
+        "adherence": 10,
+        "engagement": 4
+      },
+      "repeatable": false
+    },
+    {
+      "id": "education-red-flags",
+      "icon": "🚩",
+      "category": "safety",
+      "label": {
+        "pt-BR": "Orientar sinais de alarme",
+        "en": "Teach warning signs",
+        "es": "Orientar signos de alarma"
+      },
+      "description": {
+        "pt-BR": "Explica quando procurar atendimento antes do retorno.",
+        "en": "Explains when to seek care before the next visit.",
+        "es": "Explica cuándo buscar atención antes del próximo control."
+      },
+      "effects": {
+        "risk": -4,
+        "engagement": 2
+      },
+      "repeatable": false
+    },
+    {
+      "id": "schedule-followup",
+      "icon": "📅",
+      "category": "continuity",
+      "label": {
+        "pt-BR": "Programar retorno e plano de contingência",
+        "en": "Schedule follow-up and contingency plan",
+        "es": "Programar control y plan de contingencia"
+      },
+      "description": {
+        "pt-BR": "Define prazo, metas e o que fazer se houver piora.",
+        "en": "Defines timing, goals, and what to do if symptoms worsen.",
+        "es": "Define plazo, metas y qué hacer si empeoran los síntomas."
+      },
+      "effects": {
+        "engagement": 4
+      },
+      "repeatable": false
+    },
+    {
+      "id": "refer-specialist",
+      "icon": "🏥",
+      "category": "escalation",
+      "label": {
+        "pt-BR": "Encaminhar quando indicado",
+        "en": "Refer when indicated",
+        "es": "Derivar cuando esté indicado"
+      },
+      "description": {
+        "pt-BR": "Escalona cuidado diante de risco, falha terapêutica ou dúvida diagnóstica.",
+        "en": "Escalates care for risk, treatment failure, or diagnostic uncertainty.",
+        "es": "Escala la atención ante riesgo, fracaso terapéutico o duda diagnóstica."
+      },
+      "effects": {
+        "risk": -8
+      },
+      "repeatable": false
+    },
+    {
+      "id": "escalate-urgent",
+      "icon": "🚑",
+      "category": "escalation",
+      "label": {
+        "pt-BR": "Encaminhar para avaliação urgente",
+        "en": "Escalate for urgent assessment",
+        "es": "Derivar para evaluación urgente"
+      },
+      "description": {
+        "pt-BR": "Interrompe seguimento eletivo quando surgem sinais de alarme.",
+        "en": "Stops elective follow-up when warning signs appear.",
+        "es": "Interrumpe el seguimiento electivo ante signos de alarma."
+      },
+      "effects": {
+        "risk": -14
+      },
+      "repeatable": false
+    },
+    {
+      "id": "no-change",
+      "icon": "⏸️",
+      "category": "risk",
+      "label": {
+        "pt-BR": "Manter tudo sem reavaliar",
+        "en": "Keep everything unchanged without reassessment",
+        "es": "Mantener todo sin reevaluar"
+      },
+      "description": {
+        "pt-BR": "Ignora tendência, adesão e metas.",
+        "en": "Ignores trends, adherence, and goals.",
+        "es": "Ignora tendencias, adherencia y metas."
+      },
+      "effects": {
+        "risk": 7,
+        "engagement": -7
+      },
+      "repeatable": false,
+      "harmful": true
+    },
+    {
+      "id": "unnecessary-tests",
+      "icon": "📚",
+      "category": "risk",
+      "label": {
+        "pt-BR": "Solicitar bateria de exames sem indicação",
+        "en": "Order a broad test panel without indication",
+        "es": "Solicitar una batería de estudios sin indicación"
+      },
+      "description": {
+        "pt-BR": "Aumenta custo e ruído sem responder à questão clínica.",
+        "en": "Increases cost and noise without answering the clinical question.",
+        "es": "Aumenta costo y ruido sin responder la pregunta clínica."
+      },
+      "effects": {
+        "risk": 2,
+        "engagement": -3
+      },
+      "repeatable": false,
+      "harmful": true
+    }
+  ],
+  "programs": [
+    {
+      "id": "hypertension-followup",
+      "title": {
+        "pt-BR": "Hipertensão — controle longitudinal",
+        "en": "Hypertension — longitudinal control",
+        "es": "Hipertensión — control longitudinal"
+      },
+      "patient": {
+        "pt-BR": "Marcos Vinícius",
+        "en": "Marcos Vinícius",
+        "es": "Marcos Vinícius"
+      },
+      "age": 34,
+      "sex": {
+        "pt-BR": "Masculino",
+        "en": "Male",
+        "es": "Masculino"
+      },
+      "condition": {
+        "pt-BR": "Pressão arterial elevada em acompanhamento",
+        "en": "Elevated blood pressure under follow-up",
+        "es": "Presión arterial elevada en seguimiento"
+      },
+      "summary": {
+        "pt-BR": "Rotina irregular, alimentação rica em sódio e dificuldade para monitorar a pressão em casa.",
+        "en": "Irregular routine, high sodium intake, and difficulty monitoring blood pressure at home.",
+        "es": "Rutina irregular, dieta alta en sodio y dificultad para controlar la presión en casa."
+      },
+      "relatedCaseId": "hipertensao-1",
+      "visitIntervalWeeks": 4,
+      "totalVisits": 4,
+      "baseline": {
+        "systolic": 148,
+        "diastolic": 92,
+        "weight": 92,
+        "symptom": 28,
+        "adherence": 54,
+        "engagement": 58,
+        "risk": 57
+      },
+      "goals": [
+        {
+          "metric": "systolic",
+          "label": {
+            "pt-BR": "Pressão sistólica",
+            "en": "Systolic pressure",
+            "es": "Presión sistólica"
+          },
+          "target": 135,
+          "direction": "max",
+          "unit": "mmHg"
+        },
+        {
+          "metric": "diastolic",
+          "label": {
+            "pt-BR": "Pressão diastólica",
+            "en": "Diastolic pressure",
+            "es": "Presión diastólica"
+          },
+          "target": 85,
+          "direction": "max",
+          "unit": "mmHg"
+        },
+        {
+          "metric": "adherence",
+          "label": {
+            "pt-BR": "Adesão",
+            "en": "Adherence",
+            "es": "Adherencia"
+          },
+          "target": 80,
+          "direction": "min",
+          "unit": "%"
+        }
+      ],
+      "requiredActions": [
+        "review-adherence",
+        "measure-vitals",
+        "shared-goals",
+        "schedule-followup"
+      ],
+      "helpfulActions": [
+        "reinforce-lifestyle",
+        "simplify-regimen",
+        "address-cost",
+        "review-labs"
+      ],
+      "harmfulActions": [
+        "no-change",
+        "unnecessary-tests"
+      ],
+      "barriers": [
+        {
+          "pt-BR": "Turnos de trabalho imprevisíveis",
+          "en": "Unpredictable work shifts",
+          "es": "Turnos laborales imprevisibles"
+        },
+        {
+          "pt-BR": "Dificuldade para medir a pressão em casa",
+          "en": "Difficulty measuring blood pressure at home",
+          "es": "Dificultad para medir la presión en casa"
+        }
+      ],
+      "naturalCourse": {
+        "good": {
+          "systolic": -5,
+          "diastolic": -3,
+          "weight": -0.5,
+          "symptom": -2,
+          "risk": -4
+        },
+        "poor": {
+          "systolic": 4,
+          "diastolic": 2,
+          "weight": 0.4,
+          "symptom": 2,
+          "risk": 4
+        }
+      },
+      "actionEffects": {
+        "reinforce-lifestyle": {
+          "systolic": -3,
+          "diastolic": -2,
+          "weight": -0.6
+        },
+        "simplify-regimen": {
+          "systolic": -4,
+          "diastolic": -2
+        },
+        "address-cost": {
+          "systolic": -2
+        },
+        "review-labs": {
+          "risk": -3
+        }
+      },
+      "sourceIds": [
+        "AHA-ACC-HBP-2025"
+      ],
+      "status": "development-only",
+      "publishable": false
+    },
+    {
+      "id": "tension-headache-followup",
+      "title": {
+        "pt-BR": "Cefaleia tensional — prevenção",
+        "en": "Tension headache — prevention",
+        "es": "Cefalea tensional — prevención"
+      },
+      "patient": {
+        "pt-BR": "Patrícia Gomes",
+        "en": "Patrícia Gomes",
+        "es": "Patrícia Gomes"
+      },
+      "age": 29,
+      "sex": {
+        "pt-BR": "Feminino",
+        "en": "Female",
+        "es": "Femenino"
+      },
+      "condition": {
+        "pt-BR": "Cefaleia tensional recorrente",
+        "en": "Recurrent tension headache",
+        "es": "Cefalea tensional recurrente"
+      },
+      "summary": {
+        "pt-BR": "Dor no fim do dia associada a sono insuficiente e sobrecarga de trabalho.",
+        "en": "End-of-day pain associated with insufficient sleep and workload.",
+        "es": "Dolor al final del día asociado con sueño insuficiente y sobrecarga laboral."
+      },
+      "relatedCaseId": "cefaleia-tensional",
+      "visitIntervalWeeks": 3,
+      "totalVisits": 4,
+      "baseline": {
+        "headacheDays": 12,
+        "sleepHours": 5.5,
+        "symptom": 52,
+        "adherence": 62,
+        "engagement": 68,
+        "risk": 30
+      },
+      "goals": [
+        {
+          "metric": "headacheDays",
+          "label": {
+            "pt-BR": "Dias de cefaleia/mês",
+            "en": "Headache days/month",
+            "es": "Días de cefalea/mes"
+          },
+          "target": 5,
+          "direction": "max",
+          "unit": "dias"
+        },
+        {
+          "metric": "sleepHours",
+          "label": {
+            "pt-BR": "Horas de sono",
+            "en": "Sleep hours",
+            "es": "Horas de sueño"
+          },
+          "target": 7,
+          "direction": "min",
+          "unit": "h"
+        },
+        {
+          "metric": "adherence",
+          "label": {
+            "pt-BR": "Adesão ao plano",
+            "en": "Plan adherence",
+            "es": "Adherencia al plan"
+          },
+          "target": 80,
+          "direction": "min",
+          "unit": "%"
+        }
+      ],
+      "requiredActions": [
+        "review-symptoms",
+        "review-adherence",
+        "shared-goals",
+        "education-red-flags",
+        "schedule-followup"
+      ],
+      "helpfulActions": [
+        "reinforce-lifestyle",
+        "simplify-regimen"
+      ],
+      "harmfulActions": [
+        "unnecessary-tests"
+      ],
+      "barriers": [
+        {
+          "pt-BR": "Jornada dupla e pouco tempo para descanso",
+          "en": "Double workload and little rest time",
+          "es": "Doble jornada y poco tiempo de descanso"
+        }
+      ],
+      "naturalCourse": {
+        "good": {
+          "headacheDays": -2,
+          "sleepHours": 0.4,
+          "symptom": -7,
+          "risk": -2
+        },
+        "poor": {
+          "headacheDays": 2,
+          "sleepHours": -0.2,
+          "symptom": 6,
+          "risk": 2
+        }
+      },
+      "actionEffects": {
+        "reinforce-lifestyle": {
+          "headacheDays": -2,
+          "sleepHours": 0.5,
+          "symptom": -6
+        },
+        "shared-goals": {
+          "headacheDays": -1
+        }
+      },
+      "sourceIds": [
+        "WHO-PATIENT-SAFETY-2011"
+      ],
+      "status": "development-only",
+      "publishable": false
+    },
+    {
+      "id": "stable-angina-followup",
+      "title": {
+        "pt-BR": "Angina estável — vigilância de risco",
+        "en": "Stable angina — risk surveillance",
+        "es": "Angina estable — vigilancia de riesgo"
+      },
+      "patient": {
+        "pt-BR": "Ricardo Andrade",
+        "en": "Ricardo Andrade",
+        "es": "Ricardo Andrade"
+      },
+      "age": 56,
+      "sex": {
+        "pt-BR": "Masculino",
+        "en": "Male",
+        "es": "Masculino"
+      },
+      "condition": {
+        "pt-BR": "Dor torácica estável em seguimento",
+        "en": "Stable chest pain under follow-up",
+        "es": "Dolor torácico estable en seguimiento"
+      },
+      "summary": {
+        "pt-BR": "Sintomas aos esforços, tabagismo prévio e dificuldade de manter o plano diário.",
+        "en": "Exertional symptoms, prior smoking, and difficulty maintaining the daily plan.",
+        "es": "Síntomas con esfuerzo, tabaquismo previo y dificultad para mantener el plan diario."
+      },
+      "relatedCaseId": "angina-estavel",
+      "visitIntervalWeeks": 2,
+      "totalVisits": 4,
+      "baseline": {
+        "episodes": 6,
+        "exerciseTolerance": 4,
+        "systolic": 142,
+        "symptom": 46,
+        "adherence": 50,
+        "engagement": 60,
+        "risk": 70
+      },
+      "goals": [
+        {
+          "metric": "episodes",
+          "label": {
+            "pt-BR": "Episódios/semana",
+            "en": "Episodes/week",
+            "es": "Episodios/semana"
+          },
+          "target": 2,
+          "direction": "max",
+          "unit": ""
+        },
+        {
+          "metric": "exerciseTolerance",
+          "label": {
+            "pt-BR": "Tolerância ao esforço",
+            "en": "Exercise tolerance",
+            "es": "Tolerancia al esfuerzo"
+          },
+          "target": 7,
+          "direction": "min",
+          "unit": "/10"
+        },
+        {
+          "metric": "risk",
+          "label": {
+            "pt-BR": "Risco simulado",
+            "en": "Simulated risk",
+            "es": "Riesgo simulado"
+          },
+          "target": 45,
+          "direction": "max",
+          "unit": "%"
+        }
+      ],
+      "requiredActions": [
+        "review-symptoms",
+        "review-adverse-effects",
+        "measure-vitals",
+        "education-red-flags",
+        "schedule-followup"
+      ],
+      "helpfulActions": [
+        "review-adherence",
+        "simplify-regimen",
+        "refer-specialist",
+        "review-labs"
+      ],
+      "harmfulActions": [
+        "no-change"
+      ],
+      "barriers": [
+        {
+          "pt-BR": "Medo de se exercitar após sentir dor",
+          "en": "Fear of exercise after experiencing pain",
+          "es": "Miedo a ejercitarse tras sentir dolor"
+        }
+      ],
+      "naturalCourse": {
+        "good": {
+          "episodes": -1,
+          "exerciseTolerance": 0.6,
+          "symptom": -5,
+          "risk": -5
+        },
+        "poor": {
+          "episodes": 2,
+          "exerciseTolerance": -0.5,
+          "symptom": 7,
+          "risk": 7
+        }
+      },
+      "actionEffects": {
+        "simplify-regimen": {
+          "episodes": -1,
+          "risk": -4
+        },
+        "refer-specialist": {
+          "risk": -10
+        },
+        "education-red-flags": {
+          "risk": -5
+        }
+      },
+      "sourceIds": [
+        "AHA-ACS-2025"
+      ],
+      "status": "development-only",
+      "publishable": false
+    },
+    {
+      "id": "uti-recovery-followup",
+      "title": {
+        "pt-BR": "Infecção urinária — retorno de segurança",
+        "en": "Urinary infection — safety follow-up",
+        "es": "Infección urinaria — control de seguridad"
+      },
+      "patient": {
+        "pt-BR": "Juliana Lima",
+        "en": "Juliana Lima",
+        "es": "Juliana Lima"
+      },
+      "age": 31,
+      "sex": {
+        "pt-BR": "Feminino",
+        "en": "Female",
+        "es": "Femenino"
+      },
+      "condition": {
+        "pt-BR": "Infecção urinária em recuperação",
+        "en": "Urinary infection recovery",
+        "es": "Infección urinaria en recuperación"
+      },
+      "summary": {
+        "pt-BR": "Retorno curto para confirmar melhora, adesão e ausência de sinais de complicação.",
+        "en": "Short follow-up to confirm improvement, adherence, and no complication signs.",
+        "es": "Control breve para confirmar mejoría, adherencia y ausencia de complicaciones."
+      },
+      "relatedCaseId": "itu-simples",
+      "visitIntervalWeeks": 1,
+      "totalVisits": 3,
+      "baseline": {
+        "dysuria": 7,
+        "temperature": 36.8,
+        "symptom": 62,
+        "adherence": 72,
+        "engagement": 74,
+        "risk": 38
+      },
+      "goals": [
+        {
+          "metric": "dysuria",
+          "label": {
+            "pt-BR": "Disúria",
+            "en": "Dysuria",
+            "es": "Disuria"
+          },
+          "target": 2,
+          "direction": "max",
+          "unit": "/10"
+        },
+        {
+          "metric": "temperature",
+          "label": {
+            "pt-BR": "Temperatura",
+            "en": "Temperature",
+            "es": "Temperatura"
+          },
+          "target": 37.5,
+          "direction": "max",
+          "unit": "°C"
+        },
+        {
+          "metric": "risk",
+          "label": {
+            "pt-BR": "Risco simulado",
+            "en": "Simulated risk",
+            "es": "Riesgo simulado"
+          },
+          "target": 20,
+          "direction": "max",
+          "unit": "%"
+        }
+      ],
+      "requiredActions": [
+        "review-symptoms",
+        "review-adherence",
+        "review-adverse-effects",
+        "education-red-flags",
+        "schedule-followup"
+      ],
+      "helpfulActions": [
+        "review-labs"
+      ],
+      "harmfulActions": [
+        "no-change",
+        "unnecessary-tests"
+      ],
+      "barriers": [
+        {
+          "pt-BR": "Esqueceu uma dose em dia de trabalho",
+          "en": "Missed one dose on a workday",
+          "es": "Olvidó una dosis en un día laboral"
+        }
+      ],
+      "naturalCourse": {
+        "good": {
+          "dysuria": -3,
+          "symptom": -15,
+          "risk": -8
+        },
+        "poor": {
+          "dysuria": 2,
+          "temperature": 0.4,
+          "symptom": 8,
+          "risk": 8
+        }
+      },
+      "actionEffects": {
+        "review-adherence": {
+          "dysuria": -1
+        },
+        "education-red-flags": {
+          "risk": -6
+        },
+        "escalate-urgent": {
+          "risk": -16
+        }
+      },
+      "sourceIds": [
+        "EAU-UTI-2026"
+      ],
+      "status": "development-only",
+      "publishable": false
+    },
+    {
+      "id": "gerd-followup",
+      "title": {
+        "pt-BR": "Refluxo — controle de sintomas",
+        "en": "Reflux — symptom control",
+        "es": "Reflujo — control de síntomas"
+      },
+      "patient": {
+        "pt-BR": "Eduardo Nunes",
+        "en": "Eduardo Nunes",
+        "es": "Eduardo Nunes"
+      },
+      "age": 42,
+      "sex": {
+        "pt-BR": "Masculino",
+        "en": "Male",
+        "es": "Masculino"
+      },
+      "condition": {
+        "pt-BR": "Refluxo gastroesofágico recorrente",
+        "en": "Recurrent gastroesophageal reflux",
+        "es": "Reflujo gastroesofágico recurrente"
+      },
+      "summary": {
+        "pt-BR": "Sintomas noturnos, refeições tardias e adesão variável às orientações.",
+        "en": "Night symptoms, late meals, and variable adherence to recommendations.",
+        "es": "Síntomas nocturnos, comidas tardías y adherencia variable a las recomendaciones."
+      },
+      "relatedCaseId": "refluxo",
+      "visitIntervalWeeks": 4,
+      "totalVisits": 4,
+      "baseline": {
+        "symptomDays": 5,
+        "nightAwakenings": 3,
+        "weight": 88,
+        "symptom": 58,
+        "adherence": 48,
+        "engagement": 62,
+        "risk": 36
+      },
+      "goals": [
+        {
+          "metric": "symptomDays",
+          "label": {
+            "pt-BR": "Dias com sintomas/semana",
+            "en": "Symptom days/week",
+            "es": "Días con síntomas/semana"
+          },
+          "target": 2,
+          "direction": "max",
+          "unit": ""
+        },
+        {
+          "metric": "nightAwakenings",
+          "label": {
+            "pt-BR": "Despertares noturnos",
+            "en": "Night awakenings",
+            "es": "Despertares nocturnos"
+          },
+          "target": 1,
+          "direction": "max",
+          "unit": ""
+        },
+        {
+          "metric": "adherence",
+          "label": {
+            "pt-BR": "Adesão",
+            "en": "Adherence",
+            "es": "Adherencia"
+          },
+          "target": 80,
+          "direction": "min",
+          "unit": "%"
+        }
+      ],
+      "requiredActions": [
+        "review-symptoms",
+        "review-adherence",
+        "shared-goals",
+        "schedule-followup"
+      ],
+      "helpfulActions": [
+        "reinforce-lifestyle",
+        "simplify-regimen",
+        "review-adverse-effects"
+      ],
+      "harmfulActions": [
+        "no-change",
+        "unnecessary-tests"
+      ],
+      "barriers": [
+        {
+          "pt-BR": "Janta tarde por causa do trabalho",
+          "en": "Late dinner because of work",
+          "es": "Cena tarde por el trabajo"
+        }
+      ],
+      "naturalCourse": {
+        "good": {
+          "symptomDays": -1,
+          "nightAwakenings": -1,
+          "weight": -0.4,
+          "symptom": -8,
+          "risk": -2
+        },
+        "poor": {
+          "symptomDays": 1,
+          "nightAwakenings": 1,
+          "weight": 0.3,
+          "symptom": 6,
+          "risk": 2
+        }
+      },
+      "actionEffects": {
+        "reinforce-lifestyle": {
+          "symptomDays": -2,
+          "nightAwakenings": -1,
+          "weight": -0.5
+        },
+        "simplify-regimen": {
+          "adherence": 8
+        }
+      },
+      "sourceIds": [
+        "ACG-GERD-2022"
+      ],
+      "status": "development-only",
+      "publishable": false
+    },
+    {
+      "id": "atopic-dermatitis-followup",
+      "title": {
+        "pt-BR": "Dermatite atópica — plano de controle",
+        "en": "Atopic dermatitis — control plan",
+        "es": "Dermatitis atópica — plan de control"
+      },
+      "patient": {
+        "pt-BR": "Camila Rocha",
+        "en": "Camila Rocha",
+        "es": "Camila Rocha"
+      },
+      "age": 24,
+      "sex": {
+        "pt-BR": "Feminino",
+        "en": "Female",
+        "es": "Femenino"
+      },
+      "condition": {
+        "pt-BR": "Dermatite atópica em acompanhamento",
+        "en": "Atopic dermatitis follow-up",
+        "es": "Dermatitis atópica en seguimiento"
+      },
+      "summary": {
+        "pt-BR": "Prurido, sono prejudicado e dificuldade de manter cuidados diários da pele.",
+        "en": "Itching, impaired sleep, and difficulty maintaining daily skin care.",
+        "es": "Prurito, sueño alterado y dificultad para mantener el cuidado diario de la piel."
+      },
+      "relatedCaseId": "dermatite-atopica",
+      "visitIntervalWeeks": 3,
+      "totalVisits": 4,
+      "baseline": {
+        "itch": 8,
+        "sleepQuality": 4,
+        "flareDays": 16,
+        "symptom": 68,
+        "adherence": 45,
+        "engagement": 66,
+        "risk": 34
+      },
+      "goals": [
+        {
+          "metric": "itch",
+          "label": {
+            "pt-BR": "Prurido",
+            "en": "Itch",
+            "es": "Prurito"
+          },
+          "target": 3,
+          "direction": "max",
+          "unit": "/10"
+        },
+        {
+          "metric": "sleepQuality",
+          "label": {
+            "pt-BR": "Qualidade do sono",
+            "en": "Sleep quality",
+            "es": "Calidad del sueño"
+          },
+          "target": 7,
+          "direction": "min",
+          "unit": "/10"
+        },
+        {
+          "metric": "flareDays",
+          "label": {
+            "pt-BR": "Dias de crise/mês",
+            "en": "Flare days/month",
+            "es": "Días de brote/mes"
+          },
+          "target": 6,
+          "direction": "max",
+          "unit": "dias"
+        }
+      ],
+      "requiredActions": [
+        "review-symptoms",
+        "review-adherence",
+        "review-adverse-effects",
+        "shared-goals",
+        "schedule-followup"
+      ],
+      "helpfulActions": [
+        "simplify-regimen",
+        "address-cost",
+        "reinforce-lifestyle"
+      ],
+      "harmfulActions": [
+        "no-change"
+      ],
+      "barriers": [
+        {
+          "pt-BR": "Produtos de cuidado têm custo elevado",
+          "en": "Skin-care products are costly",
+          "es": "Los productos de cuidado son costosos"
+        }
+      ],
+      "naturalCourse": {
+        "good": {
+          "itch": -1.5,
+          "sleepQuality": 0.7,
+          "flareDays": -3,
+          "symptom": -8,
+          "risk": -2
+        },
+        "poor": {
+          "itch": 1,
+          "sleepQuality": -0.5,
+          "flareDays": 3,
+          "symptom": 7,
+          "risk": 3
+        }
+      },
+      "actionEffects": {
+        "simplify-regimen": {
+          "itch": -1,
+          "flareDays": -2
+        },
+        "address-cost": {
+          "adherence": 10
+        },
+        "review-adverse-effects": {
+          "risk": -3
+        }
+      },
+      "sourceIds": [
+        "AAD-AD-TOPICAL-2023"
+      ],
+      "status": "development-only",
+      "publishable": false
+    },
+    {
+      "id": "type2-diabetes-followup",
+      "title": {
+        "pt-BR": "Diabetes tipo 2 — metas e adesão",
+        "en": "Type 2 diabetes — goals and adherence",
+        "es": "Diabetes tipo 2 — metas y adherencia"
+      },
+      "patient": {
+        "pt-BR": "Sandra Alves",
+        "en": "Sandra Alves",
+        "es": "Sandra Alves"
+      },
+      "age": 53,
+      "sex": {
+        "pt-BR": "Feminino",
+        "en": "Female",
+        "es": "Femenino"
+      },
+      "condition": {
+        "pt-BR": "Diabetes tipo 2 em controle ambulatorial",
+        "en": "Type 2 diabetes outpatient control",
+        "es": "Diabetes tipo 2 en control ambulatorio"
+      },
+      "summary": {
+        "pt-BR": "Rotina alimentar irregular, dificuldade de acesso e baixa confiança para autocuidado.",
+        "en": "Irregular meals, access difficulty, and low confidence in self-care.",
+        "es": "Alimentación irregular, dificultad de acceso y baja confianza para el autocuidado."
+      },
+      "relatedCaseId": null,
+      "visitIntervalWeeks": 8,
+      "totalVisits": 4,
+      "baseline": {
+        "glucose": 178,
+        "a1c": 8.6,
+        "weight": 84,
+        "symptom": 30,
+        "adherence": 46,
+        "engagement": 52,
+        "risk": 64
+      },
+      "goals": [
+        {
+          "metric": "glucose",
+          "label": {
+            "pt-BR": "Glicemia simulada",
+            "en": "Simulated glucose",
+            "es": "Glucemia simulada"
+          },
+          "target": 140,
+          "direction": "max",
+          "unit": "mg/dL"
+        },
+        {
+          "metric": "a1c",
+          "label": {
+            "pt-BR": "HbA1c simulada",
+            "en": "Simulated HbA1c",
+            "es": "HbA1c simulada"
+          },
+          "target": 7.5,
+          "direction": "max",
+          "unit": "%"
+        },
+        {
+          "metric": "adherence",
+          "label": {
+            "pt-BR": "Adesão",
+            "en": "Adherence",
+            "es": "Adherencia"
+          },
+          "target": 80,
+          "direction": "min",
+          "unit": "%"
+        }
+      ],
+      "requiredActions": [
+        "review-adherence",
+        "measure-vitals",
+        "review-labs",
+        "shared-goals",
+        "education-red-flags",
+        "schedule-followup"
+      ],
+      "helpfulActions": [
+        "reinforce-lifestyle",
+        "simplify-regimen",
+        "address-cost",
+        "refer-specialist"
+      ],
+      "harmfulActions": [
+        "no-change",
+        "unnecessary-tests"
+      ],
+      "barriers": [
+        {
+          "pt-BR": "Custo do transporte e dos insumos",
+          "en": "Transportation and supply costs",
+          "es": "Costo del transporte y los insumos"
+        }
+      ],
+      "naturalCourse": {
+        "good": {
+          "glucose": -12,
+          "a1c": -0.25,
+          "weight": -0.7,
+          "risk": -5
+        },
+        "poor": {
+          "glucose": 15,
+          "a1c": 0.2,
+          "weight": 0.5,
+          "risk": 6
+        }
+      },
+      "actionEffects": {
+        "reinforce-lifestyle": {
+          "glucose": -8,
+          "weight": -0.8
+        },
+        "simplify-regimen": {
+          "glucose": -10,
+          "a1c": -0.15
+        },
+        "address-cost": {
+          "adherence": 12
+        }
+      },
+      "sourceIds": [
+        "ADA-HYPOGLYCEMIA-2026"
+      ],
+      "status": "development-only",
+      "publishable": false
+    },
+    {
+      "id": "dyslipidemia-followup",
+      "title": {
+        "pt-BR": "Dislipidemia — redução de risco",
+        "en": "Dyslipidemia — risk reduction",
+        "es": "Dislipidemia — reducción de riesgo"
+      },
+      "patient": {
+        "pt-BR": "Antônio Reis",
+        "en": "Antônio Reis",
+        "es": "Antônio Reis"
+      },
+      "age": 61,
+      "sex": {
+        "pt-BR": "Masculino",
+        "en": "Male",
+        "es": "Masculino"
+      },
+      "condition": {
+        "pt-BR": "Dislipidemia e risco cardiovascular",
+        "en": "Dyslipidemia and cardiovascular risk",
+        "es": "Dislipidemia y riesgo cardiovascular"
+      },
+      "summary": {
+        "pt-BR": "Paciente assintomático questiona a necessidade de manter o plano por longo prazo.",
+        "en": "Asymptomatic patient questions the need for long-term care.",
+        "es": "Paciente asintomático cuestiona la necesidad de mantener el plan a largo plazo."
+      },
+      "relatedCaseId": null,
+      "visitIntervalWeeks": 8,
+      "totalVisits": 4,
+      "baseline": {
+        "ldl": 176,
+        "weight": 90,
+        "systolic": 138,
+        "symptom": 10,
+        "adherence": 44,
+        "engagement": 48,
+        "risk": 68
+      },
+      "goals": [
+        {
+          "metric": "ldl",
+          "label": {
+            "pt-BR": "LDL simulado",
+            "en": "Simulated LDL",
+            "es": "LDL simulado"
+          },
+          "target": 100,
+          "direction": "max",
+          "unit": "mg/dL"
+        },
+        {
+          "metric": "adherence",
+          "label": {
+            "pt-BR": "Adesão",
+            "en": "Adherence",
+            "es": "Adherencia"
+          },
+          "target": 80,
+          "direction": "min",
+          "unit": "%"
+        },
+        {
+          "metric": "risk",
+          "label": {
+            "pt-BR": "Risco simulado",
+            "en": "Simulated risk",
+            "es": "Riesgo simulado"
+          },
+          "target": 45,
+          "direction": "max",
+          "unit": "%"
+        }
+      ],
+      "requiredActions": [
+        "review-adherence",
+        "review-adverse-effects",
+        "review-labs",
+        "shared-goals",
+        "schedule-followup"
+      ],
+      "helpfulActions": [
+        "reinforce-lifestyle",
+        "simplify-regimen",
+        "address-cost"
+      ],
+      "harmfulActions": [
+        "no-change"
+      ],
+      "barriers": [
+        {
+          "pt-BR": "Não sente sintomas e acha o tratamento desnecessário",
+          "en": "Feels no symptoms and thinks treatment is unnecessary",
+          "es": "No siente síntomas y cree que el tratamiento es innecesario"
+        }
+      ],
+      "naturalCourse": {
+        "good": {
+          "ldl": -18,
+          "weight": -0.6,
+          "risk": -6
+        },
+        "poor": {
+          "ldl": 12,
+          "weight": 0.4,
+          "risk": 5
+        }
+      },
+      "actionEffects": {
+        "simplify-regimen": {
+          "ldl": -10
+        },
+        "reinforce-lifestyle": {
+          "ldl": -7,
+          "weight": -0.7
+        },
+        "review-adverse-effects": {
+          "engagement": 4
+        }
+      },
+      "sourceIds": [
+        "AHA-ACC-HBP-2025"
+      ],
+      "status": "development-only",
+      "publishable": false
+    },
+    {
+      "id": "asthma-control-followup",
+      "title": {
+        "pt-BR": "Asma — controle e prevenção",
+        "en": "Asthma — control and prevention",
+        "es": "Asma — control y prevención"
+      },
+      "patient": {
+        "pt-BR": "Lucas Ferreira",
+        "en": "Lucas Ferreira",
+        "es": "Lucas Ferreira"
+      },
+      "age": 19,
+      "sex": {
+        "pt-BR": "Masculino",
+        "en": "Male",
+        "es": "Masculino"
+      },
+      "condition": {
+        "pt-BR": "Asma persistente em acompanhamento",
+        "en": "Persistent asthma under follow-up",
+        "es": "Asma persistente en seguimiento"
+      },
+      "summary": {
+        "pt-BR": "Sintomas noturnos, técnica inconsistente e exposição frequente a gatilhos.",
+        "en": "Night symptoms, inconsistent technique, and frequent trigger exposure.",
+        "es": "Síntomas nocturnos, técnica inconsistente y exposición frecuente a desencadenantes."
+      },
+      "relatedCaseId": null,
+      "visitIntervalWeeks": 4,
+      "totalVisits": 4,
+      "baseline": {
+        "symptomDays": 4,
+        "nightAwakenings": 3,
+        "peakFlow": 62,
+        "symptom": 54,
+        "adherence": 50,
+        "engagement": 64,
+        "risk": 61
+      },
+      "goals": [
+        {
+          "metric": "symptomDays",
+          "label": {
+            "pt-BR": "Dias com sintomas/semana",
+            "en": "Symptom days/week",
+            "es": "Días con síntomas/semana"
+          },
+          "target": 2,
+          "direction": "max",
+          "unit": ""
+        },
+        {
+          "metric": "nightAwakenings",
+          "label": {
+            "pt-BR": "Despertares noturnos",
+            "en": "Night awakenings",
+            "es": "Despertares nocturnos"
+          },
+          "target": 1,
+          "direction": "max",
+          "unit": ""
+        },
+        {
+          "metric": "peakFlow",
+          "label": {
+            "pt-BR": "Fluxo expiratório simulado",
+            "en": "Simulated peak flow",
+            "es": "Flujo espiratorio simulado"
+          },
+          "target": 80,
+          "direction": "min",
+          "unit": "%"
+        }
+      ],
+      "requiredActions": [
+        "review-symptoms",
+        "review-adherence",
+        "review-adverse-effects",
+        "education-red-flags",
+        "schedule-followup"
+      ],
+      "helpfulActions": [
+        "simplify-regimen",
+        "reinforce-lifestyle",
+        "refer-specialist"
+      ],
+      "harmfulActions": [
+        "no-change"
+      ],
+      "barriers": [
+        {
+          "pt-BR": "Esquece o plano quando está sem sintomas",
+          "en": "Forgets the plan when symptom-free",
+          "es": "Olvida el plan cuando no tiene síntomas"
+        }
+      ],
+      "naturalCourse": {
+        "good": {
+          "symptomDays": -1,
+          "nightAwakenings": -1,
+          "peakFlow": 5,
+          "risk": -6
+        },
+        "poor": {
+          "symptomDays": 2,
+          "nightAwakenings": 1,
+          "peakFlow": -5,
+          "risk": 7
+        }
+      },
+      "actionEffects": {
+        "simplify-regimen": {
+          "peakFlow": 4,
+          "symptomDays": -1
+        },
+        "education-red-flags": {
+          "risk": -6
+        },
+        "refer-specialist": {
+          "risk": -8
+        }
+      },
+      "sourceIds": [
+        "GINA-ASTHMA-2025"
+      ],
+      "status": "development-only",
+      "publishable": false
+    },
+    {
+      "id": "obesity-lifestyle-followup",
+      "title": {
+        "pt-BR": "Obesidade — cuidado centrado na pessoa",
+        "en": "Obesity — person-centered care",
+        "es": "Obesidad — atención centrada en la persona"
+      },
+      "patient": {
+        "pt-BR": "Renata Souza",
+        "en": "Renata Souza",
+        "es": "Renata Souza"
+      },
+      "age": 38,
+      "sex": {
+        "pt-BR": "Feminino",
+        "en": "Female",
+        "es": "Femenino"
+      },
+      "condition": {
+        "pt-BR": "Cuidado longitudinal do peso e saúde metabólica",
+        "en": "Longitudinal weight and metabolic health care",
+        "es": "Cuidado longitudinal del peso y la salud metabólica"
+      },
+      "summary": {
+        "pt-BR": "Histórico de tentativas restritivas, estigma e dificuldade de manter mudanças bruscas.",
+        "en": "History of restrictive attempts, stigma, and difficulty sustaining abrupt changes.",
+        "es": "Historia de intentos restrictivos, estigma y dificultad para sostener cambios bruscos."
+      },
+      "relatedCaseId": null,
+      "visitIntervalWeeks": 4,
+      "totalVisits": 5,
+      "baseline": {
+        "weight": 104,
+        "waist": 112,
+        "activityMinutes": 35,
+        "symptom": 24,
+        "adherence": 38,
+        "engagement": 44,
+        "risk": 59
+      },
+      "goals": [
+        {
+          "metric": "weight",
+          "label": {
+            "pt-BR": "Peso simulado",
+            "en": "Simulated weight",
+            "es": "Peso simulado"
+          },
+          "target": 99,
+          "direction": "max",
+          "unit": "kg"
+        },
+        {
+          "metric": "activityMinutes",
+          "label": {
+            "pt-BR": "Atividade/semana",
+            "en": "Activity/week",
+            "es": "Actividad/semana"
+          },
+          "target": 120,
+          "direction": "min",
+          "unit": "min"
+        },
+        {
+          "metric": "engagement",
+          "label": {
+            "pt-BR": "Engajamento",
+            "en": "Engagement",
+            "es": "Compromiso"
+          },
+          "target": 75,
+          "direction": "min",
+          "unit": "%"
+        }
+      ],
+      "requiredActions": [
+        "review-adherence",
+        "measure-vitals",
+        "shared-goals",
+        "schedule-followup"
+      ],
+      "helpfulActions": [
+        "reinforce-lifestyle",
+        "address-cost",
+        "simplify-regimen",
+        "refer-specialist"
+      ],
+      "harmfulActions": [
+        "no-change",
+        "unnecessary-tests"
+      ],
+      "barriers": [
+        {
+          "pt-BR": "Experiências anteriores de estigma em saúde",
+          "en": "Prior experiences of healthcare stigma",
+          "es": "Experiencias previas de estigma en salud"
+        }
+      ],
+      "naturalCourse": {
+        "good": {
+          "weight": -1.0,
+          "waist": -1.2,
+          "activityMinutes": 18,
+          "risk": -4
+        },
+        "poor": {
+          "weight": 0.8,
+          "waist": 0.5,
+          "activityMinutes": -8,
+          "risk": 4
+        }
+      },
+      "actionEffects": {
+        "shared-goals": {
+          "engagement": 10
+        },
+        "reinforce-lifestyle": {
+          "weight": -0.8,
+          "activityMinutes": 15
+        },
+        "address-cost": {
+          "engagement": 6
+        }
+      },
+      "sourceIds": [
+        "WHO-PATIENT-SAFETY-2011"
+      ],
+      "status": "development-only",
+      "publishable": false
+    }
+  ]
+}

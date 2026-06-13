@@ -14,9 +14,9 @@
       "name": "Urgência e Emergência",
       "description": "Atenda casos críticos e tome decisões que salvam vidas.",
       "icon": "✚",
-      "declaredCaseCount": 15,
+      "declaredCaseCount": 9,
       "background": 8,
-      "unlockLevel": 2
+      "unlockLevel": 1
     },
     {
       "id": "cardiologia",
