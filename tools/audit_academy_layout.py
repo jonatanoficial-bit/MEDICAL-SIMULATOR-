@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[1]
 CSS=(ROOT/'src/styles.css').read_text(encoding='utf-8')
 exported=subprocess.run(['node','tools/export-audit-screens.mjs'],cwd=ROOT,capture_output=True,text=True,check=True)
 SCREENS=json.loads(exported.stdout)['screens']
-outdir=ROOT/'docs/screenshots-v0.18.0';outdir.mkdir(exist_ok=True)
+outdir=ROOT/'docs/screenshots-v0.24.0';outdir.mkdir(exist_ok=True)
 profiles=[]
 for locale,markers in {
  'pt-BR':['Academia Clínica Introdutória','Segurança, limites e papel do simulador','Checkpoint de aprendizagem','Caso guiado: dor no peito durante esforço'],
@@ -26,7 +26,7 @@ with sync_playwright() as p:
   text=page.locator('body').inner_text()
   metrics=page.evaluate('''()=>{const controls=[...document.querySelectorAll('button,input,select,textarea')].filter(x=>{const r=x.getBoundingClientRect(),s=getComputedStyle(x);return r.width>0&&r.height>0&&s.display!=='none'&&s.visibility!=='hidden'});return{vw:innerWidth,w:document.documentElement.scrollWidth,h:document.documentElement.scrollHeight,minControl:controls.length?Math.min(...controls.map(x=>x.getBoundingClientRect().height)):null,modules:document.querySelectorAll('.academy-module').length,options:document.querySelectorAll('.academy-option').length,lessonTabs:document.querySelectorAll('.academy-lesson-tab').length}}''')
   name=f'academy-{locale}-{kind}-{width}x{height}.png';page.screenshot(path=str(outdir/name),full_page=True)
-  results.append({'locale':locale,'view':kind,'viewport':[width,height],'marker':marker,'markerFound':marker in text,'overflowX':metrics['w']>metrics['vw']+1,'metrics':metrics,'pageErrors':errors,'screenshot':f'docs/screenshots-v0.18.0/{name}'})
+  results.append({'locale':locale,'view':kind,'viewport':[width,height],'marker':marker,'markerFound':marker in text,'overflowX':metrics['w']>metrics['vw']+1,'metrics':metrics,'pageErrors':errors,'screenshot':f'docs/screenshots-v0.24.0/{name}'})
   page.close()
  browser.close()
 fail=[]
@@ -39,6 +39,6 @@ for r in results:
  if r['view'] in ('quiz','guided') and r['metrics']['options']!=4:fail.append(f"{r['locale']}:{r['view']}:options {r['metrics']['options']}")
  if r['pageErrors']:fail.append(f"{r['locale']}:{r['view']}:errors")
 out={'ok':not fail,'method':'Generated production DOM + production CSS in isolated Chromium','failures':fail,'profiles':results}
-(ROOT/'docs/audit-academy-layout-v0.18.0.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(ROOT/'docs/audit-academy-layout-v0.24.0.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps(out,ensure_ascii=False,indent=2))
 if fail:raise SystemExit(1)

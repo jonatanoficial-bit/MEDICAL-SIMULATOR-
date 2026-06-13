@@ -3,7 +3,7 @@ globalThis.localStorage={getItem:key=>memory.get(key)||null,setItem:(key,value)=
 Object.defineProperty(globalThis,'navigator',{value:{userAgent:'ValeAudit/1.0',language:'pt-BR',onLine:true},configurable:true});
 globalThis.innerWidth=390;globalThis.innerHeight=844;
 const {createDiagnostics}=await import('../src/core/diagnostics.js');
-const diagnostics=createDiagnostics({key:'audit-diag',build:'v0.18.0',maxEntries:3});
+const diagnostics=createDiagnostics({key:'audit-diag',build:'v0.24.0',maxEntries:3});
 diagnostics.info('boot','início');diagnostics.warn('content','fallback');diagnostics.error('runtime','falha');diagnostics.info('boot','recuperado');
 const list=diagnostics.list();const summary=diagnostics.summary();const exported=diagnostics.export();
 if(list.length!==3||summary.total!==3||summary.errors!==1||exported.environment.viewport!=='390x844')throw new Error('Diagnóstico local inválido.');

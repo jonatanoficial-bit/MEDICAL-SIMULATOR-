@@ -38,11 +38,11 @@ globalThis.fetch=async input=>{
 await import('../src/app.js');
 await new Promise(resolve=>setTimeout(resolve,120));
 if(!appElement.innerHTML.includes('NOVO GAME'))throw new Error('Tela inicial não renderizou.');
-if(!appElement.innerHTML.includes('v0.18.0'))throw new Error('Build visível ausente.');
+if(!appElement.innerHTML.includes('v0.24.0'))throw new Error('Build visível ausente.');
 if(appElement.innerHTML.includes('Modo segurança ativo'))throw new Error('Runtime caiu no modo de segurança.');
 if(globalThis.VALE_CONTENT_STATUS?.caseCount!==6)throw new Error('Conteúdo clínico não foi ativado.');
 const screens={};
-for(const [screen,needle] of [['hub','LOBBY DO RESIDENTE'],['specialty','Escolha sua especialidade'],['shift','PLANTÃO - MODO SIMULADOR'],['settings','Proteção do progresso'],['recovery','Central de recuperação']]){
+for(const [screen,needle] of [['hub','LOBBY DO RESIDENTE'],['specialty','Escolha sua especialidade'],['shift','PLANTÃO - MODO SIMULADOR'],['settings','Proteção do progresso'],['outpatient','CENTRO DE SEGUIMENTO'],['emergency','CENTRO DE EMERGÊNCIA'],['recovery','Central de recuperação']]){
   globalThis.state.screen=screen;
   if(screen==='shift')globalThis.state.selectedSpec='clinica-medica';
   globalThis.render();

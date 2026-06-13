@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 const read=file=>fs.readFileSync(new URL('../'+file,import.meta.url),'utf8');
 const json=file=>JSON.parse(read(file));
-const expected='0.18.0';
+const expected='0.24.0';
 const build=json('BUILD.json');
 const packageJson=json('package.json');
 const webmanifest=json('manifest.webmanifest');
@@ -15,8 +15,8 @@ const checks={
   package:packageJson.version===expected,
   webmanifest:webmanifest.start_url.includes(expected)&&webmanifest.display_override.includes('fullscreen'),
   content:content.contentVersion===expected,
-  coreManifest:coreManifest.version===expected&&coreManifest.architecture.saveSchema===9&&coreManifest.architecture.contentSchema===3,
-  config:config.includes(`version: '${expected}'`)&&config.includes('saveSchema: 9')&&config.includes('contentSchema: 3'),
+  coreManifest:coreManifest.version===expected&&coreManifest.architecture.saveSchema===15&&coreManifest.architecture.contentSchema===9,
+  config:config.includes(`version: '${expected}'`)&&config.includes('saveSchema: 15')&&config.includes('contentSchema: 9'),
   index:index.includes(`v${expected}`)&&index.includes('src/core/boot-guard.js'),
   serviceWorker:sw.includes(`VERSION='${expected}'`)
 };

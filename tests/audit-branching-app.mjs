@@ -1,0 +1,17 @@
+import fs from 'node:fs';import path from 'node:path';
+const root=path.resolve(new URL('..',import.meta.url).pathname),memory=new Map();
+const storage={get length(){return memory.size},key:i=>[...memory.keys()][i]??null,getItem:k=>memory.has(k)?memory.get(k):null,setItem:(k,v)=>memory.set(k,String(v)),removeItem:k=>memory.delete(k),clear:()=>memory.clear()};
+const classList={add(){},remove(){},contains(){return false},toggle(){}};const app={innerHTML:'',dataset:{},classList,append(){},querySelector(){return null},querySelectorAll(){return[]}};const body={innerHTML:'',classList,append(){},appendChild(){}};
+const doc={readyState:'loading',fullscreenElement:null,documentElement:{lang:'pt-BR',dataset:{},style:{setProperty(){}},requestFullscreen:()=>Promise.resolve()},body,querySelector:s=>s==='#app'?app:null,querySelectorAll:()=>[],createTreeWalker:()=>({currentNode:null,nextNode(){return false}}),addEventListener(){},removeEventListener(){},createElement:()=>({className:'',textContent:'',classList,style:{},append(){},click(){},remove(){},setAttribute(){}})};
+Object.defineProperty(globalThis,'window',{value:globalThis,configurable:true});Object.defineProperty(globalThis,'document',{value:doc,configurable:true});Object.defineProperty(globalThis,'navigator',{value:{userAgent:'BranchAudit',language:'pt-BR',onLine:true,standalone:false},configurable:true});Object.defineProperty(globalThis,'location',{value:{search:'',protocol:'http:',pathname:'/index.html',reload(){},href:'http://local/index.html'},configurable:true});
+globalThis.localStorage=storage;globalThis.sessionStorage=storage;globalThis.innerWidth=360;globalThis.innerHeight=800;globalThis.visualViewport={width:360,height:800,scale:1,offsetTop:0,offsetLeft:0,addEventListener(){},removeEventListener(){}};globalThis.screen={orientation:{type:'portrait-primary',addEventListener(){},removeEventListener(){}}};globalThis.matchMedia=()=>({matches:true,addEventListener(){},removeEventListener(){}});globalThis.alert=()=>{};globalThis.addEventListener=()=>{};globalThis.removeEventListener=()=>{};globalThis.NodeFilter={SHOW_TEXT:4,FILTER_REJECT:2,FILTER_ACCEPT:1};
+globalThis.fetch=async input=>{const raw=String(input).split('?')[0].replace(/^\.\//,'');const file=path.join(root,raw);if(!fs.existsSync(file))return{ok:false,status:404,json:async()=>({})};return{ok:true,status:200,json:async()=>JSON.parse(fs.readFileSync(file,'utf8'))}};
+await import('../src/app.js');await new Promise(r=>setTimeout(r,160));
+globalThis.state.selectedSpec='clinica-medica';globalThis.state.screen='shift';globalThis.setDifficulty('challenge');globalThis.resetEncounterData();globalThis.render();
+globalThis.toggleAction('hypotheses','Hipertensão Arterial Estágio 1');globalThis.toggleAction('hypotheses','Angina estável');
+if(globalThis.state.actions.hypotheses.length!==1)throw new Error('Modo desafio permitiu mais de uma hipótese.');
+if(!app.innerHTML.includes('Hipóteses simultâneas: 1'))throw new Error('Limite de hipótese não apareceu na interface.');
+globalThis.setDifficulty('beginner');globalThis.resetEncounterData();globalThis.state.screen='shift';globalThis.render();
+if(!app.innerHTML.includes('2/3 pistas'))throw new Error('Pistas iniciais do modo iniciante não foram exibidas.');
+if(!app.innerHTML.includes('difficulty-beginner'))throw new Error('Selo de dificuldade ausente.');
+console.log(JSON.stringify({ok:true,challengeHypotheses:1,beginnerInitialClues:2,saveSchema:globalThis.state.meta.saveSchema}));

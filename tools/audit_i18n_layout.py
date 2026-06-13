@@ -10,7 +10,7 @@ idx=idx.replace('export ','')
 I18N=cat+'\n'+idx
 exported=subprocess.run(['node','tools/export-audit-screens.mjs'],cwd=ROOT,capture_output=True,text=True,check=True)
 SCREENS=json.loads(exported.stdout)['screens']
-outdir=ROOT/'docs/screenshots-v0.18.0';outdir.mkdir(exist_ok=True)
+outdir=ROOT/'docs/screenshots-v0.24.0';outdir.mkdir(exist_ok=True)
 profiles=[
  ('pt-BR','setup','NOVO GAME',360,800),('en','setup','NEW GAME',360,800),('es','setup','NUEVA PARTIDA',360,800),
  ('pt-BR','shift','PLANTÃO - MODO SIMULADOR',360,800),('en','shift','SHIFT — SIMULATOR MODE',360,800),('es','shift','GUARDIA — MODO SIMULADOR',360,800),
@@ -39,7 +39,7 @@ with sync_playwright() as p:
     metrics=page.evaluate('''()=>({vw:innerWidth,w:document.documentElement.scrollWidth,h:document.documentElement.scrollHeight,lang:document.documentElement.lang,locale:document.documentElement.dataset.locale,controls:[...document.querySelectorAll('button,select,input')].filter(x=>{const r=x.getBoundingClientRect();return r.width>0&&r.height>0}).length,minControl:[...document.querySelectorAll('button,select,input')].filter(x=>{const r=x.getBoundingClientRect();return r.width>0&&r.height>0}).reduce((m,x)=>Math.min(m,x.getBoundingClientRect().height),999)})''')
     name=f'{locale}-{screen}-{width}x{height}.png'
     page.screenshot(path=str(outdir/name),full_page=True)
-    results.append({'locale':locale,'screen':screen,'viewport':[width,height],'marker':marker,'markerFound':marker in text,'overflowX':metrics['w']>metrics['vw']+1,'metrics':metrics,'sample':text[:420],'pageErrors':errors,'screenshot':f'docs/screenshots-v0.18.0/{name}'})
+    results.append({'locale':locale,'screen':screen,'viewport':[width,height],'marker':marker,'markerFound':marker in text,'overflowX':metrics['w']>metrics['vw']+1,'metrics':metrics,'sample':text[:420],'pageErrors':errors,'screenshot':f'docs/screenshots-v0.24.0/{name}'})
     page.close()
   browser.close()
 fail=[]
@@ -49,6 +49,6 @@ for r in results:
   if r['metrics']['minControl']<47.5:fail.append(f"{r['locale']}:{r['screen']}: control {r['metrics']['minControl']}")
   if r['pageErrors']:fail.append(f"{r['locale']}:{r['screen']}: errors")
 out={'ok':not fail,'method':'Generated production DOM + production CSS + live i18n catalogs in isolated Chromium','failures':fail,'profiles':results}
-(ROOT/'docs/audit-i18n-layout-v0.18.0.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(ROOT/'docs/audit-i18n-layout-v0.24.0.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps(out,ensure_ascii=False,indent=2))
 if fail:raise SystemExit(1)

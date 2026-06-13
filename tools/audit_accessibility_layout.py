@@ -88,6 +88,6 @@ for item in results:
     if item['dialogs'] and item.get('focusTrap') is not True:failures.append(item['profile']+': modal focus trap')
     if item['pageErrors']:failures.append(item['profile']+': page errors '+','.join(item['pageErrors']))
 output={'ok':not failures,'method':'Actual generated game DOM + production CSS in isolated Chromium/Playwright harness','failures':failures,'profiles':results}
-(ROOT/'docs/audit-layout-v0.18.0.json').write_text(json.dumps(output,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(ROOT/'docs/audit-layout-v0.24.0.json').write_text(json.dumps(output,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps(output,ensure_ascii=False,indent=2))
 if failures:raise SystemExit(1)
