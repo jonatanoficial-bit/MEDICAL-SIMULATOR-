@@ -1,0 +1,68 @@
+{
+  "product": "Medical Simulator - Vale Edition",
+  "version": "0.24.0",
+  "build": "v0.24.0 | build 2026-06-13 12:25:00 BRT",
+  "phase": "Casos Ramificados e Níveis de Dificuldade",
+  "auditStatus": "passed-development-gate-blocked",
+  "schemas": {
+    "save": 15,
+    "content": 9,
+    "branching": 1
+  },
+  "branching": {
+    "difficultyLevels": 4,
+    "caseProfiles": 6,
+    "conditionalClues": 18,
+    "outcomes": 4,
+    "deterministic": true
+  },
+  "visualAudit": {
+    "passed": true,
+    "profiles": 7,
+    "horizontalOverflowFailures": 0,
+    "minimumControlPx": 48,
+    "touchAction": "pan-y pinch-zoom",
+    "mobileSwipeRangePx": "525",
+    "languages": [
+      "pt-BR",
+      "en",
+      "es"
+    ],
+    "viewports": [
+      "360x800",
+      "768x1024",
+      "1366x768"
+    ]
+  },
+  "pwa": {
+    "assetsTotal": 79,
+    "critical": 48,
+    "data": 15,
+    "optional": 16
+  },
+  "mobileScroll": {
+    "preserved": true,
+    "touchmoveCancelled": false,
+    "accidentalFullscreen": false
+  },
+  "releaseGate": {
+    "exitCode": 2,
+    "releaseReady": false,
+    "expectedBlock": true,
+    "reason": "conteúdo médico ainda requer revisão clínica, terminológica e de segurança independente"
+  },
+  "runtimeHttpTest": {
+    "status": "blocked-by-environment-policy",
+    "error": "net::ERR_BLOCKED_BY_ADMINISTRATOR",
+    "appFailureDetected": false,
+    "alternativeIsolatedChromiumAuditPassed": true
+  },
+  "integrity": {
+    "manifestFiles": 450,
+    "missing": 0,
+    "unlisted": 0,
+    "hashMismatch": 0,
+    "empty": 0,
+    "zipVerificationRequired": true
+  }
+}

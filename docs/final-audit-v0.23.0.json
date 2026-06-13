@@ -1,0 +1,44 @@
+{
+  "product": "Medical Simulator - Vale Edition",
+  "version": "0.23.0",
+  "build": "20260613_115741_BRT",
+  "phase": "Pacote Ambulatorial Longitudinal",
+  "status": "audited-development-build",
+  "logicAudit": {
+    "passed": true,
+    "outpatientPrograms": 10,
+    "outpatientActions": 15,
+    "deterministic": true,
+    "uniqueReward": true,
+    "saveSchema": 14,
+    "contentSchema": 8
+  },
+  "regression": {
+    "regularCases": 6,
+    "specialties": 9,
+    "academyModules": 9,
+    "academyLessonsPerLocale": 27,
+    "physiologyProfiles": 6,
+    "assessmentProfiles": 6,
+    "emergencyScenarios": 9,
+    "exams": 13,
+    "interventions": 14,
+    "serviceWorkerAssets": 76,
+    "backups": 5,
+    "locales": ["pt-BR", "en", "es"]
+  },
+  "mobileLayout": {
+    "passed": true,
+    "profiles": 6,
+    "horizontalOverflow": 0,
+    "minimumControlPx": 48,
+    "nativeVerticalTouchScroll": true,
+    "automaticFullscreenOnGesture": false
+  },
+  "commercialGate": {
+    "releaseReady": false,
+    "expectedExitCode": 2,
+    "outpatientProgramsBlocked": 10,
+    "reason": "Independent clinical, terminology and safety validation remains pending."
+  }
+}

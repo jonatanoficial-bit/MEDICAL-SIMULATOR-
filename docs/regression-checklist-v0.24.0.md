@@ -1,0 +1,11 @@
+# Regressão v0.24.0
+- [x] Migração de save schema 14 → 15
+- [x] Quatro dificuldades carregadas
+- [x] Seis perfis ramificados
+- [x] Limite de hipóteses
+- [x] Pistas por evidência
+- [x] Múltiplos desfechos
+- [x] Rolagem mobile nativa
+- [x] Fallback, PWA e rollback
+- [ ] Validação em aparelho físico
+- [ ] Revisão clínica independente

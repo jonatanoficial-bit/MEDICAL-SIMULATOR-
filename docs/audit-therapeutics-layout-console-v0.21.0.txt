@@ -1,0 +1,247 @@
+{
+  "ok": true,
+  "method": "Generated production DOM + production CSS + live i18n in isolated Chromium; CDP touch swipe on mobile profiles",
+  "failures": [],
+  "profiles": [
+    {
+      "locale": "pt-BR",
+      "screen": "shift-exams",
+      "viewport": [
+        360,
+        800
+      ],
+      "marker": "Os resultados têm tempo de processamento",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 360,
+        "w": 360,
+        "h": 2257,
+        "lang": "pt-BR",
+        "controls": 35,
+        "minControl": 48,
+        "bodyTouch": "pan-y pinch-zoom",
+        "htmlOverflowY": "auto"
+      },
+      "scroll": {
+        "before": 0,
+        "after": 375,
+        "moved": true
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.21.0/therapeutics-pt-BR-shift-exams-360x800.png"
+    },
+    {
+      "locale": "en",
+      "screen": "shift-exams",
+      "viewport": [
+        360,
+        800
+      ],
+      "marker": "Results require processing time",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 360,
+        "w": 360,
+        "h": 2087,
+        "lang": "en",
+        "controls": 35,
+        "minControl": 48,
+        "bodyTouch": "pan-y pinch-zoom",
+        "htmlOverflowY": "auto"
+      },
+      "scroll": {
+        "before": 0,
+        "after": 546,
+        "moved": true
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.21.0/therapeutics-en-shift-exams-360x800.png"
+    },
+    {
+      "locale": "es",
+      "screen": "shift-exams",
+      "viewport": [
+        360,
+        800
+      ],
+      "marker": "Los resultados requieren tiempo",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 360,
+        "w": 360,
+        "h": 2252,
+        "lang": "es",
+        "controls": 35,
+        "minControl": 48,
+        "bodyTouch": "pan-y pinch-zoom",
+        "htmlOverflowY": "auto"
+      },
+      "scroll": {
+        "before": 0,
+        "after": 375,
+        "moved": true
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.21.0/therapeutics-es-shift-exams-360x800.png"
+    },
+    {
+      "locale": "pt-BR",
+      "screen": "shift-diagnosis",
+      "viewport": [
+        360,
+        800
+      ],
+      "marker": "SEGURANÇA MEDICAMENTOSA",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 360,
+        "w": 360,
+        "h": 4049,
+        "lang": "pt-BR",
+        "controls": 50,
+        "minControl": 48,
+        "bodyTouch": "pan-y pinch-zoom",
+        "htmlOverflowY": "auto"
+      },
+      "scroll": {
+        "before": 0,
+        "after": 375,
+        "moved": true
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.21.0/therapeutics-pt-BR-shift-diagnosis-360x800.png"
+    },
+    {
+      "locale": "en",
+      "screen": "shift-diagnosis",
+      "viewport": [
+        360,
+        800
+      ],
+      "marker": "MEDICATION SAFETY",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 360,
+        "w": 360,
+        "h": 3965,
+        "lang": "en",
+        "controls": 50,
+        "minControl": 48,
+        "bodyTouch": "pan-y pinch-zoom",
+        "htmlOverflowY": "auto"
+      },
+      "scroll": {
+        "before": 0,
+        "after": 375,
+        "moved": true
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.21.0/therapeutics-en-shift-diagnosis-360x800.png"
+    },
+    {
+      "locale": "es",
+      "screen": "shift-diagnosis",
+      "viewport": [
+        360,
+        800
+      ],
+      "marker": "SEGURIDAD DE MEDICAMENTOS",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 360,
+        "w": 360,
+        "h": 4216,
+        "lang": "es",
+        "controls": 50,
+        "minControl": 48,
+        "bodyTouch": "pan-y pinch-zoom",
+        "htmlOverflowY": "auto"
+      },
+      "scroll": {
+        "before": 0,
+        "after": 508,
+        "moved": true
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.21.0/therapeutics-es-shift-diagnosis-360x800.png"
+    },
+    {
+      "locale": "pt-BR",
+      "screen": "shift-diagnosis",
+      "viewport": [
+        768,
+        1024
+      ],
+      "marker": "SEGURANÇA MEDICAMENTOSA",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 768,
+        "w": 768,
+        "h": 2933,
+        "lang": "pt-BR",
+        "controls": 50,
+        "minControl": 48,
+        "bodyTouch": "pan-y pinch-zoom",
+        "htmlOverflowY": "auto"
+      },
+      "scroll": null,
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.21.0/therapeutics-pt-BR-shift-diagnosis-768x1024.png"
+    },
+    {
+      "locale": "en",
+      "screen": "shift-diagnosis",
+      "viewport": [
+        1366,
+        768
+      ],
+      "marker": "MEDICATION SAFETY",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 1366,
+        "w": 1366,
+        "h": 3742,
+        "lang": "en",
+        "controls": 63,
+        "minControl": 48,
+        "bodyTouch": "pan-y pinch-zoom",
+        "htmlOverflowY": "auto"
+      },
+      "scroll": null,
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.21.0/therapeutics-en-shift-diagnosis-1366x768.png"
+    },
+    {
+      "locale": "es",
+      "screen": "shift-diagnosis",
+      "viewport": [
+        1366,
+        768
+      ],
+      "marker": "SEGURIDAD DE MEDICAMENTOS",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 1366,
+        "w": 1366,
+        "h": 4061,
+        "lang": "es",
+        "controls": 63,
+        "minControl": 48,
+        "bodyTouch": "pan-y pinch-zoom",
+        "htmlOverflowY": "auto"
+      },
+      "scroll": null,
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.21.0/therapeutics-es-shift-diagnosis-1366x768.png"
+    }
+  ]
+}

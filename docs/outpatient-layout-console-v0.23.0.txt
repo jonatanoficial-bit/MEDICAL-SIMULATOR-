@@ -1,0 +1,171 @@
+
+> medical-simulator-vale-edition@0.23.0 audit:outpatient-layout
+> python tools/audit_outpatient_layout.py
+
+{
+  "ok": true,
+  "method": "Generated production outpatient DOM + production CSS + live i18n in isolated Chromium; CDP touch swipe on mobile profiles",
+  "failures": [],
+  "profiles": [
+    {
+      "locale": "pt-BR",
+      "screen": "pt-BR-outpatient-catalog",
+      "viewport": [
+        360,
+        800
+      ],
+      "marker": "CENTRO DE SEGUIMENTO",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 360,
+        "w": 360,
+        "h": 4761,
+        "lang": "pt-BR",
+        "controls": 19,
+        "minControl": 48,
+        "bodyTouch": "pan-y pinch-zoom",
+        "htmlOverflowY": "auto"
+      },
+      "scroll": {
+        "before": 0,
+        "after": 545,
+        "moved": true
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.23.0/outpatient-pt-BR-catalog-360x800.png"
+    },
+    {
+      "locale": "pt-BR",
+      "screen": "pt-BR-outpatient-active",
+      "viewport": [
+        360,
+        800
+      ],
+      "marker": "CENTRO DE SEGUIMENTO",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 360,
+        "w": 360,
+        "h": 1978,
+        "lang": "pt-BR",
+        "controls": 8,
+        "minControl": 48,
+        "bodyTouch": "pan-y pinch-zoom",
+        "htmlOverflowY": "auto"
+      },
+      "scroll": {
+        "before": 0,
+        "after": 730,
+        "moved": true
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.23.0/outpatient-pt-BR-active-360x800.png"
+    },
+    {
+      "locale": "pt-BR",
+      "screen": "pt-BR-outpatient-plan",
+      "viewport": [
+        360,
+        800
+      ],
+      "marker": "CENTRO DE SEGUIMENTO",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 360,
+        "w": 360,
+        "h": 4139,
+        "lang": "pt-BR",
+        "controls": 23,
+        "minControl": 48,
+        "bodyTouch": "pan-y pinch-zoom",
+        "htmlOverflowY": "auto"
+      },
+      "scroll": {
+        "before": 0,
+        "after": 545,
+        "moved": true
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.23.0/outpatient-pt-BR-plan-360x800.png"
+    },
+    {
+      "locale": "en",
+      "screen": "en-outpatient-catalog",
+      "viewport": [
+        360,
+        800
+      ],
+      "marker": "FOLLOW-UP CENTER",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 360,
+        "w": 360,
+        "h": 4554,
+        "lang": "en",
+        "controls": 19,
+        "minControl": 48,
+        "bodyTouch": "pan-y pinch-zoom",
+        "htmlOverflowY": "auto"
+      },
+      "scroll": {
+        "before": 0,
+        "after": 545,
+        "moved": true
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.23.0/outpatient-en-catalog-360x800.png"
+    },
+    {
+      "locale": "en",
+      "screen": "en-outpatient-active",
+      "viewport": [
+        1366,
+        768
+      ],
+      "marker": "FOLLOW-UP CENTER",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 1366,
+        "w": 1366,
+        "h": 1237,
+        "lang": "en",
+        "controls": 7,
+        "minControl": 48,
+        "bodyTouch": "pan-y pinch-zoom",
+        "htmlOverflowY": "auto"
+      },
+      "scroll": null,
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.23.0/outpatient-en-active-1366x768.png"
+    },
+    {
+      "locale": "es",
+      "screen": "es-outpatient-plan",
+      "viewport": [
+        768,
+        1024
+      ],
+      "marker": "CENTRO DE SEGUIMIENTO",
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "vw": 768,
+        "w": 768,
+        "h": 3203,
+        "lang": "es",
+        "controls": 23,
+        "minControl": 48,
+        "bodyTouch": "pan-y pinch-zoom",
+        "htmlOverflowY": "auto"
+      },
+      "scroll": null,
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v0.23.0/outpatient-es-plan-768x1024.png"
+    }
+  ]
+}
