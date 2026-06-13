@@ -2,7 +2,7 @@
   "id": "./medical-simulator-vale-edition",
   "name": "Medical Simulator - Vale Edition",
   "short_name": "Med Vale",
-  "start_url": "./index.html?source=pwa&v=0.18.0",
+  "start_url": "./?v=0.24.0",
   "scope": "./",
   "display": "fullscreen",
   "display_override": [
@@ -13,7 +13,7 @@
   "background_color": "#020814",
   "theme_color": "#06131f",
   "orientation": "any",
-  "description": "Trilingual educational clinical simulator with a 9-module introductory Clinical Academy, traceable medical governance, accessible records, and mobile-first immersive play.",
+  "description": "Simulador clínico educacional trilíngue com casos ramificados, quatro níveis de dificuldade, emergência ABCDE e experiência mobile acessível.",
   "lang": "pt-BR",
   "dir": "ltr",
   "categories": [
@@ -66,6 +66,30 @@
       "short_name": "Aprender",
       "description": "Abrir módulos de aprendizagem / Open learning modules / Abrir módulos de aprendizaje",
       "url": "./index.html?screen=learning&source=shortcut",
+      "icons": [
+        {
+          "src": "assets/icons/pwa/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Seguimento ambulatorial / Outpatient follow-up / Seguimiento ambulatorio",
+      "short_name": "Seguimento",
+      "description": "Abrir linhas de cuidado longitudinal",
+      "url": "./index.html?screen=outpatient&source=shortcut",
+      "icons": [
+        {
+          "src": "assets/icons/pwa/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Treino de emergência / Emergency training / Entrenamiento de emergencia",
+      "short_name": "Emergência",
+      "description": "Abrir cenários críticos ABCDE",
+      "url": "./index.html?screen=emergency&source=shortcut",
       "icons": [
         {
           "src": "assets/icons/pwa/icon-192.png",

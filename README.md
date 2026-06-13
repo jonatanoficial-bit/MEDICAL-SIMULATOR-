@@ -1,56 +1,63 @@
 # Medical Simulator — Vale Edition
 
-Build atual: **v0.18.0 | build 2026-06-12 17:15:20 BRT**  
-Fase 9: **Academia Clínica Introdutória trilíngue**
+Build atual: **v0.23.0 | build 2026-06-13 11:57:41 BRT**  
+Fase 14: **Pacote Ambulatorial Longitudinal**
 
 ## Execução
 
-Hospede a raiz em um servidor HTTP/HTTPS e abra `index.html`. Para validar localmente:
+Hospede a raiz em servidor HTTP/HTTPS e abra `index.html`. Para validar localmente:
 
 ```bash
 npm run audit
-python tools/audit_academy_layout.py
-npm run audit:i18n-layout
-python tools/audit_accessibility_layout.py
+npm run audit:outpatient-layout
 npm run release-gate
 npm run manifest
 npm run verify-manifest
 ```
 
-`npm run release-gate` deve terminar com código 2 nesta build. Isso é intencional: os seis casos e os nove módulos educacionais continuam no canal de desenvolvimento até revisão clínica, terminológica e de segurança independente.
+`npm run release-gate` deve terminar com código `2` nesta build. Isso é intencional: casos, Academia, fisiologia, avaliação clínica, terapêutica, emergência e ambulatório permanecem no canal de desenvolvimento até revisão independente.
 
-## Academia Clínica
+## Centro de Seguimento
 
-- 9 módulos sequenciais;
-- 27 lições em PT-BR, inglês e espanhol;
-- pré-teste de 5 perguntas sem penalidade;
-- checkpoint ao fim de cada módulo;
-- 1 caso guiado com 5 decisões e debriefing;
-- progresso persistente no save schema 9;
-- XP concedido uma única vez por módulo e pelo caso guiado;
-- fontes oficiais vinculadas a cada módulo;
-- aviso permanente de que o conteúdo não substitui formação, certificação ou atendimento real.
+- 10 linhas de cuidado longitudinais;
+- 15 ações de avaliação, monitorização, comunicação, segurança, adesão e continuidade;
+- 3 a 5 consultas simuladas por paciente;
+- metas clínicas simuladas e tendência entre retornos;
+- adesão, engajamento, sintomas e risco persistentes;
+- barreiras sociais e financeiras;
+- faltas ao retorno com consequência determinística;
+- score, histórico e debriefing;
+- recompensa única por linha de cuidado;
+- português do Brasil, inglês e espanhol.
 
-## Módulos
+Linhas disponíveis: hipertensão, cefaleia tensional, angina estável, retorno de infecção urinária, refluxo, dermatite atópica, diabetes tipo 2, dislipidemia, asma e cuidado longitudinal do peso.
 
-1. Segurança, limites e papel do simulador.
-2. Avaliação inicial, estabilidade e prioridade.
-3. Sinais vitais, contexto e tendência.
-4. Anamnese, comunicação e sinais de alarme.
-5. Exame físico e limitações da simulação.
-6. Exames complementares, probabilidade e incerteza.
-7. Segurança medicamentosa e reavaliação.
-8. Mapa introdutório dos protocolos do jogo.
-9. Raciocínio guiado e debriefing.
+Todo o conteúdo permanece educacional, determinístico e não preditivo. Não substitui consulta, prescrição, protocolo local ou acompanhamento real.
 
-## Garantias anti-quebra
+## Rolagem mobile
 
-A build preserva gravação transacional, checksum, cinco backups rotativos, recuperação de escrita pendente, watchdog de inicialização, fallback integral da Academia, último pacote de conteúdo íntegro, cache anterior do service worker, acessibilidade, internacionalização trilíngue e manifesto SHA-256.
+- fullscreen somente pelo botão explícito;
+- rolagem vertical nativa com `pan-y` e pinch zoom;
+- nenhum manipulador cancela `touchmove`;
+- auditoria por gesto real em 360×800;
+- nenhum estouro horizontal;
+- controles visíveis com pelo menos 48 px.
 
-## Situação clínica
+## Compatibilidade preservada
 
-A Academia e os seis casos ativos estão disponíveis apenas para desenvolvimento e testes. Nenhum conteúdo foi marcado como clinicamente aprovado ou liberado para publicação comercial. Credenciais ou aprovações médicas não são atribuídas automaticamente.
+- 6 casos clínicos regulares;
+- 9 cenários de emergência ABCDE;
+- 9 módulos e 27 lições da Academia;
+- 6 perfis fisiológicos;
+- 13 exames, 14 intervenções e 2 procedimentos;
+- save schema 14 e content schema 8;
+- gravação transacional, checksum e cinco backups;
+- PWA, modo seguro, rollback de cache e três idiomas.
+
+## Situação de publicação
+
+A build é jogável para desenvolvimento e testes. Nenhuma credencial, validação ou aprovação médica é atribuída automaticamente.
 
 ## Próxima fase prevista
 
-**v0.19.0 — Motor Fisiológico:** tempo clínico contínuo, deterioração baseada no caso, resposta a intervenções, monitorização e desfechos, preservando a governança e o tutorial já construídos.
+**v0.24.0 — Casos Ramificados e Dificuldade:** múltiplos desfechos, níveis de dificuldade, dados parcialmente ocultos e redução de exploração por memorização.

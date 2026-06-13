@@ -1,4 +1,1 @@
-Medical Simulator - Vale Edition
-v0.18.0 | build 2026-06-12 17:15:20 BRT
-Fase 9: Academia Clínica Introdutória trilíngue
-Save schema 9 | Content schema 3 | Academy schema 1
+v0.24.0 | build 2026-06-13 12:25:00 BRT

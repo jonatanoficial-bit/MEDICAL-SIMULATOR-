@@ -1,6 +1,60 @@
 # Changelog
 
-## 0.18.0 — Academia Clínica Introdutória — 2026-06-12 17:15:20 BRT
+## v0.24.0 — Casos Ramificados e Níveis de Dificuldade
+- Quatro níveis: iniciante, estudante, profissional e desafio.
+- Seis perfis ramificados, pistas condicionais e diagnósticos diferenciais.
+- Limite de hipóteses por dificuldade, penalidades e recompensa ajustadas.
+- Quatro desfechos auditáveis: seguro, seguimento, risco não resolvido e encerramento inseguro.
+- Save schema 15, content schema 9 e fallback anti-quebra.
+- Rolagem vertical mobile preservada.
+
+## v0.23.0 — Pacote Ambulatorial Longitudinal — 2026-06-13 11:57:41 BRT
+
+- Centro de Seguimento separado do plantão agudo.
+- Dez linhas de cuidado longitudinal com três a cinco retornos.
+- Quinze ações sobre avaliação, monitorização, adesão, barreiras, segurança e continuidade.
+- Metas determinísticas, evolução entre consultas, faltas e desfechos persistentes.
+- Recompensa única por linha de cuidado e histórico no save schema 14.
+- Conteúdo trilíngue, PWA e rolagem mobile nativa preservados.
+- Release gate ampliado para bloquear todo o pacote ambulatorial até revisão independente.
+
+## v0.22.0 — 2026-06-13 11:13:08 BRT
+- Centro de Emergência com 9 cenários ABCDE.
+- Motor determinístico de deterioração e resposta a ações críticas.
+- RCP, SCA, AVC, sepse, anafilaxia, overdose, TEP, asma grave e hipoglicemia.
+- Conteúdo trilíngue e governança com fontes oficiais atualizadas.
+- Save schema 13, content schema 7, fallback e release gate ampliados.
+- Rolagem mobile nativa preservada.
+
+## v0.21.0 — 2026-06-13 10:01:34 BRT
+
+- Exames com estados solicitado, processando, liberado e cancelado.
+- Tempos clínicos comprimidos e resultados persistentes no prontuário.
+- Reconciliação medicamentosa com seis barreiras obrigatórias.
+- Ordens educacionais com dose, via, frequência, duração, alertas e contraindicações.
+- Incidentes simulados por indicação incorreta e penalidade auditável.
+- Procedimentos com riscos, tentativas e desfechos determinísticos.
+- Save schema 12, content schema 6, fallback e release gate ampliados.
+- Rolagem vertical por toque preservada.
+
+## v0.20.0 — Anamnese e Exame Físico Avançados + Scroll Mobile — 2026-06-13 09:04:51 BRT
+
+- correção crítica da rolagem vertical por toque no celular;
+- remoção do acionamento automático de tela cheia no primeiro gesto;
+- `touchmove` permanece passivo e nunca é cancelado;
+- `touch-action: pan-y pinch-zoom`, overflow vertical nativo e overscroll restaurados;
+- camadas invisíveis deixaram de interceptar gestos;
+- preservação da posição da página após ações clínicas;
+- registro estruturado com 6 perfis de avaliação clínica;
+- 30 perguntas contextuais de anamnese e 24 itens de exame físico;
+- conteúdo localizado em PT-BR, inglês e espanhol;
+- respostas, achados, justificativas, prioridades e sinais de alarme por caso;
+- integração ao prontuário, linha do tempo, tempo clínico e motor fisiológico;
+- fallback íntegro, validação antes da ativação e release gate ampliado;
+- save schema 11, content schema 5 e service worker atualizados;
+- teste de gesto real em Chromium mobile: deslocamento de 0 para 809 px sem fullscreen acidental.
+
+## v0.18.0 — Academia Clínica Introdutória — 2026-06-12 17:15:20 BRT
 
 - Academia trilíngue com 9 módulos e 27 lições.
 - Pré-teste diagnóstico sem penalidade.

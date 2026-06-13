@@ -11,8 +11,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Med Vale">
   <meta name="format-detection" content="telephone=no">
-  <meta name="description" content="Medical Simulator - Vale Edition: simulador clínico educacional trilíngue com Academia Clínica Introdutória, governança médica, fontes rastreáveis e foco mobile.">
-  <title>Medical Simulator - Vale Edition v0.18.0</title>
+  <meta name="description" content="Medical Simulator - Vale Edition: simulador clínico educacional trilíngue com anamnese e exame físico estruturados, Academia Clínica, governança médica e rolagem mobile nativa.">
+  <title>Medical Simulator - Vale Edition v0.24.0</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="assets/icons/pwa/apple-touch-icon.png">
@@ -21,6 +21,7 @@
   <link rel="modulepreload" href="src/app.js">
   <link rel="modulepreload" href="src/config/build.js">
   <link rel="modulepreload" href="src/core/mobile-experience.js">
+  <link rel="modulepreload" href="src/core/touch-scroll-guard.js">
   <link rel="modulepreload" href="src/core/accessibility.js">
   <link rel="modulepreload" href="src/i18n/index.js">
   <link rel="modulepreload" href="src/i18n/catalogs.js">
@@ -28,6 +29,12 @@
   <link rel="modulepreload" href="src/data/academy-schema.js">
   <link rel="modulepreload" href="src/data/fallback-academy.js">
   <link rel="modulepreload" href="src/data/content-loader.js">
+  <link rel="modulepreload" href="src/data/assessment-schema.js">
+  <link rel="modulepreload" href="src/data/fallback-assessment.js">
+  <link rel="modulepreload" href="src/data/fallback-outpatient.js">
+  <link rel="modulepreload" href="src/simulation/outpatient-engine.js">
+  <link rel="modulepreload" href="src/simulation/branching-engine.js">
+  <link rel="modulepreload" href="src/data/fallback-branching.js">
   <link rel="modulepreload" href="src/data/clinical-governance.js">
   <link rel="modulepreload" href="src/core/storage.js">
   <script src="src/core/boot-guard.js"></script>
@@ -41,7 +48,7 @@
       <p>Este jogo precisa de JavaScript ativado.</p>
     </main>
   </noscript>
-  <div id="app"><main class="boot-shell" aria-live="polite"><div class="boot-spinner"></div><h1>Medical Simulator</h1><p>Loading the multilingual clinical simulator… / Cargando el simulador clínico multilingüe… / Preparando o simulador clínico multilíngue…</p><small>v0.18.0</small></main></div>
+  <div id="app"><main class="boot-shell" aria-live="polite"><div class="boot-spinner"></div><h1>Medical Simulator</h1><p>Loading the multilingual clinical simulator… / Cargando el simulador clínico multilingüe… / Preparando o simulador clínico multilíngue…</p><small>v0.24.0</small></main></div>
   <script type="module" src="src/app.js"></script>
 </body>
 </html>

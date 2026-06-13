@@ -1,8 +1,6 @@
-MEDICAL SIMULATOR - VALE EDITION
-VERSION: 0.18.0
-BUILD: 2026-06-12 17:15:20 BRT
-PHASE: 9 - Academia Clínica Introdutória
-SAVE SCHEMA: 9
-CONTENT SCHEMA: 3
-ACADEMY: 9 modules / 27 lessons / 3 languages / 1 guided case
-STATUS: development build; commercial medical release blocked pending independent review
+Medical Simulator - Vale Edition
+Version: 0.24.0
+Build: 20260613_122500_BRT
+Phase: Casos Ramificados e Níveis de Dificuldade
+Save schema: 15
+Content schema: 9
