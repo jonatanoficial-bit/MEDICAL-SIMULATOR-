@@ -1,0 +1,23 @@
+{
+  "before": {
+    "scrollY": 0,
+    "innerHeight": 800,
+    "scrollHeight": 4219,
+    "bodyOverflow": "auto",
+    "touchAction": "pan-y pinch-zoom",
+    "overscroll": "auto"
+  },
+  "after": {
+    "scrollY": 809,
+    "scrollHeight": 4219,
+    "log": [
+      "mobile-scroll",
+      "Gesto de rolagem por toque detectado sem cancelamento.",
+      {
+        "scrollY": 535
+      }
+    ],
+    "activeFullscreen": false
+  },
+  "passed": true
+}

@@ -1,0 +1,55 @@
+{
+  "ok": true,
+  "profiles": [
+    {
+      "screen": "shift-questions",
+      "before": {
+        "y": 0,
+        "h": 2170,
+        "w": 360,
+        "vw": 360,
+        "touch": "pan-y pinch-zoom",
+        "active": [
+          "💬\nANAMNESE"
+        ]
+      },
+      "after": {
+        "y": 909,
+        "fullscreen": false,
+        "log": [
+          "mobile-scroll",
+          "Gesto de rolagem por toque detectado sem cancelamento.",
+          {
+            "scrollY": 525
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "screen": "shift-procedures",
+      "before": {
+        "y": 0,
+        "h": 1711,
+        "w": 360,
+        "vw": 360,
+        "touch": "pan-y pinch-zoom",
+        "active": [
+          "🩺\nEXAME FÍSICO"
+        ]
+      },
+      "after": {
+        "y": 525,
+        "fullscreen": false,
+        "log": [
+          "mobile-scroll",
+          "Gesto de rolagem por toque detectado sem cancelamento.",
+          {
+            "scrollY": 525
+          }
+        ]
+      },
+      "passed": true
+    }
+  ]
+}

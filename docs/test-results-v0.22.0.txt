@@ -1,0 +1,317 @@
+
+> medical-simulator-vale-edition@0.22.0 audit
+> node tests/audit-emergency.mjs && node tests/audit-content.mjs && node tests/audit-governance.mjs && node tests/audit-academy.mjs && node tests/audit-academy-runtime.mjs && node tests/audit-physiology.mjs && node tests/audit-physiology-runtime.mjs && node tests/audit-assessment.mjs && node tests/audit-therapeutics.mjs && node tests/audit-touch-scroll.mjs && node tests/audit-architecture.mjs && node tests/audit-loader.mjs && node tests/audit-storage.mjs && node tests/audit-diagnostics.mjs && node tests/audit-build-consistency.mjs && node tests/audit-antibreak.mjs && node tests/audit-runtime-smoke.mjs && node tests/audit-sw-assets.mjs && node tests/audit-mobile-pwa.mjs && node tests/audit-clinical-ui.mjs && node tests/audit-accessibility.mjs && node tests/audit-i18n.mjs
+
+{
+  "ok": true,
+  "scenarios": 9,
+  "actions": 34,
+  "stages": 5,
+  "deterministic": true,
+  "publishable": false
+}
+{
+  "ok": true,
+  "cases": 6,
+  "specialties": 9,
+  "missions": 6,
+  "governanceCases": 6,
+  "academyModules": 9,
+  "physiologyProfiles": 6,
+  "assessmentProfiles": 6,
+  "therapeuticsProfiles": 6,
+  "emergencyScenarios": 9,
+  "warnings": [
+    "Caso hipertensao-1 permanece somente para desenvolvimento: Fontes mapeadas.",
+    "Caso cefaleia-tensional permanece somente para desenvolvimento: Fontes mapeadas.",
+    "Caso angina-estavel permanece somente para desenvolvimento: Fontes mapeadas.",
+    "Caso itu-nao-complicada permanece somente para desenvolvimento: Fontes mapeadas.",
+    "Caso refluxo-gastroesofagico permanece somente para desenvolvimento: Fontes mapeadas.",
+    "Caso dermatite-atopica permanece somente para desenvolvimento: Fontes mapeadas.",
+    "Exames, medicamentos e procedimentos permanecem bloqueados para publicação comercial."
+  ]
+}
+{
+  "ok": true,
+  "channel": "development",
+  "cases": 6,
+  "approved": 0,
+  "blocked": 6,
+  "sources": 22,
+  "warnings": 6
+}
+{
+  "ok": true,
+  "modules": 9,
+  "lessonCounts": {
+    "pt-BR": 27,
+    "en": 27,
+    "es": 27
+  },
+  "pretestQuestions": 5,
+  "guidedSteps": 5,
+  "locales": [
+    "pt-BR",
+    "en",
+    "es"
+  ],
+  "developmentOnly": true
+}
+{
+  "ok": true,
+  "modulesPassed": 9,
+  "lessonsCompleted": 27,
+  "guidedScore": 100,
+  "pretestScore": 100,
+  "xpAwarded": 495,
+  "locales": [
+    "pt-BR",
+    "en",
+    "es"
+  ],
+  "saveSchema": 13
+}
+{
+  "ok": true,
+  "profiles": 6,
+  "engineVersion": "1.0.0",
+  "deterministic": true,
+  "delayedAnginaStatus": "attention",
+  "results": [
+    {
+      "caseId": "hipertensao-1",
+      "status": "stable",
+      "elapsed": 44,
+      "symptomBefore": 40,
+      "symptomAfter": 37,
+      "reserve": 91,
+      "quality": 10,
+      "trend": 10
+    },
+    {
+      "caseId": "cefaleia-tensional",
+      "status": "stable",
+      "elapsed": 40,
+      "symptomBefore": 48,
+      "symptomAfter": 37,
+      "reserve": 91,
+      "quality": 10,
+      "trend": 8
+    },
+    {
+      "caseId": "angina-estavel",
+      "status": "attention",
+      "elapsed": 44,
+      "symptomBefore": 63,
+      "symptomAfter": 62,
+      "reserve": 86,
+      "quality": 5,
+      "trend": 10
+    },
+    {
+      "caseId": "itu-nao-complicada",
+      "status": "stable",
+      "elapsed": 40,
+      "symptomBefore": 47,
+      "symptomAfter": 40,
+      "reserve": 93,
+      "quality": 10,
+      "trend": 8
+    },
+    {
+      "caseId": "refluxo-gastroesofagico",
+      "status": "stable",
+      "elapsed": 44,
+      "symptomBefore": 44,
+      "symptomAfter": 33,
+      "reserve": 93,
+      "quality": 10,
+      "trend": 10
+    },
+    {
+      "caseId": "dermatite-atopica",
+      "status": "improving",
+      "elapsed": 44,
+      "symptomBefore": 42,
+      "symptomAfter": 28,
+      "reserve": 97,
+      "quality": 15,
+      "trend": 10
+    }
+  ]
+}
+{
+  "ok": true,
+  "caseId": "angina-estavel",
+  "elapsed": 6,
+  "status": "stable",
+  "trend": 5,
+  "actions": {
+    "conduct:estratificação de risco": 1
+  }
+}
+{
+  "ok": true,
+  "profiles": 6,
+  "interviewItems": 30,
+  "physicalExamItems": 24,
+  "locales": 3
+}
+{
+  "ok": true,
+  "exams": 13,
+  "interventions": 14,
+  "profiles": 6,
+  "ready": 1,
+  "incidents": 1,
+  "penalty": 12
+}
+{
+  "ok": true,
+  "nativeVerticalPan": true,
+  "touchmoveCancelled": false,
+  "automaticFullscreenGesture": false,
+  "overlayPointerIsolation": true
+}
+{
+  "ok": true,
+  "requiredModules": 22,
+  "appBytes": 135796
+}
+{
+  "ok": true,
+  "mode": "external",
+  "recoveredMode": "last-known-good",
+  "safeMode": "safe-fallback",
+  "cases": 6,
+  "resources": 12
+}
+{
+  "ok": true,
+  "saveSchema": 13,
+  "player": "Dr. Save Antigo",
+  "xp": 906,
+  "accessibility": {
+    "contrast": "high",
+    "textSize": "large",
+    "reduceMotion": true,
+    "focusMode": true,
+    "descriptions": true
+  },
+  "backups": 5,
+  "pending": false,
+  "mainIntegrity": true
+}
+{
+  "ok": true,
+  "total": 3,
+  "warnings": 1,
+  "errors": 1,
+  "viewport": "390x844"
+}
+{
+  "ok": true,
+  "version": "0.22.0",
+  "checks": {
+    "build": true,
+    "package": true,
+    "webmanifest": true,
+    "content": true,
+    "coreManifest": true,
+    "config": true,
+    "index": true,
+    "serviceWorker": true
+  }
+}
+{
+  "ok": true,
+  "groups": [
+    "storage",
+    "boot",
+    "loader",
+    "sw",
+    "app"
+  ],
+  "assertions": 21
+}
+{
+  "ok": true,
+  "initialScreen": "setup",
+  "contentMode": "external",
+  "cases": 6,
+  "screens": {
+    "hub": 4855,
+    "specialty": 6166,
+    "shift": 27451,
+    "settings": 19934,
+    "emergency": 7301,
+    "recovery": 4880
+  },
+  "accessibility": "applied-and-reset"
+}
+{
+  "ok": true,
+  "assets": 73,
+  "critical": 44,
+  "data": 13,
+  "optional": 16
+}
+{
+  "ok": true,
+  "display": "fullscreen",
+  "icons": 4,
+  "clinicalTabs": 7,
+  "safeAreas": true,
+  "dynamicViewport": true
+}
+{
+  "ok": true,
+  "patientCommand": true,
+  "workflowSteps": 5,
+  "recordTabs": 6,
+  "resultsCenter": true,
+  "closureReview": true,
+  "predictedScoreVisible": false
+}
+{
+  "ok": true,
+  "textSizes": 4,
+  "highContrast": true,
+  "reducedMotion": true,
+  "keyboardNavigation": true,
+  "liveRegions": 2,
+  "dialogSemantics": true,
+  "forcedColors": true
+}
+{
+  "ok": true,
+  "locales": [
+    "pt-BR",
+    "en",
+    "es"
+  ],
+  "stats": {
+    "pt-BR": {
+      "ui": 0,
+      "terms": 0,
+      "responses": 0,
+      "ready": true
+    },
+    "en": {
+      "ui": 549,
+      "terms": 131,
+      "responses": 46,
+      "ready": true
+    },
+    "es": {
+      "ui": 549,
+      "terms": 131,
+      "responses": 46,
+      "ready": true
+    }
+  },
+  "canonicalTerms": 86,
+  "clinicalResponses": 46,
+  "liveSwitch": true,
+  "canonicalGameplayPreserved": true
+}
