@@ -38,6 +38,6 @@ const app=read('src/app.js'),sw=read('sw.js'),index=read('index.html'),state=rea
 for(const token of ['localizeDOM','applyDocumentLocale','detectLocale','setAppLocale','top-locale','localeSelected'])require(app.includes(token),`app:${token}`);
 require(sw.includes("'./src/i18n/catalogs.js'"),'catálogo no cache crítico');
 require(index.includes('src/i18n/catalogs.js'),'catálogo em modulepreload');
-require(state.includes("locale:'pt-BR'")&&state.includes('saveSchema:15'),'locale e schema no estado');
+require(state.includes("locale:'pt-BR'")&&state.includes('saveSchema:18'),'locale e schema no estado');
 if(failures.length)throw new Error(`Auditoria i18n falhou: ${failures.slice(0,25).join(' | ')}${failures.length>25?` (+${failures.length-25})`:''}`);
 console.log(JSON.stringify({ok:true,locales:SUPPORTED_LOCALES.map(x=>x.id),stats,canonicalTerms:canonicalTerms.length,clinicalResponses:46,liveSwitch:true,canonicalGameplayPreserved:true},null,2));

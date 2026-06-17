@@ -14,5 +14,5 @@ if(globalThis.state.outpatient.session.status!=='completed'||globalThis.state.ou
 const awarded=globalThis.state.player.xp-initialXp;if(awarded<=0||globalThis.state.outpatient.xpClaimed.length!==1)throw new Error('Recompensa longitudinal inválida.');
 globalThis.restartOutpatientProgram();for(let visit=1;visit<=program.totalVisits;visit++){for(const id of [...new Set([...program.requiredActions,...program.helpfulActions])].slice(0,7))globalThis.doOutpatientAction(id);globalThis.closeCurrentOutpatientVisit();}
 if(globalThis.state.player.xp!==initialXp+awarded)throw new Error('Repetição concedeu XP novamente.');
-const envelope=JSON.parse(localStorage.getItem('medsim-vale-save-v024'));if(envelope?.payload?.meta?.saveSchema!==15||!envelope?.payload?.outpatient?.completed?.length)throw new Error('Seguimento não persistiu no save schema 15.');
+const envelope=JSON.parse(localStorage.getItem('medsim-vale-save-v027'));if(envelope?.payload?.meta?.saveSchema!==18||!envelope?.payload?.outpatient?.completed?.length)throw new Error('Seguimento não persistiu no save schema 18.');
 console.log(JSON.stringify({ok:true,program:'hypertension-followup',visits:program.totalVisits,score:globalThis.state.outpatient.session.score,xpAwarded:awarded,rewardOnce:true,saveSchema:envelope.payload.meta.saveSchema},null,2));

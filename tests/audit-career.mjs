@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {validateCareerRegistry} from '../src/simulation/career-engine.js';
+const registry=JSON.parse(fs.readFileSync(new URL('../data/career.json',import.meta.url),'utf8'));
+const result=validateCareerRegistry(registry);
+assert.equal(result.ok,true,result.errors.join(' | '));
+assert.equal(registry.stages.length,5);
+assert.equal(registry.departments.length,8);
+assert.equal(registry.exams.length,4);
+assert.equal(registry.calendar.length,7);
+assert.equal(registry.missions.length,6);
+assert.equal(registry.publishable,false);
+console.log(JSON.stringify({ok:true,stages:5,departments:8,exams:4,calendar:7,missions:6}));

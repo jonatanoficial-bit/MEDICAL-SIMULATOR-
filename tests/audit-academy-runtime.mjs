@@ -54,6 +54,6 @@ globalThis.setAppLocale('en');globalThis.openAcademyCatalog();
 if(!appElement.innerHTML.includes('Introductory Clinical Academy'))throw new Error('Academia em inglês não renderizou.');
 globalThis.setAppLocale('es');globalThis.openAcademyCatalog();
 if(!appElement.innerHTML.includes('Academia Clínica Introductoria'))throw new Error('Academia em espanhol não renderizou.');
-const envelope=JSON.parse(localStorage.getItem('medsim-vale-save-v024'));
-if(envelope?.payload?.meta?.saveSchema!==15||!envelope?.payload?.academy?.guided?.completed)throw new Error('Progresso da Academia não foi persistido no save schema 15.');
+const envelope=JSON.parse(localStorage.getItem('medsim-vale-save-v027'));
+if(envelope?.payload?.meta?.saveSchema!==18||!envelope?.payload?.academy?.guided?.completed)throw new Error('Progresso da Academia não foi persistido no save schema 18.');
 console.log(JSON.stringify({ok:true,modulesPassed:Object.keys(globalThis.state.academy.passedModules).length,lessonsCompleted:Object.keys(globalThis.state.academy.completedLessons).length,guidedScore:globalThis.state.academy.guided.score,pretestScore:globalThis.state.academy.pretest.score,xpAwarded:globalThis.state.player.xp-initialXp,locales:['pt-BR','en','es'],saveSchema:envelope.payload.meta.saveSchema},null,2));

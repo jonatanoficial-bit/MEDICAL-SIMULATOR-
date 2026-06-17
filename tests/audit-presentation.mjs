@@ -1,0 +1,7 @@
+import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');const req=(v,m)=>{if(!v)throw new Error(m)};
+const data=JSON.parse(fs.readFileSync(path.join(root,'data/presentation.json'),'utf8'));req(data.schemaVersion===1,'presentation schema');req(data.contentVersion==='0.27.0','presentation version');req(Object.keys(data.audio.sfx).length>=6,'sfx registry');req(Object.keys(data.audio.ambience).length>=3,'ambience registry');req(data.visual.assetSlots.length>=6,'asset slots');
+for(const file of [...Object.values(data.audio.sfx),...Object.values(data.audio.ambience)]){const full=path.join(root,file);req(fs.existsSync(full),`asset ausente ${file}`);const b=fs.readFileSync(full);req(b.length>100&&b.subarray(0,4).toString()==='RIFF'&&b.subarray(8,12).toString()==='WAVE',`wav inválido ${file}`)}
+const state=fs.readFileSync(path.join(root,'src/core/default-state.js'),'utf8');req(state.includes('saveSchema:18')&&state.includes('ambientVolume'),'estado audiovisual');
+const app=fs.readFileSync(path.join(root,'src/app.js'),'utf8');req(app.includes('presentationSettingsCard')&&app.includes('syncPresentation'),'integração app');
+console.log(JSON.stringify({ok:true,sfx:Object.keys(data.audio.sfx).length,ambience:Object.keys(data.audio.ambience).length,assetSlots:data.visual.assetSlots.length}));

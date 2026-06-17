@@ -21,7 +21,7 @@ globalThis.fetch=async input=>{const raw=String(input).split('?')[0].replace(/^\
 await import('../src/app.js');
 await new Promise(resolve=>setTimeout(resolve,120));
 const screens={};
-for(const screenName of ['setup','hub','specialty','shift','learning','settings','outpatient','emergency','recovery']){
+for(const screenName of ['setup','hub','career','specialty','shift','learning','settings','outpatient','emergency','beta','recovery']){
   globalThis.state.screen=screenName;
   if(screenName==='shift'){globalThis.state.selectedSpec='clinica-medica';globalThis.state.ui.shiftTab='summary';globalThis.state.ui.resultsOpen=false;globalThis.state.ui.closureReview=false;}
   globalThis.render();
@@ -67,6 +67,32 @@ for(const locale of ['pt-BR','en','es']){
   }
 }
 
+
+
+for(const locale of ['pt-BR','en','es']){
+  globalThis.state.locale=locale;
+  globalThis.state.screen='career';
+  globalThis.state.emergency.completed=[];globalThis.state.outpatient.completed=[];
+  globalThis.state.career={stageId:'intern',day:4,rotationId:'triage',examSession:null,examResults:{},examRewardsClaimed:[],claimedMissions:[],attendanceDates:[],activityLog:[{type:'case',score:86,at:'2026-06-13T15:00:00.000Z'}],competencies:{'clinica-medica':{activities:3,totalScore:252,average:84}},streak:3,lastActivityDate:'2026-06-13',totalActivities:3};
+  globalThis.state.completed=[
+    {id:'hypertension',score:84},{id:'tension-headache',score:82},{id:'gerd',score:86}
+  ];
+  globalThis.state.academy.passedModules={'safety-limits':true,'initial-assessment':true};
+  globalThis.state.ui.careerTab='overview';globalThis.render();screens[`${locale}-career-overview`]=appElement.innerHTML;
+  globalThis.state.ui.careerTab='residency';globalThis.render();screens[`${locale}-career-residency`]=appElement.innerHTML;
+  globalThis.state.ui.careerTab='hospital';globalThis.render();screens[`${locale}-career-hospital`]=appElement.innerHTML;
+  globalThis.state.ui.careerTab='exams';globalThis.render();screens[`${locale}-career-exams`]=appElement.innerHTML;
+  globalThis.state.ui.careerTab='calendar';globalThis.render();screens[`${locale}-career-calendar`]=appElement.innerHTML;
+}
+
+
+for(const locale of ['pt-BR','en','es']){
+  globalThis.state.locale=locale;globalThis.state.screen='beta';globalThis.state.ui.betaTab='status';globalThis.runBetaAudit();screens[`${locale}-beta-status`]=appElement.innerHTML;
+  globalThis.state.ui.betaTab='checklist';globalThis.render();screens[`${locale}-beta-checklist`]=appElement.innerHTML;
+  globalThis.state.ui.betaTab='feedback';globalThis.render();screens[`${locale}-beta-feedback`]=appElement.innerHTML;
+  globalThis.state.ui.betaTab='sessions';globalThis.render();screens[`${locale}-beta-sessions`]=appElement.innerHTML;
+}
+
 const academy=JSON.parse(fs.readFileSync(path.join(root,'data/academy.json'),'utf8'));
 for(const locale of ['pt-BR','en','es']){
   globalThis.state.locale=locale;globalThis.state.screen='learning';globalThis.state.ui.academyView='catalog';globalThis.state.ui.academyModuleId=null;globalThis.render();screens[`${locale}-academy-catalog`]=appElement.innerHTML;
@@ -75,4 +101,4 @@ for(const locale of ['pt-BR','en','es']){
   globalThis.state.ui.academyView='quiz';globalThis.state.ui.academyModuleId='safety-limits';globalThis.state.ui.academyQuizFeedback=null;globalThis.render();screens[`${locale}-academy-quiz`]=appElement.innerHTML;
   globalThis.state.academy.passedModules['guided-reasoning']=true;globalThis.state.academy.guided={current:0,answers:[],correct:0,completed:false,score:null};globalThis.state.ui.academyView='guided';globalThis.state.ui.academyModuleId='guided-reasoning';globalThis.render();screens[`${locale}-academy-guided`]=appElement.innerHTML;
 }
-process.stdout.write(JSON.stringify({build:'0.24.0',screens}));
+process.stdout.write(JSON.stringify({build:'0.27.0',screens}));

@@ -38,11 +38,11 @@ globalThis.fetch=async input=>{
 await import('../src/app.js');
 await new Promise(resolve=>setTimeout(resolve,120));
 if(!appElement.innerHTML.includes('NOVO GAME'))throw new Error('Tela inicial não renderizou.');
-if(!appElement.innerHTML.includes('v0.24.0'))throw new Error('Build visível ausente.');
+if(!appElement.innerHTML.includes('v0.27.0'))throw new Error('Build visível ausente.');
 if(appElement.innerHTML.includes('Modo segurança ativo'))throw new Error('Runtime caiu no modo de segurança.');
 if(globalThis.VALE_CONTENT_STATUS?.caseCount!==6)throw new Error('Conteúdo clínico não foi ativado.');
 const screens={};
-for(const [screen,needle] of [['hub','LOBBY DO RESIDENTE'],['specialty','Escolha sua especialidade'],['shift','PLANTÃO - MODO SIMULADOR'],['settings','Proteção do progresso'],['outpatient','CENTRO DE SEGUIMENTO'],['emergency','CENTRO DE EMERGÊNCIA'],['recovery','Central de recuperação']]){
+for(const [screen,needle] of [['hub','LOBBY DO RESIDENTE'],['career','CARREIRA E RESIDÊNCIA'],['specialty','Escolha sua especialidade'],['shift','PLANTÃO - MODO SIMULADOR'],['settings','Proteção do progresso'],['outpatient','CENTRO DE SEGUIMENTO'],['emergency','CENTRO DE EMERGÊNCIA'],['beta','CENTRO BETA FECHADO'],['recovery','Central de recuperação']]){
   globalThis.state.screen=screen;
   if(screen==='shift')globalThis.state.selectedSpec='clinica-medica';
   globalThis.render();
@@ -58,4 +58,11 @@ globalThis.setAccessibility('reduceMotion',true);
 if(document.documentElement.dataset.motion!=='reduced')throw new Error('Redução de movimento não foi aplicada.');
 globalThis.resetAccessibility();
 if(globalThis.state.accessibility.contrast!=='standard'||document.documentElement.dataset.textSize!=='medium')throw new Error('Reset de acessibilidade falhou.');
-console.log(JSON.stringify({ok:true,initialScreen:'setup',contentMode:globalThis.VALE_CONTENT_STATUS.mode,cases:globalThis.VALE_CONTENT_STATUS.caseCount,screens,accessibility:'applied-and-reset'},null,2));
+const examXpBefore=globalThis.state.player.xp;
+globalThis.beginCareerExam('exam-r1');for(let i=0;i<3;i++)globalThis.answerCareerQuestion(0);
+const examXpFirst=globalThis.state.player.xp;
+if(examXpFirst-examXpBefore!==150)throw new Error('Primeira aprovação da prova não concedeu 150 XP.');
+globalThis.finishCareerExam();globalThis.beginCareerExam('exam-r1');for(let i=0;i<3;i++)globalThis.answerCareerQuestion(0);
+if(globalThis.state.player.xp!==examXpFirst)throw new Error('Repetição da prova duplicou a recompensa.');
+if(!globalThis.state.career.examRewardsClaimed.includes('exam-r1'))throw new Error('Trava de recompensa da prova não foi persistida.');
+console.log(JSON.stringify({ok:true,initialScreen:'setup',contentMode:globalThis.VALE_CONTENT_STATUS.mode,cases:globalThis.VALE_CONTENT_STATUS.caseCount,screens,accessibility:'applied-and-reset',careerExamRewardOnce:true},null,2));

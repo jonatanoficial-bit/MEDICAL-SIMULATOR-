@@ -2,7 +2,7 @@ import fs from 'node:fs';
 const read=file=>fs.readFileSync(new URL('../'+file,import.meta.url),'utf8');
 const required={
   storage:['vale-medical-save','pendingKey','maxBackups','restoreBackup','checksum'],
-  boot:['TIMEOUT=12000','medsim-boot-attempts-v020','modo seguro','clearCaches'],
+  boot:['TIMEOUT=12000','medsim-boot-attempts-v027','modo seguro','clearCaches'],
   loader:['last-known-good','timeoutMs=5000','retries=1','validateGameContent'],
   sw:['CRITICAL_ASSETS','Cache crítico incompleto','slice(0,1)','SKIP_WAITING'],
   app:['CENTRAL DE RECUPERAÇÃO','repairTransientState','safeExportDiagnostics','verifyRuntimeBuild']
