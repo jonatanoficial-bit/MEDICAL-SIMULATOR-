@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "checks": {
+    "premiumCss": true,
+    "mobileRange": true,
+    "settingsCard": true,
+    "touchPreserved": true,
+    "slots": 6
+  }
+}
