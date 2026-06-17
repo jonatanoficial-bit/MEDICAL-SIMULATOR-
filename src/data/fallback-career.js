@@ -1,0 +1,802 @@
+export const FALLBACK_CAREER = {
+  "schemaVersion": 1,
+  "engineVersion": "1.0.0",
+  "status": "development-review",
+  "publishable": false,
+  "policy": {
+    "disclaimer": {
+      "pt-BR": "Progressão fictícia para fins de jogo. Não representa formação, residência ou certificação médica real.",
+      "en": "Fictional progression for game purposes. It does not represent real medical education, residency, or certification.",
+      "es": "Progresión ficticia para fines de juego. No representa formación, residencia ni certificación médica real."
+    }
+  },
+  "stages": [
+    {
+      "id": "intern",
+      "order": 1,
+      "icon": "🩺",
+      "title": {
+        "pt-BR": "Internato",
+        "en": "Internship",
+        "es": "Internado"
+      },
+      "subtitle": {
+        "pt-BR": "Fundamentos e supervisão",
+        "en": "Foundations and supervision",
+        "es": "Fundamentos y supervisión"
+      },
+      "requirements": {
+        "cases": 0,
+        "averageScore": 0,
+        "academyModules": 0,
+        "emergency": 0,
+        "outpatient": 0,
+        "examId": null
+      },
+      "unlocks": [
+        "triage",
+        "general-ward"
+      ]
+    },
+    {
+      "id": "r1",
+      "order": 2,
+      "icon": "📘",
+      "title": {
+        "pt-BR": "Residência R1",
+        "en": "Residency PGY-1",
+        "es": "Residencia R1"
+      },
+      "subtitle": {
+        "pt-BR": "Avaliação inicial e segurança",
+        "en": "Initial assessment and safety",
+        "es": "Evaluación inicial y seguridad"
+      },
+      "requirements": {
+        "cases": 3,
+        "averageScore": 65,
+        "academyModules": 2,
+        "emergency": 0,
+        "outpatient": 0,
+        "examId": "exam-r1"
+      },
+      "unlocks": [
+        "outpatient-clinic",
+        "diagnostics"
+      ]
+    },
+    {
+      "id": "r2",
+      "order": 3,
+      "icon": "🏥",
+      "title": {
+        "pt-BR": "Residência R2",
+        "en": "Residency PGY-2",
+        "es": "Residencia R2"
+      },
+      "subtitle": {
+        "pt-BR": "Decisão clínica e continuidade",
+        "en": "Clinical decisions and continuity",
+        "es": "Decisión clínica y continuidad"
+      },
+      "requirements": {
+        "cases": 8,
+        "averageScore": 72,
+        "academyModules": 5,
+        "emergency": 2,
+        "outpatient": 2,
+        "examId": "exam-r2"
+      },
+      "unlocks": [
+        "emergency-department",
+        "cardiology-unit"
+      ]
+    },
+    {
+      "id": "r3",
+      "order": 4,
+      "icon": "⚕️",
+      "title": {
+        "pt-BR": "Residência R3",
+        "en": "Residency PGY-3",
+        "es": "Residencia R3"
+      },
+      "subtitle": {
+        "pt-BR": "Casos complexos e liderança",
+        "en": "Complex cases and leadership",
+        "es": "Casos complejos y liderazgo"
+      },
+      "requirements": {
+        "cases": 15,
+        "averageScore": 78,
+        "academyModules": 8,
+        "emergency": 5,
+        "outpatient": 5,
+        "examId": "exam-r3"
+      },
+      "unlocks": [
+        "critical-care",
+        "teaching-center"
+      ]
+    },
+    {
+      "id": "specialist",
+      "order": 5,
+      "icon": "🏅",
+      "title": {
+        "pt-BR": "Especialista Vale",
+        "en": "Vale Specialist",
+        "es": "Especialista Vale"
+      },
+      "subtitle": {
+        "pt-BR": "Certificação interna do simulador",
+        "en": "Internal simulator certification",
+        "es": "Certificación interna del simulador"
+      },
+      "requirements": {
+        "cases": 25,
+        "averageScore": 82,
+        "academyModules": 9,
+        "emergency": 9,
+        "outpatient": 10,
+        "examId": "exam-final"
+      },
+      "unlocks": [
+        "all-sectors"
+      ]
+    }
+  ],
+  "departments": [
+    {
+      "id": "triage",
+      "icon": "🚪",
+      "title": {
+        "pt-BR": "Triagem",
+        "en": "Triage",
+        "es": "Triaje"
+      },
+      "stage": "intern",
+      "description": {
+        "pt-BR": "Prioridade, sinais vitais e segurança inicial.",
+        "en": "Priority, vital signs, and initial safety.",
+        "es": "Prioridad, signos vitales y seguridad inicial."
+      }
+    },
+    {
+      "id": "general-ward",
+      "icon": "🛏️",
+      "title": {
+        "pt-BR": "Enfermaria Clínica",
+        "en": "General Ward",
+        "es": "Sala Clínica"
+      },
+      "stage": "intern",
+      "description": {
+        "pt-BR": "Casos clínicos regulares e documentação.",
+        "en": "Regular clinical cases and documentation.",
+        "es": "Casos clínicos regulares y documentación."
+      }
+    },
+    {
+      "id": "outpatient-clinic",
+      "icon": "📆",
+      "title": {
+        "pt-BR": "Ambulatório",
+        "en": "Outpatient Clinic",
+        "es": "Ambulatorio"
+      },
+      "stage": "r1",
+      "description": {
+        "pt-BR": "Seguimento longitudinal e adesão.",
+        "en": "Longitudinal follow-up and adherence.",
+        "es": "Seguimiento longitudinal y adherencia."
+      }
+    },
+    {
+      "id": "diagnostics",
+      "icon": "🧪",
+      "title": {
+        "pt-BR": "Diagnóstico",
+        "en": "Diagnostics",
+        "es": "Diagnóstico"
+      },
+      "stage": "r1",
+      "description": {
+        "pt-BR": "Exames, resultados e raciocínio diferencial.",
+        "en": "Tests, results, and differential reasoning.",
+        "es": "Pruebas, resultados y razonamiento diferencial."
+      }
+    },
+    {
+      "id": "emergency-department",
+      "icon": "⚡",
+      "title": {
+        "pt-BR": "Pronto-Socorro",
+        "en": "Emergency Department",
+        "es": "Urgencias"
+      },
+      "stage": "r2",
+      "description": {
+        "pt-BR": "Cenários ABCDE e deterioração aguda.",
+        "en": "ABCDE scenarios and acute deterioration.",
+        "es": "Escenarios ABCDE y deterioro agudo."
+      }
+    },
+    {
+      "id": "cardiology-unit",
+      "icon": "🫀",
+      "title": {
+        "pt-BR": "Unidade Cardiológica",
+        "en": "Cardiology Unit",
+        "es": "Unidad Cardiológica"
+      },
+      "stage": "r2",
+      "description": {
+        "pt-BR": "Competência e casos cardiovasculares.",
+        "en": "Cardiovascular competency and cases.",
+        "es": "Competencia y casos cardiovasculares."
+      }
+    },
+    {
+      "id": "critical-care",
+      "icon": "📟",
+      "title": {
+        "pt-BR": "Cuidados Críticos",
+        "en": "Critical Care",
+        "es": "Cuidados Críticos"
+      },
+      "stage": "r3",
+      "description": {
+        "pt-BR": "Casos de alta complexidade simulada.",
+        "en": "High-complexity simulated cases.",
+        "es": "Casos simulados de alta complejidad."
+      }
+    },
+    {
+      "id": "teaching-center",
+      "icon": "🎓",
+      "title": {
+        "pt-BR": "Centro de Ensino",
+        "en": "Teaching Center",
+        "es": "Centro de Enseñanza"
+      },
+      "stage": "r3",
+      "description": {
+        "pt-BR": "Academia, provas e revisão de desempenho.",
+        "en": "Academy, exams, and performance review.",
+        "es": "Academia, exámenes y revisión del desempeño."
+      }
+    }
+  ],
+  "exams": [
+    {
+      "id": "exam-r1",
+      "stage": "r1",
+      "passScore": 60,
+      "title": {
+        "pt-BR": "Prova de Fundamentos R1",
+        "en": "PGY-1 Foundations Exam",
+        "es": "Examen de Fundamentos R1"
+      },
+      "questions": [
+        {
+          "text": {
+            "pt-BR": "Qual é a primeira prioridade diante de um paciente potencialmente instável?",
+            "en": "What is the first priority with a potentially unstable patient?",
+            "es": "¿Cuál es la primera prioridad ante un paciente potencialmente inestable?"
+          },
+          "options": [
+            {
+              "pt-BR": "Avaliação estruturada de estabilidade e ABCDE",
+              "en": "Structured stability assessment and ABCDE",
+              "es": "Evaluación estructurada de estabilidad y ABCDE"
+            },
+            {
+              "pt-BR": "Solicitar todos os exames",
+              "en": "Order every test",
+              "es": "Solicitar todas las pruebas"
+            },
+            {
+              "pt-BR": "Definir o diagnóstico final imediatamente",
+              "en": "Set the final diagnosis immediately",
+              "es": "Definir el diagnóstico final de inmediato"
+            }
+          ],
+          "correctIndex": 0
+        },
+        {
+          "text": {
+            "pt-BR": "O que deve acontecer após uma intervenção?",
+            "en": "What should happen after an intervention?",
+            "es": "¿Qué debe ocurrir después de una intervención?"
+          },
+          "options": [
+            {
+              "pt-BR": "Reavaliação",
+              "en": "Reassessment",
+              "es": "Reevaluación"
+            },
+            {
+              "pt-BR": "Encerramento automático",
+              "en": "Automatic closure",
+              "es": "Cierre automático"
+            },
+            {
+              "pt-BR": "Ignorar a resposta",
+              "en": "Ignore the response",
+              "es": "Ignorar la respuesta"
+            }
+          ],
+          "correctIndex": 0
+        },
+        {
+          "text": {
+            "pt-BR": "Qual atitude melhora a segurança medicamentosa?",
+            "en": "Which action improves medication safety?",
+            "es": "¿Qué acción mejora la seguridad de medicamentos?"
+          },
+          "options": [
+            {
+              "pt-BR": "Checar identidade, alergias, dose e via",
+              "en": "Check identity, allergies, dose, and route",
+              "es": "Verificar identidad, alergias, dosis y vía"
+            },
+            {
+              "pt-BR": "Administrar antes de revisar",
+              "en": "Administer before reviewing",
+              "es": "Administrar antes de revisar"
+            },
+            {
+              "pt-BR": "Usar a mesma dose para todos",
+              "en": "Use the same dose for everyone",
+              "es": "Usar la misma dosis para todos"
+            }
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "exam-r2",
+      "stage": "r2",
+      "passScore": 70,
+      "title": {
+        "pt-BR": "Prova de Decisão Clínica R2",
+        "en": "PGY-2 Clinical Decision Exam",
+        "es": "Examen de Decisión Clínica R2"
+      },
+      "questions": [
+        {
+          "text": {
+            "pt-BR": "Exames complementares devem ser solicitados com base em quê?",
+            "en": "What should guide diagnostic test ordering?",
+            "es": "¿Qué debe guiar la solicitud de pruebas?"
+          },
+          "options": [
+            {
+              "pt-BR": "Hipótese, probabilidade e impacto na conduta",
+              "en": "Hypothesis, probability, and impact on management",
+              "es": "Hipótesis, probabilidad e impacto en la conducta"
+            },
+            {
+              "pt-BR": "Quantidade máxima possível",
+              "en": "The largest possible number",
+              "es": "La mayor cantidad posible"
+            },
+            {
+              "pt-BR": "Preferência estética",
+              "en": "Aesthetic preference",
+              "es": "Preferencia estética"
+            }
+          ],
+          "correctIndex": 0
+        },
+        {
+          "text": {
+            "pt-BR": "Uma falta ambulatorial pode indicar o quê?",
+            "en": "What may a missed outpatient visit indicate?",
+            "es": "¿Qué puede indicar una ausencia ambulatoria?"
+          },
+          "options": [
+            {
+              "pt-BR": "Barreiras que precisam ser investigadas",
+              "en": "Barriers that need investigation",
+              "es": "Barreras que deben investigarse"
+            },
+            {
+              "pt-BR": "Desinteresse definitivo",
+              "en": "Permanent disinterest",
+              "es": "Desinterés definitivo"
+            },
+            {
+              "pt-BR": "Alta automática",
+              "en": "Automatic discharge",
+              "es": "Alta automática"
+            }
+          ],
+          "correctIndex": 0
+        },
+        {
+          "text": {
+            "pt-BR": "Diante de piora fisiológica, a melhor resposta é:",
+            "en": "With physiological deterioration, the best response is:",
+            "es": "Ante deterioro fisiológico, la mejor respuesta es:"
+          },
+          "options": [
+            {
+              "pt-BR": "Reavaliar, priorizar e escalonar",
+              "en": "Reassess, prioritize, and escalate",
+              "es": "Reevaluar, priorizar y escalar"
+            },
+            {
+              "pt-BR": "Esperar sem monitorar",
+              "en": "Wait without monitoring",
+              "es": "Esperar sin monitorizar"
+            },
+            {
+              "pt-BR": "Encerrar o caso",
+              "en": "Close the case",
+              "es": "Cerrar el caso"
+            }
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "exam-r3",
+      "stage": "r3",
+      "passScore": 78,
+      "title": {
+        "pt-BR": "Prova de Liderança Clínica R3",
+        "en": "PGY-3 Clinical Leadership Exam",
+        "es": "Examen de Liderazgo Clínico R3"
+      },
+      "questions": [
+        {
+          "text": {
+            "pt-BR": "Qual é a melhor forma de reduzir um erro de equipe?",
+            "en": "What is the best way to reduce a team error?",
+            "es": "¿Cuál es la mejor forma de reducir un error de equipo?"
+          },
+          "options": [
+            {
+              "pt-BR": "Comunicação estruturada, confirmação e debriefing",
+              "en": "Structured communication, confirmation, and debriefing",
+              "es": "Comunicación estructurada, confirmación y debriefing"
+            },
+            {
+              "pt-BR": "Culpar uma pessoa",
+              "en": "Blame one person",
+              "es": "Culpar a una persona"
+            },
+            {
+              "pt-BR": "Ocultar o evento",
+              "en": "Hide the event",
+              "es": "Ocultar el evento"
+            }
+          ],
+          "correctIndex": 0
+        },
+        {
+          "text": {
+            "pt-BR": "Em um caso complexo, diagnósticos diferenciais servem para:",
+            "en": "In a complex case, differential diagnoses are used to:",
+            "es": "En un caso complejo, los diagnósticos diferenciales sirven para:"
+          },
+          "options": [
+            {
+              "pt-BR": "Comparar explicações e riscos plausíveis",
+              "en": "Compare plausible explanations and risks",
+              "es": "Comparar explicaciones y riesgos plausibles"
+            },
+            {
+              "pt-BR": "Selecionar todas as opções",
+              "en": "Select every option",
+              "es": "Seleccionar todas las opciones"
+            },
+            {
+              "pt-BR": "Evitar coleta de evidências",
+              "en": "Avoid gathering evidence",
+              "es": "Evitar reunir evidencias"
+            }
+          ],
+          "correctIndex": 0
+        },
+        {
+          "text": {
+            "pt-BR": "Uma liderança segura diante de incerteza deve:",
+            "en": "Safe leadership under uncertainty should:",
+            "es": "Un liderazgo seguro ante la incertidumbre debe:"
+          },
+          "options": [
+            {
+              "pt-BR": "Declarar limites, monitorar e pedir apoio",
+              "en": "State limits, monitor, and seek support",
+              "es": "Declarar límites, monitorizar y pedir apoyo"
+            },
+            {
+              "pt-BR": "Fingir certeza",
+              "en": "Pretend certainty",
+              "es": "Fingir certeza"
+            },
+            {
+              "pt-BR": "Evitar documentação",
+              "en": "Avoid documentation",
+              "es": "Evitar documentación"
+            }
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "exam-final",
+      "stage": "specialist",
+      "passScore": 85,
+      "title": {
+        "pt-BR": "Avaliação Final Vale",
+        "en": "Vale Final Assessment",
+        "es": "Evaluación Final Vale"
+      },
+      "questions": [
+        {
+          "text": {
+            "pt-BR": "O simulador pode substituir formação e supervisão reais?",
+            "en": "Can the simulator replace real education and supervision?",
+            "es": "¿Puede el simulador sustituir la formación y supervisión reales?"
+          },
+          "options": [
+            {
+              "pt-BR": "Não",
+              "en": "No",
+              "es": "No"
+            },
+            {
+              "pt-BR": "Sim",
+              "en": "Yes",
+              "es": "Sí"
+            },
+            {
+              "pt-BR": "Sempre",
+              "en": "Always",
+              "es": "Siempre"
+            }
+          ],
+          "correctIndex": 0
+        },
+        {
+          "text": {
+            "pt-BR": "Uma decisão segura integra:",
+            "en": "A safe decision integrates:",
+            "es": "Una decisión segura integra:"
+          },
+          "options": [
+            {
+              "pt-BR": "Contexto, evidências, riscos, comunicação e reavaliação",
+              "en": "Context, evidence, risks, communication, and reassessment",
+              "es": "Contexto, evidencias, riesgos, comunicación y reevaluación"
+            },
+            {
+              "pt-BR": "Apenas um número",
+              "en": "Only one number",
+              "es": "Solo un número"
+            },
+            {
+              "pt-BR": "Somente velocidade",
+              "en": "Speed alone",
+              "es": "Solo velocidad"
+            }
+          ],
+          "correctIndex": 0
+        },
+        {
+          "text": {
+            "pt-BR": "Quando o conteúdo clínico não foi validado, ele deve:",
+            "en": "When clinical content has not been validated, it should:",
+            "es": "Cuando el contenido clínico no ha sido validado, debe:"
+          },
+          "options": [
+            {
+              "pt-BR": "Permanecer bloqueado para publicação",
+              "en": "Remain blocked from release",
+              "es": "Permanecer bloqueado para publicación"
+            },
+            {
+              "pt-BR": "Ser vendido imediatamente",
+              "en": "Be sold immediately",
+              "es": "Venderse de inmediato"
+            },
+            {
+              "pt-BR": "Ocultar sua fonte",
+              "en": "Hide its source",
+              "es": "Ocultar su fuente"
+            }
+          ],
+          "correctIndex": 0
+        }
+      ]
+    }
+  ],
+  "calendar": [
+    {
+      "day": 1,
+      "type": "orientation",
+      "icon": "📋",
+      "title": {
+        "pt-BR": "Integração do hospital",
+        "en": "Hospital orientation",
+        "es": "Integración hospitalaria"
+      },
+      "description": {
+        "pt-BR": "Revise setores, metas e regras de segurança.",
+        "en": "Review departments, goals, and safety rules.",
+        "es": "Revisa sectores, metas y reglas de seguridad."
+      }
+    },
+    {
+      "day": 2,
+      "type": "shift",
+      "icon": "🩺",
+      "title": {
+        "pt-BR": "Plantão supervisionado",
+        "en": "Supervised shift",
+        "es": "Guardia supervisada"
+      },
+      "description": {
+        "pt-BR": "Conclua um caso regular.",
+        "en": "Complete one regular case.",
+        "es": "Completa un caso regular."
+      }
+    },
+    {
+      "day": 3,
+      "type": "academy",
+      "icon": "📖",
+      "title": {
+        "pt-BR": "Sessão acadêmica",
+        "en": "Academic session",
+        "es": "Sesión académica"
+      },
+      "description": {
+        "pt-BR": "Avance na Academia Clínica.",
+        "en": "Advance in the Clinical Academy.",
+        "es": "Avanza en la Academia Clínica."
+      }
+    },
+    {
+      "day": 4,
+      "type": "outpatient",
+      "icon": "📆",
+      "title": {
+        "pt-BR": "Ambulatório longitudinal",
+        "en": "Longitudinal clinic",
+        "es": "Ambulatorio longitudinal"
+      },
+      "description": {
+        "pt-BR": "Acompanhe metas e adesão.",
+        "en": "Follow goals and adherence.",
+        "es": "Acompaña metas y adherencia."
+      }
+    },
+    {
+      "day": 5,
+      "type": "emergency",
+      "icon": "⚡",
+      "title": {
+        "pt-BR": "Treino ABCDE",
+        "en": "ABCDE training",
+        "es": "Entrenamiento ABCDE"
+      },
+      "description": {
+        "pt-BR": "Pratique uma emergência simulada.",
+        "en": "Practice a simulated emergency.",
+        "es": "Practica una emergencia simulada."
+      }
+    },
+    {
+      "day": 6,
+      "type": "review",
+      "icon": "📊",
+      "title": {
+        "pt-BR": "Revisão de desempenho",
+        "en": "Performance review",
+        "es": "Revisión de desempeño"
+      },
+      "description": {
+        "pt-BR": "Verifique competências e lacunas.",
+        "en": "Review competencies and gaps.",
+        "es": "Revisa competencias y brechas."
+      }
+    },
+    {
+      "day": 7,
+      "type": "exam",
+      "icon": "🎓",
+      "title": {
+        "pt-BR": "Janela de avaliação",
+        "en": "Assessment window",
+        "es": "Ventana de evaluación"
+      },
+      "description": {
+        "pt-BR": "Realize a prova disponível para seu estágio.",
+        "en": "Take the exam available for your stage.",
+        "es": "Realiza el examen disponible para tu etapa."
+      }
+    }
+  ],
+  "missions": [
+    {
+      "id": "career-cases-3",
+      "metric": "cases",
+      "goal": 3,
+      "rewardXp": 120,
+      "rewardCredits": 90,
+      "title": {
+        "pt-BR": "Concluir 3 casos",
+        "en": "Complete 3 cases",
+        "es": "Completar 3 casos"
+      }
+    },
+    {
+      "id": "career-average-75",
+      "metric": "averageScore",
+      "goal": 75,
+      "rewardXp": 140,
+      "rewardCredits": 100,
+      "title": {
+        "pt-BR": "Média clínica 75",
+        "en": "Clinical average 75",
+        "es": "Promedio clínico 75"
+      }
+    },
+    {
+      "id": "career-academy-3",
+      "metric": "academyModules",
+      "goal": 3,
+      "rewardXp": 130,
+      "rewardCredits": 80,
+      "title": {
+        "pt-BR": "Aprovar 3 módulos",
+        "en": "Pass 3 modules",
+        "es": "Aprobar 3 módulos"
+      }
+    },
+    {
+      "id": "career-emergency-2",
+      "metric": "emergency",
+      "goal": 2,
+      "rewardXp": 160,
+      "rewardCredits": 110,
+      "title": {
+        "pt-BR": "Estabilizar 2 emergências",
+        "en": "Stabilize 2 emergencies",
+        "es": "Estabilizar 2 emergencias"
+      }
+    },
+    {
+      "id": "career-outpatient-2",
+      "metric": "outpatient",
+      "goal": 2,
+      "rewardXp": 150,
+      "rewardCredits": 100,
+      "title": {
+        "pt-BR": "Concluir 2 seguimentos",
+        "en": "Complete 2 follow-ups",
+        "es": "Completar 2 seguimientos"
+      }
+    },
+    {
+      "id": "career-streak-5",
+      "metric": "streak",
+      "goal": 5,
+      "rewardXp": 100,
+      "rewardCredits": 70,
+      "title": {
+        "pt-BR": "Sequência de 5 atividades",
+        "en": "5-activity streak",
+        "es": "Racha de 5 actividades"
+      }
+    }
+  ]
+};

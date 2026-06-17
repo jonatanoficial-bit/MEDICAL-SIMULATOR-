@@ -4,10 +4,10 @@ import {createEnvelope,verifyEnvelope} from '../core/checksum.js';
 
 const FILES={
   cases:'data/core-cases.json',gameplay:'data/gameplay.json',queue:'data/queue.json',
-  specialties:'data/specialties.json',missions:'data/missions.json',responses:'data/clinical-responses.json',governance:'data/governance.json',academy:'data/academy.json',physiology:'data/physiology.json',assessment:'data/assessment.json',therapeutics:'data/therapeutics.json',emergency:'data/emergency.json',outpatient:'data/outpatient.json',branching:'data/branching.json'
+  specialties:'data/specialties.json',missions:'data/missions.json',responses:'data/clinical-responses.json',governance:'data/governance.json',academy:'data/academy.json',physiology:'data/physiology.json',assessment:'data/assessment.json',therapeutics:'data/therapeutics.json',emergency:'data/emergency.json',outpatient:'data/outpatient.json',branching:'data/branching.json',career:'data/career.json'
 };
-const CACHE_KEY='medsim-last-known-good-content-v024';
-const LEGACY_CACHE_KEYS=['medsim-last-known-good-content-v023','medsim-last-known-good-content-v022','medsim-last-known-good-content-v021','medsim-last-known-good-content-v020','medsim-last-known-good-content-v018','medsim-last-known-good-content-v017','medsim-last-known-good-content-v016','medsim-last-known-good-content-v015','medsim-last-known-good-content-v014','medsim-last-known-good-content-v013','medsim-last-known-good-content-v012'];
+const CACHE_KEY='medsim-last-known-good-content-v027';
+const LEGACY_CACHE_KEYS=['medsim-last-known-good-content-v026','medsim-last-known-good-content-v024','medsim-last-known-good-content-v023','medsim-last-known-good-content-v022','medsim-last-known-good-content-v021','medsim-last-known-good-content-v020','medsim-last-known-good-content-v018','medsim-last-known-good-content-v017','medsim-last-known-good-content-v016','medsim-last-known-good-content-v015','medsim-last-known-good-content-v014','medsim-last-known-good-content-v013','medsim-last-known-good-content-v012'];
 
 const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 
@@ -21,6 +21,7 @@ function normalizeContentPackage(content,fallback){
   if(!normalized.emergency)normalized.emergency=fallback.emergency;
   if(!normalized.outpatient)normalized.outpatient=fallback.outpatient;
   if(!normalized.branching)normalized.branching=fallback.branching;
+  if(!normalized.career)normalized.career=fallback.career;
   return normalized;
 }
 
@@ -63,7 +64,7 @@ function readCachedContent(){
 
 function writeCachedContent(content,metadata){
   try{
-    const envelope=createEnvelope({content,metadata:{...metadata,cachedAt:new Date().toISOString()}},{kind:'vale-clinical-content',schema:8,label:'last-known-good'});
+    const envelope=createEnvelope({content,metadata:{...metadata,cachedAt:new Date().toISOString()}},{kind:'vale-clinical-content',schema:12,label:'last-known-good'});
     localStorage.setItem(CACHE_KEY,JSON.stringify(envelope));
     return {ok:true,checksum:envelope.checksum};
   }catch(error){return {ok:false,error:error.message};}

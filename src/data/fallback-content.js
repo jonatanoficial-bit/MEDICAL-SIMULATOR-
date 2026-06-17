@@ -6,6 +6,7 @@ import {FALLBACK_THERAPEUTICS} from './fallback-therapeutics.js';
 import {FALLBACK_EMERGENCY} from './fallback-emergency.js';
 import {FALLBACK_OUTPATIENT} from './fallback-outpatient.js';
 import {FALLBACK_BRANCHING} from './fallback-branching.js';
+import {FALLBACK_CAREER} from './fallback-career.js';
 // Fallback anti-quebra gerado a partir dos mesmos dados externos da build.
 const FALLBACK_CONTENT = {
   "cases": [
@@ -673,6 +674,7 @@ const FALLBACK_CONTENT = {
 };
 
 FALLBACK_CONTENT.branching=FALLBACK_BRANCHING;
+FALLBACK_CONTENT.career=FALLBACK_CAREER;
 export function getFallbackContent(){
   const content=structuredCloneSafe(FALLBACK_CONTENT);
   content.governance=structuredCloneSafe(FALLBACK_GOVERNANCE);
@@ -682,6 +684,7 @@ export function getFallbackContent(){
   content.therapeutics=structuredCloneSafe(FALLBACK_THERAPEUTICS);
   content.emergency=structuredCloneSafe(FALLBACK_EMERGENCY);
   content.outpatient=structuredCloneSafe(FALLBACK_OUTPATIENT);
+  content.career=structuredCloneSafe(FALLBACK_CAREER);
   return content;
 }
 

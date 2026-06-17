@@ -1,4 +1,4 @@
-// Fallback estruturado de anamnese e exame físico da build v0.24.0.
+// Fallback estruturado de anamnese e exame físico da build v0.27.0.
 export const FALLBACK_ASSESSMENT = Object.freeze({
   "schemaVersion": 1,
   "engineVersion": "1.0.0",

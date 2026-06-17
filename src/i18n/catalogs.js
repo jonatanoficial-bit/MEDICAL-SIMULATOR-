@@ -1,4 +1,4 @@
-// Generated and reviewed catalog for v0.24.0. Canonical gameplay values remain in PT-BR.
+// Generated and reviewed catalog for v0.27.0. Canonical gameplay values remain in PT-BR.
 export const CATALOGS = Object.freeze({
   "pt-BR": {
     "meta": {

@@ -1,10 +1,12 @@
 export const BUILD = Object.freeze({
-  version: '0.24.0',
-  stamp: '20260613_122500_BRT',
-  label: 'v0.24.0 | build 2026-06-13 12:25:00 BRT',
-  phase: 'Casos Ramificados e Níveis de Dificuldade',
-  saveSchema: 15,
-  contentSchema: 9
+  version: '0.27.0',
+  stamp: '20260617_104342_BRT',
+  label: 'v0.27.0 | build 2026-06-17 10:43:42 BRT',
+  phase: 'Beta Fechado, Auditoria Final e Preparação para RC',
+  saveSchema: 18,
+  contentSchema: 12,
+  presentationSchema: 1,
+  betaSchema: 1
 });
 
 export const ASSET_ROOT = 'assets/';

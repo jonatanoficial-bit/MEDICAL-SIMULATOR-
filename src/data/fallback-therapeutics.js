@@ -1,4 +1,4 @@
-// Fallback de exames, medicamentos e procedimentos da build v0.24.0.
+// Fallback de exames, medicamentos e procedimentos da build v0.27.0.
 export const FALLBACK_THERAPEUTICS = Object.freeze({
   "schemaVersion": 1,
   "engineVersion": "1.0.0",

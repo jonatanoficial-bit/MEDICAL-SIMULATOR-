@@ -6,6 +6,7 @@ import {validateTherapeuticsRegistry} from '../simulation/therapeutics-engine.js
 import {validateEmergencyRegistry} from '../simulation/emergency-engine.js';
 import {validateOutpatientRegistry} from '../simulation/outpatient-engine.js';
 import {validateBranchingRegistry} from '../simulation/branching-engine.js';
+import {validateCareerRegistry} from '../simulation/career-engine.js';
 const nonEmptyString=value=>typeof value==='string' && value.trim().length>0;
 const stringArray=value=>Array.isArray(value) && value.every(nonEmptyString);
 
@@ -27,6 +28,7 @@ export function validateGameContent(content){
   const emergency=content.emergency||null;
   const outpatient=content.outpatient||null;
   const branching=content.branching||null;
+  const career=content.career||null;
   if(!Array.isArray(cases)||!cases.length) errors.push('Nenhum caso clínico válido foi fornecido.');
   if(!stringArray(gameplay.exams)) errors.push('Lista de exames inválida.');
   if(!stringArray(gameplay.procedures)) errors.push('Lista de procedimentos inválida.');
@@ -58,6 +60,9 @@ export function validateGameContent(content){
   const branchingValidation=validateBranchingRegistry(branching,Array.isArray(cases)?cases.map(item=>item?.id).filter(Boolean):[]);
   if(!branchingValidation.ok)errors.push(...branchingValidation.errors);
   warnings.push(...branchingValidation.warnings);
+  const careerValidation=validateCareerRegistry(career);
+  if(!careerValidation.ok)errors.push(...careerValidation.errors);
+  warnings.push(...careerValidation.warnings);
 
   const ids=new Set();
   const safeSpecialties=Array.isArray(specialties)?specialties:[];
