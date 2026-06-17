@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "version": "0.26.0",
+  "build": "20260617_095907_BRT",
+  "files": 500,
+  "audioFiles": 9,
+  "audioBytes": 820556,
+  "sfx": 6,
+  "ambience": 3,
+  "assetSlots": 6,
+  "saveSchema": 17,
+  "contentSchema": 11,
+  "presentationSchema": 1,
+  "touchScrollPreserved": true,
+  "releaseGateExitCode": 2,
+  "pendingPhysicalTests": [
+    "Android Chrome/Samsung Internet",
+    "iOS Safari",
+    "PWA HTTPS offline",
+    "TalkBack/VoiceOver",
+    "long-session audio performance"
+  ]
+}

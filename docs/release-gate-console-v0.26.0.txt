@@ -1,0 +1,19 @@
+
+> medical-simulator-vale-edition@0.26.0 release-gate
+> node tools/release-gate.mjs
+
+PUBLICAÇÃO CLÍNICA BLOQUEADA: 6/6 casos possuem pendências.
+- hipertensao-1: aprovação clínica pendente, publicação desativada, responsável clínico ausente, revisor médico ausente, auditoria de segurança pendente, revisão trilíngue pendente, data de revisão clínica ausente, data de revisão trilíngue ausente, data de QA ausente, próxima revisão não agendada
+- cefaleia-tensional: aprovação clínica pendente, publicação desativada, responsável clínico ausente, revisor médico ausente, auditoria de segurança pendente, revisão trilíngue pendente, data de revisão clínica ausente, data de revisão trilíngue ausente, data de QA ausente, próxima revisão não agendada
+- angina-estavel: aprovação clínica pendente, publicação desativada, responsável clínico ausente, revisor médico ausente, auditoria de segurança pendente, revisão trilíngue pendente, data de revisão clínica ausente, data de revisão trilíngue ausente, data de QA ausente, próxima revisão não agendada
+- itu-nao-complicada: aprovação clínica pendente, publicação desativada, responsável clínico ausente, revisor médico ausente, auditoria de segurança pendente, revisão trilíngue pendente, data de revisão clínica ausente, data de revisão trilíngue ausente, data de QA ausente, próxima revisão não agendada
+- refluxo-gastroesofagico: aprovação clínica pendente, publicação desativada, responsável clínico ausente, revisor médico ausente, auditoria de segurança pendente, revisão trilíngue pendente, data de revisão clínica ausente, data de revisão trilíngue ausente, data de QA ausente, próxima revisão não agendada
+- dermatite-atopica: aprovação clínica pendente, publicação desativada, responsável clínico ausente, revisor médico ausente, auditoria de segurança pendente, revisão trilíngue pendente, data de revisão clínica ausente, data de revisão trilíngue ausente, data de QA ausente, próxima revisão não agendada
+- Academia: publicação bloqueada; 9 módulos em revisão independente.
+- Fisiologia: publicação bloqueada; 6 perfis aguardam validação clínica e de segurança independente.
+- Emergência: publicação bloqueada; 9 cenários ABCDE aguardam validação independente.
+- Ramificações: publicação bloqueada; 6 perfis e 4 níveis aguardam validação independente.
+- Carreira: publicação bloqueada; 5 estágios, 4 provas e 8 setores aguardam validação independente.
+- Ambulatório: publicação bloqueada; 10 linhas de cuidado aguardam validação independente.
+- Avaliação clínica: publicação bloqueada; 6 perfis aguardam validação clínica, terminológica e de segurança independente.
+- Terapêutica: publicação bloqueada; exames, medicamentos e procedimentos aguardam validação clínica, farmacêutica e de segurança independente.

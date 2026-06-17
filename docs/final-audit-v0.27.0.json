@@ -1,0 +1,40 @@
+{
+  "ok": true,
+  "version": "0.27.0",
+  "build": "20260617_104342_BRT",
+  "channel": "closed-beta",
+  "phase": "Beta Fechado, Auditoria Final e Preparação para RC",
+  "automatedAuditExitCode": 0,
+  "betaLayoutAuditExitCode": 0,
+  "visualProfiles": 7,
+  "horizontalOverflowFailures": 0,
+  "minimumControlPx": 48,
+  "mobileTouchScrollPreserved": true,
+  "serviceWorkerAssets": {
+    "total": 98,
+    "critical": 55,
+    "data": 18,
+    "optional": 25
+  },
+  "saveSchema": 18,
+  "contentSchema": 12,
+  "presentationSchema": 1,
+  "betaSchema": 1,
+  "localTelemetryDefault": false,
+  "networkTransmission": false,
+  "maxLocalSessions": 25,
+  "releaseGateExitCode": 2,
+  "releaseCandidateReady": false,
+  "requiredPhysicalDeviceFamilies": 5,
+  "physicalDeviceFamiliesPassed": 0,
+  "closedBetaReady": true,
+  "medicalReleaseReady": false,
+  "pendingPhysicalTests": [
+    "Android Chrome and Samsung Internet",
+    "iOS Safari",
+    "PWA HTTPS install and offline update",
+    "TalkBack, VoiceOver and NVDA",
+    "long-session performance and audio"
+  ],
+  "filesExcludingBuildManifest": 532
+}
