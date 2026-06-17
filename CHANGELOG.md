@@ -1,5 +1,27 @@
 # Changelog
 
+## v0.27.0 — Beta Fechado, Auditoria Final e Preparação para RC — 2026-06-17 10:43:42 BRT
+
+- Centro Beta Fechado com status, checklist, feedback e sessões locais.
+- Autoauditoria com 12 verificações de build, save, conteúdo, governança, PWA, idioma e acessibilidade.
+- Matriz de 6 famílias de aparelhos/navegadores, pendente por padrão.
+- Telemetria local opcional, desativada por padrão, limitada a 25 sessões e sem transmissão.
+- Exportação manual de pacote beta e relatório de falha em JSON.
+- Nome e texto livre removidos dos eventos automáticos.
+- Save schema 18, content schema 12 e beta schema 1.
+- Service worker ampliado para 98 recursos: 55 críticos, 18 de dados e 25 opcionais.
+- Auditoria visual trilíngue do Centro Beta em celular, tablet e PC.
+- Release Candidate gate permanece bloqueado por matriz física e validação médica pendentes.
+
+## v0.26.0 — 2026-06-17
+- Sistema audiovisual premium com fallback seguro.
+- 6 SFX e 3 ambientes originais.
+- Tema visual adaptativo e qualidade configurável.
+- Inventário oficial de assets substituíveis.
+- Save schema 17 e content schema 11.
+
+# Changelog
+
 ## v0.24.0 — Casos Ramificados e Níveis de Dificuldade
 - Quatro níveis: iniciante, estudante, profissional e desafio.
 - Seis perfis ramificados, pistas condicionais e diagnósticos diferenciais.
@@ -174,3 +196,9 @@
 
 ### Próxima fase recomendada
 - v0.11.0 — Arquitetura modular: separar core, casos, idiomas, tutorial e simulação.
+## v0.26.0 — Carreira, Residência e Retenção
+- Cinco estágios fictícios de progressão.
+- Quatro provas de carreira trilíngues.
+- Oito setores hospitalares com desbloqueios.
+- Calendário semanal, competências e seis missões.
+- Save schema 17 e content schema 10.

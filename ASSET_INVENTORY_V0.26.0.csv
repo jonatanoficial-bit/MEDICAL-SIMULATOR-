@@ -1,0 +1,7 @@
+﻿id;caminho;tipo;especificacao;status;comportamento
+bg-hospital-lobby;assets/premium/backgrounds/hospital-lobby.webp;background;1920x1080 WebP;placeholder;fallback seguro ativo
+bg-clinical-room;assets/premium/backgrounds/clinical-room.webp;background;1920x1080 WebP;placeholder;fallback seguro ativo
+bg-emergency-bay;assets/premium/backgrounds/emergency-bay.webp;background;1920x1080 WebP;placeholder;fallback seguro ativo
+bg-classroom;assets/premium/backgrounds/clinical-academy.webp;background;1920x1080 WebP;placeholder;fallback seguro ativo
+portrait-patient-set;assets/premium/patients/;portrait-set;1024x1024 WebP, sem texto;planned;fallback seguro ativo
+procedure-illustrations;assets/premium/procedures/;illustration-set;1600x900 WebP, sem texto;planned;fallback seguro ativo

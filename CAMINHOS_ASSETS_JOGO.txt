@@ -74,3 +74,8 @@ ui/ChatGPT_Image_24_de_abr._de_2026__09_31_03-removebg-preview (1).png -> igual 
 SUGESTAO DE USO EM CODIGO
 const ASSET_BASE = 'assets/';
 // Exemplo: <img src='assets/avatars/avatar_01.png'>
+
+
+FASE 17 — ASSETS PREMIUM
+Consultar o inventário audiovisual ASSET_INVENTORY_V0.26.0.csv e assets/premium/README.md.
+Áudio: assets/audio/sfx/ e assets/audio/ambient/.

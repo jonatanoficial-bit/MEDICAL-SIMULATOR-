@@ -2,7 +2,7 @@
   "id": "./medical-simulator-vale-edition",
   "name": "Medical Simulator - Vale Edition",
   "short_name": "Med Vale",
-  "start_url": "./?v=0.24.0",
+  "start_url": "./?v=0.27.0",
   "scope": "./",
   "display": "fullscreen",
   "display_override": [
@@ -13,7 +13,7 @@
   "background_color": "#020814",
   "theme_color": "#06131f",
   "orientation": "any",
-  "description": "Simulador clínico educacional trilíngue com casos ramificados, quatro níveis de dificuldade, emergência ABCDE e experiência mobile acessível.",
+  "description": "Simulador clínico educacional trilíngue em beta fechado, com carreira fictícia, auditoria local, PWA e ferramentas de feedback.",
   "lang": "pt-BR",
   "dir": "ltr",
   "categories": [
@@ -49,6 +49,18 @@
     }
   ],
   "shortcuts": [
+    {
+      "name": "Carreira e residência / Career and residency / Carrera y residencia",
+      "short_name": "Carreira",
+      "description": "Abrir progressão, provas e setores",
+      "url": "./index.html?screen=career&source=shortcut",
+      "icons": [
+        {
+          "src": "assets/icons/pwa/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
     {
       "name": "Iniciar plantão / Start shift / Iniciar guardia",
       "short_name": "Plantão",
@@ -90,6 +102,18 @@
       "short_name": "Emergência",
       "description": "Abrir cenários críticos ABCDE",
       "url": "./index.html?screen=emergency&source=shortcut",
+      "icons": [
+        {
+          "src": "assets/icons/pwa/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Centro Beta / Beta Center / Centro Beta",
+      "short_name": "Beta",
+      "description": "Abrir auditoria e checklist do beta fechado",
+      "url": "./index.html?screen=beta&source=shortcut",
       "icons": [
         {
           "src": "assets/icons/pwa/icon-192.png",
