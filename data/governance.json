@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "0.24.0",
+  "contentVersion": "0.27.0",
   "releaseChannel": "development",
   "policy": {
     "productScope": "educational-clinical-simulation",
@@ -586,7 +586,7 @@
       "at": "2026-06-13T12:25:00-03:00",
       "actor": "build-system",
       "action": "branching-registry-added",
-      "build": "0.24.0",
+      "build": "0.27.0",
       "detail": "Seis perfis ramificados e quatro níveis adicionados. Conteúdo permanece bloqueado para publicação."
     }
   ]

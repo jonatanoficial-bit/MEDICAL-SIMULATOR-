@@ -1,7 +1,7 @@
 {
   "id": "medical-simulator-vale-content",
-  "schemaVersion": 9,
-  "contentVersion": "0.24.0",
+  "schemaVersion": 12,
+  "contentVersion": "0.27.0",
   "required": [
     "data/core-cases.json",
     "data/gameplay.json",
@@ -15,16 +15,19 @@
     "data/assessment.json",
     "data/emergency.json",
     "data/outpatient.json",
-    "data/branching.json"
+    "data/branching.json",
+    "data/career.json",
+    "data/beta-program.json"
   ],
   "staged": [
     "data/legacy-cases-v0.8.json",
     "data/catalog.json"
   ],
   "notes": [
-    "Casos ramificados com quatro níveis de dificuldade, pistas condicionais e múltiplos desfechos.",
-    "Pacote ambulatorial com 10 linhas de cuidado, metas, adesão, retornos e barreiras longitudinais.",
-    "Rolagem vertical mobile nativa preservada; tela cheia somente por botão explícito.",
-    "Todo conteúdo ambulatorial permanece bloqueado até revisão clínica, terminológica e de segurança independente."
-  ]
+    "Beta fechado com auditoria interna, checklist manual e relatórios JSON locais.",
+    "Telemetria local é opcional, desativada por padrão e não transmite dados.",
+    "Matriz física de aparelhos permanece obrigatória antes do Release Candidate.",
+    "Rolagem vertical mobile nativa e tela cheia somente por botão explícito."
+  ],
+  "presentationSchema": 1
 }

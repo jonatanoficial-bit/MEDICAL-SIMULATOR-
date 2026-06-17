@@ -1,8 +1,8 @@
 {
   "id": "medical-simulator-vale-edition-core",
   "name": "Medical Simulator - Vale Edition Core",
-  "version": "0.24.0",
-  "build": "20260613_122500_BRT",
+  "version": "0.27.0",
+  "build": "20260617_104342_BRT",
   "architecture": {
     "entry": "src/core/boot-guard.js -> src/app.js",
     "modules": [
@@ -14,8 +14,10 @@
       "observability",
       "simulation"
     ],
-    "contentSchema": 9,
-    "saveSchema": 15
+    "contentSchema": 12,
+    "saveSchema": 18,
+    "presentationSchema": 1,
+    "betaSchema": 1
   },
   "activeCases": 6,
   "stagedCases": 3,
@@ -78,7 +80,25 @@
     "difficulty_levels",
     "conditional_clues",
     "differential_diagnoses",
-    "multiple_case_outcomes"
+    "multiple_case_outcomes",
+    "structured_career",
+    "fictional_residency_stages",
+    "career_exams",
+    "hospital_departments",
+    "career_calendar",
+    "competency_tracking",
+    "career_missions",
+    "career_save_migration",
+    "premium_presentation_system",
+    "adaptive_audio",
+    "safe_asset_fallback",
+    "presentation_asset_inventory",
+    "closed_beta_center",
+    "local_opt_in_observability",
+    "beta_self_audit",
+    "manual_device_checklist",
+    "local_feedback_export",
+    "physical_device_release_gate"
   ],
   "medicalGovernance": {
     "channel": "development",
@@ -150,5 +170,27 @@
     "outcomes": 4,
     "releaseReady": false,
     "registry": "data/branching.json"
+  },
+  "career": {
+    "schema": 1,
+    "engineVersion": "1.0.0",
+    "stages": 5,
+    "departments": 8,
+    "exams": 4,
+    "calendarEvents": 7,
+    "missions": 6,
+    "fictional": true,
+    "releaseReady": false,
+    "registry": "data/career.json"
+  },
+  "presentationSchema": 1,
+  "beta": {
+    "schema": 1,
+    "channel": "closed-beta",
+    "localTelemetryDefault": false,
+    "networkTransmission": false,
+    "deviceMatrixRequired": true,
+    "releaseCandidateReady": false,
+    "registry": "data/beta-program.json"
   }
 }

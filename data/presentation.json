@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "0.27.0",
+  "status": "development-ready",
+  "fallbackSafe": true,
+  "audio": {
+    "defaults": {
+      "enabled": true,
+      "ambient": true,
+      "sfx": true,
+      "master": 0.72,
+      "ambientVolume": 0.2,
+      "sfxVolume": 0.58
+    },
+    "sfx": {
+      "tap": "assets/audio/sfx/ui-tap.wav",
+      "ok": "assets/audio/sfx/ui-ok.wav",
+      "warn": "assets/audio/sfx/ui-warn.wav",
+      "nav": "assets/audio/sfx/ui-nav.wav",
+      "level": "assets/audio/sfx/ui-level.wav",
+      "clinical": "assets/audio/sfx/clinical-confirm.wav"
+    },
+    "ambience": {
+      "lobby": "assets/audio/ambient/hospital-lobby.wav",
+      "clinical": "assets/audio/ambient/clinical-room.wav",
+      "emergency": "assets/audio/ambient/emergency-bay.wav"
+    },
+    "screenTracks": {
+      "setup": "lobby",
+      "menu": "lobby",
+      "hub": "lobby",
+      "career": "lobby",
+      "learning": "clinical",
+      "specialty": "clinical",
+      "shift": "clinical",
+      "post": "clinical",
+      "outpatient": "clinical",
+      "emergency": "emergency",
+      "settings": "lobby",
+      "recovery": null
+    }
+  },
+  "visual": {
+    "qualityModes": [
+      "auto",
+      "high",
+      "balanced",
+      "battery"
+    ],
+    "screenThemes": {
+      "setup": "arrival",
+      "menu": "arrival",
+      "hub": "hospital",
+      "career": "education",
+      "learning": "education",
+      "specialty": "clinical",
+      "shift": "clinical",
+      "post": "clinical",
+      "outpatient": "ambulatory",
+      "emergency": "emergency",
+      "settings": "system",
+      "recovery": "recovery"
+    },
+    "assetSlots": [
+      {
+        "id": "bg-hospital-lobby",
+        "path": "assets/premium/backgrounds/hospital-lobby.webp",
+        "type": "background",
+        "recommended": "1920x1080 WebP",
+        "status": "placeholder"
+      },
+      {
+        "id": "bg-clinical-room",
+        "path": "assets/premium/backgrounds/clinical-room.webp",
+        "type": "background",
+        "recommended": "1920x1080 WebP",
+        "status": "placeholder"
+      },
+      {
+        "id": "bg-emergency-bay",
+        "path": "assets/premium/backgrounds/emergency-bay.webp",
+        "type": "background",
+        "recommended": "1920x1080 WebP",
+        "status": "placeholder"
+      },
+      {
+        "id": "bg-classroom",
+        "path": "assets/premium/backgrounds/clinical-academy.webp",
+        "type": "background",
+        "recommended": "1920x1080 WebP",
+        "status": "placeholder"
+      },
+      {
+        "id": "portrait-patient-set",
+        "path": "assets/premium/patients/",
+        "type": "portrait-set",
+        "recommended": "1024x1024 WebP, sem texto",
+        "status": "planned"
+      },
+      {
+        "id": "procedure-illustrations",
+        "path": "assets/premium/procedures/",
+        "type": "illustration-set",
+        "recommended": "1600x900 WebP, sem texto",
+        "status": "planned"
+      }
+    ]
+  },
+  "policy": {
+    "autoplay": "blocked-until-user-interaction",
+    "missingAssetBehavior": "silent-fallback",
+    "mobileOptimization": "audio mono 16 kHz; images lazy-loaded",
+    "copyright": "Only original or licensed assets may replace placeholders."
+  }
+}
