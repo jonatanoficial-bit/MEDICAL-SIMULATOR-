@@ -23,6 +23,29 @@ function viewportSnapshot(){
   };
 }
 
+function shouldBlockPortrait(viewport){
+  const width=Number(viewport?.width||0),height=Number(viewport?.height||0);
+  if(!width||!height||height<=width)return false;
+  const compactViewport=width<=1100;
+  const touchDevice=Number(navigator.maxTouchPoints||0)>0;
+  return compactViewport||touchDevice;
+}
+
+function applyOrientationOverlay(blocked){
+  const overlay=document.querySelector('#orientation-lock');
+  const app=document.querySelector('#app');
+  document.documentElement.dataset.orientationBlocked=String(blocked);
+  document.body?.classList?.toggle?.('orientation-blocked',blocked);
+  if(overlay){
+    overlay.hidden=!blocked;
+    overlay.setAttribute?.('aria-hidden',String(!blocked));
+  }
+  if(app){
+    app.inert=blocked;
+    app.setAttribute?.('aria-hidden',String(blocked));
+  }
+}
+
 export function createMobileExperience({diagnostics,onChange=()=>{}}={}){
   let installEvent=null;
   let status={
@@ -33,16 +56,21 @@ export function createMobileExperience({diagnostics,onChange=()=>{}}={}){
     online:navigator.onLine!==false,
     viewport:viewportSnapshot(),
     orientation:screen.orientation?.type||((innerWidth>innerHeight)?'landscape':'portrait'),
+    orientationBlocked:false,
     lastInstallResult:null
   };
 
   const emit=()=>{
-    status={...status,displayMode:detectDisplayMode(),fullscreen:!!document.fullscreenElement,online:navigator.onLine!==false,viewport:viewportSnapshot(),orientation:screen.orientation?.type||((innerWidth>innerHeight)?'landscape':'portrait')};
+    const viewport=viewportSnapshot();
+    const orientation=screen.orientation?.type||((viewport.width>viewport.height)?'landscape':'portrait');
+    const orientationBlocked=shouldBlockPortrait(viewport);
+    status={...status,displayMode:detectDisplayMode(),fullscreen:!!document.fullscreenElement,online:navigator.onLine!==false,viewport,orientation,orientationBlocked};
     document.documentElement.dataset.displayMode=status.displayMode;
     document.documentElement.dataset.online=String(status.online);
     document.documentElement.dataset.orientation=status.orientation;
     document.documentElement.style.setProperty('--app-height',`${status.viewport.height}px`);
     document.documentElement.style.setProperty('--app-width',`${status.viewport.width}px`);
+    applyOrientationOverlay(status.orientationBlocked);
     onChange({...status});
   };
 
@@ -62,6 +90,7 @@ export function createMobileExperience({diagnostics,onChange=()=>{}}={}){
     emit();
   };
   const onFullscreenChange=()=>emit();
+  const onVisibility=()=>emit();
   const onConnectivity=()=>{diagnostics?.info?.('network',navigator.onLine?'Conexão restabelecida.':'Aplicativo offline.');emit();};
   const onViewport=()=>emit();
 
@@ -72,6 +101,7 @@ export function createMobileExperience({diagnostics,onChange=()=>{}}={}){
   window.addEventListener('resize',onViewport,{passive:true});
   window.addEventListener('orientationchange',onViewport,{passive:true});
   document.addEventListener('fullscreenchange',onFullscreenChange);
+  document.addEventListener('visibilitychange',onVisibility);
   window.visualViewport?.addEventListener('resize',onViewport,{passive:true});
   window.visualViewport?.addEventListener('scroll',onViewport,{passive:true});
   screen.orientation?.addEventListener?.('change',onViewport);
@@ -101,6 +131,7 @@ export function createMobileExperience({diagnostics,onChange=()=>{}}={}){
       if(!root.requestFullscreen)return {ok:false,reason:'unsupported'};
       try{
         await root.requestFullscreen({navigationUI:'hide'});
+        await screen.orientation?.lock?.('landscape').catch(()=>{});
         emit();
         return {ok:true};
       }catch(error){
@@ -124,6 +155,7 @@ export function createMobileExperience({diagnostics,onChange=()=>{}}={}){
       window.removeEventListener('resize',onViewport);
       window.removeEventListener('orientationchange',onViewport);
       document.removeEventListener('fullscreenchange',onFullscreenChange);
+      document.removeEventListener('visibilitychange',onVisibility);
       window.visualViewport?.removeEventListener('resize',onViewport);
       window.visualViewport?.removeEventListener('scroll',onViewport);
       screen.orientation?.removeEventListener?.('change',onViewport);

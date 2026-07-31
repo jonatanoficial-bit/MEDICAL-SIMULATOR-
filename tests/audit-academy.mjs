@@ -1,9 +1,10 @@
+﻿import {fileURLToPath} from 'node:url';
 import fs from 'node:fs';
 import path from 'node:path';
 import {validateAcademy} from '../src/data/academy-schema.js';
 import {FALLBACK_ACADEMY} from '../src/data/fallback-academy.js';
 import {ACADEMY_UI} from '../src/i18n/academy-ui.js';
-const root=path.resolve(new URL('..',import.meta.url).pathname);
+const root=fileURLToPath(new URL('..',import.meta.url));
 const academy=JSON.parse(fs.readFileSync(path.join(root,'data/academy.json'),'utf8'));
 const validation=validateAcademy(academy);
 if(!validation.ok)throw new Error(`Academia inválida: ${validation.errors.join(' | ')}`);

@@ -9,7 +9,7 @@ idx=re.sub(r"^import .*?;\n",'',idx,count=1).replace('export ','')
 I18N=cat+'\n'+idx
 exported=subprocess.run(['node','tools/export-audit-screens.mjs'],cwd=ROOT,capture_output=True,text=True,check=True)
 SCREENS=json.loads(exported.stdout)['screens']
-outdir=ROOT/'docs/screenshots-v0.27.0';outdir.mkdir(exist_ok=True)
+outdir=ROOT/'docs/screenshots-v1.0.0';outdir.mkdir(exist_ok=True)
 profiles=[
  ('pt-BR','pt-BR-career-overview','CARREIRA E RESIDÊNCIA',360,800),
  ('pt-BR','pt-BR-career-residency','Residência',360,800),
@@ -40,7 +40,7 @@ with sync_playwright() as p:
       after=page.evaluate('scrollY');scroll={'before':before,'after':after,'moved':after>before+20}
     safe=screen.replace('pt-BR-','').replace('en-','').replace('es-','')
     name=f'career-{locale}-{safe}-{width}x{height}.png';page.screenshot(path=str(outdir/name),full_page=True)
-    results.append({'locale':locale,'screen':screen,'viewport':[width,height],'markerFound':marker in text,'overflowX':metrics['w']>metrics['vw']+1,'metrics':metrics,'scroll':scroll,'pageErrors':errors,'screenshot':f'docs/screenshots-v0.27.0/{name}'})
+    results.append({'locale':locale,'screen':screen,'viewport':[width,height],'markerFound':marker in text,'overflowX':metrics['w']>metrics['vw']+1,'metrics':metrics,'scroll':scroll,'pageErrors':errors,'screenshot':f'docs/screenshots-v1.0.0/{name}'})
     context.close()
   browser.close()
 fail=[]
@@ -51,6 +51,6 @@ for r in results:
   if r['scroll'] and not r['scroll']['moved']:fail.append(f"{r['screen']}: touch scroll")
   if r['pageErrors']:fail.append(f"{r['screen']}: errors")
 out={'ok':not fail,'method':'Production career DOM + production CSS + live i18n in isolated Chromium; CDP touch swipe on mobile','failures':fail,'profiles':results}
-(ROOT/'docs/audit-career-layout-v0.27.0.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(ROOT/'docs/audit-career-layout-v1.0.0.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps(out,ensure_ascii=False,indent=2))
 if fail:raise SystemExit(1)

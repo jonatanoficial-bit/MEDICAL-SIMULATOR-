@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.0.0 — Produção web/PWA — 2026-07-31 16:15:19 BRT
+
+- Interface pública comercial sem central de testes, ferramentas internas ou mensagens provisórias.
+- Experiência mobile-first em horizontal, incluindo 568 × 320 e áreas seguras.
+- Overlay de rotação acessível, sem `alert()` e sem recarga do estado.
+- Pausa segura de fisiologia, emergência e áudio ao girar ou ocultar a página.
+- Configuração, menu, especialidades, plantão, ajustes e recuperação redesenhados.
+- Manifesto PWA em paisagem com cinco ícones finais e cache v1.0.0.
+- Nove recursos de áudio WAV locais adicionados com fallback seguro.
+- Build e schemas consistentes, documentação de auditoria e preparação para APK.
+- Suíte automatizada e matriz responsiva atualizadas para Windows e navegadores modernos.
+
 ## v0.27.0 — Beta Fechado, Auditoria Final e Preparação para RC — 2026-06-17 10:43:42 BRT
 
 - Centro Beta Fechado com status, checklist, feedback e sessões locais.

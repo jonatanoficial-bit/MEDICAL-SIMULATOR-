@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 const read=file=>fs.readFileSync(new URL('../'+file,import.meta.url),'utf8');
 const json=file=>JSON.parse(read(file));
-const expected='0.27.0';
+const expected='1.0.0';
 const build=json('BUILD.json');
 const packageJson=json('package.json');
 const webmanifest=json('manifest.webmanifest');

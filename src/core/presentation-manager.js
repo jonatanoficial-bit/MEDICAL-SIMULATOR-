@@ -20,7 +20,7 @@ export async function loadPresentationConfig({version='dev',safeMode=false}={}){
   }catch(error){return {config:FALLBACK_PRESENTATION,status:{mode:'fallback',warnings:[String(error.message||error)]}};}
 }
 export function createPresentationManager({getState=()=>({}),diagnostics=null}={}){
-  let config=FALLBACK_PRESENTATION,unlocked=false,currentKey=null,currentAudio=null;
+  let config=FALLBACK_PRESENTATION,unlocked=false,currentKey=null,currentAudio=null,suspended=false;
   const audioCache=new Map();
   const state=()=>getState()||{};
   const prefs=()=>normalizeAudioPreferences(state().audio||{enabled:state().sound!==false});
@@ -29,8 +29,10 @@ export function createPresentationManager({getState=()=>({}),diagnostics=null}={
   async function unlock(){unlocked=true;try{await currentAudio?.play?.();currentAudio?.pause?.();}catch{}return true;}
   function applyTheme(screen){const theme=config.visual?.screenThemes?.[screen]||'system';if(globalThis.document?.documentElement?.dataset){document.documentElement.dataset.scene=theme;document.documentElement.dataset.visualQuality=state().presentation?.quality||'auto';document.documentElement.dataset.visualEffects=state().presentation?.reduceVisualEffects?'reduced':'full';}return theme;}
   function stopAmbient(){if(currentAudio){currentAudio.pause();currentAudio.currentTime=0;}currentAudio=null;currentKey=null;}
-  async function syncScreen(screen){applyTheme(screen);const p=prefs(),key=resolveTrackForScreen(config,screen);if(!p.enabled||!p.ambient||!key||!unlocked){if(!p.enabled||!p.ambient||!key)stopAmbient();return {playing:false,key};}if(key===currentKey&&currentAudio){currentAudio.volume=clamp(p.master*p.ambientVolume);return {playing:!currentAudio.paused,key};}stopAmbient();const path=config.audio?.ambience?.[key];if(!path)return {playing:false,key,error:'track-missing'};const audio=makeAudio(path);if(!audio)return {playing:false,key,error:'audio-api-missing'};audio.loop=true;audio.volume=clamp(p.master*p.ambientVolume);currentAudio=audio;currentKey=key;try{await audio.play();return {playing:true,key};}catch(error){diagnostics?.info?.('audio','Áudio aguardando interação do usuário.',{key,error:String(error)});return {playing:false,key,blocked:true};}}
-  function playSfx(type='tap'){const p=prefs();if(!p.enabled||!p.sfx||!unlocked)return false;const path=config.audio?.sfx?.[type]||config.audio?.sfx?.tap;const source=makeAudio(path);if(!source)return false;try{const audio=source.cloneNode?.()||source;audio.volume=clamp(p.master*p.sfxVolume);audio.play?.().catch(()=>{});return true;}catch{return false;}}
-  function status(){return {unlocked,currentKey,playing:Boolean(currentAudio&&!currentAudio.paused),configVersion:config.contentVersion,assets:(config.visual?.assetSlots||[]).length};}
-  return {setConfig,unlock,applyTheme,syncScreen,playSfx,stopAmbient,status,getConfig:()=>config};
+  async function syncScreen(screen){applyTheme(screen);const p=prefs(),key=resolveTrackForScreen(config,screen);if(suspended){currentAudio?.pause?.();return {playing:false,key,suspended:true};}if(!p.enabled||!p.ambient||!key||!unlocked){if(!p.enabled||!p.ambient||!key)stopAmbient();return {playing:false,key};}if(key===currentKey&&currentAudio){currentAudio.volume=clamp(p.master*p.ambientVolume);try{if(currentAudio.paused)await currentAudio.play();}catch{}return {playing:!currentAudio.paused,key};}stopAmbient();const path=config.audio?.ambience?.[key];if(!path)return {playing:false,key,error:'track-missing'};const audio=makeAudio(path);if(!audio)return {playing:false,key,error:'audio-api-missing'};audio.loop=true;audio.volume=clamp(p.master*p.ambientVolume);currentAudio=audio;currentKey=key;try{await audio.play();return {playing:true,key};}catch(error){diagnostics?.info?.('audio','Áudio aguardando interação do usuário.',{key,error:String(error)});return {playing:false,key,blocked:true};}}
+  function suspend(){suspended=true;currentAudio?.pause?.();return true;}
+  async function resume(screen){suspended=false;return syncScreen(screen);}
+  function playSfx(type='tap'){const p=prefs();if(suspended||!p.enabled||!p.sfx||!unlocked)return false;const path=config.audio?.sfx?.[type]||config.audio?.sfx?.tap;const source=makeAudio(path);if(!source)return false;try{const audio=source.cloneNode?.()||source;audio.volume=clamp(p.master*p.sfxVolume);audio.play?.().catch(()=>{});return true;}catch{return false;}}
+  function status(){return {unlocked,currentKey,playing:Boolean(currentAudio&&!currentAudio.paused),suspended,configVersion:config.contentVersion,assets:(config.visual?.assetSlots||[]).length};}
+  return {setConfig,unlock,applyTheme,syncScreen,suspend,resume,playSfx,stopAmbient,status,getConfig:()=>config};
 }

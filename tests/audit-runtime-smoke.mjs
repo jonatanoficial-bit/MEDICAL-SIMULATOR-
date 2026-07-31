@@ -1,6 +1,7 @@
+﻿import {fileURLToPath} from 'node:url';
 import fs from 'node:fs';
 import path from 'node:path';
-const root=path.resolve(new URL('..',import.meta.url).pathname);
+const root=fileURLToPath(new URL('..',import.meta.url));
 const memory=new Map();
 const storage={
   get length(){return memory.size;},
@@ -37,12 +38,12 @@ globalThis.fetch=async input=>{
 };
 await import('../src/app.js');
 await new Promise(resolve=>setTimeout(resolve,120));
-if(!appElement.innerHTML.includes('NOVO GAME'))throw new Error('Tela inicial não renderizou.');
-if(!appElement.innerHTML.includes('v0.27.0'))throw new Error('Build visível ausente.');
+if(!appElement.innerHTML.includes('CRIE SEU PERFIL'))throw new Error('Tela inicial não renderizou.');
+if(!appElement.innerHTML.includes('Versão 1.0.0'))throw new Error('Build visível ausente.');
 if(appElement.innerHTML.includes('Modo segurança ativo'))throw new Error('Runtime caiu no modo de segurança.');
 if(globalThis.VALE_CONTENT_STATUS?.caseCount!==6)throw new Error('Conteúdo clínico não foi ativado.');
 const screens={};
-for(const [screen,needle] of [['hub','LOBBY DO RESIDENTE'],['career','CARREIRA E RESIDÊNCIA'],['specialty','Escolha sua especialidade'],['shift','PLANTÃO - MODO SIMULADOR'],['settings','Proteção do progresso'],['outpatient','CENTRO DE SEGUIMENTO'],['emergency','CENTRO DE EMERGÊNCIA'],['beta','CENTRO BETA FECHADO'],['recovery','Central de recuperação']]){
+for(const [screen,needle] of [['hub','LOBBY DO RESIDENTE'],['career','CARREIRA E RESIDÊNCIA'],['specialty','Escolha sua especialidade'],['shift','PLANTÃO - MODO SIMULADOR'],['settings','Meu progresso'],['outpatient','CENTRO DE SEGUIMENTO'],['emergency','CENTRO DE EMERGÊNCIA'],['recovery','Gerenciar progresso']]){
   globalThis.state.screen=screen;
   if(screen==='shift')globalThis.state.selectedSpec='clinica-medica';
   globalThis.render();

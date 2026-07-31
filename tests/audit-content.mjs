@@ -1,7 +1,8 @@
+﻿import {fileURLToPath} from 'node:url';
 import fs from 'node:fs';
 import path from 'node:path';
 import {validateGameContent} from '../src/data/content-schema.js';
-const root=path.resolve(new URL('..',import.meta.url).pathname);
+const root=fileURLToPath(new URL('..',import.meta.url));
 const read=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
 const content={cases:read('data/core-cases.json'),gameplay:read('data/gameplay.json'),queue:read('data/queue.json'),specialties:read('data/specialties.json'),missions:read('data/missions.json'),responses:read('data/clinical-responses.json'),governance:read('data/governance.json'),academy:read('data/academy.json'),physiology:read('data/physiology.json'),assessment:read('data/assessment.json'),therapeutics:read('data/therapeutics.json'),emergency:read('data/emergency.json'),outpatient:read('data/outpatient.json'),branching:read('data/branching.json'),career:read('data/career.json')};
 const result=validateGameContent(content);

@@ -5,7 +5,7 @@ const required={
   boot:['TIMEOUT=12000','medsim-boot-attempts-v027','modo seguro','clearCaches'],
   loader:['last-known-good','timeoutMs=5000','retries=1','validateGameContent'],
   sw:['CRITICAL_ASSETS','Cache crítico incompleto','slice(0,1)','SKIP_WAITING'],
-  app:['CENTRAL DE RECUPERAÇÃO','repairTransientState','safeExportDiagnostics','verifyRuntimeBuild']
+  app:['RECUPERAÇÃO SEGURA','repairTransientState','safeExportDiagnostics','verifyRuntimeBuild']
 };
 const sources={storage:read('src/core/storage.js'),boot:read('src/core/boot-guard.js'),loader:read('src/data/content-loader.js'),sw:read('sw.js'),app:read('src/app.js')};
 const missing=[];

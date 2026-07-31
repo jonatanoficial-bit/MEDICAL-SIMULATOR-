@@ -1,5 +1,6 @@
+﻿import {fileURLToPath} from 'node:url';
 import fs from 'node:fs';import path from 'node:path';
-const root=path.resolve(new URL('..',import.meta.url).pathname),memory=new Map();
+const root=fileURLToPath(new URL('..',import.meta.url)),memory=new Map();
 const storage={get length(){return memory.size},key:i=>Array.from(memory.keys())[i]??null,getItem:k=>memory.get(k)??null,setItem:(k,v)=>memory.set(k,String(v)),removeItem:k=>memory.delete(k),clear:()=>memory.clear()};
 const classList={add(){},remove(){},contains(){return false;}},app={innerHTML:'',dataset:{},classList,querySelector(){return null;}};
 const documentStub={readyState:'loading',hidden:false,fullscreenElement:null,documentElement:{lang:'pt-BR',dataset:{},style:{setProperty(){}},requestFullscreen:()=>Promise.resolve()},body:{append(){},appendChild(){},classList},querySelector:s=>s==='#app'?app:null,querySelectorAll:()=>[],addEventListener(){},removeEventListener(){},createElement:()=>({classList,style:{},append(){},click(){},remove(){},setAttribute(){}})};

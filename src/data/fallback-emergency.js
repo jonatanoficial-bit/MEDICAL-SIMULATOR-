@@ -1,7 +1,7 @@
 export const FALLBACK_EMERGENCY = {
   "schemaVersion": 1,
   "engineVersion": "1.0.0",
-  "contentVersion": "0.27.0",
+  "contentVersion": "1.0.0",
   "status": "development-only",
   "publishable": false,
   "policy": {

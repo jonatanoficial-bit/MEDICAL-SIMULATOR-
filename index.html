@@ -3,7 +3,7 @@
 <head>
   <base href="./">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1,user-scalable=no">
   <meta name="theme-color" content="#06131f">
   <meta name="color-scheme" content="dark">
   <meta name="mobile-web-app-capable" content="yes">
@@ -11,8 +11,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Med Vale">
   <meta name="format-detection" content="telephone=no">
-  <meta name="description" content="Medical Simulator - Vale Edition: simulador clínico educacional trilíngue em beta fechado, com auditoria local, Academia Clínica, governança médica e rolagem mobile nativa.">
-  <title>Medical Simulator - Vale Edition v0.27.0</title>
+  <meta name="description" content="Medical Simulator - Vale Edition: simulador clínico educacional trilíngue com carreira, Academia Clínica, emergência e acompanhamento ambulatorial.">
+  <title>Medical Simulator - Vale Edition v1.0.0</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="assets/icons/pwa/apple-touch-icon.png">
@@ -23,9 +23,6 @@
   <link rel="modulepreload" href="src/core/mobile-experience.js">
   <link rel="modulepreload" href="src/core/touch-scroll-guard.js">
   <link rel="modulepreload" href="src/core/accessibility.js">
-  <link rel="modulepreload" href="src/core/beta-observability.js">
-  <link rel="modulepreload" href="src/core/beta-self-test.js">
-  <link rel="modulepreload" href="src/data/beta-program.js">
   <link rel="modulepreload" href="src/i18n/index.js">
   <link rel="modulepreload" href="src/i18n/catalogs.js">
   <link rel="modulepreload" href="src/i18n/academy-ui.js">
@@ -45,6 +42,17 @@
   <script src="src/core/boot-guard.js"></script>
 </head>
 <body>
+  <section id="orientation-lock" class="orientation-lock" role="dialog" aria-modal="true" aria-labelledby="orientation-title" aria-describedby="orientation-message" hidden>
+    <div class="orientation-card">
+      <div class="orientation-mark" aria-hidden="true">
+        <span class="orientation-phone"></span>
+        <span class="orientation-arrow">↻</span>
+      </div>
+      <p class="orientation-eyebrow">Medical Simulator</p>
+      <h1 id="orientation-title">Gire seu dispositivo</h1>
+      <p id="orientation-message">Este jogo foi desenvolvido para ser utilizado na horizontal. Gire o celular para continuar.</p>
+    </div>
+  </section>
   <div id="a11y-live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
   <div id="a11y-alert" class="sr-only" role="alert" aria-live="assertive" aria-atomic="true"></div>
   <noscript>
@@ -53,7 +61,7 @@
       <p>Este jogo precisa de JavaScript ativado.</p>
     </main>
   </noscript>
-  <div id="app"><main class="boot-shell" aria-live="polite"><div class="boot-spinner"></div><h1>Medical Simulator</h1><p>Loading the multilingual clinical simulator… / Cargando el simulador clínico multilingüe… / Preparando o simulador clínico multilíngue…</p><small>v0.27.0</small></main></div>
+  <div id="app"><main class="boot-shell" aria-live="polite"><div class="boot-spinner"></div><h1>Medical Simulator</h1><p>Loading the multilingual clinical simulator… / Cargando el simulador clínico multilingüe… / Preparando o simulador clínico multilíngue…</p><small>Versão 1.0.0</small></main></div>
   <script type="module" src="src/app.js"></script>
 </body>
 </html>

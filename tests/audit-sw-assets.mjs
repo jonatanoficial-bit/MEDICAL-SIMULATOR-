@@ -1,6 +1,7 @@
+﻿import {fileURLToPath} from 'node:url';
 import fs from 'node:fs';
 import path from 'node:path';
-const root=path.resolve(new URL('..',import.meta.url).pathname);
+const root=fileURLToPath(new URL('..',import.meta.url));
 const sw=fs.readFileSync(path.join(root,'sw.js'),'utf8');
 const blocks=['CRITICAL_ASSETS','DATA_ASSETS','OPTIONAL_ASSETS'];
 const assets=[];

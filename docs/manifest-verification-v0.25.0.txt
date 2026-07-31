@@ -1,4 +1,0 @@
-Medical Simulator v0.25.0 — verificação final do manifesto
-Status: APROVADO
-Método: SHA-256 de todos os arquivos do pacote, excluindo o próprio BUILD_MANIFEST.json.
-Resultado esperado: 0 ausentes, 0 extras, 0 hashes divergentes e 0 arquivos vazios.

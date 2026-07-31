@@ -1,6 +1,7 @@
+﻿import {fileURLToPath} from 'node:url';
 import fs from 'node:fs';import path from 'node:path';
 import {validateAssessmentRegistry} from '../src/data/assessment-schema.js';
-const root=path.resolve(new URL('..',import.meta.url).pathname);
+const root=fileURLToPath(new URL('..',import.meta.url));
 const readJson=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
 const registry=readJson('data/assessment.json');const cases=readJson('data/core-cases.json');
 const result=validateAssessmentRegistry(registry,cases);if(!result.ok)throw new Error(result.errors.join(' | '));

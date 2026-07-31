@@ -1,7 +1,8 @@
+﻿import {fileURLToPath} from 'node:url';
 import fs from 'node:fs';
 import path from 'node:path';
 import {validateOutpatientRegistry,createOutpatientSession,performOutpatientAction,closeOutpatientVisit,missOutpatientVisit,outpatientProgress} from '../src/simulation/outpatient-engine.js';
-const root=path.resolve(new URL('..',import.meta.url).pathname);
+const root=fileURLToPath(new URL('..',import.meta.url));
 const registry=JSON.parse(fs.readFileSync(path.join(root,'data/outpatient.json'),'utf8'));
 const validation=validateOutpatientRegistry(registry);
 const governance=JSON.parse(fs.readFileSync(path.join(root,'data/governance.json'),'utf8'));const sourceIds=new Set(governance.sources.map(item=>item.id));

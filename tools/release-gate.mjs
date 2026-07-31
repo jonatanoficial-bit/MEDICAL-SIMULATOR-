@@ -37,7 +37,7 @@ const branchingValidation=validateBranchingRegistry(branching,cases.map(item=>it
 const branchingReady=branchingValidation.ok&&branching.policy?.publishable===true;
 const careerValidation=validateCareerRegistry(career);
 const careerReady=careerValidation.ok&&career.publishable===true;
-const betaRegistryValid=beta.schemaVersion===1&&beta.contentVersion==='0.27.0'&&beta.channel==='closed-beta'&&beta.localOnly===true&&beta.telemetryDefault===false;
+const betaRegistryValid=beta.schemaVersion===1&&beta.contentVersion==='1.0.0'&&beta.channel==='closed-beta'&&beta.localOnly===true&&beta.telemetryDefault===false;
 const betaRequiredDevices=(beta.deviceMatrix||[]).filter(item=>item.required);
 const betaPhysicalComplete=betaRequiredDevices.length>0&&betaRequiredDevices.every(item=>item.status==='passed');
 const releaseReady=gate.ready&&academy.publishable===true&&physiologyReady&&assessmentReady&&therapeuticsReady&&emergencyReady&&outpatientReady&&branchingReady&&careerReady;
@@ -84,7 +84,7 @@ const report={
     blocker:'independent clinical, terminology, communication, and physical-examination safety validation pending'
   }
 };
-fs.writeFileSync(path.join(root,'docs','release-gate-v0.27.0.json'),JSON.stringify(report,null,2)+'\n');
+fs.writeFileSync(path.join(root,'docs','release-gate-v1.0.0.json'),JSON.stringify(report,null,2)+'\n');
 if(!releaseReady){
   console.error(`PUBLICAÇÃO CLÍNICA BLOQUEADA: ${gate.blockedCount}/${gate.total} casos possuem pendências.`);
   for(const item of gate.items)if(!item.approved)console.error(`- ${item.caseId}: ${item.blockers.join(', ')}`);

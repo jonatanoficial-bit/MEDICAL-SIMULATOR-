@@ -1,8 +1,8 @@
 export const BUILD = Object.freeze({
-  version: '0.27.0',
-  stamp: '20260617_104342_BRT',
-  label: 'v0.27.0 | build 2026-06-17 10:43:42 BRT',
-  phase: 'Beta Fechado, Auditoria Final e Preparação para RC',
+  version: '1.0.0',
+  stamp: '20260731_161519_BRT',
+  label: 'Versão 1.0.0',
+  phase: 'Production',
   saveSchema: 18,
   contentSchema: 12,
   presentationSchema: 1,

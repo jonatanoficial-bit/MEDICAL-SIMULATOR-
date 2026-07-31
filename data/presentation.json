@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "0.27.0",
-  "status": "development-ready",
+  "contentVersion": "1.0.0",
+  "status": "production",
   "fallbackSafe": true,
   "audio": {
     "defaults": {
@@ -64,45 +64,45 @@
     "assetSlots": [
       {
         "id": "bg-hospital-lobby",
-        "path": "assets/premium/backgrounds/hospital-lobby.webp",
+        "path": "assets/backgrounds/background_08.png",
         "type": "background",
         "recommended": "1920x1080 WebP",
-        "status": "placeholder"
+        "status": "active"
       },
       {
         "id": "bg-clinical-room",
-        "path": "assets/premium/backgrounds/clinical-room.webp",
+        "path": "assets/backgrounds/background_05.png",
         "type": "background",
         "recommended": "1920x1080 WebP",
-        "status": "placeholder"
+        "status": "active"
       },
       {
         "id": "bg-emergency-bay",
-        "path": "assets/premium/backgrounds/emergency-bay.webp",
+        "path": "assets/backgrounds/background_04.png",
         "type": "background",
         "recommended": "1920x1080 WebP",
-        "status": "placeholder"
+        "status": "active"
       },
       {
         "id": "bg-classroom",
-        "path": "assets/premium/backgrounds/clinical-academy.webp",
+        "path": "assets/backgrounds/background_09.png",
         "type": "background",
         "recommended": "1920x1080 WebP",
-        "status": "placeholder"
+        "status": "active"
       },
       {
         "id": "portrait-patient-set",
-        "path": "assets/premium/patients/",
+        "path": "assets/ui/",
         "type": "portrait-set",
         "recommended": "1024x1024 WebP, sem texto",
-        "status": "planned"
+        "status": "active"
       },
       {
         "id": "procedure-illustrations",
-        "path": "assets/premium/procedures/",
+        "path": "assets/backgrounds/",
         "type": "illustration-set",
         "recommended": "1600x900 WebP, sem texto",
-        "status": "planned"
+        "status": "active"
       }
     ]
   },
@@ -110,6 +110,6 @@
     "autoplay": "blocked-until-user-interaction",
     "missingAssetBehavior": "silent-fallback",
     "mobileOptimization": "audio mono 16 kHz; images lazy-loaded",
-    "copyright": "Only original or licensed assets may replace placeholders."
+    "copyright": "Only original or properly licensed assets are included."
   }
 }

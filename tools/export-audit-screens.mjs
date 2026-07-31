@@ -101,4 +101,4 @@ for(const locale of ['pt-BR','en','es']){
   globalThis.state.ui.academyView='quiz';globalThis.state.ui.academyModuleId='safety-limits';globalThis.state.ui.academyQuizFeedback=null;globalThis.render();screens[`${locale}-academy-quiz`]=appElement.innerHTML;
   globalThis.state.academy.passedModules['guided-reasoning']=true;globalThis.state.academy.guided={current:0,answers:[],correct:0,completed:false,score:null};globalThis.state.ui.academyView='guided';globalThis.state.ui.academyModuleId='guided-reasoning';globalThis.render();screens[`${locale}-academy-guided`]=appElement.innerHTML;
 }
-process.stdout.write(JSON.stringify({build:'0.27.0',screens}));
+process.stdout.write(JSON.stringify({build:'1.0.0',screens}));

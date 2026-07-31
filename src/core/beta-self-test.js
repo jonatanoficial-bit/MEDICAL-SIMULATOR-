@@ -3,7 +3,7 @@ const ok=value=>value?'pass':'fail';
 
 export function runBetaSelfTests({build,state,contentStatus,governanceSummary,stateStore,diagnostics,pwaStatus,documentRef=globalThis.document}={}){
   const checks=[];
-  checks.push(item('build','Versão única da build',ok(build?.version==='0.27.0'),build?.label||'indisponível'));
+  checks.push(item('build','Versão única da build',ok(build?.version==='1.0.0'),build?.label||'indisponível'));
   checks.push(item('save-schema','Save schema 18',ok(Number(state?.meta?.saveSchema)===18),`schema ${state?.meta?.saveSchema??'?'}`));
   checks.push(item('content-schema','Conteúdo schema 12',ok(Number(build?.contentSchema)===12),`schema ${build?.contentSchema??'?'}`));
   checks.push(item('content','Pacote clínico carregado',Number(contentStatus?.caseCount||0)>=6?'pass':'fail',`${contentStatus?.caseCount||0} casos • ${contentStatus?.mode||'unknown'}`));

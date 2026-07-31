@@ -1,7 +1,0 @@
-id,plataforma,navegador,obrigatorio,status,observacoes
-android-chrome,Android,Chrome,sim,pendente,Testar rolagem PWA offline áudio e save
-android-samsung,Android,Samsung Internet,sim,pendente,Testar rolagem e fullscreen
-iphone-safari,iPhone,Safari,sim,pendente,Testar safe areas PWA e VoiceOver
-ipad-safari,iPad,Safari,não,pendente,Testar layout tablet
-windows-chrome,Windows,Chrome,sim,pendente,Testar teclado NVDA e PWA
-windows-edge,Windows,Edge,sim,pendente,Testar teclado e atualização PWA

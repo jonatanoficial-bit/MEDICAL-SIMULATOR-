@@ -1,4 +1,4 @@
-export function createDefaultState({buildVersion='0.27.0'}={}){
+export function createDefaultState({buildVersion='1.0.0'}={}){
   return {
     meta:{saveSchema:18,buildVersion,contentMode:'fallback',updatedAt:null,lastHealthyAt:null,recoveryCount:0},
     locale:'pt-BR',screen:'setup',difficulty:'student',drawer:false,sound:true,audio:{enabled:true,ambient:true,sfx:true,master:.72,ambientVolume:.20,sfxVolume:.58},presentation:{quality:'auto',reduceVisualEffects:false},beta:{localTelemetry:false,includeDiagnostics:true,includeSaveSummary:true,testerAlias:'',checklist:{},devices:{},lastAudit:null,reports:[]},accessibility:{contrast:'standard',textSize:'medium',reduceMotion:false,focusMode:true,descriptions:true},selectedSpec:'clinica-medica',currentCase:0,score:null,

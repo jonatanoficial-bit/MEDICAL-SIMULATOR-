@@ -1,74 +1,43 @@
 # Medical Simulator — Vale Edition
 
-**Versão:** v0.27.0  
-**Build:** 2026-06-17 10:43:42 BRT  
-**Canal:** Beta fechado  
-**Fase 18:** Auditoria final e preparação para Release Candidate
+Versão 1.0.0 de um simulador clínico educacional, trilíngue e instalável como PWA. A experiência reúne carreira, plantões, Academia Clínica, cenários de emergência e seguimento ambulatorial.
 
-## Execução
+> Uso exclusivamente educacional. O conteúdo não substitui avaliação, diagnóstico, tratamento ou treinamento profissional supervisionado.
 
-Hospede a raiz em servidor HTTP/HTTPS e abra `index.html`. Para PWA, cache offline e tela cheia instalável, use HTTPS.
+## Executar localmente
+
+O projeto não exige instalação de dependências. Sirva a pasta por HTTP para habilitar módulos ES e o service worker:
+
+```bash
+python -m http.server 8080
+```
+
+Abra `http://localhost:8080`. Em celular ou tablet, use o dispositivo na horizontal.
+
+## Verificação
+
+Com Node.js 20 ou superior:
 
 ```bash
 npm run audit
-npm run audit:beta-layout
-npm run release-gate
 npm run manifest
 npm run verify-manifest
 ```
 
-`npm run release-gate` deve terminar com código `2`. Isso é intencional: a matriz física ainda está pendente e o conteúdo médico não possui aprovação clínica independente.
+A suíte automatizada cobre conteúdo, armazenamento, recuperação, PWA, service worker, acessibilidade, internacionalização e os principais motores de simulação.
 
-## Centro Beta Fechado
+## Estrutura
 
-A nova área `Beta` oferece:
+- `index.html`, `manifest.webmanifest` e `sw.js`: entrada e instalação PWA.
+- `src/`: aplicação, simulação, persistência, acessibilidade e idiomas.
+- `data/` e `content/`: conteúdo clínico estruturado.
+- `assets/`: imagens, ícones e áudio local.
+- `tests/`: auditorias automatizadas sem dependências externas.
+- `tools/`: geração de manifesto, ícones, áudio e verificações de layout.
+- `docs/`: auditoria final, testes e preparação para Android.
 
-- auditoria interna com 12 verificações;
-- checklist manual de 10 fluxos essenciais;
-- matriz de 6 famílias de aparelhos/navegadores;
-- relatório de falha exportado em JSON;
-- telemetria local opcional e desativada por padrão;
-- no máximo 25 sessões locais;
-- remoção de nome e texto livre dos eventos automáticos;
-- exportação exclusivamente manual;
-- nenhum endpoint de transmissão.
+## Publicação
 
-## Compatibilidade preservada
+A distribuição web deve usar HTTPS e servir todos os arquivos preservando seus caminhos relativos. Para Android, consulte `docs/PREPARACAO-PARA-APK-v1.0.0.md`.
 
-- 6 casos clínicos regulares;
-- 9 cenários de emergência ABCDE;
-- 10 linhas de cuidado ambulatorial;
-- 9 módulos e 27 lições da Academia;
-- 6 perfis fisiológicos;
-- 30 perguntas de anamnese e 24 itens de exame físico;
-- 13 exames, 14 intervenções e 2 procedimentos;
-- 4 níveis de dificuldade e 6 perfis ramificados;
-- 5 estágios de carreira, 8 setores e 4 provas;
-- PT-BR, inglês e espanhol;
-- acessibilidade, PWA, áudio adaptativo e assets com fallback.
-
-## Rolagem mobile
-
-- `touch-action: pan-y pinch-zoom`;
-- nenhum cancelamento de `touchmove`;
-- fullscreen somente por botão explícito;
-- sem estouro horizontal nos perfis auditados;
-- controles visíveis com mínimo de 48 px.
-
-## Schemas
-
-- Save schema: 18.
-- Content schema: 12.
-- Presentation schema: 1.
-- Beta schema: 1.
-
-## Situação de lançamento
-
-A build está pronta para distribuição a um grupo controlado de testadores, mas **não está pronta para publicação comercial nem para Release Candidate**. Permanecem obrigatórios:
-
-- testes físicos em Android, iPhone, tablet e PC;
-- instalação e atualização PWA em HTTPS;
-- teste offline real;
-- TalkBack, VoiceOver e NVDA;
-- sessões prolongadas;
-- revisão médica, farmacêutica e terminológica independente.
+Build: `v1.0.0 | build 2026-07-31 16:15:19 BRT`.

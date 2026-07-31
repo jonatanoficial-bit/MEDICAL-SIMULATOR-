@@ -1,4 +1,4 @@
-// Fallback fisiológico interno da build v0.27.0.
+// Fallback fisiológico interno da build v1.0.0.
 export const FALLBACK_PHYSIOLOGY = Object.freeze({
   "schemaVersion": 1,
   "engineVersion": "1.0.0",

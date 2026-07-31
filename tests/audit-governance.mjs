@@ -1,7 +1,8 @@
+﻿import {fileURLToPath} from 'node:url';
 import fs from 'node:fs';
 import path from 'node:path';
 import {validateGovernance,evaluateReleaseGate,isCasePlayable} from '../src/data/clinical-governance.js';
-const root=path.resolve(new URL('..',import.meta.url).pathname);
+const root=fileURLToPath(new URL('..',import.meta.url));
 const read=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
 const cases=read('data/core-cases.json');
 const governance=read('data/governance.json');

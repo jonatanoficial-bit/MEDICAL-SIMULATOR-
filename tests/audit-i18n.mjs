@@ -1,8 +1,9 @@
+﻿import {fileURLToPath} from 'node:url';
 import fs from 'node:fs';
 import path from 'node:path';
 import {CATALOGS} from '../src/i18n/catalogs.js';
 import {SUPPORTED_LOCALES,normalizeLocale,detectLocale,translateTerm,translateText,catalogStats} from '../src/i18n/index.js';
-const root=path.resolve(new URL('..',import.meta.url).pathname);
+const root=fileURLToPath(new URL('..',import.meta.url));
 const readJson=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
 const read=file=>fs.readFileSync(path.join(root,file),'utf8');
 const failures=[];const require=(ok,label)=>{if(!ok)failures.push(label)};

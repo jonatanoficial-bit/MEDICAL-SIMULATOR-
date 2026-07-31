@@ -1,0 +1,14 @@
+{
+  "product": "Medical Simulator - Vale Edition",
+  "version": "1.0.0",
+  "build": "20260731_161519_BRT",
+  "channel": "production",
+  "web_release_ready": true,
+  "pwa_release_ready": true,
+  "apk_wrapper_ready": true,
+  "apk_compiled": false,
+  "physical_device_matrix_complete": false,
+  "independent_clinical_validation_complete": false,
+  "intended_use": "educational simulation only",
+  "generated_at": "2026-07-31T16:15:19-03:00"
+}

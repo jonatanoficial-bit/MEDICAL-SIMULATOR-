@@ -1,0 +1,12 @@
+{
+  "product": "Medical Simulator - Vale Edition",
+  "version": "1.0.0",
+  "build": "20260731_161519_BRT",
+  "build_label": "v1.0.0 | build 2026-07-31 16:15:19 BRT",
+  "timezone": "America/Sao_Paulo",
+  "runtime": "static ES modules / PWA",
+  "orientation": "landscape",
+  "save_schema": 18,
+  "content_schema": 12,
+  "presentation_schema": 1
+}

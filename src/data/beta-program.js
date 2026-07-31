@@ -1,6 +1,6 @@
 export const BETA_PROGRAM=Object.freeze({
   schemaVersion:1,
-  version:'0.27.0',
+  version:'1.0.0',
   channel:'closed-beta',
   localOnly:true,
   telemetryDefault:false,

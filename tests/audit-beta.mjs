@@ -6,7 +6,7 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const data=JSON.parse(fs.readFileSync(path.join(root,'data/beta-program.json'),'utf8'));
 const req=(value,message)=>{if(!value)throw new Error(message)};
 req(data.schemaVersion===1,'beta schema');
-req(data.contentVersion==='0.27.0','beta content version');
+req(data.contentVersion==='1.0.0','beta content version');
 req(data.channel==='closed-beta','beta channel');
 req(data.localOnly===true&&data.telemetryDefault===false,'privacy defaults');
 req(data.privacy.networkTransmission===false&&data.privacy.manualExportOnly===true,'privacy contract');

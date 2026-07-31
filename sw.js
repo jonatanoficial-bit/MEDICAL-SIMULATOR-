@@ -1,4 +1,4 @@
-const VERSION='0.27.0';
+const VERSION='1.0.0';
 const CACHE_PREFIX='medical-simulator-vale-edition-v';
 const CACHE_NAME=`${CACHE_PREFIX}${VERSION.replaceAll('.','-')}`;
 const OFFLINE_FALLBACK='./index.html';
@@ -6,15 +6,15 @@ const CRITICAL_ASSETS=[
   './','./index.html','./manifest.webmanifest','./favicon.ico','./BUILD.json','./VERSAO.txt',
   './src/core/boot-guard.js','./src/app.js','./src/styles.css','./src/config/build.js',
   './src/core/default-state.js','./src/core/touch-scroll-guard.js','./src/core/object.js','./src/core/checksum.js','./src/core/storage.js',
-  './src/core/diagnostics.js','./src/core/beta-observability.js','./src/core/beta-self-test.js','./src/core/runtime-health.js','./src/core/sw-manager.js','./src/core/mobile-experience.js','./src/core/accessibility.js','./src/core/presentation-manager.js',
+  './src/core/diagnostics.js','./src/core/runtime-health.js','./src/core/sw-manager.js','./src/core/mobile-experience.js','./src/core/accessibility.js','./src/core/presentation-manager.js',
   './src/data/fallback-presentation.js','./src/data/content-loader.js','./src/data/content-schema.js','./src/data/assessment-schema.js','./src/data/clinical-governance.js','./src/data/academy-schema.js','./src/data/fallback-content.js','./src/data/fallback-assessment.js','./src/data/fallback-governance.js','./src/data/fallback-academy.js','./src/data/fallback-physiology.js','./src/data/fallback-therapeutics.js','./src/data/fallback-emergency.js','./src/data/fallback-outpatient.js','./src/data/fallback-branching.js','./src/data/fallback-career.js','./src/simulation/branching-engine.js','./src/simulation/physiology-engine.js','./src/simulation/therapeutics-engine.js','./src/simulation/emergency-engine.js','./src/simulation/outpatient-engine.js','./src/simulation/career-engine.js',
-  './src/data/beta-program.js','./src/i18n/index.js','./src/i18n/catalogs.js','./src/i18n/academy-ui.js','./src/compat/legacy-guards.js',
+  './src/i18n/index.js','./src/i18n/catalogs.js','./src/i18n/academy-ui.js',
   './assets/icons/pwa/icon-192.png','./assets/icons/pwa/icon-512.png',
   './assets/icons/pwa/icon-maskable-192.png','./assets/icons/pwa/icon-maskable-512.png','./assets/icons/pwa/apple-touch-icon.png'
 ];
 const DATA_ASSETS=[
   './data/content-index.json','./data/core-cases.json','./data/gameplay.json','./data/queue.json',
-  './data/specialties.json','./data/missions.json','./data/clinical-responses.json','./data/governance.json','./data/academy.json','./data/physiology.json','./data/assessment.json','./data/therapeutics.json','./data/emergency.json','./data/outpatient.json','./data/branching.json','./data/career.json','./data/presentation.json','./data/beta-program.json'
+  './data/specialties.json','./data/missions.json','./data/clinical-responses.json','./data/governance.json','./data/academy.json','./data/physiology.json','./data/assessment.json','./data/therapeutics.json','./data/emergency.json','./data/outpatient.json','./data/branching.json','./data/career.json','./data/presentation.json'
 ];
 const OPTIONAL_ASSETS=[
   './assets/backgrounds/background_01.png','./assets/backgrounds/background_04.png','./assets/backgrounds/background_05.png',

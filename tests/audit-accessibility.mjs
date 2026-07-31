@@ -1,7 +1,8 @@
+﻿import {fileURLToPath} from 'node:url';
 import fs from 'node:fs';
 import path from 'node:path';
 import {normalizeAccessibility,ACCESSIBILITY_DEFAULTS} from '../src/core/accessibility.js';
-const root=path.resolve(new URL('..',import.meta.url).pathname);
+const root=fileURLToPath(new URL('..',import.meta.url));
 const read=file=>fs.readFileSync(path.join(root,file),'utf8');
 const app=read('src/app.js'),css=read('src/styles.css'),html=read('index.html'),state=read('src/core/default-state.js'),sw=read('sw.js');
 const failures=[];const require=(ok,label)=>{if(!ok)failures.push(label)};

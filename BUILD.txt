@@ -1,6 +1,5 @@
 Medical Simulator - Vale Edition
-Versão: 0.27.0
-Build: 20260617_104342_BRT
-Data/hora: 2026-06-17 10:43:42 BRT
-Fase: Beta Fechado, Auditoria Final e Preparação para RC
-Canal: closed-beta
+Versão: 1.0.0
+Build: 20260731_161519_BRT
+Data/hora: 2026-07-31 16:15:19 BRT
+Canal: production

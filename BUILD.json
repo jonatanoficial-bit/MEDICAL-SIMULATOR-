@@ -1,14 +1,14 @@
 {
   "product": "Medical Simulator - Vale Edition",
-  "version": "0.27.0",
-  "build": "20260617_104342_BRT",
-  "build_label": "v0.27.0 | build 2026-06-17 10:43:42 BRT",
-  "phase": "Beta Fechado, Auditoria Final e Preparação para RC",
+  "version": "1.0.0",
+  "build": "20260731_161519_BRT",
+  "build_label": "v1.0.0 | build 2026-07-31 16:15:19 BRT",
+  "phase": "Production",
   "save_schema": 18,
   "content_schema": 12,
   "presentation_schema": 1,
   "beta_schema": 1,
   "timezone": "America/Sao_Paulo",
-  "channel": "closed-beta",
-  "generated_at": "2026-06-17T10:43:42-03:00"
+  "channel": "production",
+  "generated_at": "2026-07-31T16:15:19-03:00"
 }

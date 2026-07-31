@@ -1,5 +1,6 @@
+﻿import {fileURLToPath} from 'node:url';
 import fs from 'node:fs';import path from 'node:path';
-const root=path.resolve(new URL('..',import.meta.url).pathname);const read=f=>fs.readFileSync(path.join(root,f),'utf8');
+const root=fileURLToPath(new URL('..',import.meta.url));const read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const app=read('src/app.js'),css=read('src/styles.css'),guard=read('src/core/touch-scroll-guard.js');const failures=[];const require=(ok,label)=>{if(!ok)failures.push(label)};
 require(!app.includes('fullscreenArmed'),'fullscreen automático removido');
 require(app.includes('installTouchScrollGuard'),'guard instalado');

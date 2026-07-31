@@ -1,5 +1,6 @@
+﻿import {fileURLToPath} from 'node:url';
 import fs from 'node:fs';import path from 'node:path';
-const root=path.resolve(new URL('..',import.meta.url).pathname);const memory=new Map();
+const root=fileURLToPath(new URL('..',import.meta.url));const memory=new Map();
 const storage={get length(){return memory.size;},key:index=>Array.from(memory.keys())[index]??null,getItem:key=>memory.has(key)?memory.get(key):null,setItem:(key,value)=>memory.set(key,String(value)),removeItem:key=>memory.delete(key),clear:()=>memory.clear()};
 const classList={add(){},remove(){},contains(){return false;},toggle(){}};const appElement={innerHTML:'',dataset:{},classList,append(){},querySelector(){return null;},querySelectorAll(){return[];}};const body={innerHTML:'',classList,append(){},appendChild(){}};
 const documentStub={readyState:'loading',fullscreenElement:null,documentElement:{lang:'pt-BR',dataset:{},style:{setProperty(){}},requestFullscreen:()=>Promise.resolve()},body,querySelector:s=>s==='#app'?appElement:null,querySelectorAll:()=>[],createTreeWalker:()=>({currentNode:null,nextNode(){return false;}}),addEventListener(){},removeEventListener(){},createElement:()=>({className:'',textContent:'',classList,style:{},append(){},click(){},remove(){},setAttribute(){}})};
