@@ -1,0 +1,423 @@
+{
+  "ok": true,
+  "method": "Production career DOM and CSS rendered in installed Chromium browser",
+  "browser": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+  "minimumControlHeight": 44,
+  "failures": [],
+  "profiles": [
+    {
+      "locale": "pt-BR",
+      "viewport": [
+        568,
+        320
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 568,
+        "documentWidth": 568,
+        "documentHeight": 320,
+        "visibleControls": 20,
+        "minControlHeight": 44
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v2.0.0/career-journey-pt-BR-568x320.png"
+    },
+    {
+      "locale": "pt-BR",
+      "viewport": [
+        640,
+        360
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 640,
+        "documentWidth": 640,
+        "documentHeight": 360,
+        "visibleControls": 20,
+        "minControlHeight": 44
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v2.0.0/career-journey-pt-BR-640x360.png"
+    },
+    {
+      "locale": "pt-BR",
+      "viewport": [
+        667,
+        375
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 667,
+        "documentWidth": 667,
+        "documentHeight": 375,
+        "visibleControls": 20,
+        "minControlHeight": 44
+      },
+      "pageErrors": [],
+      "screenshot": null
+    },
+    {
+      "locale": "en",
+      "viewport": [
+        740,
+        360
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 740,
+        "documentWidth": 740,
+        "documentHeight": 360,
+        "visibleControls": 20,
+        "minControlHeight": 44
+      },
+      "pageErrors": [],
+      "screenshot": null
+    },
+    {
+      "locale": "es",
+      "viewport": [
+        780,
+        360
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 780,
+        "documentWidth": 780,
+        "documentHeight": 360,
+        "visibleControls": 20,
+        "minControlHeight": 44
+      },
+      "pageErrors": [],
+      "screenshot": null
+    },
+    {
+      "locale": "pt-BR",
+      "viewport": [
+        812,
+        375
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 812,
+        "documentWidth": 812,
+        "documentHeight": 375,
+        "visibleControls": 20,
+        "minControlHeight": 44
+      },
+      "pageErrors": [],
+      "screenshot": null
+    },
+    {
+      "locale": "en",
+      "viewport": [
+        844,
+        390
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 844,
+        "documentWidth": 844,
+        "documentHeight": 390,
+        "visibleControls": 20,
+        "minControlHeight": 44
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v2.0.0/career-journey-en-844x390.png"
+    },
+    {
+      "locale": "es",
+      "viewport": [
+        852,
+        393
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 852,
+        "documentWidth": 852,
+        "documentHeight": 393,
+        "visibleControls": 20,
+        "minControlHeight": 44
+      },
+      "pageErrors": [],
+      "screenshot": null
+    },
+    {
+      "locale": "pt-BR",
+      "viewport": [
+        896,
+        414
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 896,
+        "documentWidth": 896,
+        "documentHeight": 414,
+        "visibleControls": 20,
+        "minControlHeight": 44
+      },
+      "pageErrors": [],
+      "screenshot": null
+    },
+    {
+      "locale": "en",
+      "viewport": [
+        915,
+        412
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 915,
+        "documentWidth": 915,
+        "documentHeight": 412,
+        "visibleControls": 20,
+        "minControlHeight": 44
+      },
+      "pageErrors": [],
+      "screenshot": null
+    },
+    {
+      "locale": "es",
+      "viewport": [
+        932,
+        430
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 932,
+        "documentWidth": 932,
+        "documentHeight": 430,
+        "visibleControls": 20,
+        "minControlHeight": 44
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v2.0.0/career-journey-es-932x430.png"
+    },
+    {
+      "locale": "pt-BR",
+      "viewport": [
+        960,
+        432
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 960,
+        "documentWidth": 960,
+        "documentHeight": 432,
+        "visibleControls": 20,
+        "minControlHeight": 44
+      },
+      "pageErrors": [],
+      "screenshot": null
+    },
+    {
+      "locale": "pt-BR",
+      "viewport": [
+        768,
+        1024
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 768,
+        "documentWidth": 768,
+        "documentHeight": 2225,
+        "visibleControls": 20,
+        "minControlHeight": 48
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v2.0.0/career-journey-pt-BR-768x1024.png"
+    },
+    {
+      "locale": "en",
+      "viewport": [
+        1024,
+        600
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 1024,
+        "documentWidth": 1024,
+        "documentHeight": 3284,
+        "visibleControls": 19,
+        "minControlHeight": 48
+      },
+      "pageErrors": [],
+      "screenshot": null
+    },
+    {
+      "locale": "en",
+      "viewport": [
+        1024,
+        768
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 1024,
+        "documentWidth": 1024,
+        "documentHeight": 3284,
+        "visibleControls": 19,
+        "minControlHeight": 48
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v2.0.0/career-journey-en-1024x768.png"
+    },
+    {
+      "locale": "es",
+      "viewport": [
+        1180,
+        820
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 1180,
+        "documentWidth": 1180,
+        "documentHeight": 2698,
+        "visibleControls": 19,
+        "minControlHeight": 48
+      },
+      "pageErrors": [],
+      "screenshot": null
+    },
+    {
+      "locale": "pt-BR",
+      "viewport": [
+        1280,
+        720
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 1280,
+        "documentWidth": 1280,
+        "documentHeight": 2746,
+        "visibleControls": 19,
+        "minControlHeight": 48
+      },
+      "pageErrors": [],
+      "screenshot": null
+    },
+    {
+      "locale": "en",
+      "viewport": [
+        1280,
+        800
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 1280,
+        "documentWidth": 1280,
+        "documentHeight": 2626,
+        "visibleControls": 19,
+        "minControlHeight": 48
+      },
+      "pageErrors": [],
+      "screenshot": null
+    },
+    {
+      "locale": "es",
+      "viewport": [
+        1366,
+        768
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 1366,
+        "documentWidth": 1366,
+        "documentHeight": 2698,
+        "visibleControls": 19,
+        "minControlHeight": 48
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v2.0.0/career-journey-es-1366x768.png"
+    },
+    {
+      "locale": "pt-BR",
+      "viewport": [
+        1440,
+        900
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 1440,
+        "documentWidth": 1440,
+        "documentHeight": 2746,
+        "visibleControls": 19,
+        "minControlHeight": 48
+      },
+      "pageErrors": [],
+      "screenshot": null
+    },
+    {
+      "locale": "en",
+      "viewport": [
+        1600,
+        900
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 1600,
+        "documentWidth": 1600,
+        "documentHeight": 2626,
+        "visibleControls": 19,
+        "minControlHeight": 48
+      },
+      "pageErrors": [],
+      "screenshot": null
+    },
+    {
+      "locale": "pt-BR",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 1920,
+        "documentWidth": 1920,
+        "documentHeight": 2746,
+        "visibleControls": 19,
+        "minControlHeight": 48
+      },
+      "pageErrors": [],
+      "screenshot": "docs/screenshots-v2.0.0/career-journey-pt-BR-1920x1080.png"
+    },
+    {
+      "locale": "es",
+      "viewport": [
+        2560,
+        1440
+      ],
+      "markerFound": true,
+      "overflowX": false,
+      "metrics": {
+        "viewportWidth": 2560,
+        "documentWidth": 2560,
+        "documentHeight": 2698,
+        "visibleControls": 19,
+        "minControlHeight": 48
+      },
+      "pageErrors": [],
+      "screenshot": null
+    }
+  ]
+}

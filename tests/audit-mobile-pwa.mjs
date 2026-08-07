@@ -1,4 +1,4 @@
-﻿import {fileURLToPath} from 'node:url';
+import {fileURLToPath} from 'node:url';
 import fs from 'node:fs';
 import path from 'node:path';
 const root=fileURLToPath(new URL('..',import.meta.url));
@@ -22,7 +22,7 @@ require(index.includes('apple-touch-icon'),'apple touch icon');
 for(const token of ['env(safe-area-inset-bottom)','--app-height','shift-mobile-tabs','mobile-shift-dock','min-height:var(--touch-target)'])require(css.includes(token),`CSS ${token}`);
 for(const token of ["['summary','👤','Resumo']",'setShiftTab','mobileClinicalStrip','installGame'])require(app.includes(token),`app ${token}`);
 for(const token of ['beforeinstallprompt','visualViewport','requestFullscreen','displayMode'])require(mobile.includes(token),`mobile ${token}`);
-require(sw.includes("VERSION='1.0.0'"),'versão SW');
+require(sw.includes("VERSION='2.0.0'"),'versão SW');
 require(sw.includes('icon-maskable-512.png'),'ícone no cache SW');
 require(sw.includes('navigationPreload'),'navigation preload');
 if(failures.length)throw new Error(`Auditoria mobile/PWA falhou: ${failures.join(' | ')}`);

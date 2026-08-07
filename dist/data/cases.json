@@ -1,0 +1,342 @@
+[
+  {
+    "id": "hipertensao-1",
+    "specialty": "clinica-medica",
+    "patient": "Marcos Vinícius",
+    "age": 34,
+    "sex": "Masculino",
+    "profession": "Analista de Sistemas",
+    "complaint": "cefaleia frequente, cansaço e aperto no peito às vezes",
+    "vitals": [
+      [
+        "PA",
+        "128/82",
+        "mmHg"
+      ],
+      [
+        "FC",
+        "88",
+        "bpm"
+      ],
+      [
+        "FR",
+        "18",
+        "irpm"
+      ],
+      [
+        "TEMP.",
+        "36,7",
+        "°C"
+      ],
+      [
+        "SpO₂",
+        "98",
+        "%"
+      ]
+    ],
+    "correctQuestions": [
+      "tempo dos sintomas",
+      "histórico familiar",
+      "dor em esforço"
+    ],
+    "correctExams": [
+      "Eletrocardiograma (ECG)",
+      "Perfil lipídico",
+      "Glicemia de jejum"
+    ],
+    "correctProcedures": [
+      "Aferir sinais vitais",
+      "Exame físico geral",
+      "Ausculta cardíaca"
+    ],
+    "diagnosis": "Hipertensão Arterial Estágio 1",
+    "idealConduct": [
+      "orientar estilo de vida",
+      "monitorar pressão",
+      "retorno ambulatorial"
+    ],
+    "xp": 160
+  },
+  {
+    "id": "cefaleia-tensional",
+    "specialty": "clinica-medica",
+    "patient": "Patrícia Gomes",
+    "age": 29,
+    "sex": "Feminino",
+    "profession": "Professora",
+    "complaint": "dor de cabeça em aperto no fim do dia, sem febre e sem vômitos",
+    "vitals": [
+      [
+        "PA",
+        "118/76",
+        "mmHg"
+      ],
+      [
+        "FC",
+        "78",
+        "bpm"
+      ],
+      [
+        "FR",
+        "16",
+        "irpm"
+      ],
+      [
+        "TEMP.",
+        "36,5",
+        "°C"
+      ],
+      [
+        "SpO₂",
+        "99",
+        "%"
+      ]
+    ],
+    "correctQuestions": [
+      "tempo dos sintomas",
+      "estresse e sono",
+      "sinais de alarme"
+    ],
+    "correctExams": [
+      "Hemograma completo"
+    ],
+    "correctProcedures": [
+      "Aferir sinais vitais",
+      "Exame físico geral",
+      "Avaliação neurológica"
+    ],
+    "diagnosis": "Cefaleia tensional",
+    "idealConduct": [
+      "analgesia simples",
+      "higiene do sono"
+    ],
+    "xp": 130
+  },
+  {
+    "id": "angina-estavel",
+    "specialty": "cardiologia",
+    "patient": "Ricardo Andrade",
+    "age": 56,
+    "sex": "Masculino",
+    "profession": "Motorista",
+    "complaint": "aperto no peito aos esforços que melhora ao repousar",
+    "vitals": [
+      [
+        "PA",
+        "142/88",
+        "mmHg"
+      ],
+      [
+        "FC",
+        "92",
+        "bpm"
+      ],
+      [
+        "FR",
+        "19",
+        "irpm"
+      ],
+      [
+        "TEMP.",
+        "36,6",
+        "°C"
+      ],
+      [
+        "SpO₂",
+        "97",
+        "%"
+      ]
+    ],
+    "correctQuestions": [
+      "dor em esforço",
+      "irradiação da dor",
+      "fatores de risco"
+    ],
+    "correctExams": [
+      "Eletrocardiograma (ECG)",
+      "Troponina",
+      "Perfil lipídico"
+    ],
+    "correctProcedures": [
+      "Aferir sinais vitais",
+      "Ausculta cardíaca",
+      "Solicitar acesso venoso"
+    ],
+    "diagnosis": "Angina estável",
+    "idealConduct": [
+      "ECG seriado",
+      "estratificação de risco",
+      "encaminhar cardiologia"
+    ],
+    "xp": 190
+  },
+  {
+    "id": "itu-nao-complicada",
+    "specialty": "clinica-medica",
+    "patient": "Vanessa Oliveira",
+    "age": 38,
+    "sex": "Feminino",
+    "profession": "Gerente",
+    "complaint": "ardência para urinar, aumento da frequência urinária e desconforto baixo ventre",
+    "vitals": [
+      [
+        "PA",
+        "116/74",
+        "mmHg"
+      ],
+      [
+        "FC",
+        "84",
+        "bpm"
+      ],
+      [
+        "FR",
+        "17",
+        "irpm"
+      ],
+      [
+        "TEMP.",
+        "37,2",
+        "°C"
+      ],
+      [
+        "SpO₂",
+        "99",
+        "%"
+      ]
+    ],
+    "correctQuestions": [
+      "dor lombar",
+      "febre recente",
+      "gestação"
+    ],
+    "correctExams": [
+      "Urina tipo 1",
+      "Urocultura"
+    ],
+    "correctProcedures": [
+      "Aferir sinais vitais",
+      "Palpação abdominal"
+    ],
+    "diagnosis": "ITU não complicada",
+    "idealConduct": [
+      "antibioticoterapia guiada",
+      "hidratação"
+    ],
+    "xp": 145
+  },
+  {
+    "id": "refluxo-gastroesofagico",
+    "specialty": "clinica-medica",
+    "patient": "Carlos Eduardo",
+    "age": 42,
+    "sex": "Masculino",
+    "profession": "Comerciante",
+    "complaint": "queimação retroesternal após refeições, gosto amargo na boca e piora ao deitar",
+    "vitals": [
+      [
+        "PA",
+        "122/80",
+        "mmHg"
+      ],
+      [
+        "FC",
+        "82",
+        "bpm"
+      ],
+      [
+        "FR",
+        "17",
+        "irpm"
+      ],
+      [
+        "TEMP.",
+        "36,6",
+        "°C"
+      ],
+      [
+        "SpO₂",
+        "98",
+        "%"
+      ]
+    ],
+    "correctQuestions": [
+      "tempo dos sintomas",
+      "gatilhos alimentares",
+      "sinais de alarme"
+    ],
+    "correctExams": [
+      "Teste terapêutico IBP",
+      "Endoscopia digestiva alta"
+    ],
+    "correctProcedures": [
+      "Aferir sinais vitais",
+      "Exame físico geral",
+      "Palpação abdominal"
+    ],
+    "diagnosis": "Refluxo gastroesofágico",
+    "idealConduct": [
+      "inibidor de bomba de prótons",
+      "evitar gatilhos alimentares",
+      "retorno ambulatorial"
+    ],
+    "xp": 150
+  },
+  {
+    "id": "dermatite-atopica",
+    "specialty": "dermatologia",
+    "patient": "Ana Clara",
+    "age": 21,
+    "sex": "Feminino",
+    "profession": "Estudante",
+    "complaint": "coceira recorrente com placas avermelhadas em dobras dos braços e pescoço",
+    "vitals": [
+      [
+        "PA",
+        "110/72",
+        "mmHg"
+      ],
+      [
+        "FC",
+        "76",
+        "bpm"
+      ],
+      [
+        "FR",
+        "16",
+        "irpm"
+      ],
+      [
+        "TEMP.",
+        "36,4",
+        "°C"
+      ],
+      [
+        "SpO₂",
+        "99",
+        "%"
+      ]
+    ],
+    "correctQuestions": [
+      "tempo dos sintomas",
+      "alergias e gatilhos",
+      "uso de produtos na pele"
+    ],
+    "correctExams": [
+      "Dermatoscopia",
+      "Hemograma completo"
+    ],
+    "correctProcedures": [
+      "Exame físico geral",
+      "Avaliação dermatológica",
+      "Orientação terapêutica"
+    ],
+    "diagnosis": "Dermatite atópica",
+    "idealConduct": [
+      "hidratação da pele",
+      "corticoide tópico leve",
+      "retorno ambulatorial"
+    ],
+    "xp": 140
+  }
+]

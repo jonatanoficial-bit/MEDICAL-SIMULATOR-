@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
-const root=path.resolve(new URL('..',import.meta.url).pathname);
+import {fileURLToPath} from 'node:url';
+const root=fileURLToPath(new URL('..',import.meta.url));
 const memory=new Map();
 const storage={get length(){return memory.size;},key:index=>Array.from(memory.keys())[index]??null,getItem:key=>memory.has(key)?memory.get(key):null,setItem:(key,value)=>memory.set(key,String(value)),removeItem:key=>memory.delete(key),clear:()=>memory.clear()};
 const classList={add(){},remove(){},contains(){return false;},toggle(){}};
@@ -78,7 +79,10 @@ for(const locale of ['pt-BR','en','es']){
     {id:'hypertension',score:84},{id:'tension-headache',score:82},{id:'gerd',score:86}
   ];
   globalThis.state.academy.passedModules={'safety-limits':true,'initial-assessment':true};
+  globalThis.state.commercial.world.stress=42;
+  globalThis.state.commercial.world.journal=[{type:'case',caseId:'hypertension',week:1,score:86}];
   globalThis.state.ui.careerTab='overview';globalThis.render();screens[`${locale}-career-overview`]=appElement.innerHTML;
+  globalThis.state.ui.careerTab='journey';globalThis.render();screens[`${locale}-career-journey`]=appElement.innerHTML;
   globalThis.state.ui.careerTab='residency';globalThis.render();screens[`${locale}-career-residency`]=appElement.innerHTML;
   globalThis.state.ui.careerTab='hospital';globalThis.render();screens[`${locale}-career-hospital`]=appElement.innerHTML;
   globalThis.state.ui.careerTab='exams';globalThis.render();screens[`${locale}-career-exams`]=appElement.innerHTML;
@@ -101,4 +105,4 @@ for(const locale of ['pt-BR','en','es']){
   globalThis.state.ui.academyView='quiz';globalThis.state.ui.academyModuleId='safety-limits';globalThis.state.ui.academyQuizFeedback=null;globalThis.render();screens[`${locale}-academy-quiz`]=appElement.innerHTML;
   globalThis.state.academy.passedModules['guided-reasoning']=true;globalThis.state.academy.guided={current:0,answers:[],correct:0,completed:false,score:null};globalThis.state.ui.academyView='guided';globalThis.state.ui.academyModuleId='guided-reasoning';globalThis.render();screens[`${locale}-academy-guided`]=appElement.innerHTML;
 }
-process.stdout.write(JSON.stringify({build:'1.0.0',screens}));
+process.stdout.write(JSON.stringify({build:'2.0.0',screens}));

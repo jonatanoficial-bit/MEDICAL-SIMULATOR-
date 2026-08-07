@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "method": "Real HTTP runtime in installed Edge with touch viewport, rotation state preservation and service-worker offline reload after HTTP server shutdown",
+  "browser": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+  "origin": "ephemeral localhost",
+  "careerBefore": {
+    "screen": "career",
+    "week": 1,
+    "save": 5
+  },
+  "portrait": {
+    "overlayVisible": true,
+    "appInert": true,
+    "screen": "career",
+    "week": 1
+  },
+  "landscape": {
+    "overlayHidden": true,
+    "appInert": false,
+    "screen": "career",
+    "week": 1,
+    "horizontalOverflow": false
+  },
+  "offline": {
+    "ready": true,
+    "screen": "career",
+    "servedAfterHttpServerStopped": true
+  },
+  "pageErrors": [],
+  "runtimeConsoleErrors": [],
+  "httpErrors": [],
+  "offlineConsoleErrors": []
+}

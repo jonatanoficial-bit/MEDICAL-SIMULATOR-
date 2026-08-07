@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import {fileURLToPath} from 'node:url';
 import {evaluateReleaseGate} from '../src/data/clinical-governance.js';
 import {validatePhysiologyRegistry} from '../src/simulation/physiology-engine.js';
 import {validateAssessmentRegistry} from '../src/data/assessment-schema.js';
@@ -9,7 +10,7 @@ import {validateOutpatientRegistry} from '../src/simulation/outpatient-engine.js
 import {validateBranchingRegistry} from '../src/simulation/branching-engine.js';
 import {validateCareerRegistry} from '../src/simulation/career-engine.js';
 
-const root=path.resolve(new URL('..',import.meta.url).pathname);
+const root=path.resolve(fileURLToPath(new URL('..',import.meta.url)));
 const read=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
 const cases=read('data/core-cases.json');
 const governance=read('data/governance.json');
@@ -37,7 +38,7 @@ const branchingValidation=validateBranchingRegistry(branching,cases.map(item=>it
 const branchingReady=branchingValidation.ok&&branching.policy?.publishable===true;
 const careerValidation=validateCareerRegistry(career);
 const careerReady=careerValidation.ok&&career.publishable===true;
-const betaRegistryValid=beta.schemaVersion===1&&beta.contentVersion==='1.0.0'&&beta.channel==='closed-beta'&&beta.localOnly===true&&beta.telemetryDefault===false;
+const betaRegistryValid=beta.schemaVersion===1&&beta.contentVersion==='2.0.0'&&beta.channel==='closed-beta'&&beta.localOnly===true&&beta.telemetryDefault===false;
 const betaRequiredDevices=(beta.deviceMatrix||[]).filter(item=>item.required);
 const betaPhysicalComplete=betaRequiredDevices.length>0&&betaRequiredDevices.every(item=>item.status==='passed');
 const releaseReady=gate.ready&&academy.publishable===true&&physiologyReady&&assessmentReady&&therapeuticsReady&&emergencyReady&&outpatientReady&&branchingReady&&careerReady;
@@ -84,7 +85,7 @@ const report={
     blocker:'independent clinical, terminology, communication, and physical-examination safety validation pending'
   }
 };
-fs.writeFileSync(path.join(root,'docs','release-gate-v1.0.0.json'),JSON.stringify(report,null,2)+'\n');
+fs.writeFileSync(path.join(root,'docs','release-gate-v2.0.0.json'),JSON.stringify(report,null,2)+'\n');
 if(!releaseReady){
   console.error(`PUBLICAÇÃO CLÍNICA BLOQUEADA: ${gate.blockedCount}/${gate.total} casos possuem pendências.`);
   for(const item of gate.items)if(!item.approved)console.error(`- ${item.caseId}: ${item.blockers.join(', ')}`);

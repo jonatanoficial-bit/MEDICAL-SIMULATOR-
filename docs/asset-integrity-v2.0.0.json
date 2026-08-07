@@ -1,0 +1,137 @@
+{
+  "ok": true,
+  "scope": "assets visual files",
+  "algorithm": "SHA-256",
+  "originalRoot": "C:\\Users\\jonat\\Desktop\\GAME\\¨2026\\medico simulator 2026",
+  "copyRoot": "C:\\Users\\jonat\\Documents\\Codex\\2026-07-31\\vamos-configurar-uma-tarefa-agendada-juntos\\work\\MEDICAL-SIMULATOR-2.0\\",
+  "originalCount": 31,
+  "copyCount": 31,
+  "differenceCount": 0,
+  "differences": [],
+  "files": {
+    "avatars/avatar_01.png": {
+      "size": 331583,
+      "sha256": "685587227a89eee252c431ee3e2b4f1b593fcb9632154aecd84cf3522cf5babf"
+    },
+    "avatars/avatar_02.png": {
+      "size": 185480,
+      "sha256": "c6e8b62e2cb59847c6f7f305c5192ce89f09427323f0e7f3fb8fe0026fa9c4b2"
+    },
+    "avatars/avatar_03.png": {
+      "size": 276191,
+      "sha256": "4a30e32aaccaa2bfff137a59cc1b53d0254131685a212a03b0cccca1f7be4d0f"
+    },
+    "avatars/avatar_04.png": {
+      "size": 177955,
+      "sha256": "01f8f1cb85025c52a465d1e4ca5b42ecd63a1315230e7df8234a9d8ff01a1783"
+    },
+    "avatars/avatar_05.png": {
+      "size": 177762,
+      "sha256": "7f979d553dbd76caf2944bc11c08c50496a8659d59a20f25ea06f537b40a0bed"
+    },
+    "backgrounds/background_01.png": {
+      "size": 2052671,
+      "sha256": "bc111862786e8eb37b1110bedacf4b6dbb4483fe147ff64e7d6c1529e006b637"
+    },
+    "backgrounds/background_02.png": {
+      "size": 2267473,
+      "sha256": "cd34d4df51abf30fb4724eb4b85537d1f937d61adcc4f404399ef2a465492d1b"
+    },
+    "backgrounds/background_03.png": {
+      "size": 2160217,
+      "sha256": "5e87b40f6959953ad2ebd14947418e7ba81b309e44d9f9eb4169869441331dcf"
+    },
+    "backgrounds/background_04.png": {
+      "size": 2160217,
+      "sha256": "5e87b40f6959953ad2ebd14947418e7ba81b309e44d9f9eb4169869441331dcf"
+    },
+    "backgrounds/background_05.png": {
+      "size": 2048657,
+      "sha256": "09c2f68a185927c404085b352570794bdeffd091003db4977a8ebbf3a070cd5b"
+    },
+    "backgrounds/background_06.png": {
+      "size": 2088477,
+      "sha256": "3f4e17ba4efe0313374ac29cd10e75df51e82f0536c049134dd5c4addebf278f"
+    },
+    "backgrounds/background_07.png": {
+      "size": 2433984,
+      "sha256": "5b86e041ed4a1fae821df2c7c2f6965db09148c9c2439e9cdccd6958910aee6b"
+    },
+    "backgrounds/background_08.png": {
+      "size": 2157660,
+      "sha256": "353813c07fbca229387f53d13c3a2c88b1f940a9d661c39877040e5c084bdd35"
+    },
+    "backgrounds/background_09.png": {
+      "size": 2183956,
+      "sha256": "15dd6a499d0443c76a203660485ba2c5465cdc4edd2ae1b6bc5223d66f456362"
+    },
+    "backgrounds/background_10.png": {
+      "size": 2232564,
+      "sha256": "a29e189ef867cce618928ff71fcb638dc29b29f1c6d25a2668baf5383bcff34f"
+    },
+    "backgrounds/background_11.png": {
+      "size": 2172997,
+      "sha256": "da7e5ce2ec9c838348be515a31ea8919274277a9da1c9ac84d76647ede6ad804"
+    },
+    "backgrounds/hero.svg": {
+      "size": 661,
+      "sha256": "e1b8fe4f7f80c4ae7aadd8b934183ba545bd089fe1460664e262513b40ee5253"
+    },
+    "icons/icon_01.png": {
+      "size": 54633,
+      "sha256": "5b018a2a4d3b53d6308db8b2bc448ccc6617324af78b4fbe6964bd0ba9c65ec9"
+    },
+    "icons/icon_02.png": {
+      "size": 89444,
+      "sha256": "37f2f5fe114fa76702edde89354cc6f0185a030ae69f12defed7a3ed7523f0a2"
+    },
+    "icons/icon_03.png": {
+      "size": 120274,
+      "sha256": "31eea86393151f5d5dda9d827db24795be286d26cefadddd339cdc9bcb689dc1"
+    },
+    "icons/icon_04.png": {
+      "size": 106134,
+      "sha256": "5f54cf853639e70d82382fc131f79aacf03af2afe09264796f72bb2db7827ed5"
+    },
+    "icons/pwa/apple-touch-icon.png": {
+      "size": 23207,
+      "sha256": "d5165d47b62029a6b3dca4fefd3221cec507d2ad3de7f036ab3fa2c2f06fa6cb"
+    },
+    "icons/pwa/icon-192.png": {
+      "size": 26792,
+      "sha256": "1b0d29040804b613aae16d57682e1309276ae5a66248b09d8fbface771cc6fd2"
+    },
+    "icons/pwa/icon-512.png": {
+      "size": 56195,
+      "sha256": "90801117eded9ad822d68ab71b2438e60d58096b73bb5f9c184023498499ae12"
+    },
+    "icons/pwa/icon-maskable-192.png": {
+      "size": 19121,
+      "sha256": "7dc22a57957e62c66c27f6f5654fcd7cc3f3abba0b9f4866a6f50b987929ac42"
+    },
+    "icons/pwa/icon-maskable-512.png": {
+      "size": 56195,
+      "sha256": "90801117eded9ad822d68ab71b2438e60d58096b73bb5f9c184023498499ae12"
+    },
+    "ui/ui_01.png": {
+      "size": 110339,
+      "sha256": "ff15a7db504953feb0c5d06817bf30cae631c427d2fdba72281b34092f5c8f7f"
+    },
+    "ui/ui_02.png": {
+      "size": 135020,
+      "sha256": "a7b4b6b8a4f491693179f4a1bf42da751bfda04a68ad3317626c22d5261e65e5"
+    },
+    "ui/ui_03.png": {
+      "size": 144120,
+      "sha256": "984231cda641b1cf317f1d85400d06cb7a4f1ac4d57e0f5a5cfecd655d135073"
+    },
+    "ui/ui_04.png": {
+      "size": 102467,
+      "sha256": "18b0b517ef8830f5bd108bf31259c110c13c2bf0b4387c2cc5e0cc3b24b7b3e7"
+    },
+    "ui/ui_05.png": {
+      "size": 142712,
+      "sha256": "e06a5ae12965c5881a0d19e473c1209a1293c08018db71fb0f615cc97eac51f4"
+    }
+  }
+}

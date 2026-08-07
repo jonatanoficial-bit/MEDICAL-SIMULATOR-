@@ -1,0 +1,86 @@
+{
+  "specialties": [
+    {
+      "id": "clinica-medica",
+      "name": "Clínica Médica",
+      "description": "Avalie, diagnostique e trate condições clínicas diversas.",
+      "icon": "⚕",
+      "declaredCaseCount": 14,
+      "background": 9,
+      "unlockLevel": 1
+    },
+    {
+      "id": "urgencia",
+      "name": "Urgência e Emergência",
+      "description": "Atenda casos críticos e tome decisões que salvam vidas.",
+      "icon": "✚",
+      "declaredCaseCount": 9,
+      "background": 8,
+      "unlockLevel": 1
+    },
+    {
+      "id": "cardiologia",
+      "name": "Cardiologia",
+      "description": "Avalie e trate doenças do coração e sistema circulatório.",
+      "icon": "❤️",
+      "declaredCaseCount": 12,
+      "background": 4,
+      "unlockLevel": 3
+    },
+    {
+      "id": "pediatria",
+      "name": "Pediatria",
+      "description": "Cuide da saúde das crianças e adolescentes.",
+      "icon": "👶",
+      "declaredCaseCount": 9,
+      "background": 11,
+      "unlockLevel": 4
+    },
+    {
+      "id": "dermatologia",
+      "name": "Dermatologia",
+      "description": "Diagnostique e trate condições da pele, cabelos e unhas.",
+      "icon": "🧴",
+      "declaredCaseCount": 10,
+      "background": 5,
+      "unlockLevel": 5
+    },
+    {
+      "id": "urologia",
+      "name": "Urologia",
+      "description": "Cuide da saúde do sistema urinário e reprodutor.",
+      "icon": "🩺",
+      "declaredCaseCount": 8,
+      "background": 6,
+      "unlockLevel": 6
+    },
+    {
+      "id": "ginecologia",
+      "name": "Ginecologia",
+      "description": "Acompanhe a saúde da mulher em todas as fases.",
+      "icon": "♀",
+      "declaredCaseCount": 10,
+      "background": 7,
+      "unlockLevel": 6
+    },
+    {
+      "id": "ambulatorio",
+      "name": "Ambulatório",
+      "description": "Atendimento geral e acompanhamento de rotina.",
+      "icon": "🏥",
+      "declaredCaseCount": 9,
+      "background": 10,
+      "unlockLevel": 1
+    },
+    {
+      "id": "outras",
+      "name": "Outras Especialidades",
+      "description": "Acesso futuro a novas áreas e especialidades.",
+      "icon": "+",
+      "declaredCaseCount": 0,
+      "background": 3,
+      "unlockLevel": 99
+    }
+  ],
+  "schemaVersion": 1
+}

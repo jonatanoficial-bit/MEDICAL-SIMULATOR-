@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.0.0 — Jornada clínica viva — 2026-08-07 09:47:01 BRT
+
+- 24 variações humanas para os seis casos centrais e 43 experiências configuradas no total.
+- Confiança, estresse, comunicação e contexto do paciente integrados ao atendimento e à pontuação.
+- Carreira dinâmica com semana, temporada, eventos hospitalares, cinco competências, estresse e legado.
+- Três mentores selecionáveis e quatro caminhos de especialização com desbloqueios por desempenho.
+- Impacto de casos, emergências e seguimentos no mundo persistente da carreira.
+- Políticas públicas trilíngues de privacidade, termos educacionais e acessibilidade.
+- Preparação estrutural para Capacitor, distribuição web e materiais de loja em três idiomas.
+- Correção dos fundos que eram resolvidos incorretamente a partir de `/src/assets` no navegador real.
+- Auditorias funcionais, responsivas, offline, rotação, integridade visual e regressão ampliadas.
+- Todas as 31 imagens originais preservadas byte a byte, comprovadas por SHA-256.
+
 ## v1.0.0 — Produção web/PWA — 2026-07-31 16:15:19 BRT
 
 - Interface pública comercial sem central de testes, ferramentas internas ou mensagens provisórias.

@@ -3,14 +3,14 @@ const storage={getItem:key=>memory.has(key)?memory.get(key):null,setItem:(key,va
 globalThis.localStorage=storage;
 const {createBetaObservability}=await import('../src/core/beta-observability.js');
 const {runBetaSelfTests}=await import('../src/core/beta-self-test.js');
-const beta=createBetaObservability({key:'audit-beta',build:'v1.0.0',maxSessions:3,storage});
+const beta=createBetaObservability({key:'audit-beta',build:'v2.0.0',maxSessions:3,storage});
 if(beta.start({screen:'hub'}))throw new Error('Telemetria iniciou sem consentimento.');
 beta.setEnabled(true);beta.start({screen:'hub',locale:'pt-BR',playerName:'não deve persistir'});beta.record('navigation',{from:'hub',to:'beta',freeText:'não deve persistir'});beta.end('audit');
 const exported=beta.export();
 if(exported.sessions.length!==1)throw new Error('Sessão local não persistida.');
 const raw=JSON.stringify(exported);if(raw.includes('não deve persistir'))throw new Error('Campo pessoal/texto livre persistido na telemetria.');
 const state={meta:{saveSchema:18},locale:'pt-BR',accessibility:{contrast:'standard'}};
-const audit=runBetaSelfTests({build:{version:'1.0.0',label:'v1.0.0',contentSchema:12},state,contentStatus:{caseCount:6,mode:'external'},governanceSummary:{ready:false,blockedCount:6},stateStore:{inspect:()=>({main:{exists:false,ok:false},backups:[]})},diagnostics:{summary:()=>({errors:0})},pwaStatus:{registered:false},documentRef:{documentElement:{style:{touchAction:'pan-y pinch-zoom'}}}});
+const audit=runBetaSelfTests({build:{version:'2.0.0',label:'v2.0.0',contentSchema:12},state,contentStatus:{caseCount:6,mode:'external'},governanceSummary:{ready:false,blockedCount:6},stateStore:{inspect:()=>({main:{exists:false,ok:false},backups:[]})},diagnostics:{summary:()=>({errors:0})},pwaStatus:{registered:false},documentRef:{documentElement:{style:{touchAction:'pan-y pinch-zoom'}}}});
 if(audit.totals.fail!==0||audit.checks.length<10)throw new Error('Autoauditoria beta falhou.');
 beta.clear();if(beta.summary().sessions!==0)throw new Error('Limpeza da telemetria local falhou.');
 console.log(JSON.stringify({ok:true,sessions:1,selfTests:audit.checks.length,status:audit.status,localOnly:true}));

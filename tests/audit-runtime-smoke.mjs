@@ -1,4 +1,4 @@
-﻿import {fileURLToPath} from 'node:url';
+import {fileURLToPath} from 'node:url';
 import fs from 'node:fs';
 import path from 'node:path';
 const root=fileURLToPath(new URL('..',import.meta.url));
@@ -39,7 +39,7 @@ globalThis.fetch=async input=>{
 await import('../src/app.js');
 await new Promise(resolve=>setTimeout(resolve,120));
 if(!appElement.innerHTML.includes('CRIE SEU PERFIL'))throw new Error('Tela inicial não renderizou.');
-if(!appElement.innerHTML.includes('Versão 1.0.0'))throw new Error('Build visível ausente.');
+if(!appElement.innerHTML.includes('Versão 2.0.0'))throw new Error('Build visível ausente.');
 if(appElement.innerHTML.includes('Modo segurança ativo'))throw new Error('Runtime caiu no modo de segurança.');
 if(globalThis.VALE_CONTENT_STATUS?.caseCount!==6)throw new Error('Conteúdo clínico não foi ativado.');
 const screens={};
@@ -51,6 +51,13 @@ for(const [screen,needle] of [['hub','LOBBY DO RESIDENTE'],['career','CARREIRA E
   if(screen==='shift'&&!appElement.innerHTML.includes('shift-mobile-tabs'))throw new Error('Navegação clínica mobile ausente.');
   screens[screen]=Buffer.byteLength(appElement.innerHTML);
 }
+globalThis.state.screen='career';
+globalThis.state.ui.careerTab='journey';
+globalThis.render();
+if(!appElement.innerHTML.includes('career-journey'))throw new Error('Jornada comercial não renderizou.');
+if(!appElement.innerHTML.includes('Reputação do hospital'))throw new Error('Reputação dinâmica do hospital ausente.');
+if(!appElement.innerHTML.includes('mentor-options'))throw new Error('Seleção de mentoria ausente.');
+screens['career-journey']=Buffer.byteLength(appElement.innerHTML);
 globalThis.setAccessibility('contrast','high');
 if(globalThis.state.accessibility.contrast!=='high'||document.documentElement.dataset.contrast!=='high')throw new Error('Alto contraste não foi aplicado ao estado e ao DOM.');
 globalThis.setAccessibility('textSize','extra-large');

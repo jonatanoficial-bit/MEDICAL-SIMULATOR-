@@ -1,0 +1,14 @@
+{
+  "appId": "com.valeedition.medicalsimulator",
+  "appName": "Medical Simulator - Vale Edition",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": false,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": false
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id":"hipertensao-1","specialty":"clinica-medica","difficulty":"simulador","patient":{"name":"Marcos Vinícius","age":34,"sex":"Masculino","profession":"Analista de Sistemas"},
+    "complaint":"cefaleia frequente, cansaço e aperto no peito às vezes",
+    "vitals":[["PA","128/82","mmHg"],["FC","88","bpm"],["FR","18","irpm"],["TEMP.","36,7","°C"],["SpO₂","98","%"]],
+    "correctQuestions":["tempo dos sintomas","histórico familiar","dor em esforço"],
+    "correctExams":["Eletrocardiograma (ECG)","Perfil lipídico","Glicemia de jejum"],
+    "correctProcedures":["Aferir sinais vitais","Exame físico geral","Ausculta cardíaca"],
+    "diagnosis":"Hipertensão Arterial Estágio 1","idealConduct":["orientar estilo de vida","monitorar pressão","retorno ambulatorial"],"xp":160,"credits":90,"timeCost":18
+  },
+  {
+    "id":"cefaleia-tensional","specialty":"clinica-medica","difficulty":"simulador","patient":{"name":"Patrícia Gomes","age":29,"sex":"Feminino","profession":"Professora"},
+    "complaint":"dor de cabeça em aperto no fim do dia, sem febre e sem vômitos",
+    "vitals":[["PA","118/76","mmHg"],["FC","78","bpm"],["FR","16","irpm"],["TEMP.","36,5","°C"],["SpO₂","99","%"]],
+    "correctQuestions":["tempo dos sintomas","estresse e sono","sinais de alarme"],
+    "correctExams":["Hemograma completo"],
+    "correctProcedures":["Aferir sinais vitais","Exame físico geral","Avaliação neurológica"],
+    "diagnosis":"Cefaleia tensional","idealConduct":["analgesia simples","higiene do sono","orientação sobre sinais de alarme"],"xp":130,"credits":70,"timeCost":14
+  },
+  {
+    "id":"angina-estavel","specialty":"cardiologia","difficulty":"simulador","patient":{"name":"Ricardo Andrade","age":56,"sex":"Masculino","profession":"Motorista"},
+    "complaint":"aperto no peito aos esforços que melhora ao repousar",
+    "vitals":[["PA","142/88","mmHg"],["FC","92","bpm"],["FR","19","irpm"],["TEMP.","36,6","°C"],["SpO₂","97","%"]],
+    "correctQuestions":["dor em esforço","irradiação da dor","fatores de risco"],
+    "correctExams":["Eletrocardiograma (ECG)","Troponina","Perfil lipídico"],
+    "correctProcedures":["Aferir sinais vitais","Ausculta cardíaca","Solicitar acesso venoso"],
+    "diagnosis":"Angina estável","idealConduct":["ECG seriado","estratificação de risco","encaminhar cardiologia"],"xp":190,"credits":110,"timeCost":20
+  },
+  {
+    "id":"itu-nao-complicada","specialty":"clinica-medica","difficulty":"simulador","patient":{"name":"Vanessa Oliveira","age":38,"sex":"Feminino","profession":"Gerente"},
+    "complaint":"ardência para urinar, aumento da frequência urinária e desconforto baixo ventre",
+    "vitals":[["PA","116/74","mmHg"],["FC","84","bpm"],["FR","17","irpm"],["TEMP.","37,2","°C"],["SpO₂","99","%"]],
+    "correctQuestions":["dor lombar","febre recente","gestação"],
+    "correctExams":["Urina tipo 1","Urocultura"],
+    "correctProcedures":["Aferir sinais vitais","Palpação abdominal"],
+    "diagnosis":"ITU não complicada","idealConduct":["antibioticoterapia guiada","hidratação","retorno se febre ou dor lombar"],"xp":145,"credits":75,"timeCost":15
+  }
+]

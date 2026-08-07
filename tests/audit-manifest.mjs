@@ -1,4 +1,4 @@
-﻿import {fileURLToPath} from 'node:url';
+import {fileURLToPath} from 'node:url';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -13,5 +13,5 @@ const missing=[...declared.keys()].filter(file=>!actual.has(file));
 const unlisted=[...actual.keys()].filter(file=>!declared.has(file));
 const mismatch=[...actual].filter(([file,meta])=>{const item=declared.get(file);return item&&(item.size!==meta.size||item.sha256!==meta.sha256);}).map(([file])=>file);
 const empty=[...actual].filter(([,meta])=>meta.size===0).map(([file])=>file);
-if(manifest.version!=='1.0.0'||manifest.fileCount!==actual.size||missing.length||unlisted.length||mismatch.length||empty.length)throw new Error(JSON.stringify({version:manifest.version,fileCount:manifest.fileCount,actual:actual.size,missing,unlisted,mismatch,empty},null,2));
+if(manifest.version!=='2.0.0'||manifest.fileCount!==actual.size||missing.length||unlisted.length||mismatch.length||empty.length)throw new Error(JSON.stringify({version:manifest.version,fileCount:manifest.fileCount,actual:actual.size,missing,unlisted,mismatch,empty},null,2));
 console.log(JSON.stringify({ok:true,version:manifest.version,files:actual.size,missing:0,unlisted:0,hashMismatch:0,empty:0},null,2));
