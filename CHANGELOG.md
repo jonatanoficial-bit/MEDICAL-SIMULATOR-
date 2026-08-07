@@ -1,5 +1,16 @@
 # Changelog
 
+## Atualização de onboarding comercial — 2026-08-07
+
+- Cadastro e seleção de modo agora funcionam em retrato; a simulação clínica continua exigindo paisagem.
+- Cinco avatares com seleção visível, acessível e persistente sem apagar o nome ou o país digitado.
+- Perfis Iniciante, Estudante e Profissional configuram automaticamente o nível inicial.
+- Seleção internacional de idioma e país/região antes de iniciar a jornada.
+- Modo Carreira e Simulação Livre redesenhados com benefícios, recomendação e chamadas claras.
+- Entrada no Modo Carreira abre diretamente a jornada profissional.
+- Fluxo validado em português, inglês e espanhol, incluindo correção de tradução de “Simulation”.
+- Avatares, fundos e demais imagens existentes permanecem inalterados.
+
 ## v2.0.0 — Jornada clínica viva — 2026-08-07 09:47:01 BRT
 
 - 24 variações humanas para os seis casos centrais e 43 experiências configuradas no total.

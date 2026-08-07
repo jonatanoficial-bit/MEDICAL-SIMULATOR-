@@ -38,10 +38,18 @@ globalThis.fetch=async input=>{
 };
 await import('../src/app.js');
 await new Promise(resolve=>setTimeout(resolve,120));
-if(!appElement.innerHTML.includes('CRIE SEU PERFIL'))throw new Error('Tela inicial não renderizou.');
+if(!appElement.innerHTML.includes('Crie seu perfil clínico'))throw new Error('Tela inicial não renderizou.');
 if(!appElement.innerHTML.includes('Versão 2.0.0'))throw new Error('Build visível ausente.');
 if(appElement.innerHTML.includes('Modo segurança ativo'))throw new Error('Runtime caiu no modo de segurança.');
 if(globalThis.VALE_CONTENT_STATUS?.caseCount!==6)throw new Error('Conteúdo clínico não foi ativado.');
+globalThis.pickAvatar(4);
+if(globalThis.state.player.avatar!==4||!appElement.innerHTML.includes('data-avatar="4"'))throw new Error('Seleção de avatar não persistiu.');
+globalThis.selectAudience('beginner');
+if(globalThis.state.player.audience!=='beginner'||globalThis.state.difficulty!=='beginner')throw new Error('Perfil de experiência não ajustou a dificuldade.');
+globalThis.state.screen='menu';globalThis.render();
+if(!appElement.innerHTML.includes('Modo Carreira')||!appElement.innerHTML.includes('Simulação Livre'))throw new Error('Escolha de modos não renderizou.');
+globalThis.chooseGameMode('career');
+if(globalThis.state.screen!=='career')throw new Error('Modo carreira não abriu a jornada profissional.');
 const screens={};
 for(const [screen,needle] of [['hub','LOBBY DO RESIDENTE'],['career','CARREIRA E RESIDÊNCIA'],['specialty','Escolha sua especialidade'],['shift','PLANTÃO - MODO SIMULADOR'],['settings','Meu progresso'],['outpatient','CENTRO DE SEGUIMENTO'],['emergency','CENTRO DE EMERGÊNCIA'],['recovery','Gerenciar progresso']]){
   globalThis.state.screen=screen;

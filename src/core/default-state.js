@@ -13,7 +13,7 @@ export function createDefaultState({buildVersion='2.0.0'}={}){
     commercial:{activeCaseId:null,variantIndex:0,trust:55,stress:45,rapport:0,lastReaction:'neutral',encountersByCase:{},world:{week:1,season:1,competence:50,ethics:55,empathy:50,efficiency:50,resilience:55,hospitalReputation:50,stress:20,mentorId:'dra-livia',mentorBond:10,legacyPoints:0,journal:[],unlockedSpecializations:[]}},
     career:{stageId:'intern',day:1,rotationId:'triage',examSession:null,examResults:{},examRewardsClaimed:[],claimedMissions:[],attendanceDates:[],activityLog:[],competencies:{},streak:0,lastActivityDate:null,totalActivities:0},
     academy:{pretest:{current:0,answers:[],correct:0,completed:false,score:null},completedLessons:{},passedModules:{},attempts:{},xpClaimed:[],guided:{current:0,answers:[],correct:0,completed:false,score:null},startedAt:null,lastActivity:null},
-    player:{name:'Dr. Rafael Santos',short:'Dr. Rafael',avatar:1,level:1,xp:0,credits:2450,reputation:'Boa',patients:0,correct:88,highScoreCases:0,learnedModules:0,title:'Interno',rank:1248,streak:0},
+    player:{name:'Dr. Rafael Santos',short:'Dr. Rafael',avatar:1,country:'BR',audience:'student',preferredMode:'career',onboardingComplete:false,level:1,xp:0,credits:2450,reputation:'Boa',patients:0,correct:88,highScoreCases:0,learnedModules:0,title:'Interno',rank:1248,streak:0},
     simulation:{minutes:720,criticality:0,physiology:null},encounter:null,popup:null,
     unlocks:{specialties:['clinica-medica']},missions:{claimed:[]},completed:[]
   };

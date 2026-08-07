@@ -32,8 +32,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "size": 13272,
-      "sha256": "748768813e6ce9e6fc9516e95ccebec4dc94b1606a12ade99db4602e95fa66f5"
+      "size": 14062,
+      "sha256": "def12b2d19f1dd765ac0957c29056b909a10c50125a96fe6fd18ac967641710d"
     },
     {
       "path": "README.md",
@@ -807,8 +807,8 @@
     },
     {
       "path": "dist/src/app.js",
-      "size": 211012,
-      "sha256": "b74fcd00b8af41418b3a59754e37c8ae5dadd059b92dfc6972f37cb138bbb1fe"
+      "size": 220473,
+      "sha256": "3d2d3bd68d6dccd26d58bb25edf7d4280443b10e807a72391ca5d0d2a04f95c3"
     },
     {
       "path": "dist/src/compat/legacy-guards.js",
@@ -857,8 +857,8 @@
     },
     {
       "path": "dist/src/core/default-state.js",
-      "size": 2995,
-      "sha256": "e333e476a20071e3ebea274ac6e9ef9da459626315726b92dbf97fe9713af6c8"
+      "size": 3075,
+      "sha256": "3e951720ca304f813f93b5a9a74cce69a2f9fa0b7af9ef888dedfa23c41f550c"
     },
     {
       "path": "dist/src/core/diagnostics.js",
@@ -867,8 +867,8 @@
     },
     {
       "path": "dist/src/core/mobile-experience.js",
-      "size": 6844,
-      "sha256": "cb3dbe8b9813596d0ad66dedb2e1803f1daa2c2c4fcf50d1de705e141111c2e8"
+      "size": 6933,
+      "sha256": "7559b660c50b455075c0a9d5df69fbf80641e057dfcf1d9b53b7b8390afc696e"
     },
     {
       "path": "dist/src/core/object.js",
@@ -1052,8 +1052,8 @@
     },
     {
       "path": "dist/src/styles.css",
-      "size": 145349,
-      "sha256": "ace03335ac675280aaa326c23ec3ecf88b4066c5e20d5db00b75a0f6764e45eb"
+      "size": 151040,
+      "sha256": "8fcc50e305539bf9e59be9eec960462d06eb3a16ce8ce65b81d76887c319f37e"
     },
     {
       "path": "dist/sw.js",
@@ -1217,8 +1217,8 @@
     },
     {
       "path": "src/app.js",
-      "size": 211012,
-      "sha256": "b74fcd00b8af41418b3a59754e37c8ae5dadd059b92dfc6972f37cb138bbb1fe"
+      "size": 220473,
+      "sha256": "3d2d3bd68d6dccd26d58bb25edf7d4280443b10e807a72391ca5d0d2a04f95c3"
     },
     {
       "path": "src/compat/legacy-guards.js",
@@ -1267,8 +1267,8 @@
     },
     {
       "path": "src/core/default-state.js",
-      "size": 2995,
-      "sha256": "e333e476a20071e3ebea274ac6e9ef9da459626315726b92dbf97fe9713af6c8"
+      "size": 3075,
+      "sha256": "3e951720ca304f813f93b5a9a74cce69a2f9fa0b7af9ef888dedfa23c41f550c"
     },
     {
       "path": "src/core/diagnostics.js",
@@ -1277,8 +1277,8 @@
     },
     {
       "path": "src/core/mobile-experience.js",
-      "size": 6844,
-      "sha256": "cb3dbe8b9813596d0ad66dedb2e1803f1daa2c2c4fcf50d1de705e141111c2e8"
+      "size": 6933,
+      "sha256": "7559b660c50b455075c0a9d5df69fbf80641e057dfcf1d9b53b7b8390afc696e"
     },
     {
       "path": "src/core/object.js",
@@ -1462,8 +1462,8 @@
     },
     {
       "path": "src/styles.css",
-      "size": 145349,
-      "sha256": "ace03335ac675280aaa326c23ec3ecf88b4066c5e20d5db00b75a0f6764e45eb"
+      "size": 151040,
+      "sha256": "8fcc50e305539bf9e59be9eec960462d06eb3a16ce8ce65b81d76887c319f37e"
     },
     {
       "path": "store/STORE-LISTING-en.md",
@@ -1612,8 +1612,8 @@
     },
     {
       "path": "tests/audit-mobile-pwa.mjs",
-      "size": 2044,
-      "sha256": "09d8e9a7b122a4c6f18933b2a489e04d488c2f254d26e1d32b4a1b64d9b72763"
+      "size": 2232,
+      "sha256": "d52866d2674f0609558a360824d940b7be10bed9989db137ef1671a42e2fff8b"
     },
     {
       "path": "tests/audit-outpatient-runtime.mjs",
@@ -1642,8 +1642,8 @@
     },
     {
       "path": "tests/audit-runtime-smoke.mjs",
-      "size": 5860,
-      "sha256": "2dbb140074089951e510c844ae210fb0450e98232954c57b201a232544133c2e"
+      "size": 6595,
+      "sha256": "cf23ff175bedcd5fb7cf6a2b6785832ff1583c1fa1d711f1e0d6a8c071fae87f"
     },
     {
       "path": "tests/audit-storage.mjs",

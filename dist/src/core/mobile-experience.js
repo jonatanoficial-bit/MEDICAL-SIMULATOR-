@@ -46,7 +46,7 @@ function applyOrientationOverlay(blocked){
   }
 }
 
-export function createMobileExperience({diagnostics,onChange=()=>{}}={}){
+export function createMobileExperience({diagnostics,onChange=()=>{},isOrientationRequired=()=>true}={}){
   let installEvent=null;
   let status={
     displayMode:detectDisplayMode(),
@@ -63,7 +63,7 @@ export function createMobileExperience({diagnostics,onChange=()=>{}}={}){
   const emit=()=>{
     const viewport=viewportSnapshot();
     const orientation=screen.orientation?.type||((viewport.width>viewport.height)?'landscape':'portrait');
-    const orientationBlocked=shouldBlockPortrait(viewport);
+    const orientationBlocked=shouldBlockPortrait(viewport)&&Boolean(isOrientationRequired());
     status={...status,displayMode:detectDisplayMode(),fullscreen:!!document.fullscreenElement,online:navigator.onLine!==false,viewport,orientation,orientationBlocked};
     document.documentElement.dataset.displayMode=status.displayMode;
     document.documentElement.dataset.online=String(status.online);
@@ -109,6 +109,7 @@ export function createMobileExperience({diagnostics,onChange=()=>{}}={}){
 
   return {
     getStatus:()=>({...status}),
+    refresh:()=>emit(),
     async install(){
       if(!installEvent)return {ok:false,reason:'unavailable'};
       try{
